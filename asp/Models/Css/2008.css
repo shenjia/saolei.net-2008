@@ -1,0 +1,320 @@
+.Text {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #BBBBBB;
+	text-decoration: none;
+	line-height: 25px;
+}
+.Texts {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #BBBBBB;
+	text-decoration: none;
+	line-height: 23px!important;
+	line-height: 25px;
+}
+.eButton {
+	font-size: 14px;
+	color: #cccccc;
+	text-decoration: none;
+	line-height: 13px!important;
+	line-height: 15px;
+	cursor: pointer;
+}
+.uButton {
+	font-size: 14px;
+	color: #555555;
+	text-decoration: none;
+	line-height: 13px!important;
+	line-height: 15px;
+	cursor: pointer;
+}
+.hButton {
+	font-size: 14px;
+	color: #ffff00;
+	text-decoration: none;
+	line-height: 13px!important;
+	line-height: 15px;
+	cursor: pointer;
+}
+.BBS {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #BBBBBB;
+	text-decoration: none;
+	line-height: 18px!important;
+	line-height: 20px;
+}
+.Mine {
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 14px!important;
+	line-height: 16px;
+}
+.Sign {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: none;
+	line-height: 23px!important;
+	line-height: 25px;
+}
+.Signest {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: none;
+	line-height: 23px!important;
+	line-height: 25px;
+	font-weight: bold;
+}
+.Title {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #DDDDDD;
+	text-decoration: none;
+	line-height: 23px!important;
+	line-height: 25px;
+	font-weight: bold;
+}
+.Bold {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #BBBBBB;
+	text-decoration: none;
+	line-height: 23px!important;
+	line-height: 25px;
+	font-weight: bold;
+}
+.Counter {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 9px;
+	color: #ffff00;
+	text-decoration: none;
+	line-height: 16px!important;
+	line-height: 18px;
+}
+.Counters {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 9px;
+	color: #eeeeee;
+	text-decoration: none;
+	line-height: 16px!important;
+	line-height: 18px;
+}
+.High {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+	line-height: 23px!important;
+	line-height: 25px;
+}
+.Highest {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #EEEEEE;
+	text-decoration: none;
+	line-height: 23px!important;
+	line-height: 25px;
+	font-weight: bold;
+}
+.World1 { color: #BBBBBB; font-weight: bold; }
+.World2 { color: #999999; font-weight: bold; }
+.雷帝 {	color: #ffff00; cursor: pointer; }
+.雷圣 {	color: #FFCC00; cursor: pointer; }
+.雷神 {	color: #66CC00; cursor: pointer; }
+.雷仙 {	color: #FFCCCC; cursor: pointer; }
+.状元 {	color: #ffffff; cursor: pointer; }
+.榜眼 {	color: #ffffff; cursor: pointer; }
+.探花 {	color: #ffffff; cursor: pointer; }
+.进士 {	color: #e0e0e0; cursor: pointer; }
+.举人 {	color: #cccccc; cursor: pointer; }
+.秀才 {	color: #aaaaaa; cursor: pointer; }
+.书生 {	color: #888888; cursor: pointer; }
+.童生 {	color: #777777; cursor: pointer; }
+.布衣 {	color: #666666; cursor: pointer; }
+.Beg { color: #999999; font-weight: bold; }
+.Int { color: #BBBBBB; font-weight: bold; }
+.Exp { color: #DDDDDD; font-weight: bold; }
+a:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #BBBBBB;
+	text-decoration: none;
+}
+a:visited {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #BBBBBB;
+	text-decoration: none;
+}
+a:hover {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: underline;
+}
+a.Beg:link { color: #AAAAAA; font-weight: bold; }
+a.Int:link { color: #CCCCCC; font-weight: bold; }
+a.Exp:link { color: #EEEEEE; font-weight: bold; }
+a.Beg:visited { color: #AAAAAA; font-weight: bold; }
+a.Int:visited { color: #CCCCCC; font-weight: bold; }
+a.Exp:visited { color: #EEEEEE; font-weight: bold; }
+a.Beg:hover { color: #ffff00; font-weight: bold; }
+a.Int:hover { color: #ffff00; font-weight: bold; }
+a.Exp:hover { color: #ffff00; font-weight: bold; }
+a.Counter:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 9px;
+	color: #ffff00;
+	text-decoration: none;
+	line-height: 19px!important;
+	line-height: 21px;
+	cursor:pointer;
+}
+a.Counter:visited {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 9px;
+	color: #ffff00;
+	text-decoration: none;
+	line-height: 19px!important;
+	line-height: 21px;
+	cursor:pointer;
+}
+a.Counter:hover {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 9px;
+	color: #ffff00;
+	text-decoration: none;
+	line-height: 19px!important;
+	line-height: 21px;
+	cursor:pointer;
+}
+a.Title:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #DDDDDD;
+	text-decoration: none;
+}
+a.Title:visited {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #DDDDDD;
+	text-decoration: none;
+}
+a.Title:hover {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: underline;
+}
+a.High:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.High:visited {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.High:hover {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: underline;
+}
+a.Highest:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #EEEEEE;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.Highest:visited {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #EEEEEE;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.Highest:hover {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: underline;
+	font-weight: bold;
+}
+a.Sign:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: none;
+}
+a.Sign:visited {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: none;
+}
+a.Sign:hover {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: underline;
+}
+a.Signest:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.Signest:visited {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.Signest:hover {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.input-no {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	background-color:#000000;
+	FONT-SIZE: 9pt; 
+	COLOR: #DDDDDD; 
+	BORDER-TOP: #BBBBBB 1px solid; 
+	BORDER-BOTTOM: #BBBBBB 1px solid; 
+	BORDER-LEFT: #BBBBBB 1px solid; 
+	BORDER-RIGHT: #BBBBBB 1px solid; 
+}
+.input-bbs {
+	font-family: "宋体";
+	background-color:#000000;
+	FONT-SIZE: 9pt; 
+	COLOR: #DDDDDD; 
+	BORDER-TOP: #BBBBBB 1px solid; 
+	BORDER-BOTTOM: #BBBBBB 1px solid; 
+	BORDER-LEFT: #BBBBBB 1px solid; 
+	BORDER-RIGHT: #BBBBBB 1px solid; 
+}
+.input-time {
+	font-family: "Arial, Helvetica, sans-serif";
+	background-color:#000000;
+	FONT-SIZE: 14pt; 
+	COLOR: #FF0000; 
+	BORDER-TOP: #808080 1px solid; 
+	BORDER-BOTTOM: #FFFFFF 1px solid; 
+	BORDER-LEFT: #808080 1px solid; 
+	BORDER-RIGHT: #FFFFFF 1px solid; 
+	font-weight: bold;
+}

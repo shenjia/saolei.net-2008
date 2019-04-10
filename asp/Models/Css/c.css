@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #111;
+	color:#ccc
+}
+#list{width:500PX; height:300PX; margin:0 AUTO; position: absolute; top:50px; left:300px; font-size:12px}
+#list table tr td{padding-left:10px}
+sup{font-size:16px;line-height:1px;}
+.p{font-size:12px;line-height:1px;}
+
+.sss{color:#f7e957}
+.ss{color:#f7e957}
+.s{color:#f7e957}
+.a{color:#ff0080}
+.b{color:#df00a6}
+.c{color:#bf00cc}
+.d{color:#a000e5}
+.e{color:#8000ff}
+.f{color:#5000CC}
+.g{color:#9EDE3F}
+.h{color:#ffffff}
+
+.title {font-size:12px}
+
+.列兵	{color:#666666;}
+.上等兵	{color:#999999;}
+.下士	{color:#7636a7;}
+.中士	{color:#7636a7;}
+.上士	{color:#9143cc;}
+.少尉	{color:#0070C0;}
+.中尉	{color:#0070C0;}
+.上尉	{color:#00B0F0;}
+.少校	{color:#76933C;}
+.中校	{color:#76933C;}
+.上校	{color:#76933C;}
+.大校	{color:#92D050;}
+.少将	{color:#d1a001;}
+.中将	{color:#d1a001;}
+.上将	{color:#d1a001;}
+.大将	{color:#F7E957;}
+.元帅	{color:#FFFF00;}
+.大元帅	{color:#eb1818;}
+
+table.列兵	,div.列兵	,img.列兵	{background-color:#666666}
+table.上等兵	,div.上等兵	,img.上等兵	{background-color:#999999}
+table.下士	,div.下士	,img.下士	{background-color:#7636a7}
+table.中士	,div.中士	,img.中士	{background-color:#7636a7}
+table.上士	,div.上士	,img.上士	{background-color:#9143cc}
+table.少尉	,div.少尉	,img.少尉	{background-color:#0070C0}
+table.中尉	,div.中尉	,img.中尉	{background-color:#0070C0}
+table.上尉	,div.上尉	,img.上尉	{background-color:#00B0F0}
+table.少校	,div.少校	,img.少校	{background-color:#76933C}
+table.中校	,div.中校	,img.中校	{background-color:#76933C}
+table.上校	,div.上校	,img.上校	{background-color:#76933C}
+table.大校	,div.大校	,img.大校	{background-color:#92D050}
+table.少将	,div.少将	,img.少将	{background-color:#d1a001}
+table.中将	,div.中将	,img.中将	{background-color:#d1a001}
+table.上将	,div.上将	,img.上将	{background-color:#d1a001}
+table.大将	,div.大将	,img.大将	{background-color:#F7E957}
+table.元帅	,div.元帅	,img.元帅	{background-color:#FFFF00}
+table.大元帅	,div.大元帅	,img.大元帅	{background-color:#eb1818}
+
+.普通士兵	{color:#666666}
+
+.副班长	{color:#666666}
+.班长	{color:#999999}
+.副排长	{color:#680c69}
+.排长	{color:#8d0b8f}
+.副连长	{color:#642C8F}
+.连长	{color:#9143cc}
+.副营长	{color:#2222b9}
+.营长	{color:#3434f9}
+.副团长	{color:#0070C0}
+.团长	{color:#00B0F0}
+.副旅长	{color:#0b6115}
+.旅长	{color:#0f8c1e}
+.副师长	{color:#76933C}
+.师长	{color:#92D050}
+.副军长	{color:#d1a001}
+.军长	{color:#FFC300}
+.副司令	{color:#F7E957}
+.司令	{color:#FFFF00}
+.总司令	{color:#eb1818}
+
+.no{color:#f7e957;filter:alpha(opacity=100);font-weight: bold;  font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:20px}
+.sup{filter:alpha(opacity=100);font-weight: bold;  font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:20px}
+.o{filter:alpha(opacity=75);font-weight:bold;  font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:20px}
+.o img{ vertical-align:middle}
+.sub{filter:alpha(opacity=50);font-weight:bold;  font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:20px}
+
+#map td {width:30px;height:30px; color:#FFF; padding:0px; margin:0px; line-height:0px}
+#map td img { border:0px; padding:0px; margin:0px}
+#btl{background-image:url('/Models/Images/Status/btl.png');text-align:right; vertical-align:bottom}
+#btr{background-image:url('/Models/Images/Status/btr.png');text-align:left; vertical-align:bottom}
+#bbl{background-image:url('/Models/Images/Status/bbl.png');text-align:right; vertical-align:top}
+#bbr{background-image:url('/Models/Images/Status/bbr.png');text-align:left;vertical-align:top}
+
+ul {list-style:none; padding:0px;}
+ul li {list-style:none; padding:0px; margin:0px}
+
+#nt	{ width:160px; background:#222; font-size:12px; margin-top:50px; margin-left:50px}
+#nt div	{ width:30px}
+#photo	{ width:160px; height:100px; text-align:center; padding-top:10px; padding-bottom:10px}
+#name	{ width:160px; height:20px; text-align:center;}
+#rank	{ width:130px; height:70px; text-align:left; padding-left:30px}
+#middle	{ width:160px; height:60px;}
+#middle li	{ float:left}
+#map	{ width:60px; height:60px; background-color:#000}
+
+#up		{ width:160px; height:25px; text-align:center; padding-top:5px}
+#bottom	{ width:160px; height:25px; text-align:center; padding-top:5px}
+#left	{ width:50px; height:35px; text-align:center; padding-top:25px}
+#right	{ width:50px; height:35px; text-align:center; padding-top:25px}

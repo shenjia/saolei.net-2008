@@ -1,0 +1,250 @@
+.Text {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #BBBBBB;
+	text-decoration: none;
+	line-height: 25px;
+}
+.BBS {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #BBBBBB;
+	text-decoration: none;
+	line-height: 20px;
+}
+.Mine {
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 16px;
+}
+.Sign {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: none;
+	line-height: 25px;
+}
+.Signest {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: none;
+	line-height: 25px;
+	font-weight: bold;
+}
+.Title {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #DDDDDD;
+	text-decoration: none;
+	line-height: 25px;
+	font-weight: bold;
+}
+.Bold {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #BBBBBB;
+	text-decoration: none;
+	line-height: 25px;
+	font-weight: bold;
+}
+.Counter {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 9px;
+	color: #ffff00;
+	text-decoration: none;
+	line-height: 21px;
+	cursor:pointer;
+}
+.Counters {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 9px;
+	color: #eeeeee;
+	text-decoration: none;
+	line-height: 21px;
+	cursor:pointer;
+}
+.High {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+	line-height: 25px;
+}
+.Highest {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #EEEEEE;
+	text-decoration: none;
+	line-height: 25px;
+	font-weight: bold;
+}
+a:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #BBBBBB;
+	text-decoration: none;
+}
+a:visited {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #BBBBBB;
+	text-decoration: none;
+}
+a:hover {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: underline;
+}
+a.Counter:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 9px;
+	color: #ffff00;
+	text-decoration: none;
+	line-height: 21px;
+	cursor:pointer;
+}
+a.Counter:visited {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 9px;
+	color: #ffff00;
+	text-decoration: none;
+	line-height: 21px;
+	cursor:pointer;
+}
+a.Counter:hover {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 9px;
+	color: #ffff00;
+	text-decoration: none;
+	line-height: 21px;
+	cursor:pointer;
+}
+a.Title:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #DDDDDD;
+	text-decoration: none;
+}
+a.Title:visited {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #DDDDDD;
+	text-decoration: none;
+}
+a.Title:hover {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: underline;
+}
+a.High:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.High:visited {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.High:hover {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: underline;
+}
+a.Highest:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #EEEEEE;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.Highest:visited {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #EEEEEE;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.Highest:hover {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: underline;
+	font-weight: bold;
+}
+a.Sign:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: none;
+}
+a.Sign:visited {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: none;
+}
+a.Sign:hover {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: underline;
+}
+a.Signest:link {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.Signest:visited {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.Signest:hover {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #ffff00;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.input-no {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	background-color:#000000;
+	FONT-SIZE: 9pt; 
+	COLOR: #DDDDDD; 
+	BORDER-TOP: #BBBBBB 1px solid; 
+	BORDER-BOTTOM: #BBBBBB 1px solid; 
+	BORDER-LEFT: #BBBBBB 1px solid; 
+	BORDER-RIGHT: #BBBBBB 1px solid; 
+}
+.input-bbs {
+	font-family: "ËÎÌו";
+	background-color:#000000;
+	FONT-SIZE: 9pt; 
+	COLOR: #DDDDDD; 
+	BORDER-TOP: #BBBBBB 1px solid; 
+	BORDER-BOTTOM: #BBBBBB 1px solid; 
+	BORDER-LEFT: #BBBBBB 1px solid; 
+	BORDER-RIGHT: #BBBBBB 1px solid; 
+}
+.input-time {
+	font-family: "Arial, Helvetica, sans-serif";
+	background-color:#000000;
+	FONT-SIZE: 14pt; 
+	COLOR: #FF0000; 
+	BORDER-TOP: #808080 1px solid; 
+	BORDER-BOTTOM: #FFFFFF 1px solid; 
+	BORDER-LEFT: #808080 1px solid; 
+	BORDER-RIGHT: #FFFFFF 1px solid; 
+	font-weight: bold;
+}

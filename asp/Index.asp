@@ -1,0 +1,1 @@
+<%Response.Redirect("/Main/Index.asp")%>
