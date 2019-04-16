@@ -28,7 +28,7 @@ function Window_Load()
 	clientWidth=parent.document.body.clientWidth;
 	parent.document.getElementById('Window_Box').style.top=parent.document.body.scrollTop+(clientHeight-theHeight-100)/2;
 	parent.document.getElementById('Window_Box').style.left=(clientWidth-theWidth)/2;
-	//确保边距不为负数
+	//è·±￡±??à2??a?oêy
 	if(parseInt(parent.document.getElementById('Window_Box').style.top)<0){
 		parent.document.getElementById('Window_Box').style.top=0;
 	}
