@@ -70,7 +70,7 @@ function addFace(I)
  }
 function Img()
  {
-  ImgLink=window.prompt('ÇëÊäÈëÍ¼Æ¬Á´½Ó,ÀıÈç:http://www.saolei.net/Models/Images/Common/Logo_Chinese.gif','http://')
+  ImgLink=window.prompt('Ã‡Ã«ÃŠÃ¤ÃˆÃ«ÃÂ¼Ã†Â¬ÃÂ´Â½Ã“,Ã€Ã½ÃˆÃ§:http://www.saolei.net/Models/Images/Common/Logo_Chinese.gif','http://')
   if(ImgLink!='')
   {
   document.Title_Form.Title_Text.focus();
@@ -79,7 +79,7 @@ function Img()
  }
 function Url()
  {
-  Link=window.prompt('ÇëÊäÈëÍøÒ³Á´½Ó,ÀıÈç:http://www.saolei.net/','http://')
+  Link=window.prompt('Ã‡Ã«ÃŠÃ¤ÃˆÃ«ÃÃ¸Ã’Â³ÃÂ´Â½Ã“,Ã€Ã½ÃˆÃ§:http://www.saolei.net/','http://')
   if(Link!='')
   {
   document.Title_Form.Title_Text.focus();

@@ -177,12 +177,17 @@ alimama_type=2;
 							<%If Video_Freeze Then
 								Call Button("为什么冻结?",100,40,"location='/Help/Freeze.asp';",1)
 							Else
+								' If Session("Player_Id") <> "" Then
+								' 	Act = "location='"&Video_Path&"';Comment_Form.Comment_Text.select();"
+								' Else
+								' 	Act = "location='"&Video_Path&"';"
+								' End If
 								If Session("Player_Id") <> "" Then
-									Act = "location='"&Video_Path&"';Comment_Form.Comment_Text.select();"
+									Act = "loadVideo('"&Video_Path&"');"
 								Else
-									Act = "location='"&Video_Path&"';"
+									Act = "loadVideo('"&Video_Path&"');"
 								End If
-								Call Button("打开录像",100,40,Act,0)
+								Call Button("在线播放",100,40,Act,0)
 							End If%>
 							</td>
 						  </tr>
@@ -318,6 +323,27 @@ alimama_type=2;
 				parent.End_Mask();
 				parent.document.getElementById('Window_Box').style.display='none';
 		}
+
+		function loadVideo(path){
+			var browser=navigator.appName 
+			var b_version=navigator.appVersion 
+			var version=b_version.split(";"); 
+			var trim_Version=version[1].replace(/[ ]/g,"");
+			if(browser=="Microsoft Internet Explorer"){
+				alert('暂不支持 IE 内核 ,请更换浏览器或内核！');
+			}else{
+				parent.document.getElementById('Window_Video').contentWindow.loadVideo(path);
+		    	// parent.document.getElementById('Window_Frame').style.display='none';
+		        // parent.Start_Mask();
+		    }
+		}
+
+		//用户前进后退时会重新加载此页面
+		//重新加载时隐藏录像播放界面、显示查看界面(防止播放时后退被隐藏)、重置录像播放界面
+		function HindVideo(){
+			parent.document.getElementById('Window_Video').contentWindow.closeVideo();
+		}
+		HindVideo();
 		
 		</script>
 		<%
