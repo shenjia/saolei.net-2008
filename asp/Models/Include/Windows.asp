@@ -19,17 +19,21 @@ function Window_Load()
 
 	// alert('screen.height: '+screen.height+'\n'+'screen.width: '+screen.width+'\n'+'body.clientHeight: '+parent.document.body.clientHeight+'\n'+'body.clientWidth: '+parent.document.body.clientWidth)
 
-	//åŸä»£ç 
+	//Ô­´úÂë
 	// parent.document.getElementById('Window_Box').style.top=parent.document.body.scrollTop+(screen.height-theHeight-168)/2;
 	// parent.document.getElementById('Window_Box').style.left=(screen.width-theWidth)/2;
 
-	//ä¿®æ”¹åä»£ç 
+	//ĞŞ¸Äºó´úÂë
 	clientHeight=parent.document.body.clientHeight<1000?window.parent.document.body.clientHeight:1000;
 	clientWidth=parent.document.body.clientWidth;
 	parent.document.getElementById('Window_Box').style.top=parent.document.body.scrollTop+(clientHeight-theHeight-100)/2;
 	parent.document.getElementById('Window_Box').style.left=(clientWidth-theWidth)/2;
+	//È·±£±ß¾à²»Îª¸ºÊı
 	if(parseInt(parent.document.getElementById('Window_Box').style.top)<0){
 		parent.document.getElementById('Window_Box').style.top=0;
+	}
+	if(parseInt(parent.document.getElementById('Window_Box').style.left)<0){
+		parent.document.getElementById('Window_Box').style.left=0;
 	}
 }
 var over=false,down=false,divleft,divtop;

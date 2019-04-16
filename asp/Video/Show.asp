@@ -325,16 +325,11 @@ alimama_type=2;
 		}
 
 		function loadVideo(path){
-			var browser=navigator.appName 
-			var b_version=navigator.appVersion 
-			var version=b_version.split(";"); 
-			var trim_Version=version[1].replace(/[ ]/g,"");
-			if(browser=="Microsoft Internet Explorer"){
+			var isIE=window.ActiveXObject || "ActiveXObject" in window;
+			if(isIE){
 				alert('暂不支持 IE 内核 ,请更换浏览器或内核！');
 			}else{
 				parent.document.getElementById('Window_Video').contentWindow.loadVideo(path);
-		    	// parent.document.getElementById('Window_Frame').style.display='none';
-		        // parent.Start_Mask();
 		    }
 		}
 
@@ -343,7 +338,9 @@ alimama_type=2;
 		function HindVideo(){
 			parent.document.getElementById('Window_Video').contentWindow.closeVideo();
 		}
-		HindVideo();
+		if(typeof parent.document.getElementById('Window_Video').contentWindow.closeVideo === "function"){
+			HindVideo();
+		}
 		
 		</script>
 		<%
