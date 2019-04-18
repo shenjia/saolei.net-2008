@@ -5,16 +5,16 @@
 '------------------------
 Function NoHtml(Text)
 
-	Text = Replace(Text,"&","&amp;")
-	Text = Replace(Text,"<","&lt;")
-	Text = Replace(Text,">","&gt;")
-	Text = Replace(Text," ","&nbsp;")
-	Text = Replace(Text,"'","&acute;")
-	Text = Replace(Text,"""","&quot;")
-	Text = Replace(Text,vbTab,"&nbsp;&nbsp;&nbsp;&nbsp;")
-	Text = Replace(Text,vbcrlf,"<br>")
+	If Not IsNull(Text) Then
+		Text = Replace(Text,"&","&amp;")
+		Text = Replace(Text,"<","&lt;")
+		Text = Replace(Text,">","&gt;")
+		Text = Replace(Text," ","&nbsp;")
+		Text = Replace(Text,vbTab,"&nbsp;&nbsp;&nbsp;&nbsp;")
+		Text = Replace(Text,vbcrlf,"<br>")
 	
-	NoHtml = Text
+		NoHtml = Text
+	End If
 
 End Function
 
@@ -37,20 +37,6 @@ Function NoHtml_Message(Text)
 	Text = Replace(Text,"<","&lt;")
 	Text = Replace(Text,">","&gt;")
 	Text = Replace(Text," ","&nbsp;")
-	Text = Replace(Text,"'","&acute;")
-	Text = Replace(Text,"""","&quot;")
-	Text = Replace(Text,vbTab,"&nbsp;&nbsp;&nbsp;&nbsp;")
-	
-	NoHtml_Message = Text
-
-End Function
-
-Function NoHtml_Video(Text)
-
-	Text = Replace(Text,"<","&lt;")
-	Text = Replace(Text,">","&gt;")
-	Text = Replace(Text,"'","&acute;")
-	Text = Replace(Text,"""","&quot;")
 	Text = Replace(Text,vbTab,"&nbsp;&nbsp;&nbsp;&nbsp;")
 	
 	NoHtml_Message = Text
