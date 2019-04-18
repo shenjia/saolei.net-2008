@@ -222,13 +222,13 @@ Select Case Result
 				<form name="Comment_Form" action="Action/Comment_Add_Action.asp" method="post" target="Action">
 					<tr>
 					  <td height="30" valign="middle" class="Text">
-					  <input name="Comment_Text" type="text" class="input-no" size="48" maxlength="500" value="<%=Video_Comment_Text%>">
+					  <input name="Comment_Text" type="text" class="input-no" size="48" maxlength="500" value="<%=Video_Comment_Text%>" style="width:270px">
 					  <input name="Comment_Video" type="hidden" value="<%=Video_Id%>">
 					  </td>
 					  <td width="100" rowspan="2" valign="top" class="Text">
 						<table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="Comment_Form.submit();">
 							<tr>
-							  <td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" style="width:270px">我来说两句</td>
+							  <td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">我来说两句</td>
 							</tr>
 						</table>
 					  </td>
