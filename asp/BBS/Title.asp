@@ -142,7 +142,7 @@ If Message = "No" Then
 				<%End If%>
 				<tr valign="bottom" height="40">
 				<%If Title_IsLock Then%>
-				<td width="110">
+				<td width="100">
 					<table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; ">
 					<tr>
 					<td align="center" bgcolor="#555555" class="Sign" onMouseOver="this.className='Sign';" onMouseOut="this.className='Sign';">主题被锁定</td>
@@ -150,7 +150,7 @@ If Message = "No" Then
 					</table>
 				</td>
 				<%Else%>
-				<td width="110">
+				<td width="100">
 					<table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="<%If Session("Player_Id")<>"" Then%>location='/BBS/Reply.asp?Id=<%=Title_Id%>';<%Else%>top.Window('/Player/Login.asp');<%End If%>">
 					<tr>
 					<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">回复此主题</td>

@@ -49,6 +49,9 @@ table {
 	line-height: 18px!important;
 	line-height: 20px;
 }
+.BBS img {
+	max-width: 560px;
+}
 .Mine {
 	font-size: 12px;
 	text-decoration: none;
