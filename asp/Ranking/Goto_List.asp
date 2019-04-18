@@ -1,3 +1,5 @@
+<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001" %>
+<% Response.Charset = "utf-8" %>
 <%
 '------------------------
 'Code:Zhang Shen Jia
@@ -9,12 +11,13 @@ Dim Goto_Rank
 <!--#include virtual="/Models/Common/Const.asp"-->
 <!--#include virtual="/Models/Common/ConnDB.asp"-->
 <!--#include virtual="/Models/Common/Error.asp"-->
+<!--#include virtual="/Models/Common/Function.asp"-->
 <%
 Call Get_Input()
 %>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css">
 <!--
 body {
@@ -36,8 +39,8 @@ body {
 		<td bgcolor="#444444">
 			<table width="220" border="0" cellspacing="0" cellpadding="0">
 				<tr bgcolor="#555555">
-					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">║║╡Иур╤╗н╩</td>
-					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">║а</td>
+					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">Ц──Ф÷╔Ф┴╬Е╝ Д╫█</td>
+					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">ц≈</td>
 			</tr>
 			</table>
 			<table width="220" border="0" cellspacing="10" cellpadding="0">
@@ -53,9 +56,9 @@ body {
 		
 			Do While Not rs.Eof
 				If rs("Player_IsHero") Then
-					Rank_Text="<span class=World1>║╬иЯ╫Г║©</span>"
+					Rank_Text="<span class=World1>Ц─░Г╔·Г∙▄Ц─▒</span>"
 				Else
-					Rank_Text="<span class=World2>║╬хк╫Г║©</span>"
+					Rank_Text="<span class=World2>Ц─░Д╨╨Г∙▄Ц─▒</span>"
 				End If
 				If rs("Player_Sex") Then
 					Player_Sex_Text = "GG"
@@ -71,11 +74,11 @@ body {
 			Loop		
 		Else
 			%><tr>
-			<td class="Sign" height="20">ц╩спур╣╫╥Ш╨олУ╪Ч╣дювсяё║</td>
+			<td class="Sign" height="20">Ф╡║Ф°┴Ф┴╬Е┬╟Г╛╕Е░┬Ф²║Д╩╤Г └И⌡╥Е▐▀О╪│</td>
 			<td>
 			<table width="40" height="30" border="0" align="center" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="location='/Ranking/Goto.asp';">
 				<tr>
-					<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">жьйт</td>
+					<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">И┤█Х╞∙</td>
 				</tr>
 			</table>
 			</td></tr><%
@@ -117,14 +120,14 @@ document.onkeypress=KeyDown;
 function Cancel()
 {
 		top.End_Mask();
-		top.Window_Box.style.display='none';
+		top.document.getElementById('Window_Box').style.display='none';
 }
 </script>
 <%
 Sub Get_Input()
 
-	Goto_Name = Trim(Request("Name"))
+	Goto_Name = Trim(URLDecode(Request("Name")))
 	Goto_Rank = Trim(Request("Rank"))
-	
+
 End Sub
 %>

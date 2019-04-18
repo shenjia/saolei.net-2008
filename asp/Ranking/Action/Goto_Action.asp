@@ -1,3 +1,5 @@
+ï»¿<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001" %>
+<% Response.Charset = "utf-8" %>
 <%
 '------------------------
 'Code:Zhang Shen Jia
@@ -32,7 +34,7 @@ If Message = "No" Then
 	
 	cmd.execute
 	Result = cmd("@Result")
-	
+
 	Select Case Result
 				
 		Case "Check_Ok"
@@ -41,16 +43,15 @@ If Message = "No" Then
 			Page = cmd("@Page")
 			Set cmd = Nothing
 			Call End_Conn()
-			
 			Message = "No"
-			Act = "top.End_Mask();top.Window_Box.style.display='none';top.Ranking_Frame.location='/Ranking/Ranking_"&Goto_Rank&".asp?Page="&Page&"';"
+			Act = "top.End_Mask();top.document.getElementById('Window_Box').style.display='none';top.document.getElementById('Ranking_Frame').src='/Ranking/Ranking_"&Goto_Rank&".asp?Page="&Page&"';"
 			Call Error()
 				
 		Case "Check_Fail"
 		
 			Set cmd = Nothing
 			Call End_Conn()
-			Message = "Ã»ÓĞ·ûºÏÌõ¼şµÄÍæ¼Ò£¡"
+			Message = "æ²¡æœ‰ç¬¦åˆæ¡ä»¶çš„ç©å®¶ï¼"
 			Act = "No"
 			Call Error()
 			
@@ -68,7 +69,7 @@ End Sub
 Sub Check_Input()
 	
 	Message = "No"
-	If Goto_Id <> "" And Not IsNumeric(Goto_Id) Then Message = "ÄúÊäÈëµÄID²»ºÏ·¨!"
+	If Goto_Id <> "" And Not IsNumeric(Goto_Id) Then Message = "æ‚¨è¾“å…¥çš„IDä¸åˆæ³•!"
 	If Message <> "No" Then
 		Act="No"
 		Call Error()

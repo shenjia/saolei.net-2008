@@ -1,3 +1,5 @@
+<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001" %>
+<% Response.Charset = "utf-8" %>
 <%
 '------------------------
 'Code:Zhang Shen Jia
@@ -18,7 +20,7 @@ If Message = "No" Then
 	
 	If Goto_Id = "" Then
 		Message = "No"
-		Act = "top.Window_Frame.location='/Ranking/Goto_List.asp?Name="&Goto_Name&"&Rank="&Goto_Rank&"';"
+		Act = "top.Window('/Ranking/Goto_List.asp?Rank="&Goto_Rank&"&Name="&Server.URLEncode(Goto_Name)&"');"
 		Call Error()
 	Else
 		Response.Redirect("/Ranking/Action/Goto_Action.asp?Id="&Goto_Id&"&Rank="&Goto_Rank)
@@ -37,8 +39,8 @@ End Sub
 Sub Check_Input()
 	
 	Message = "No"
-	If Goto_Id = "" And Goto_Name = "" Then Message = "ÇëÖÁÉÙÊäÈëÒ»¸öÌõ¼ş!"
-	If Goto_Id <> "" And Not IsNumeric(Goto_Id) Then Message = "ÄúÊäÈëµÄ[ID]²»ºÏ·¨!"
+	If Goto_Id = "" And Goto_Name = "" Then Message = "è¯·è‡³å°‘è¾“å…¥ä¸€ä¸ªæ¡ä»¶!"
+	If Goto_Id <> "" And Not IsNumeric(Goto_Id) Then Message = "æ‚¨è¾“å…¥çš„[ID]ä¸åˆæ³•!"
 	If Message <> "No" Then
 		Act="No"
 		Call Error()

@@ -34,7 +34,7 @@ body {
 			</table>
           <span class="Title">加入世界排行的流程</span><br>
 　　世界排行只收录总成绩100秒以内的玩家。 <br>
-　　给Damien(<a href="mailto:damienalexmoore@yahoo.com" class="Sign">damienalexmoore@yahoo.com</a>)写信，将自己的初、中、高三个级别的 <span class="Title">mvf </span>录像作为附件，信中注明自己的姓名拼音、每个级别纪录的产生时间，以及自己来自中国何处。(<a href="javascript:;" class="Sign" onClick="top.Window('/Help/Email.asp');">查看示范Email</a>)</td>
+　　给Damien(<a href="mailto:damienalexmoore@yahoo.com" class="Sign">damienalexmoore@yahoo.com</a>)写信，将自己的初、中、高三个级别的 <span class="Title">mvf </span>录像作为附件，信中注明自己的姓名拼音、每个级别记录的产生时间，以及自己来自中国何处。(<a href="javascript:;" class="Sign" onClick="top.Window('/Help/Email.asp');">查看示范Email</a>)</td>
 	</tr>
 </table>
 </body>

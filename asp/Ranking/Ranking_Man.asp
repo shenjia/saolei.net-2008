@@ -91,16 +91,20 @@ body {
 				<%If Session("Ranking_By") = "Player_Sum_Time_Score" Then%>
 					<td align="center" class="Text">
 					<%
-					If CInt(rs("Player_Old_Rank")) = 0 or CInt(rs("Player_Old_Rank")) = 9999 Then 
+					If isnull(rs("Player_Old_Rank"))  Then 
 						%><span style="cursor:default" title="本月新上榜" class="Signest">↑新</span><%
 					Else
-						If CInt(rs("Player_Real_Rank")) = CInt(rs("Player_Old_Rank")) Then
-							%><span style="cursor:default" title="与上月持平" class="Highest">→</span><%
+						If CInt(rs("Player_Old_Rank")) = 0 or CInt(rs("Player_Old_Rank")) = 9999 Then
+							%><span style="cursor:default" title="本月新上榜" class="Signest">↑新</span><%
 						Else
-							If CInt(rs("Player_Real_Rank")) < CInt(rs("Player_Old_Rank")) Then
-								%><span style="cursor:default" title="比上月进步<%=CInt(rs("Player_Old_Rank"))-CInt(rs("Player_Real_Rank"))%>位" class="Signest">↑<%=CInt(rs("Player_Old_Rank"))-CInt(rs("Player_Real_Rank"))%></span><%
+							If CInt(rs("Player_Real_Rank")) = CInt(rs("Player_Old_Rank")) Then
+								%><span style="cursor:default" title="与上月持平" class="Highest">→</span><%
 							Else
-								%><span style="cursor:default" title="比上月下降<%=CInt(rs("Player_Real_Rank"))-CInt(rs("Player_Old_Rank"))%>位" class="Bold">↓<%=CInt(rs("Player_Real_Rank"))-CInt(rs("Player_Old_Rank"))%></span><%
+								If CInt(rs("Player_Real_Rank")) < CInt(rs("Player_Old_Rank")) Then
+									%><span style="cursor:default" title="比上月进步<%=CInt(rs("Player_Old_Rank"))-CInt(rs("Player_Real_Rank"))%>位" class="Signest">↑<%=CInt(rs("Player_Old_Rank"))-CInt(rs("Player_Real_Rank"))%></span><%
+								Else
+									%><span style="cursor:default" title="比上月下降<%=CInt(rs("Player_Real_Rank"))-CInt(rs("Player_Old_Rank"))%>位" class="Bold">↓<%=CInt(rs("Player_Real_Rank"))-CInt(rs("Player_Old_Rank"))%></span><%
+								End If
 							End If
 						End If
 					End If

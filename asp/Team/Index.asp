@@ -29,19 +29,19 @@ body {
 <table id="Window_Table" border="0" cellspacing="1" cellpadding="0" bgcolor="#999999">
 	<tr>
 		<td bgcolor="#444444">
-			<table width="500" border="0" cellspacing="0" cellpadding="0">
+			<table width="510" border="0" cellspacing="0" cellpadding="0">
 				<tr bgcolor="#555555">
 					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">　管理团队</td>
 					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">×</td>
 			</tr>
 		  </table>
-			<table width="500" border="0" cellspacing="10" cellpadding="0">
+			<table width="510" border="0" cellspacing="10" cellpadding="0">
 				<tr>
 				  <td colspan="2" class="Text">				    <table border="0" cellspacing="2" cellpadding="0">
                       <tr class="Title">
                         <td width="100" height="25" align="center">管理员</td>
                         <td width="110" align="center">最近登录</td>
-                        <td width="210" align="center">本月审核录像数量</td>
+                        <td width="220" align="center">本月审核录像数量</td>
                         <td width="50" align="center">总审核</td>
                       </tr>
                     </table>
@@ -60,11 +60,11 @@ body {
 							<td width="100" height="25" align="center" class="High"><span class="Texts">[</span><span onClick="location='/Help/Title.asp';" class="<%=rs("Player_Title")%>" title="点击查看称号说明"><%=rs("Player_Title")%></span><span class="Texts">]</span> <a href="/Player/Show.asp?Id=<%=rs("Player_Id")%>" title="点击查看个人信息"class="High"><%=rs("Player_Name_Chinese")%></a></td>
 							<td width="110" align="center" class="Text"><%=FormatDateTime(rs("Player_Login_Time"),1)%></td>
 							<td width="210" align="center">
-								<table width="200" border="0" cellspacing="0" cellpadding="0">
+								<table width="210" border="0" cellspacing="0" cellpadding="0">
 									<tr>
 										<td width="2">
-										<td><%Call Bar("Number_",rs("Player_Check_Number_Now"),Best_Number,170,10)%></td>
-										<td width="20" align="center" class="Sign"><%=rs("Player_Check_Number_Now")%></td>
+										<td width="170"><%Call Bar("Number_",rs("Player_Check_Number_Now"),Best_Number,170,10)%></td>
+										<td align="center" class="Sign"><%=rs("Player_Check_Number_Now")%></td>
 									</tr>
 								</table>
 							</td>
@@ -79,7 +79,7 @@ body {
 					</td>
 				</tr>
 				<tr>
-				  <td width="235" class="Text"><%If ZhaoPin=1 Then%><table width="180" height="30" border="0" align="center" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="window.open('http://www.saolei.net/BBS/Title.asp?Id=3660');">
+				  <td width="235" class="Text"><%If ZhaoPin=1 Then%><table width="180" height="30" border="0" align="center" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="window.open('http://www.saolei.net/BBS/Title.asp?Id=13029');">
                     <tr>
                       <td align="center" bgcolor="#555555" class="Sign" onMouseOver="this.className='Sign';" onMouseOut="this.className='Sign';">正在招聘,请点击查看!</td>
                     </tr>
@@ -91,7 +91,7 @@ body {
 				  </td>
 				  <td width="235" class="Text"><table width="180" height="30" border="0" align="center" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="Cancel();">
                     <tr>
-                      <td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">各位大哥辛苦了，在下告退</td>
+                      <td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">各位辛苦了，在下告退</td>
                     </tr>
                   </table></td>
 				</tr>

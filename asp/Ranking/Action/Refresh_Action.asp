@@ -5,7 +5,7 @@
 '------------------------
 Response.Buffer = True
 Dim Areas(100)
-Dim Hero(200)
+Dim Hero(500)
 Dim Video(200)
 Dim Man(10000)
 %>

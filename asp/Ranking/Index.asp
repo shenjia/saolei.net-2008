@@ -40,7 +40,7 @@ body {
 			<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Ranking_2" style="cursor:pointer " onClick="High('Ranking_2');Low('Ranking_1');Low('Ranking_3');Low('Ranking_4');Low('Ranking_5');Low('Ranking_6');Low('Ranking_7');Show('Searchs');Rank='Man';Ranking_Frame.location='/Ranking/Ranking_Man.asp?Page=1&By=Player_Sum_Time_Score'">人界</td>
 			<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Ranking_3" style="cursor:pointer " onClick="High('Ranking_3');Low('Ranking_2');Low('Ranking_1');Low('Ranking_4');Low('Ranking_5');Low('Ranking_6');Low('Ranking_7');Show('Searchs');Rank='Hero';Ranking_Frame.location='/Ranking/Ranking_Hero.asp?Page=1&By=Player_Sum_Time_Score'">神界</td>
 			<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Ranking_4" style="cursor:pointer " onClick="High('Ranking_4');Low('Ranking_2');Low('Ranking_1');Low('Ranking_3');Low('Ranking_5');Low('Ranking_6');Low('Ranking_7');Show('Searchs');Rank='NF';Ranking_Frame.location='/Ranking/Ranking_NF.asp?Page=1&By=Player_Sum_Time_Score_NF'">NF</td>
-			<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Ranking_5" style="cursor:pointer " onClick="High('Ranking_5');Low('Ranking_2');Low('Ranking_1');Low('Ranking_3');Low('Ranking_4');Low('Ranking_6');Low('Ranking_7');Show('Searchs');Rank='Grow';Ranking_Frame.location='/Ranking/Ranking_Grow.asp?Page=1'">进步</td>
+			<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Ranking_5" style="cursor:pointer " onClick="High('Ranking_5');Low('Ranking_2');Low('Ranking_1');Low('Ranking_3');Low('Ranking_4');Low('Ranking_6');Low('Ranking_7');Hide('Searchs');Rank='Grow';Ranking_Frame.location='/Ranking/Ranking_Grow.asp?Page=1'">进步</td>
 			<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Ranking_6" style="cursor:pointer " onClick="High('Ranking_6');Low('Ranking_2');Low('Ranking_1');Low('Ranking_3');Low('Ranking_4');Low('Ranking_5');Low('Ranking_7');Hide('Searchs');Ranking_Frame.location='/Ranking/Ranking_Area.asp?Page=1&By=Area_Power'">地区</td>
 			<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Ranking_7" style="cursor:pointer " onClick="High('Ranking_7');Low('Ranking_2');Low('Ranking_1');Low('Ranking_3');Low('Ranking_4');Low('Ranking_5');Low('Ranking_6');Show('Searchs');Rank='Click';Ranking_Frame.location='/Ranking/Ranking_Click.asp?Page=1&By=Player_Click_Today'">人气</td>
 		  </tr>
@@ -52,7 +52,7 @@ body {
 		  <tr bgcolor="#333333">
 			<td height="554" valign="top" class="Text">
 				<div id="Ranking" style="display:none ">
-				<iframe name="Ranking_Frame" frameborder="0" width="575" height="554" scrolling="no" src="/Ranking/Ranking_All.asp?Page=1&By=Player_Sum_Time_Score"></iframe>
+				<iframe name="Ranking_Frame" id="Ranking_Frame" frameborder="0" width="575" height="554" scrolling="no" src="/Ranking/Ranking_All.asp?Page=1&By=Player_Sum_Time_Score"></iframe>
 				</div>
 			</td>
 		  </tr>

@@ -1,15 +1,18 @@
+<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001" %>
+<% Response.Charset = "utf-8" %>
 <%
 '------------------------
 'Code:Zhang Shen Jia
 'Date:2007-12-25
 '------------------------
 %>
+<!--#include virtual="/Models/Include/NoHtml.asp"-->
 <%
 If Request("Rank") <> "" Then Session("Goto_Rank") = Request("Rank")
 %>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css">
 <!--
 body {
@@ -31,17 +34,17 @@ body {
 		<td bgcolor="#444444">
 			<table width="200" border="0" cellspacing="0" cellpadding="0">
 				<tr bgcolor="#555555">
-					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">　查找定位</td>
-					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">×</td>
+					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">銆�鏌ユ壘瀹氫綅</td>
+					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">脳</td>
 			</tr>
 			</table>
 			<table width="200" border="0" cellspacing="10" cellpadding="0">
-					<td colspan="2" valign="top" class="Text">按姓名查找：
+					<td colspan="2" valign="top" class="Text">鎸夊鍚嶆煡鎵撅細
 					  <input name="Goto_Name" type="text" class="input-no" size="12" maxlength="12" value="<%=Session("Player_Name_Chinese")%>" onClick="Goto_Form.Goto_Id.value='';">
 					  <br>
-					  按ＩＤ查找：
+					  鎸夛缉锛ゆ煡鎵撅細
 					  <input name="Goto_Id" type="text" class="input-no" size="5" maxlength="5" onClick="Goto_Form.Goto_Name.value='';">
-					  <input name="Goto_Rank" type="hidden" value="<%=Session("Goto_Rank")%>"></td>
+					  <input name="Goto_Rank" type="hidden" value="<%=NoHtml(Session("Goto_Rank"))%>"></td>
 					</tr>
 				<tr>
 				  <td colspan="2" align="right" class="Text">
@@ -50,14 +53,14 @@ body {
 						<td width="155">
 							<table width="80" height="30" border="0" align="center" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="Goto_Form.submit();">
 								<tr>
-									<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">查找定位</td>
+									<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">鏌ユ壘瀹氫綅</td>
 								</tr>
 							</table>
 						</td>
 						<td width="150">
 							<table width="50" height="30" border="0" align="center" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="Cancel();">
 								<tr>
-									<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">放弃</td>
+									<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">鏀惧純</td>
 								</tr>
 							</table>
 						</td>
@@ -97,6 +100,6 @@ document.onkeypress=KeyDown;
 function Cancel()
 {
 		top.End_Mask();
-		top.Window_Box.style.display='none';
+		top.document.getElementById('Window_Box').style.display='none';
 }
 </script>
