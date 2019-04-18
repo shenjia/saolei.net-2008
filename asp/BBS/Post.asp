@@ -43,7 +43,7 @@ If Check_Result <> "Fail" Then
 	</style>
 	<link href="/Models/Css/2008.css" rel="stylesheet" type="text/css">
 	</head>
-	<body onLoad="parent.document.getElementById('BBS').style.display='block';Title_Form.Title_Name.focus();">
+	<body onLoad="parent.document.getElementById('BBS').style.display='block';Title_Form.Title_Name.select();">
 	
 		<table width="575" border="0" cellspacing="0" cellpadding="0">
 		<tr>
@@ -68,9 +68,9 @@ If Check_Result <> "Fail" Then
 		<%If Model = "No" Then%>
 		<select name="Title_Model" class="input-no">		
 		  <%If Session("Player_IsMaster") Then%><option value="Notice">公告</option><%End If%>
+		  <option value="Ask">问答</option>
 		  <option value="Skill">技术</option>
 		  <option value="Other">杂谈</option>
-		  <option value="Ask">问答</option>
 		</select>
 		<%Else%>
 		<input name="Title_Model" value="<%=Model%>" type="hidden">

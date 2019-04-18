@@ -47,7 +47,7 @@ body {
 				    </span><br>
 				    <span class="Bold">例：</span>错传了其他文件或者上传了损坏的录像文件。<br>
 				    <span class="Text">本次录像被冻结的原因已经通过短信提交给上传者本人，</span><span class="Sign">本录像将于三日内自动删除。</span><br>
-				    <span class="Sign">如果是数据填写错误请先保存录像，再删除录像并从新上传。其他原因请直接删除录像。</span><br>
+				    <span class="Sign">如果是数据填写错误请先保存录像，再删除录像并重新上传。其他原因请直接删除录像。</span><br>
 				  </p>
 			      </td>
 				</tr>

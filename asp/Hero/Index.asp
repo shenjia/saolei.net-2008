@@ -38,40 +38,46 @@ body {
 			<script language="javascript">High('World_1');</script>
 		<table width="595" border="0" cellpadding="10" cellspacing="1" bgcolor="#666666">
 		  <tr bgcolor="#333333">
-			<td height="535" valign="top" class="Text">
-			<table border="0" cellspacing="0" cellpadding="0">
-			<tr>
-			<td>
-			<table width="115" border="0" cellspacing="0" cellpadding="0">
-			<tr>
-			<td height="50">
-				<table width="100" height="30" border="0" align="left" cellpadding="0" cellspacing="1">
-					<tr>
-						<td align="center" bgcolor="#555555" class="Title">Sub40</td>
-					</tr>
-			</table>
-			</td>
-			</tr>
-            <tr class="Text">
-			<%
+			<td height="535" valign="top" class="Text"><table width="575" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="50"><table width="100" height="30" border="0" align="left" cellpadding="0" cellspacing="1">
+                    <tr>
+                      <td align="center" bgcolor="#555555" class="Title">Sub40</td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr class="Text">
+                <%
 			Call Start_Conn()
 			
 			SQL_Text = "Hero_Index 0,40"
 			rs.Open SQL_Text,Conn,1,3
 			
+			I = 0
+			
 			Do While Not rs.Eof
-				%><td width="115" height="135" aligh="top"><%
+				%>
+                <td width="115" height="135" aligh="top"><%
 				Call Player(rs("Player_Id"),rs("Player_Name_Chinese"),FormatNumber(rs("Player_Exp_Time_Score"),2),rs("Player_Image"))
-				%></td><%
+				%></td>
+                <%
+				I = I + 1
+				If I = 5 Then
+					Response.Write("</tr><tr class=""Text"">")			
+					I = 0
+				End If
 				rs.MoveNext
 			Loop
+			If I < 5 Then 
+				For J = I To 4
+					Response.Write("<td width=""115""></td>")			
+				Next
+			End If
 			
 			Call End_Conn()
 			%>
-            </tr>
-          </table>
-		  </td>
-			</tr></table>
+              </tr>
+            </table>
 			<table width="575" border="0" cellspacing="0" cellpadding="0">
               <tr>
                 <td height="50"><table width="100" height="30" border="0" align="left" cellpadding="0" cellspacing="1">
@@ -224,7 +230,7 @@ Sub Player(Player_Id,Player_Name,Player_Exp,Player_Image)
 		Image_Path = "/Models/Images/Player/No.jpg"
 	End If
 	%><div id="Player_<%=Player_Id%>" style="cursor:pointer;" title="点击查看<%=Player_Name%>的更多信息" onClick="top.Window('/Player/Show.asp?Id=<%=Player_Id%>');">
-	<img src="<%=Image_Path%>" border="1" align="absmiddle" style="border-color:#999999; cursor:pointer" onclick="top.Window('/Player/Show.asp?Id=<%=Player_Id%>');" title="点击查看<%=Player_Name%>的更多信息"><br>
+	<img src="<%=Image_Path%>" border="1" align="absmiddle" style="border-color:#999999; cursor:pointer" onClick="top.Window('/Player/Show.asp?Id=<%=Player_Id%>');" title="点击查看<%=Player_Name%>的更多信息"><br>
    <span class="Texts">[</span><span onClick="top.Window('/Help/Title.asp');" class="<%=rs("Player_Title")%>" title="点击查看称号说明"><%=rs("Player_Title")%></span><span class="Texts">]</span> <a href="javascript:;" onClick="top.Window('/Player/Show.asp?Id=<%=rs("Player_Id")%>');" title="点击查看个人信息" class="High"><%=rs("Player_Name_Chinese")%></a>(<span class="Counters"><%=Player_Exp%></span>)</div><%
 	  
 End Sub

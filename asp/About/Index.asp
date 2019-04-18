@@ -47,7 +47,7 @@ body {
 						<td width="161">
 							<table width="150" height="30" border="0" align="right" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="parent.Window('/About/Donate.asp')">
 								<tr>
-									<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';"><span class="Sign">支持本站</span></td>
+									<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';"><span class="Sign">提供赞助</span></td>
 								</tr>
 						  </table>
 						</td>

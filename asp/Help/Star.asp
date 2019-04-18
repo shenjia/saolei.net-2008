@@ -33,7 +33,7 @@ body {
 			</table>
 			<table width="270" border="0" cellspacing="10" cellpadding="0">
 				<tr>
-				  <td class="Text">					  <p class="Text"> 　<span class="Sign">“每日一星”</span>是为了鼓励雷友们增进水平设立的栏目。由系统<span class="Sign">每日零时</span>在<span class="High">【神界】</span><span class="High">全员</span>与<span class="Title">【人界】</span><span class="High">排名有进步的雷友</span>中<span class="Sign">随机</span>产生一位。当选过一次的雷友不再参与本月接下来的每日一星评选。您只要努力提高排名，或者升入神界，就有机会成为每日之星啦！<br>
+				  <td class="Text">					  <p class="Text"> 　<span class="Sign">“每日一星”</span>是为了鼓励雷友们增进水平设立的栏目。由系统<span class="Sign">每日零时</span>在<span class="High">【神界】</span><span class="High">全员</span>与<span class="Title">【人界】</span><span class="High">排名有进步且<span class="Sign">最近30天内登录过网站</span>的雷友</span>中<span class="Sign">随机</span>产生一位。当选过一次的雷友不再参与本月接下来的每日一星评选。您只要努力提高排名或者升入神界，</span>就有机会成为每日之星啦！<br>
 				  </p>
 			      </td>
 				</tr>

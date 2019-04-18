@@ -218,7 +218,7 @@ If Message = "No" Then
 				<%
 				Call Start_Conn()
 				
-				SQL_Text = "Title_List '"&Clng(Title_Id)&"',"&Clng(Point)&","&Session("Title_Page")	
+				SQL_Text = "Title_List '"&Clng(Title_Id)&"',"&Clng(Point)&","&CLng(Session("Title_Page"))	
 				rs.Open SQL_Text,Conn
 				
 				If Not rs.Eof Then
@@ -406,24 +406,16 @@ If Message = "No" Then
 				<table width="303" border="0" cellpadding="5" cellspacing="1" bgcolor="#666666">
 				  <tr bgcolor="#333333">
 					<td height="195" align="center" valign="top" class="Text">
-<script type="text/JavaScript"> 
-alimama_pid="mm_11936678_1495783_3850160"; 
-alimama_titlecolor="FFFFFF"; 
-alimama_descolor ="BFBFBF"; 
-alimama_bgcolor="333333"; 
-alimama_bordercolor="333333"; 
-alimama_linkcolor="ffff00"; 
-alimama_bottomcolor="FFFFFF"; 
-alimama_anglesize="0"; 
-alimama_bgpic="0"; 
-alimama_icon="0"; 
-alimama_sizecode="32"; 
-alimama_width=250; 
-alimama_height=300; 
-alimama_type=2; 
-</script> 
-<script src="http://a.alimama.cn/inf.js" type=text/javascript> 
-</script>					</td>
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- ÂÛÌ³ÎÄÕÂ²à±ßÀ¸ -->
+					<ins class="adsbygoogle"
+					     style="display:inline-block;width:300px;height:250px"
+					     data-ad-client="ca-pub-5867628704806120"
+					     data-ad-slot="5455939895"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+					</td>
 				  </tr>
 				</table>
 			</td>

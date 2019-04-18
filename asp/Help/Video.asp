@@ -34,11 +34,14 @@ body {
 			</table>
 			<table width="500" border="0" cellspacing="10" cellpadding="0">
 				<tr>
-				  <td colspan="2" class="Text">					  <p class="Text"><span class="Title">                  </span> 　　请先下载 <a href="/Software/Download/Minesweeper_Clone_0.97.rar" class="Sign">Minesweeper Clone 0.97</a> 并安装。<br>
-　　安装完后运行进入游戏，如果遇到问题，<a href="/Software/Question.asp" target="_blank" class="Sign">请点这里</a>。<br>
+				  <td colspan="2" class="Text">					  <p class="Text"><span class="Title">                  </span> 　　
+要观看avf录像，请先下载 <a href="/Download/Arbiter_0.52.2.zip" class="Sign">Minesweeper Arbiter 0.52.2</a> 。<br>　　
+要观看mvf录像，请先下载 <a href="/Download/Minesweeper_Clone_0.97.rar" class="Sign">Minesweeper Clone 0.97</a> 并安装。<br>
+　　安装完后运行进入游戏，如果遇到问题，<a href="/BBS/Index.asp" target="_blank" class="Sign">请到论坛提问</a>。<br>
 　　打开网站上任何一个录像，点击<span class="High">“保存录像”</span>，将录像保存到桌面上。<br>
 　　双击保存下来的录像文件，选择打开方式。<br>
-　　浏览到 <span class="Sign">Clone</span> 的安装目录，选择<span class="Sign"> Minesweeper Clone.exe</span> 。<br>
+　　mvf录像浏览到 <span class="Sign">Clone</span> 的安装目录，选择<span class="Sign"> Minesweeper Clone.exe</span> 。<br>
+　　avf录像浏览到 <span class="Sign">Arbiter</span> 的所在目录，选择<span class="Sign"> ms_arbiter.exe</span> 。<br>
 　　选择 <span class="Sign">“始终使用选择的程序打开这种文件”</span> 。<br>
 　　打开网站上任何一个录像，点击<span class="High">“打开录像”</span>，选择“始终打开”。<br>
 　　好了，现在你可以选择“打开录像”来直接播放，也可以选择“保存录像”将其下载。<br>

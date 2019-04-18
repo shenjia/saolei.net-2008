@@ -89,7 +89,7 @@ End If
 	
 	Call Start_Conn()
 	
-	SQL_Text = "BBS_Notice 'Title_"&Session("BBS_Order")&"_Time',"&Session("Nice")&","&Point&","&CInt(Page)
+	SQL_Text = "BBS_Notice 'Title_"&Session("BBS_Order")&"_Time',"&CInt(Session("Nice"))&","&Point&","&CInt(Page)
 	rs.Open SQL_Text,Conn,3,1
 		
 	Max_Page = 1

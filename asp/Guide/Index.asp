@@ -40,6 +40,7 @@ body {
 　　※ <a href="/BBS/Title.asp?Id=177" target="_blank" class="High">扫雷新手上路</a>　作者: <A class=Text href="/Player/Show.asp?Id=433">门世运</A><br>
 　　※ <a href="/BBS/Title.asp?Id=227" target="_blank" class="High">扫雷术语介绍</a>　作者: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">张砷镓</a><br>
 　　※ <a href="/BBS/Title.asp?Id=362" target="_blank" class="High">扫雷定式及其变化</a>　作者: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">张砷镓</a><br>
+　　※ <a href="/BBS/Title.asp?Id=8243" target="_blank" class="High">关于数字1-7周围8格中雷的分布的各种形状</a>　作者: <a href="/Player/Show.asp?Id=2747" target="_blank" class="Text">杨萧杨</a><br>
 　　※ <a href="/BBS/Title.asp?Id=1005" target="_blank" class="High">扫雷游戏的起源</a>　作者: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">张砷镓</a><br>
 <span class="Sign">　【中级进阶】</span><br>
 　　※ <a href="/BBS/Title.asp?Id=187" target="_blank" class="High">猜雷的一些心得</a>　作者: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">张砷镓</a><br>
@@ -53,10 +54,15 @@ body {
 <span class="Sign">　【综合教程】</span><br>
 　　※ <a href="/BBS/Title.asp?Id=92" target="_blank" class="High">扫雷基本经验</a>　作者: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">张砷镓</a><br>
 　　※ <a href="/BBS/Title.asp?Id=285" target="_blank" class="High">小谈盲扫与标雷</a>　作者: <a href="/Player/Show.asp?Id=32" target="_blank" class="Text">李峰</a><br>
-　　※ <a href="/BBS/Title.asp?Id=333" target="_blank" class="High">扫雷游戏前热身之我见</a><span class="Counter">&nbsp;</span>作者: <a href="/Player/Show.asp?Id=32" target="_blank" class="Text">李峰</a><br>
-　　※ <a href="/BBS/Title.asp?Id=453" target="_blank" class="High">一方谈扫雷07版</a><span class="Counter">&nbsp;</span>作者: <a href="/Player/Show.asp?Id=24" target="_blank" class="Text">田溢昉</a><br>
-　　※ <a href="/BBS/Title.asp?Id=4845" target="_blank" class="High">一方谈扫雷09版</a><span class="Counter">&nbsp;New!</span><span class="Counter">&nbsp;</span>作者: <a href="/Player/Show.asp?Id=24" target="_blank" class="Text">田溢昉</a><br>
+　　※ <a href="/BBS/Title.asp?Id=333" target="_blank" class="High">扫雷游戏前热身之我见</a>　作者: <a href="/Player/Show.asp?Id=32" target="_blank" class="Text">李峰</a><br>
+　　※ <a href="/BBS/Title.asp?Id=453" target="_blank" class="High">一方谈扫雷07版</a>　作者: <a href="/Player/Show.asp?Id=24" target="_blank" class="Text">田溢昉</a><br>
+　　※ <a href="/BBS/Title.asp?Id=4845" target="_blank" class="High">一方谈扫雷09版</a>　作者: <a href="/Player/Show.asp?Id=24" target="_blank" class="Text">田溢昉</a><br>
+　　※ <a href="/BBS/Title.asp?Id=11409" target="_blank" class="High">郭嘉NF经验谈</a>　作者: <a href="/Player/Show.asp?Id=8356" target="_blank" class="Text">郭蔚嘉</a><br>
+　　※ <a href="/BBS/Title.asp?Id=8367" target="_blank" class="High">浅谈隔空判雷及标雷</a>　作者: <a href="/Player/Show.asp?Id=4843" target="_blank" class="Text">周丹</a><br>
 <span class="Sign">　【软件周边】</span><br>
+　　※ <a href="/BBS/Title.asp?Id=11038" target="_blank" class="High">Minesweeper Arbiter使用教程(一)</a>　作者: <a href="/Player/Show.asp?Id=4843" target="_blank" class="Text">周丹</a><br>
+　　※ <a href="/BBS/Title.asp?Id=11039" target="_blank" class="High">Minesweeper Arbiter使用教程(二)</a>　作者: <a href="/Player/Show.asp?Id=4843" target="_blank" class="Text">周丹</a><br>
+　　※ <a href="/BBS/Title.asp?Id=11499" target="_blank" class="High">Minesweeper Arbiter中文插件</a><span class="Counter">&nbsp;New!</span>　作者: <a href="/Player/Show.asp?Id=9672" target="_blank" class="Text">郭锦洋</a><br>
 　　※ <a href="/BBS/Title.asp?Id=1006" target="_blank" class="High">Minesweeper Clone 0.97 使用说明</a>　作者: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">张砷镓</a><br>
 　　※ <a href="/BBS/Title.asp?Id=1007" target="_blank" class="High">Minesweeper Clone 0.97 常见问题</a>　作者: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">张砷镓</a><br>
 　　※ <a href="/BBS/Title.asp?Id=115" target="_blank" class="High">Minesweeper Clone 0.97 自动录像教程</a>　作者: <a href="/Player/Show.asp?Id=124" target="_blank" class="Text">吴梦熊</a><br>
@@ -65,7 +71,7 @@ body {
 　　※ <a href="/BBS/Title.asp?Id=283" target="_blank" class="High">将分辨率调成640x480的方法</a>　作者: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">张砷镓</a><br>
 　　※ <a href="/BBS/Title.asp?Id=385" target="_blank" class="High">关于调节鼠标速度</a>　作者: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">张砷镓</a><br>
 　　※ <a href="/BBS/Title.asp?Id=1082" target="_blank" class="High">怎样调节适合自己的鼠标灵敏度</a>　作者: <a href="/Player/Show.asp?Id=32" target="_blank" class="Text">李峰</a><br>
-　　※ <a href="/BBS/Title.asp?Id=2294" target="_blank" class="High">扫雷世界排行榜简史(2008.5.25)</a><span class="Counter">&nbsp;New!</span>　作者: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">张砷镓</a></td>
+　　※ <a href="/BBS/Title.asp?Id=2294" target="_blank" class="High">扫雷世界排行榜简史(2008.5.25)</a>　作者: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">张砷镓</a></td>
 		  </tr>
 		</table>
 	<table width="604" border="0" cellpadding="0" cellspacing="0">

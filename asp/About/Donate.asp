@@ -35,6 +35,7 @@ body {
 				<tr>
 				  <td class="Text">
 <p>本站一直由站长张砷镓进行独立维护。希望有经济能力的雷友对本站进行赞助，使本站能维持运行，并不断发展。</p>
+<p>支付宝帐号：<span class="Sign">137516@qq.com</span></p>
 <span class="Title">【赞助用途】</span>
 <p>
 1、服务器租赁及域名等基本费用<br>
@@ -44,9 +45,10 @@ body {
 
 <span class="Title">【注意事项】</span>
 <p>
-1、赞助的原则是量力而行！<br>
-2、请在付款说明中注明“扫雷网”，否则款项将流失，无法计入赞助。<br>
-3、接受匿名赞助，但如果在付款说明中提供扫雷网用户ID，则日后本站推出收费项目（如VIP会员）时，将对该用户ID充值对应的金额。
+1、赞助应在不影响生活质量的情况下，量力而行。建议在校学生在工作后再进行赞助！<br>
+2、请在付款说明中注明“扫雷网+用户ID”（如：<span class="Sign">扫雷网 54</span>），否则款项将流失，无法计入赞助。<br>
+3、日后本站推出收费项目（如VIP会员）时，将对赞助用户充值对应的金额，如果不填写ID则视为匿名赞助，放弃日后等额充值的权利。<br>
+4、请不要将赞助金额发布在论坛或QQ群中，如需核实款项请和站长张砷镓联系。
 </p>
 </td>
 				</tr>
@@ -55,7 +57,7 @@ body {
 				  <table width="406" border="0" cellspacing="0" cellpadding="0">
 					  <tr>
 						<td width="161">
-							<table width="150" height="30" border="0" align="right" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="window.open('https://me.alipay.com/zhangshenjia')">
+							<table width="150" height="30" border="0" align="right" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="window.open('https://www.alipay.com')">
 								<tr>
 									<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';"><img src="/Models/Images/alipay.jpg" style="vertical-align:middle"/> <span class="Sign">去支付宝付款</span></td>
 								</tr>
