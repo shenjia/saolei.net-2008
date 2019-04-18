@@ -146,29 +146,6 @@ Select Case Result
 						%>
 						<br>
 						上传<%If DateDiff("d",Video_Time,Now())>30 Then%><%=DateDiff("m",Video_Time,Now())%>个月<%Else%><%=DateDiff("d",Video_Time,Now())%>天<%End If%>来，共有&nbsp;<span class="Title"><%=Video_Click%></span>&nbsp;人点击，评论&nbsp;<span class="Title"><%=Video_Comment%></span>&nbsp;条 <br>
-		<table width="250" border="0" cellpadding="0" cellspacing="0">
-		  <tr height="5">
-			<td></td>
-		  </tr>
-		</table>
-<script type="text/JavaScript"> 
-alimama_pid="mm_11936678_1495783_3850206"; 
-alimama_titlecolor="FFFFFF"; 
-alimama_descolor ="BFBFBF"; 
-alimama_bgcolor="333333"; 
-alimama_bordercolor="333333"; 
-alimama_linkcolor="ffff00"; 
-alimama_bottomcolor="FFFFFF"; 
-alimama_anglesize="0"; 
-alimama_bgpic="0"; 
-alimama_icon="0"; 
-alimama_sizecode="13"; 
-alimama_width=250; 
-alimama_height=60; 
-alimama_type=2; 
-</script> 
-<script src="http://a.alimama.cn/inf.js" type=text/javascript> 
-</script>
 					  </td>
 						<td width="100" valign="top" class="Text">
 						<table border="0" cellspacing="0" cellpadding="0">
@@ -177,11 +154,6 @@ alimama_type=2;
 							<%If Video_Freeze Then
 								Call Button("为什么冻结?",100,40,"location='/Help/Freeze.asp';",1)
 							Else
-								' If Session("Player_Id") <> "" Then
-								' 	Act = "location='"&Video_Path&"';Comment_Form.Comment_Text.select();"
-								' Else
-								' 	Act = "location='"&Video_Path&"';"
-								' End If
 								If Session("Player_Id") <> "" Then
 									Act = "loadVideo('"&Video_Path&"');"
 								Else
@@ -211,8 +183,6 @@ alimama_type=2;
 								Else
 									If Video_Player = Session("Player_Id") Then
 										Call Button("删除录像",100,40,"Action.location='Action/Del_Action.asp?Id="&Video_Id&"';",0)
-									Else
-										Call Button("怎么看录像?",100,60,"location='/Help/Video.asp';",1)
 									End If
 								End If
 							Else
@@ -223,8 +193,7 @@ alimama_type=2;
 										  <td align="center" bgcolor="#555555" class="Sign">冻结录像</td>
 										</tr>
 									</table>
-									<%Else
-										Call Button("怎么看录像?",100,60,"location='/Help/Video.asp';",1)
+									<%
 									End If
 								Else
 									If Session("Player_IsMaster") Then
@@ -252,7 +221,7 @@ alimama_type=2;
 				<form name="Comment_Form" action="Action/Comment_Add_Action.asp" method="post" target="Action">
 					<tr>
 					  <td height="30" valign="middle" class="Text">
-					  <input name="Comment_Text" type="text" class="input-no" size="48" maxlength="500" value="<%=Video_Comment_Text%>">
+					  <input name="Comment_Text" type="text" class="input-no" size="48" maxlength="500" value="<%=Video_Comment_Text%>" style="width:270px">
 					  <input name="Comment_Video" type="hidden" value="<%=Video_Id%>">
 					  </td>
 					  <td width="100" rowspan="2" valign="top" class="Text">
