@@ -35,10 +35,10 @@ body {
 				<tr>
 					<td colspan="2" class="Text">
 						<span class="Sign">If you are not Chinese , Please don't register to this site. </span><br>
-						1、<span class="High"><strong>本网站需要用</strong></span><span class="Signest"><strong>真实姓名</strong></span><span class="High"><strong>注册。</strong></span><br>
+						1、<span class="High"><strong>必须使用</strong></span><span class="Signest"><strong>真实姓名</strong></span><span class="High"><strong>注册，每人只能注册一个用户。</strong></span><br>
 						2、<span class="High"><strong>未用实名注册者所上传录象，一律不审核通过。</strong></span><br>
 						3、如发现注册信息不实，管理员有权封停或删除该用户。<br>
-						4、本网站只接受 <a href="/Software/Index.asp" target="_blank" class="High"><strong>Minesweeper Clone</strong></a> 录制的 <span class="High"><strong>mvf</strong></span> 格式录象。 <br>
+						4、本网站只接受 <a href="/Download/Index.asp" target="_blank" class="High"><strong>Minesweeper Arbiter</strong></a> 录制的 <span class="High"><strong>avf</strong></span> 格式录象。 <br>
 						5、录象上传后需经管理员审核后方可生效。<br>
 						6、如发现用户伪造录象，将立刻删除该用户所有信息。
 					</td>

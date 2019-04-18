@@ -103,6 +103,7 @@ Sub Check_Input()
 
 	Message = "No"
 	
+        If CheckArray(Player_Areas, Player_Area) Then Message = "您的[地区]信息是非法的!"
 	If Check_Str(Player_Name_Net) Then Message = "您在[网名]中输入了非法字符!"
 	If Player_Password <> Player_Password_Confirm Then Message = "两次输入的密码不一致!"
 	If Check_Str(Player_Password_Confirm) Then Message = "您在[重复密码]中输入了非法字符!"

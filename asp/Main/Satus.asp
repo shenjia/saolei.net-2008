@@ -83,7 +83,7 @@ body {
 	雷界排行人数：<span class="Signest"><%=Rank_Number%></span>&nbsp;位<br>
 	雷界众生总数：<span class="Title"><%=Player_Number%></span>&nbsp;位<br>
 	雷界本月新人：<span class="Signest"><%=Rank_Month_Number%></span>&nbsp;位<br>
-	上传录象总数：<span class="Title"><%=Video_Number%></span>&nbsp;个<br>
+	上传录像总数：<span class="Title"><%=Video_Number%></span>&nbsp;个<br>
 	论坛主题总数：<span class="Title"><%=Title_Number%></span>&nbsp;篇<br>
 	雷界人气统计：<span class="Title"><%=Counter%></span>&nbsp;次	<br>
 	</td>

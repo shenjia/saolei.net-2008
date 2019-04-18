@@ -56,7 +56,7 @@ body {
 性　　别：
 <select name="Player_Sex" class="input-no" onfocus="Show('For_Player_Sex')" onBlur="Hide('For_Player_Sex')">
   <option> </option>
-  <option value="1">男</option>
+  <option value="1" selected>男</option>
   <option value="0">女</option>
 </select>
 <span id="For_Player_Sex" class="High" style="display: none">&nbsp;※注册后不能更改</span> <br>

@@ -70,7 +70,7 @@ If Message = "No" Then
 	
 		Case "Register_OK"
 		
-			Set fso = CreateObject("Scripting.FileSystemObjectxxx")
+			Set fso = CreateObject("Scripting.FileSystemObject")
 		
 			fso.CreateFolder(Server.MapPath("/Video/Mvf/"&Player_Id))
 		

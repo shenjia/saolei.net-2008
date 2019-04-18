@@ -87,7 +87,7 @@ body {
     <td class="Text">
 	<span class="Sign"><%=Player_Name_Chinese%></span>(<%=Player_Name_English%>)　<span class="Title"><%=Player_Area%></span><span class="Counter"><%=Player_Sex_Text%></span>&nbsp;
 	<%If Player_Year > 0 Then%><span class="Title"><%=Player_Year%></span>年<span class="Title"><%=Player_Month%></span>月生<%End If%><br>
-	网名：<%=Player_Name_Net%>　ＱＱ：<%=Player_QQ%><br>
+	网名：<%=NoHtml(Player_Name_Net)%>　ＱＱ：<%=NoHtml(Player_QQ)%><br>
 	Email：<span class="Sign"><%=NoHtml(Player_Email)%></span><br>
 	鼠标：<span class="Title"><%=NoHtml(Player_Mouse)%></span><br>
 	鼠标垫：<span class="Title"><%=NoHtml(Player_Pad)%></span><br>

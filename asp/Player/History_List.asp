@@ -6,6 +6,7 @@
 %>
 <!--#include virtual="/Models/Common/Const.asp"-->
 <!--#include virtual="/Models/Common/ConnDB.asp"-->
+<!--#include virtual="/Models/Include/NoHtml.asp"-->
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
@@ -49,7 +50,7 @@ body {
 	
 		Do While Not rs.Eof
 			%><tr><td width="28%" class="td" valign="top" nowrap><div class="Title"><%=Year(rs("History_Time"))%>年<%=Month(rs("History_Time"))%>月</div></td>
-			<td width="72%" class="td" valign="top"><div class="Text"><%=Replace(rs("History_Text"),vbcrlf,"<br>")%></div><span class="Text">
+			<td width="72%" class="td" valign="top"><div class="Text"><%=NoHtml(Replace(rs("History_Text"),vbcrlf,"<br>"))%></div><span class="Text">
 			<%If History_IsMine Or Session("Player_IsMaster") Then%><span class="Text">[<a href="History_Edit.asp?Id=<%=rs("History_Id")%>" class="High">编辑</a>]　<%End If%>
 			<%If History_IsMine Or Session("Player_IsMaster") Then%><span class="Text">[<a href="javascript:;" onClick="if(confirm('确定要删除此条历程？')) Action.location='Action/History_Del_Action.asp?Id=<%=rs("History_Id")%>';" class="High">删除</a>]</span><%End If%>
 			</td></tr><%

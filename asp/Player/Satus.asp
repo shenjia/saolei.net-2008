@@ -56,9 +56,16 @@ Set cmd = Nothing
 
 Call End_Conn()
 
+If isNull(Player_Int_Score) Then Player_Int_Score = 999.99
+If isNull(Player_Exp_Score) Then Player_Exp_Score = 999.99
+If isNull(Player_Sum_Score) Then Player_Sum_Score = 999.99
 If Player_Int_Score = 999.99 Then Best_Int_Score = 0
 If Player_Exp_Score = 999.99 Then Best_Exp_Score = 0
 If Player_Sum_Score = 999.99 Then Best_Sum_Score = 0
+If isNull(Player_Beg_3BVS) Then Player_Beg_3BVS = 0
+If isNull(Player_Int_3BVS) Then Player_Int_3BVS = 0
+If isNull(Player_Exp_3BVS) Then Player_Exp_3BVS = 0
+If isNull(Player_Sum_3BVS) Then Player_Sum_3BVS = 0
 %>
 <html>
 <head>

@@ -39,11 +39,10 @@ body {
 					  </span>　<img src="/Models/Images/Common/Sign1.GIF" width="161" height="71" border="1" style="border-color: #cccccc "><br>  
 					  					  　录像标识文字将出现在您每个录像的下方，是<span class="Sign">录像属于您的唯一证据</span>。<span class="Title"><br>
 						怎样设置录像标识文字？<br>
-                                                                        </span>　请先下载 <a href="/Download/Minesweeper_Clone_0.97.exe" class="Sign">Minesweeper Clone 0.97</a> 并安装。<br>
-　安装完后运行进入游戏，如果遇到问题，<a href="/Help/Question.asp" class="Sign">请点这里</a>。<span class="Title"><br>
-</span> 　进入游戏后按 <span class="Highest">F5</span> ， 可进入设置界面。<br>
-　在 <span class="Sign">Auto recording</span> 选项卡最下面可设置 <span class="Sign">Text for videos</span>，用以标识用户身份，即录像标识文字。<br>　
-<img src="/Models/Images/Common/Sign2.GIF" width="409" height="27" border="1" style="border-color: #cccccc ">
+                                                                        </span>　请先下载 <a href="/Download/Arbiter_0.52.3.zip" class="Sign">Minesweeper Arbiter</a> 并安装。<br>
+　安装完后运行进入游戏，如果遇到问题，请<a href="/BBS/Index.asp" target="_blank" class="Sign">到论坛提问</a>。<span class="Title"><br>
+</span> 　进入游戏后按 <span class="Highest">F5</span> ， 可进入设置界面，请设置专属的录像标识文字，并选择国家。<br>
+<img src="/Models/Images/arbiter_setting.png" width="356" height="73" border="1" style="border-color: #cccccc ">
 <br>
 <span class="High">　录像标识文字只能使用英文</span>，推荐使用姓名拼音附加地区拼音，例如：<span class="Signest">Wang Wei (Shan Xi)</span> 。 <br>
 　如果您注册时不慎填错了录像标识文字，可与管理员联系进行更改。<br>
