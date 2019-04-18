@@ -303,6 +303,7 @@ Container.prototype.replay_video=function(){
 }
 
 Container.prototype.reset_mine=function(){
+	document.getElementById("mark").getElementsByTagName("span")[0].innerHTML='UPK mode';
 	if(left_count!=0||gameover==true){
 		if(document.getElementById("mouse_point")){
 			$("div#mouse_point").remove();
