@@ -12,7 +12,7 @@ If Session("Player_Id")<>"" Then
 <%End If%>
 <table width="910" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
-    <td width="215" height="60" align="center"><img src="/Models/Images/Common/Logo.gif" width="185" height="55"></td>
+    <td width="215" height="60" align="center"><a href="/Main/Index.asp"><img src="/Models/Images/Common/Logo.gif" width="185" height="55"></a></td>
     <td width="695" align="right" class="High">
 	<%If Session("Player_Id")="" Then
 		If Request.Cookies("Saolei.net")("Player_Name_Chinese") <> "" Then%>欢迎您, <%=Request.Cookies("Saolei.net")("Player_Name_Chinese")%> !　 <%End If%><a href="javascript:;" onClick="Window('/Player/Login.asp');" class="Sign">登录</a> <span class="Signest">[F2]</span>　|　<a href="javascript:;" onClick="Window('/Player/Register.asp');" class="High">注册</a>　|　<a href="javascript:;" onClick="Window('/Player/Password.asp');" class="High">找回密码</a>　|　<a href="javascript:;" onClick="Window('/Download/Index.asp');" class="High">软件下载</a>　|　<a href="javascript:;" onClick="Window('/History/2008.asp');" class="High">更新历史</a>　|　<a href="javascript:;" onClick="Window('/About/Index.asp');" class="High">关于本站</a>　|　<a href="javascript:;" onClick="Window('/Team/Index.asp');" class="Sign">管理团队</a>
