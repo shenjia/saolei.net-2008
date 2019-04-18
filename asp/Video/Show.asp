@@ -154,11 +154,6 @@ Select Case Result
 							<%If Video_Freeze Then
 								Call Button("为什么冻结?",100,40,"location='/Help/Freeze.asp';",1)
 							Else
-								' If Session("Player_Id") <> "" Then
-								' 	Act = "location='"&Video_Path&"';Comment_Form.Comment_Text.select();"
-								' Else
-								' 	Act = "location='"&Video_Path&"';"
-								' End If
 								If Session("Player_Id") <> "" Then
 									Act = "loadVideo('"&Video_Path&"');"
 								Else
@@ -188,16 +183,20 @@ Select Case Result
 								Else
 									If Video_Player = Session("Player_Id") Then
 										Call Button("删除录像",100,40,"Action.location='Action/Del_Action.asp?Id="&Video_Id&"';",0)
+									Else
+										Call Button("怎么看录像?",100,60,"location='/Help/Video.asp';",1)
 									End If
 								End If
 							Else
-								If Video_Check Then
-									If Session("Player_Id") = "1" Or (Session("Player_Id") = Video_CheckBy And DateDiff("d",Video_Check_Time,now())<3) Then
-										%><table width="100" height="40" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="location='/Video/Freeze.asp?Id=<%=Video_Id%>';">
+								If Video_Check Then%>
+									<%If Session("Player_Id") = "1" Or (Session("Player_Id") = Video_CheckBy And DateDiff("d",Video_Check_Time,now())<3) Then%>
+									<table width="100" height="40" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="location='/Video/Freeze.asp?Id=<%=Video_Id%>';">
 										<tr>
 										  <td align="center" bgcolor="#555555" class="Sign">冻结录像</td>
 										</tr>
-										</table><%
+									</table>
+									<%Else
+										Call Button("怎么看录像?",100,60,"location='/Help/Video.asp';",1)
 									End If
 								Else
 									If Session("Player_IsMaster") Then
@@ -229,7 +228,7 @@ Select Case Result
 					  <td width="100" rowspan="2" valign="top" class="Text">
 						<table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="Comment_Form.submit();">
 							<tr>
-							  <td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">我来说两句</td>
+							  <td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" style="width:270px">我来说两句</td>
 							</tr>
 						</table>
 					  </td>
