@@ -15,6 +15,7 @@ Why(6) = "录像无法打开"
 <!--#include virtual="/Player/Check.asp"-->
 <!--#include virtual="/Models/Common/Const.asp"-->
 <!--#include virtual="/Models/Common/ConnDB.asp"-->
+<!--#include virtual="/Models/Include/NoHtml.asp"-->
 <%
 Call Check_Master()
 
@@ -94,8 +95,8 @@ If Check_Result <> "Fail" Then
 			}
 			.tbl {table-layout:fixed}
 			.td {overflow:hidden;}
-			.cls1 { position:absolute; left:50px; top:133px; width:195px; height:18px; z-index:1 }
-			.cls2 { position:absolute; left:25px; top:66px; width:195px; height:18px; z-index:2 }
+			.cls1 { position:absolute; left:50px; top:146px; width:195px; height:18px; z-index:1 }
+			.cls2 { position:absolute; left:25px; top:73px; width:195px; height:18px; z-index:2 }
 			-->
 			</style>
 			<link href="/Models/Css/2008.css" rel="stylesheet" type="text/css">
@@ -120,7 +121,9 @@ If Check_Result <> "Fail" Then
 							<a href="/Player/Show.asp?Id=<%=Video_Player%>" class="High" title="点击查看个人信息"><%=Video_Player_Name%></a>
 							<span onClick="location='/Help/Title.asp';" style="cursor:pointer" class="Title" title="点击查看称号说明"><%=Video_Player_Title%></span><span class="Counter"><%=Player_Sex_Text%></span>
 							上传于<%=FormatDateTime(Video_Time,1)%><br>
-							录像标识：<span class="Sign" title="<%=Video_Player_Text%>"><%=Video_Player_Text%></span></div>
+							录像标识：<span class="Sign" title="<%=Video_Player_Text%>"><%=NoHtml(Video_Player_Text)%></span><br>
+							Arbiter版本：<span class="Sign"><%=getVersion(Video_Path)%></span>
+						</div>
 			
 							
 						  </td>
@@ -215,4 +218,21 @@ If Check_Result <> "Fail" Then
 	End Select		
 
 End If
+
+function getVersion(filename) 
+	dim fso,f,temparray,tempcnt 
+    set fso = server.CreateObject("scripting.filesystemobject") 
+    if not fso.fileExists(server.mappath(filename)) then exit function 
+    set f = fso.opentextfile(server.mappath(filename),1) 
+    if not f.AtEndofStream then 
+        tempcnt = f.readall 
+        f.close 
+        set f = nothing 
+        if CStr(Left(tempcnt,1)) = "1" then
+            getVersion = "0.49.X"
+        else
+            getVersion = Left(Right(tempcnt,51),6)
+        end if 
+    end if
+end function 
 %>

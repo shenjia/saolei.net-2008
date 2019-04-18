@@ -8,6 +8,7 @@ Point = 5
 <!--#include virtual="/Models/Common/Const.asp"-->
 <!--#include virtual="/Models/Common/ConnDB.asp"-->
 <!--#include virtual="/Models/Include/ShowHide.asp"-->
+<!--#include virtual="/Models/Include/NoHtml.asp"-->
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
@@ -71,7 +72,7 @@ body {
 		Do While Not rs.Eof
 			%><span class="Texts">[</span><span onClick="top.Window('/Help/Title.asp');" class="<%=rs("Comment_Player_Title")%>" title="点击查看称号说明"><%=rs("Comment_Player_Title")%></span><span class="Texts">]</span> <a href="javascript:;" onClick="top.Window('/Player/Show.asp?Id=<%=rs("Comment_Player")%>');" title="点击查看个人信息"class="High"><%=rs("Comment_Player_Name")%></a> 于<%=FormatDateTime(rs("Comment_Time"),1)%>发表评论：
 			<%If Video_Owner = Session("Player_Id") Or Session("Player_IsMaster") Then%>[<a href="Action/Comment_Del_Action.asp?Id=<%=rs("Comment_Id")%>" target="Action" class="High">删除</a>]<%End If%>
-			<br><span class="Text"><%=rs("Comment_Text")%></span><br><%
+			<br><span class="Text"><%=NoHtml(rs("Comment_Text"))%></span><br><%
 			rs.MoveNext
 		Loop		
 		

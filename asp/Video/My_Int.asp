@@ -55,6 +55,10 @@ body {
 		Case "Comment"
 			OrderBy = "Video_Comment"
 			Order = 1
+		Case Else
+			Session("Order") = "Time"
+			OrderBy = "Video_Time"
+			Order = 1
 	End Select
 	
 	Call Start_Conn()
