@@ -52,6 +52,11 @@ body {
 		Case "Comment"
 			OrderBy = "Video_Comment"
 			Order = 1
+		Case Else
+			Session("Order") = "Time"
+			OrderBy = "Video_Time"
+			Order = 1
+			
 	End Select
 	
 	Call Start_Conn()
@@ -131,7 +136,7 @@ body {
 	%></td>
   </tr>
 </table>
-<table width="475" cellpadding="0" cellspacing="0">
+<table width="575" cellpadding="0" cellspacing="0">
 <form name="Page_Form" method="get">
 <tr><td align="center" class="Text" height="30">
 	<%

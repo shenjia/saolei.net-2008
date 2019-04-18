@@ -1,4 +1,3 @@
-
 <%
 '------------------------
 'Code:Zhang Shen Jia
@@ -59,8 +58,8 @@ body {
 		<td bgcolor="#444444">
 			<table width="380" border="0" cellspacing="0" cellpadding="0">
 				<tr bgcolor="#555555">
-					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">銆�璇烽�夋嫨褰曞儚绾у埆</td>
-					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">脳</td>
+					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">　请选择录像级别</td>
+					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">×</td>
 			</tr>
 			</table>
 			<table width="380" border="0" cellspacing="10" cellpadding="0">
@@ -68,12 +67,12 @@ body {
 				<td id="Beg" width="100" align="left" valign="middle" class="Text">
 				<table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="Action.location='Action/Upload_Check_Action.asp?Model=Beg';">
 				<tr>
-				<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">鍒濈骇褰曞儚</td>
+				<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">初级录像</td>
 				</tr>
 				</table>
 				</td>
 				<td width="208" align="left" valign="middle">
-				<%Call Bar("Beg",Video_Number_Beg,500,208,20)%>
+				<%Call Bar("Beg",Video_Number_Beg,1500,208,20)%>
 				</td>
 				<td id="Beg_Number" width="15" align="left" valign="middle" class="Counters"><%=Video_Number_Beg%></td>
 			  </tr>
@@ -81,12 +80,12 @@ body {
 				<td id="Int" width="100" align="left" valign="middle" class="Text">
 				<table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="Action.location='Action/Upload_Check_Action.asp?Model=Int';">
 				<tr>
-				<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">涓骇褰曞儚</td>
+				<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">中级录像</td>
 				</tr>
 				</table>
 				</td>
 				<td width="208" align="left" valign="middle">
-				<%Call Bar("Int",Video_Number_Int,500,208,20)%>
+				<%Call Bar("Int",Video_Number_Int,1500,208,20)%>
 				</td>
 				<td id="Int_Number" width="15" align="left" valign="middle" class="Counters"><%=Video_Number_Int%></td>
 			  </tr>
@@ -94,12 +93,12 @@ body {
 				<td id="Exp" width="100" align="left" valign="middle" class="Text">
 				<table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="Action.location='Action/Upload_Check_Action.asp?Model=Exp';">
 				<tr>
-				<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">楂樼骇褰曞儚</td>
+				<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">高级录像</td>
 				</tr>
 				</table>
 				</td>
 				<td width="208" align="left" valign="middle">
-				<%Call Bar("Exp",Video_Number_Exp,500,208,20)%>
+				<%Call Bar("Exp",Video_Number_Exp,1500,208,20)%>
 				</td>
 				<td id="Exp_Number" width="15" align="left" valign="middle" class="Counters"><%=Video_Number_Exp%></td>
 			  </tr>

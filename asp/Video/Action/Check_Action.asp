@@ -56,7 +56,7 @@ If Message = "No" And Check_Result <> "Fail" Then
 	
 		Case "Check_Fail"
 		
-			Message = "此录象不存在!"
+			Message = "此录象不存在，或被其他管理员审核过了"
 			Act="top.location=top.location"
 			Call Error()
 		

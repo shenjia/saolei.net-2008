@@ -72,14 +72,15 @@ If Check_Result <> "Fail" Then
 				<table width="360" border="0" cellspacing="10" cellpadding="0">
 					<tr>
 						<td class="Text">
-						请选择 <span class="Title">mvf</span> 录像文件：
+						请选择 <span class="Title">avf</span> 录像文件：
 						<input name="Video" type="File" class="input-no" size="20" maxlength="100"><br>
 						请输入录像３ＢＶ值：
 						<input name="Video_3BV" type="text" class="input-no" size="3" maxlength="3" onFocus="Show('For_Video_3BV')" onBlur="Hide_3BV()">
 						<span id="For_Video_3BV" style="display: none">&nbsp;<a href="/Help/Upload_3BV.asp" class="Sign">怎样查看录像3BV值？</a></span> <br>
 						请输入录像时间成绩：
 						  <input name="Video_Score" type="text" class="input-no" size="6" maxlength="6" onFocus="Show('For_Video_Score')" onBlur="Hide('For_Video_Score')"><input type="checkbox" name="Video_IsNoFrag" value="1">&nbsp;盲扫
-						  <span id="For_Video_Score" class="High" style="display: none">&nbsp;※精确到两位小数</span><br>
+						  <span id="For_Video_Score" class="High" style="display: none">※精确到两位小数</span><br>
+※为和mvf录像成绩保持兼容，avf录像的成绩会自动加上1秒
 						
 						<input name="Video_Model" type="hidden" value="<%=Video_Model%>">
 						<input name="Video_Id" type="hidden" value="<%=Video_Id%>">

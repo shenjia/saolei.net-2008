@@ -8,6 +8,7 @@ Dim Video_Model
 Dim Video_IsNoFrag
 Dim Video_Score
 Dim Video_3BV
+Dim Video_Type
 %>
 <!--#include virtual="/Player/Check.asp"-->
 <!--#include virtual="/Models/Common/Const.asp"-->
@@ -25,9 +26,18 @@ Video_Model = upload.form("Video_Model")
 Video_IsNoFrag = upload.form("Video_IsNoFrag")
 Video_Score = upload.form("Video_Score")
 Video_3BV = upload.form("Video_3BV")
+Video_Type = LCase(Right(file.fileName,3))
 
 Session("Upload_Video_Model") = Video_Model
 Session("Upload_Video_Score") = Video_Score
+
+If Video_Type <> "avf" And Video_Type <> "mvf" Then
+	Video_Type = "avf"
+End If
+
+If Video_Type = "avf" Then
+	Video_Score = Video_Score + 1
+End If
 
 If Video_IsNoFrag = "1" Then 
 	Video_IsNoFrag = 1
@@ -41,7 +51,7 @@ Video_3BV = CInt(Video_3BV)
 
 If Message = "No" And Check_Result <> "Fail" Then
 
-	Video_Path = "/Video/Mvf/"&Session("Player_Id")&"/"&Session("Player_Name_English")&"_"&Video_Model&"_"&Video_Score&"(3bv"&Video_3BV&").mvf"
+	Video_Path = "/Video/Mvf/"&Session("Player_Id")&"/"&Session("Player_Name_English")&"_"&Video_Model&"_"&Video_Score&"(3bv"&Video_3BV&")."&Video_Type
 	Video_Path = Replace(Video_Path,vbcr,"")
 	Video_Path = Replace(Video_Path,vblf,"")
 	'response.Write(Server.mappath(Video_Path))
@@ -78,7 +88,10 @@ If Message = "No" And Check_Result <> "Fail" Then
 	
 		Case "Upload_OK"
 
-			Video_Path = "/Video/Mvf/"&Session("Player_Id")&"/"&Session("Player_Name_English")&"_"&Video_Model&"_"&Video_Score&"(3bv"&Video_3BV&").mvf"
+			Set fso = CreateObject("Scripting.FileSystemObject")
+			If Not fso.FolderExists(Server.MapPath("/Video/Mvf/"&Session("Player_Id"))) Then fso.CreateFolder(Server.MapPath("/Video/Mvf/"&Session("Player_Id")))
+
+			Video_Path = "/Video/Mvf/"&Session("Player_Id")&"/"&Session("Player_Name_English")&"_"&Video_Model&"_"&Video_Score&"(3bv"&Video_3BV&")."&Video_Type
 			file.SaveAs Server.mappath(Video_Path)
 			set file=nothing
 			set upload=nothing	
@@ -106,7 +119,7 @@ If Message = "No" And Check_Result <> "Fail" Then
 			Call End_Conn()
 			
 			If Result = "Change_OK" Then
-				Set fso = CreateObject("Scripting.FileSystemObjectxxx")
+				Set fso = CreateObject("Scripting.FileSystemObject")
 				fso.DeleteFile(Server.MapPath(Video_Path))
 			End If
 
@@ -147,7 +160,8 @@ Sub Check_Input()
 		If ( Video_Model = "Beg" And ( Video_3BV < 2  Or Video_3BV > 54 ) ) Or ( Video_Model = "Int" And ( Video_3BV < 25 Or Video_3BV > 216 ) ) Or ( Video_Model = "Exp" And ( Video_3BV < 95 Or Video_3BV > 381 ) )  Then Message = "您输入的[录像3BV值]不合法!"
 	End If
 	If Video_3BV = "" Then Message = "请输入[录像3BV值]!"
-	if file.fileSize=0 Then Message = "请选择要上传的mvf录象文件!"
+	if file.fileSize=0 Then Message = "请选择要上传的录象文件!"
+	If Video_Type = "mvf" Then Message = "很抱歉，本站已停止对mvf录像的支持！"
 
 	If Message <> "No" Then
 		Act="No"

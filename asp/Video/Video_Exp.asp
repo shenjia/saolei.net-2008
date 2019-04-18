@@ -60,11 +60,15 @@ body {
 		Case "Comment"
 			OrderBy = "Video_Comment"
 			Order = 1
+		Case Else
+			Session("Order") = "Time"
+			OrderBy = "Video_Time"
+			Order = 1
 	End Select
 	
 	Call Start_Conn()
 	
-	SQL_Text = "Video_Exp '"&OrderBy&"','"&BV&"',"&Order&","&Point&","&CInt(Page)
+	SQL_Text = "Video_Exp '"&OrderBy&"','"&CINt(BV)&"',"&Order&","&Point&","&CInt(Page)
 	rs.Open SQL_Text,Conn,3,1
 		
 	Max_Page = 1
@@ -138,7 +142,7 @@ body {
 	End If
 	%></td>
   </tr>
-</table><table width="475" cellpadding="0" cellspacing="0">
+</table><table width="575" cellpadding="0" cellspacing="0">
 <form name="Page_Form" method="get">
 <tr><td align="center" class="Text" height="30">
 	<%
