@@ -16,8 +16,25 @@ function Window_Load()
 	parent.document.getElementById('Window_Frame').height=theHeight;
 	parent.document.getElementById('Window_Box').width=theWidth;
 	parent.document.getElementById('Window_Box').height=theHeight;
-	parent.document.getElementById('Window_Box').style.top=parent.document.body.scrollTop+(screen.height-theHeight-168)/2;
-	parent.document.getElementById('Window_Box').style.left=(screen.width-theWidth)/2;
+
+	// alert('screen.height: '+screen.height+'\n'+'screen.width: '+screen.width+'\n'+'body.clientHeight: '+parent.document.body.clientHeight+'\n'+'body.clientWidth: '+parent.document.body.clientWidth)
+
+	//原代码
+	// parent.document.getElementById('Window_Box').style.top=parent.document.body.scrollTop+(screen.height-theHeight-168)/2;
+	// parent.document.getElementById('Window_Box').style.left=(screen.width-theWidth)/2;
+
+	//修改后代码
+	clientHeight=parent.document.body.clientHeight<1000?window.parent.document.body.clientHeight:1000;
+	clientWidth=parent.document.body.clientWidth;
+	parent.document.getElementById('Window_Box').style.top=parent.document.body.scrollTop+(clientHeight-theHeight-100)/2;
+	parent.document.getElementById('Window_Box').style.left=(clientWidth-theWidth)/2;
+	//防止出现top与left属性为负值
+	if(parseInt(parent.document.getElementById('Window_Box').style.top)<0){
+		parent.document.getElementById('Window_Box').style.top=0;
+	}
+	if(parseInt(parent.document.getElementById('Window_Box').style.left)<0){
+		parent.document.getElementById('Window_Box').style.left=0;
+	}
 }
 var over=false,down=false,divleft,divtop;
 function move(){
