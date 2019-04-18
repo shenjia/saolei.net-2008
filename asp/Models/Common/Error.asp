@@ -82,6 +82,7 @@ Public Sub Error()
 			%><script language=JavaScript><%=Act%></script><%
 	
 	End Select
+        Response.End()
 	
 End Sub
 %>

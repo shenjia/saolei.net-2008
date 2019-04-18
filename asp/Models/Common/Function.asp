@@ -3,6 +3,16 @@
 'Code:Zhang Shen Jia
 'Date:2007-12-11
 '------------------------
+
+Function CheckArray(Array, String)
+  CheckArray=True
+  For i=0 to ubound(Array)
+    If String=Array(i) Then
+      CheckArray=False
+    End If
+  Next
+End Function
+
 Function Check_Str(Input)
 
 	Output = False
@@ -60,4 +70,32 @@ Function strLength(str)
        end if
        if err.number<>0 then err.clear
 End Function
+
+Function URLDecode(enStr)
+   dim deStr,strSpecial
+   dim c,i,v
+     deStr=""
+     strSpecial="!""#$%&'()*+,.-_/:;<=>?@[\]^`{|}~%"
+     for i=1 to len(enStr)
+       c=Mid(enStr,i,1)
+       if c="%" then
+         v=eval("&h"+Mid(enStr,i+1,2))
+         if inStr(strSpecial,chr(v))>0 then
+           deStr=deStr&chr(v)
+           i=i+2
+         else
+           v=eval("&h"+ Mid(enStr,i+1,2) + Mid(enStr,i+4,2))
+           deStr=deStr & chr(v)
+           i=i+5
+         end if
+       else
+         if c="+" then
+           deStr=deStr&" "
+         else
+           deStr=deStr&c
+         end if
+       end if
+     next
+     URLDecode=deStr
+End function
 %>

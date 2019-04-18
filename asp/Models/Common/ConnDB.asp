@@ -10,6 +10,7 @@ Public Sub Start_Conn()
 
 	On Error Resume Next
 	Set Conn = Server.CreateObject("ADODB.CONNECTION")
+	Conn.ConnectionTimeOut = 2
 	If Err.Number <> 0 Then
 		Err.Clear
 		Set Conn = Nothing
@@ -26,6 +27,7 @@ Public Sub Start_Conn()
 			Conn.CommandTimeout = 1000
 			Conn.Open CONST_DATABASE_CONN
 			If Err.number <> 0 Then
+Response.Write Err.Description
 				Err.Clear
 				Set Conn = Nothing
 				Response.Write "数据库连接失败,请检查数据库是否存在!"
