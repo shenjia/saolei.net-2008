@@ -188,20 +188,16 @@ Select Case Result
 								Else
 									If Video_Player = Session("Player_Id") Then
 										Call Button("É¾³ýÂ¼Ïñ",100,40,"Action.location='Action/Del_Action.asp?Id="&Video_Id&"';",0)
-									Else
-										Call Button("ÔõÃ´¿´Â¼Ïñ?",100,60,"location='/Help/Video.asp';",1)
 									End If
 								End If
 							Else
-								If Video_Check Then%>
-									<%If Session("Player_Id") = "1" Or (Session("Player_Id") = Video_CheckBy And DateDiff("d",Video_Check_Time,now())<3) Then%>
-									<table width="100" height="40" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="location='/Video/Freeze.asp?Id=<%=Video_Id%>';">
+								If Video_Check Then
+									If Session("Player_Id") = "1" Or (Session("Player_Id") = Video_CheckBy And DateDiff("d",Video_Check_Time,now())<3) Then
+										%><table width="100" height="40" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="location='/Video/Freeze.asp?Id=<%=Video_Id%>';">
 										<tr>
 										  <td align="center" bgcolor="#555555" class="Sign">¶³½áÂ¼Ïñ</td>
 										</tr>
-									</table>
-									<%Else
-										Call Button("ÔõÃ´¿´Â¼Ïñ?",100,60,"location='/Help/Video.asp';",1)
+										</table><%
 									End If
 								Else
 									If Session("Player_IsMaster") Then
@@ -209,8 +205,6 @@ Select Case Result
 									Else
 										If Video_Player = Session("Player_Id") Then
 											Call Button("É¾³ýÂ¼Ïñ",100,40,"Action.location='Action/Del_Action.asp?Id="&Video_Id&"';",1)
-										Else
-											Call Button("ÔõÃ´¿´Â¼Ïñ?",100,60,"location='/Help/Video.asp';",1)
 										End If
 									End If
 								End If
