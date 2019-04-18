@@ -10,9 +10,9 @@ var video=new Array();//全部鼠标事件
 var number=0;//字符读取进度
 var file=new Array();
 var fade=500;//淡入淡出时间
+var xmlhttp=null;
 
 function loadVideo(name){
-	var xmlhttp;
 
 	if (window.XMLHttpRequest){
 		//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
@@ -81,6 +81,7 @@ function playAvfVideo(result){
     path=0;
     var size=0;//鼠标事件长度
     var realtime="";
+    var skin="";
     var player="";//玩家标志
 
     if(level==1||level==2||level==3){
@@ -154,38 +155,71 @@ function playAvfVideo(result){
         }//events时间读取完成
         
     	while(number<result.length){
-    		if(result[number++]=="R"&&result[number]=="e"&&result[number+1]=="a"){
-    			//取Realtime前三个字母Rea作为位置判断依据
-    			break;
-    		}
+            if(result.substring(++number,number+10)=="RealTime: "){
+                number+=10;
+                break;
+            }
     	}
 
-        if(result[number]=="e"){
-        	number+=9;
-        	while(result[number]!="S"){
-	        	realtime+=result[number];
-	        	number++;
-	        }//真实时间读取完成
+        while(number<result.length&&result.substring(number,number+6)!="Skin: "){
+            realtime+=result[number];
+            number++;
         }
-        console.log('realtime:'+realtime);
+        console.log('Realtime: '+realtime);
 
-        if(result[number]=="S"){
-        	number+=10;
-        	while(result[number]!="M"){
+        if(result.substring(number,number+6)=="Skin: "){
+            while(number<result.length&&result[number].charCodeAt()!=13){
+                skin+=result[number];
+                number++;
+            }
+            console.log(skin);
+
+        	// number++;//使当前读取进度number位于间隔符后一位
+        	while(++number<result.length&&result[number].charCodeAt()!=13){
 	        	player+=result[number];
-	        	number++;
 	        }//标志读取完成
-        }
-        console.log('player:'+player);
+            console.log('Player: '+player);
 
-        video[0].size=size;
-        video[0].realtime=realtime;
-        video[0].player=player;
-        video[0].level=level;
-        video[0].board=board;
-        // console.log(video);
-        start_avf(video);
-        video_invalid=false;		        
+            for(let index=0;index<player.length;index++){
+                if(player[index].charCodeAt()>128&&xmlhttp!=null){
+                    //扫雷网不需要考虑上传本地录像导致avf数据来源不同，即selectedFile与xmlhttp
+                    let blob=new Blob([xmlhttp.response.slice(number-player.length,number)]);
+                    xmlhttp=null;//为了下一次Avf录像判断用户标识是否含有中文符号并截取Blob
+                    var reader = new FileReader();//这是核心,读取操作就是由它完成.
+                    reader.readAsText(blob,"gb2312");//读取文件的内容,也可以读取文件的URL
+                    reader.onabort = function () {
+                        console.log("读取中断....");
+                    }
+                    reader.onerror = function () {
+                        console.log("读取异常....");
+                    }
+                    reader.onload = function () {
+                        player=this.result;
+                        console.log('Player(GB2312): '+player);
+
+                        video[0].size=size;
+                        video[0].realtime=realtime;
+                        video[0].player=player;
+                        video[0].level=level;
+                        video[0].board=board;
+                        // console.log(video);
+                        start_avf(video);
+                        video_invalid=false;                
+                    }
+                    break;
+                }else if(index==player.length-1){//全部不包含中文字符
+                    video[0].size=size;
+                    video[0].realtime=realtime;
+                    video[0].player=player;
+                    video[0].level=level;
+                    video[0].board=board;
+                    // console.log(video);
+                    start_avf(video);
+                    video_invalid=false;
+                }
+            }
+        }
+
     }
 }
 
@@ -265,11 +299,12 @@ function analyze_video(name,selectedFile){
         }  
         reader.onerror = function () {  
             console.log("读取异常....");  
-        }  
+        }
         reader.onload = function () {
             playAvfVideo(this.result);
         }
     }else if('.mvf'==type){
+        xmlhttp=null;//为了下一次判断用户标识是否含有中文符号并截取Blob
         var reader = new FileReader();//这是核心,读取操作就是由它完成.
         reader.readAsBinaryString(selectedFile);//读取文件的内容,也可以读取文件的URL
         reader.onabort = function () {  
