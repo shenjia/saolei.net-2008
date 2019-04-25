@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>  
-	<title>在线扫雷游戏</title>
+	<title>扫雷录像播放</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
-	<link href="./css/mine.css" rel="stylesheet" type="text/css"/>
+	<link type="text/css" rel="styleSheet"  href="./css/mine.css?v=2019425" />
+
 </head>  
 
 <!-- 屏蔽鼠标拖动、右键菜单、左键选择事件 -->
@@ -220,12 +221,21 @@
 		<img src="image/wrongflag.bmp">
 	</div>
 	
-	<script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="./js/public.js"></script>
+	<!-- <script type="text/javascript" src="./js/jquery-3.3.1.js"></script> -->
+	<!-- <script type="text/javascript" src="./js/jquery-2.0.0.min.js"></script> -->
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
 
-	<script type="text/javascript" src="./js/mine.js?v=20190418"></script>
-	<script type="text/javascript" src="./js/play_avf.js?v=20190418"></script>
+	<script type="text/javascript" src="./js/public.js?v=2019425"></script>
+	<script type="text/javascript" src="./js/mine.js?v=2019425"></script>
+	<script type="text/javascript" src="./js/play_avf.js?v=2019425"></script>
 
+	<!-- <script type="text/javascript">
+		//禁止浏览器缓存
+	    document.write("<script type='text/javascript' src='./js/public.js?random="+Math.random()+"'></s"+"cript>");
+	    document.write("<script type='text/javascript' src='./js/mine.js?random="+Math.random()+"'></s"+"cript>");
+	    document.write("<script type='text/javascript' src='./js/play_avf.js?random="+Math.random()+"'></s"+"cript>");
+	</script>
+ -->
 	<script type="text/javascript">
 
 		function stopPropagation(e){

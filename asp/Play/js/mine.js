@@ -178,11 +178,12 @@ Container.prototype.add_mark=function(){//添加标识
 		document.getElementById("mark_span").appendChild(input);//添加子元素
 		input.focus();//获得焦点
 		input.onblur=function(){//设置newobj失去焦点的事件
-			document.getElementById("mark_span").innerHTML=this.value ? this.value : innerHTML;
+			$('#mark_span').html(this.value ? this.value : innerHTML);
+			$('#mark_span').attr('title',$('#mark_span').html());
 		//判断是否做了修改并使用ajax代码请求服务端将id与修改后的数据提交
   		//当触发时判断newobj的值是否为空，为空则不修改，并返回oldhtml
-  	}
-  }
+  		}
+    }
 	document.getElementById("mark").appendChild(span);//添加子元素
 
 	for(var i=0;i<container.rows*container.columns;i++){//给每个block增加img节点
@@ -303,7 +304,8 @@ Container.prototype.replay_video=function(){
 }
 
 Container.prototype.reset_mine=function(){
-	document.getElementById("mark").getElementsByTagName("span")[0].innerHTML='UPK mode';
+	$('#mark_span').html('UPK mode');
+	$('#mark_span').attr('title',$('#mark_span').html());
 	if(left_count!=0||gameover==true){
 		if(document.getElementById("mouse_point")){
 			$("div#mouse_point").remove();
@@ -608,7 +610,6 @@ Block.prototype.open=function()
 		change_top_image("face","face_cry");
 	}
 	this.isOpen=true;
-	this.win();
 	if(this.bombNumAround==0){
 		var a=new Array();
 		// JavaScript push() 方法
@@ -629,6 +630,7 @@ Block.prototype.open=function()
 			}
 		}
 	}
+	this.win();//放在最后面，防止ces_count满足--条件时未--
 };
 
 Block.prototype.openaround=function()
@@ -667,9 +669,9 @@ Block.prototype.openaround=function()
 };
 
 Block.prototype.around_open=function()
-//跟open（）的区别在于没有进行是否胜利的判断
-//在openaround（）的操作时win（）应该在所有格子遍历完成后进行
-//否则ces_count可能在stop（）之后才完成计数，导致计数错误
+//跟open()的区别在于没有进行是否胜利的判断
+//在openaround()的操作时win()应该在所有格子遍历完成后进行
+//否则ces_count可能在stop()之后才完成计数，导致计数错误
 //没加标识变量判断那是因为只有此处特殊处理，没必要在别的地方多次初始化
 {
 	ces_count++;

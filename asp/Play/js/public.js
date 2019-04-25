@@ -88,6 +88,7 @@ function timer()//计时函数
 	}else if(second>999){
 		stop();
 		lose();
+		change_top_count("time_count",999);
 		document.getElementById('RTime').innerText=999.99;
 	}
 }
@@ -97,7 +98,8 @@ function start_avf(video)//开始函数
 	if(video==0){
 		return false;
 	}
-	document.getElementById("mark").getElementsByTagName("span")[0].innerHTML=video[0].player;
+	$('#mark_span').html(video[0].player);
+	$('#mark_span').attr('title',$('#mark_span').html());
 	gameover=true;
 	size=video[0].size;
 	// for(i=0;i<1;i++){
@@ -644,7 +646,7 @@ function counters_Isls(block,a){//计算islands
 
 function write_counters(){//重写counter
 	counters_3BV();
-	// change_top_count("time_count",parseInt(second)+1);
+	change_top_count("time_count",parseInt(second)+1);
 	document.getElementById('RTime').innerText=(second+millisecond/100).toFixed(2);
 	document.getElementById('Flags').innerText=container.bombNumber-container.minenumber;
 	document.getElementById('Ces').innerText=ces_count+'@'+(ces_count/(second+millisecond/100)).toFixed(2);
