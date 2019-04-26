@@ -95,7 +95,7 @@ function playAvfVideo(result){
     number=5;//字符读取进度，不要放在level定义下面
     var level=charCodeAt(result[number])-2;//级别
 
-    var timestamp="Timestamp:";//时间戳
+    var timestamp="";//时间戳
     var events=new Array();//鼠标事件
     video=new Array();
     path=0;
@@ -114,9 +114,8 @@ function playAvfVideo(result){
         	board[container.columns*(charCodeAt(result[i])-1)+(charCodeAt(result[i+1])-1)]=1;
         	// console.log(charCodeAt(result[i])+' '+charCodeAt(result[i+1]));
         }
-        container.set_viedo_mine(board);//按录像布雷
 
-        while(result[number]!='|'){//时间戳开始标志
+        while(number<result.length&&(result[number-2]!='['||result[number]!='|')){//时间戳开始标志
         	number++;
         	// console.log(number+':'+charCodeAt(result[number]));
         }
@@ -132,12 +131,14 @@ function playAvfVideo(result){
         }
 
         number++;
-        while(result[number]!='|'){//时间戳结束标志
+        while(number<result.length&&result[number]!=']'){//时间戳结束标志
         	timestamp+=result[number];
         	// console.log(number+':'+result[number]);
         	number++;
         }//时间戳读取完成
-        // console.log(timestamp);
+        let array=timestamp.split("|");
+        let last=array[array.length-1];
+        timestamp=array[0];
 
         for(var i=0;i<7;i++){
         	events[i]=0;
@@ -153,6 +154,10 @@ function playAvfVideo(result){
         while(true){	
         	video[size]=new Mouse_event();
         	video[size].mouse=events[0];
+
+            //当鼠标有左键和移动外的事件时判断style为FL，否则为undefined(NF)
+            if(events[0]!=1&&events[0]!=3&&events[0]!=5&&events[0]!=21)video[0].style="FL";
+
         	video[size].rows=parseInt((events[1]*256+events[3])/16+1);
         	video[size].columns=parseInt((events[5]*256+events[7])/16+1);
         	video[size].x=events[1]*256+events[3];
@@ -173,6 +178,24 @@ function playAvfVideo(result){
         	}
         	size++;
         }//events时间读取完成
+
+        //以iframe的src属性判断当前界面是否为录像上传界面
+        if($('#Window_Frame', parent.document).attr('src')==="/Video/Upload.asp"){
+            let inputBv=$('#Window_Frame', parent.document).contents().find("input[name='Video_3BV']")[0];
+            let inputTime=$('#Window_Frame', parent.document).contents().find("input[name='Video_Score']")[0];
+            let inputStyle=$('#Window_Frame', parent.document).contents().find("input[name='Video_IsNoFrag']")[0];
+            inputBv.value=parseInt(last.substring(1,last.lastIndexOf("T")));
+            inputTime.value=Math.round((parseFloat(last.substring(last.lastIndexOf("T")+1))-1)*100)/100;
+            if(video[0].style==="FL"){//默认undefined为NF
+                inputStyle.checked=false;
+            }else{
+                inputStyle.checked=true;
+            }
+            $('#Window_Video', parent.document).fadeOut(0);//防止显示录像播放界面
+            return;
+        }
+
+        container.set_viedo_mine(board);//按录像布雷`
         
     	while(number<result.length){
             if(result.substring(++number,number+10)=="RealTime: "){
@@ -222,9 +245,8 @@ function playAvfVideo(result){
                         video[0].player=player;
                         video[0].level=level;
                         video[0].board=board;
-                        // console.log(video);
                         start_avf(video);
-                        video_invalid=false;                
+                        video_invalid=false;          
                     }
                     break;
                 }else if(index==player.length-1){//全部不包含中文字符
@@ -233,7 +255,6 @@ function playAvfVideo(result){
                     video[0].player=player;
                     video[0].level=level;
                     video[0].board=board;
-                    // console.log(video);
                     start_avf(video);
                     video_invalid=false;
                 }
@@ -292,6 +313,7 @@ function playMvfVideo(result){
     }
 }
 
+//选择本地文件进行录像播放
 function fileImport() {
     //获取读取文件的File对象
     var selectedFile = document.getElementById('files').files[0];
@@ -307,7 +329,7 @@ function fileImport() {
 	    }
 	    analyze_video(name,selectedFile);
 	}else{
-		log("请选择一个录像文件");
+		console.log("请选择一个录像文件");
 	}
 }
 
@@ -318,7 +340,7 @@ function analyze_video(name,selectedFile){
         reader.readAsBinaryString(selectedFile);//读取文件的内容,也可以读取文件的URL
         reader.onabort = function () {  
             console.log("中断读取....");  
-        }  
+        }
         reader.onerror = function () {  
             console.log("读取异常....");  
         }
@@ -409,6 +431,7 @@ function read_pre(result){//0.97clone
 		if(pos>=w*h||pos<0){
 			console.log("录像读取错误");
             videoError("录像读取错误");
+            undefined.charCodeAt();//通过调用不可用函数进行函数中断，可能不太好？
 			return false;
 		}
 		video[0].board[pos]=1;
