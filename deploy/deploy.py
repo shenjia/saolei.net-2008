@@ -17,7 +17,6 @@ else:
     GIT_REPO_PATH = '/www/saolei.net/deploy/saolei.net-2008'
     
 DEPLOY_LOG = DEPLOY_PATH + '/deploy.log'
-GIT_LOG = DEPLOY_PATH + '/git.log'
 
 
 def log(string, file=DEPLOY_LOG):
@@ -35,7 +34,6 @@ def shell_with_log(command):
 def git_pull():
     os.chdir(GIT_REPO_PATH)
     old_commit = shell('git log|head -n 1|sed \'s/commit //\'')
-    shell('date >> ' + GIT_LOG)
     shell('git_pull.sh >> ' + GIT_LOG + ' 2>&1')
     new_commit = shell('git log|head -n 1|sed \'s/commit //\'')
     return old_commit, new_commit
