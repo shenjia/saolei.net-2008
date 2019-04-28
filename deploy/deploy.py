@@ -30,7 +30,7 @@ def encode_path(path):
     return path
 
 def now():
-    return time.strftime('%Y-%m-%d(%H：%M：%S)',time.localtime(time.time()))
+    return time.strftime('%Y-%m-%d.%H.%M.%S)',time.localtime(time.time()))
 
 def log(string, file=DEPLOY_LOG):
     print(string)
