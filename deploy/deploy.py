@@ -18,18 +18,22 @@ else:
 DEPLOY_LOG = DEPLOY_PATH + '/deploy.log'
 GIT_LOG = DEPLOY_PATH + '/git.log'
 
+
 def log(string):
     now = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
     os.system('echo "[' + now + '] ' + string + '" >> ' + DEPLOY_LOG)
 
 def git_pull():
-    log('git pull origin master')
+    log('git pull origin test')
     os.chdir(GIT_REPO_PATH)
+    old_commit = os.popen('git log|head -n 1|sed \'s/commit //\'').read()
     os.system('date >> ' + GIT_LOG)
     os.system('git pull origin master >> ' + GIT_LOG + ' 2>&1')
+    new_commit = os.popen('git log|head -n 1|sed \'s/commit //\'').read()
+    return old_commit, new_commit
+    
 
 def get_new_files():
-    
     pass
 
 def backup(files):
@@ -39,9 +43,13 @@ def deploy(files):
     pass
 
 # 1. 拉取最新代码
-git_pull()
+old_commit, new_commit = git_pull()
 
 # 2. 分析文件变化情况
+if old_commit == new_commit:
+    log('no new commit!')
+    exit()
+
 files = get_new_files()
 
 # 3. 备份本次更新，准备回滚
