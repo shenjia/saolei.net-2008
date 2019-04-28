@@ -284,7 +284,7 @@ function timer_avf(){
 		if(video[plan].rows>container.columns||video[plan].columns>container.rows){
 			//mvf录像x和y可能会超出界面范围
 			//若超出则只进行鼠标指针操作并退出此次循环
-			current.change_around_normal();
+			if(current!=0)current.change_around_normal();//越界时先判断current是否初始化
 			if(video[plan].mouse==3){//lc
 				leftClick=true;
 				if(rightClick==true){
