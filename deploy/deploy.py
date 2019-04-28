@@ -20,7 +20,8 @@ else:
     GIT_REPO_PATH = '/www/saolei.net/deploy/saolei.net-2008'
     
 SYNC_PATH = 'asp/'
-LOG_FILE = DEPLOY_PATH + '/deploy.log'
+DEPLOY_LOG = DEPLOY_PATH + '/deploy.log'
+SHELL_LOG = DEPLOY_PATH + '/shell.log'
 DEL_LIST = DEPLOY_PATH + '/del_files.sh'
 
 def encode_path(path):
@@ -32,16 +33,16 @@ def now():
     return time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
 
 def log(string):
-    os.system('echo "' + string + '" >> ' + LOG_FILE)
+    os.system('echo "' + string + '" >> ' + DEPLOY_LOG)
 
-def log_with_time(string):
-    os.system('echo "[' + now() + '] ' + string + '" >> ' + LOG_FILE)
+def log_with_time(string, file=DEPLOY_LOG):
+    os.system('echo "[' + now() + '] ' + string + '" >> ' + DEPLOY_LOG)
 
 def shell(command):
     return os.popen(command).read()
 
 def shell_with_log(command):
-    log_with_time(command)
+    log_with_time(command, file=SHELL_LOG)
     return shell(command)
 
 def check_sync_files():
@@ -87,6 +88,7 @@ def backup(commit, files):
         if not os.path.exists(backup_path):
             os.makedirs(backup_path)
         
+        log('backup [ ' + filepath + ' ]')
         copy_file(source_file, backup_file)
 
 def deploy(files):
@@ -103,9 +105,11 @@ def deploy(files):
             os.makedirs(deploy_path)
 
         if os.path.exists(source_file):
+            log('sync [ ' + filepath + ' ]')
             copy_file(source_file, deploy_file)
 
         else:
+            log('del [ ' + filepath + ' ]')
             del_file(deploy_file)
 
 # 拉取最新代码，分析文件变化情况
