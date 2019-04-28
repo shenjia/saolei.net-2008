@@ -45,6 +45,7 @@ def git_pull():
     
 
 def get_new_files(old_commit, new_commit):
+    log(old_commit)
     if old_commit == new_commit:
         log('no new commit!')
         exit()
