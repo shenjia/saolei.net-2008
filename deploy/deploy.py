@@ -1,66 +1,69 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-import os
+import os, shutil
 import time
 
 # 线上环境
 if os.path.isdir('/cygdrive'):
     WWW_PATH = '/cygdrive/c/saolei.net/root'
-    DEPLOY_PATH = '/cygdrive/c/saolei.net/deploy/saolei.net-2008/asp'
-    GIT_REPO_PATH = '/cygdrive/c/saolei.net/deploy/saolei.net-2008'
+    DEPLOY_PATH = '/cygdrive/c/saolei.net/deploy/'
+    BACKUP_PATH = '/cygdrive/c/saolei.net/deploy/backup'
+    GIT_REPO_PATH = '/cygdrive/c/saolei.net/deploy/saolei.net-2008/asp'
     
 # 开发环境
 else:
     WWW_PATH = '/www/saolei.net/root'
     DEPLOY_PATH = '/www/saolei.net/deploy'
-    GIT_REPO_PATH = '/www/saolei.net/deploy/saolei.net-2008'
+    BACKUP_PATH = '/www/saolei.net/deploy/backup'
+    GIT_REPO_PATH = '/www/saolei.net/deploy/saolei.net-2008/asp'
     
-DEPLOY_LOG = DEPLOY_PATH + '/deploy.log'
+SYNC_PATH = 'asp/'
+LOG_FILE = DEPLOY_PATH + '/deploy.log'
 
+def now():
+    return time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
 
-def log(string, file=DEPLOY_LOG):
-    now = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
-    os.system('echo "[' + now + '] ' + string + '" >> ' + file)
+def log(string):
+    os.system('echo "' + string + '" >> ' + LOG_FILE)
+
+def log_with_time(string):
+    os.system('echo "[' + now() + '] ' + string + '" >> ' + LOG_FILE)
 
 def shell(command):
-    return os.popen('git log|head -n 1|sed \'s/commit //\'').read()
+    return os.popen(command).read()
 
 def shell_with_log(command):
-    log(command)
+    log_with_time(command)
     return shell(command)
 
+def check_updated_files():
+    files = shell(DEPLOY_PATH + '/git_pull_diff.sh').strip().split('\n')
+    commit = files.pop(0) if files else 'none'
+    return commit, files
 
-def git_pull():
-    os.chdir(GIT_REPO_PATH)
-    old_commit = shell('git log|head -n 1|sed \'s/commit //\'')
-    shell('git_pull.sh >> ' + GIT_LOG + ' 2>&1')
-    new_commit = shell('git log|head -n 1|sed \'s/commit //\'')
-    return old_commit, new_commit
+
+def backup(commit, files):
+    BACKUP_DIR = BACKUP_PATH + '/' + now() + ' ' + commit
+    os.mkdir(BACKUP_DIR)
     
-
-def get_new_files(old_commit, new_commit):
-    log(old_commit)
-    if old_commit == new_commit:
-        log('no new commit!')
-        exit()
-    log(old_commit + ' -> ' + new_commit)
-
-
-def backup(files):
+    for file in files:
+        #from_path = 
+        #if not os.path.isfile()
+        #shell_with_log('cp -F ')
+        pass
     pass
 
 def deploy(files):
     pass
 
-# 1. 拉取最新代码
-old_commit, new_commit = git_pull()
+# 拉取最新代码，分析文件变化情况
+commit, files = check_updated_files()
 
-# 2. 分析文件变化情况
-files = get_new_files(old_commit, new_commit)
+if files:
 
-# 3. 备份本次更新，准备回滚
-backup(files)
+    # 备份本次更新，准备回滚
+    backup(commit, files)
 
-# 4. 部署文件更新
-deploy(files)
+    # 部署文件更新
+    deploy(files)
