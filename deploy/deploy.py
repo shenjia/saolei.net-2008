@@ -36,7 +36,7 @@ def log(string):
     os.system('echo "' + string + '" >> ' + DEPLOY_LOG)
 
 def log_with_time(string, file=DEPLOY_LOG):
-    os.system('echo "[' + now() + '] ' + string + '" >> ' + DEPLOY_LOG)
+    os.system('echo "[' + now() + '] ' + string + '" >> ' + file)
 
 def shell(command):
     return os.popen(command).read()
