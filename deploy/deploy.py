@@ -33,8 +33,12 @@ def git_pull():
     return old_commit, new_commit
     
 
-def get_new_files():
-    pass
+def get_new_files(old_commit, new_commit):
+    if old_commit == new_commit:
+        log('no new commit!')
+        exit()
+    log(old_commit + ' -> ' + new_commit)
+
 
 def backup(files):
     pass
@@ -46,11 +50,7 @@ def deploy(files):
 old_commit, new_commit = git_pull()
 
 # 2. 分析文件变化情况
-if old_commit == new_commit:
-    log('no new commit!')
-    exit()
-
-files = get_new_files()
+files = get_new_files(old_commit, new_commit)
 
 # 3. 备份本次更新，准备回滚
 backup(files)
