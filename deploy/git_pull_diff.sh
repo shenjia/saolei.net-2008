@@ -6,12 +6,9 @@ NOW=`date +%Y.%m.%d_%H:%m:%S`
 
 cd $REPO
 
-#OLD_COMMIT=`git log|head -n 1|sed 's/commit //'`
-#git pull origin test >> $GIT_LOG 2>&1
-#NEW_COMMIT=`git log|head -n 1|sed 's/commit //'`
-
-OLD_COMMIT=b2e913
-NEW_COMMIT=06d3de
+OLD_COMMIT=`git log|head -n 1|sed 's/commit //'`
+git pull origin master >> $GIT_LOG 2>&1
+NEW_COMMIT=`git log|head -n 1|sed 's/commit //'`
 
 if [ "$OLD_COMMIT" != "$NEW_COMMIT" ];then
     echo "-----[ $NOW ]-----" >> $DEPLOY_LOG

@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-import os, shutil
+import os
 import time
+import re
 
 # 线上环境
 if os.path.isdir('/cygdrive'):
@@ -20,6 +21,12 @@ else:
     
 SYNC_PATH = 'asp/'
 LOG_FILE = DEPLOY_PATH + '/deploy.log'
+DEL_LIST = DEPLOY_PATH + '/del_files.sh'
+
+def encode_path(path):
+    for str in ['*', ' ', '>', '(', ')']:
+        path = path.replace(str, '\\' + str)
+    return path
 
 def now():
     return time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
@@ -43,37 +50,61 @@ def check_sync_files():
     sync_files = []
     for file in files:
         if file.startswith(SYNC_PATH):
-            sync_files.append(file)
+            sync_files.append(file.lstrip(SYNC_PATH))
     return commit, sync_files
 
+def copy_file(file, copy_file):
+    shell_with_log('cp -f ' + encode_path(file) + ' ' + encode_path(copy_file) + ' > /dev/null')
+
+def del_file(file):
+    # 为安全起见，只记录要删除的文件，定期手动删除
+    log('add [ ' + file + ' ] to del file list')
+    with open(DEL_LIST, 'w+') as f:
+        f.write('rm -rf ' + encode_path(file))
 
 def backup(commit, files):
+
+    log('start backuping...')
+
     BACKUP_DIR = BACKUP_PATH + '/' + now() + ' ' + commit
-    os.mkdir(BACKUP_DIR)
+    if not os.path.exists(BACKUP_DIR):
+        os.makedirs(BACKUP_DIR)
 
-    for file in files:
-
-        source_file = GIT_REPO_PATH + '/' + file
-        backup_path, backup_name = os.path.split(BACKUP_DIR + '/' + file)
+    for filepath in files:
+        
+        path, file = os.path.split(filepath)
+        source_file = WWW_PATH + '/' + filepath
 
         if not os.path.isfile(source_file):
-            log(source_file + ' not exists!')
-            pass
+            log('source file [ ' + source_file + ' ] not exists, skip backup!')
+            continue
+        
+        backup_file = BACKUP_DIR + '/' + filepath 
+        backup_path = BACKUP_DIR + '/' + path
 
         if not os.path.exists(backup_path):
-            os.mkdir(backup_path)
-
-        #shutil.copyfile(source_file, )
-
-#            print('cp -f ' + source_path + ' ' + backup_path)
-        #from_path = 
-        #
-        #shell_with_log('cp -F ')
-        pass
-    pass
+            os.makedirs(backup_path)
+        
+        copy_file(source_file, backup_file)
 
 def deploy(files):
-    pass
+
+    log('start deploying...')
+
+    for filepath in files:
+        path, file = os.path.split(filepath)
+        source_file = GIT_REPO_PATH + '/' + SYNC_PATH + filepath
+        deploy_file = WWW_PATH + '/' + filepath
+        deploy_path = WWW_PATH + '/' + path
+
+        if not os.path.exists(deploy_path):
+            os.makedirs(deploy_path)
+
+        if os.path.exists(source_file):
+            copy_file(source_file, deploy_file)
+
+        else:
+            del_file(deploy_file)
 
 # 拉取最新代码，分析文件变化情况
 commit, files = check_sync_files()
