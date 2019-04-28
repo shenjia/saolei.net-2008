@@ -26,11 +26,12 @@ def log(string):
     os.system('echo "[' + now + '] ' + string + '" >> ' + DEPLOY_LOG)
 
 def git_pull():
-    log('git pull origin test')
     os.chdir(GIT_REPO_PATH)
     old_commit = os.popen('git log|head -n 1|sed \'s/commit //\'').read()
     os.system('date >> ' + GIT_LOG)
-    os.system('git pull origin ' + GIT_BRANCH + ' >> ' + GIT_LOG + ' 2>&1')
+    command = 'git pull origin ' + GIT_BRANCH + ' >> ' + GIT_LOG + ' 2>&1'
+    os.system(command)
+    log(command)
     new_commit = os.popen('git log|head -n 1|sed \'s/commit //\'').read()
     return old_commit, new_commit
     
