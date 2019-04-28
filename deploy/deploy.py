@@ -51,6 +51,8 @@ def check_sync_files():
     for file in files:
         if file.startswith(SYNC_PATH):
             sync_files.append(file.lstrip(SYNC_PATH))
+        else:
+            log('skip [ ' + file + ' ]')
     return commit, sync_files
 
 def copy_file(file, copy_file):
@@ -116,6 +118,3 @@ if files:
 
     # 部署文件更新
     deploy(files)
-
-else:
-    print('no new commit!')
