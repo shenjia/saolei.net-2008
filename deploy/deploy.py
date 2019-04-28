@@ -33,6 +33,7 @@ def now():
     return time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
 
 def log(string):
+    print(log)
     os.system('echo "' + string + '" >> ' + DEPLOY_LOG)
 
 def log_with_time(string, file=DEPLOY_LOG):
