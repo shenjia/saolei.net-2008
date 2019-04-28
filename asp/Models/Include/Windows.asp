@@ -1,7 +1,7 @@
 <%
 '------------------------
 'Code:Zhang Shen Jia
-'Date:2008-1-1
+'Date:2008-1-1 
 '------------------------
 %>
 <script language="javascript">

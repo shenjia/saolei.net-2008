@@ -10,8 +10,8 @@ cd $REPO
 #git pull origin test >> $GIT_LOG 2>&1
 #NEW_COMMIT=`git log|head -n 1|sed 's/commit //'`
 
-OLD_COMMIT=c2e4f9a7407f570a1ba30f925d64fa6d714f81a8
-NEW_COMMIT=b2e91369198fb3de1a7173b7a09702a752112efc
+OLD_COMMIT=b2e913
+NEW_COMMIT=06d3de
 
 if [ "$OLD_COMMIT" != "$NEW_COMMIT" ];then
     echo "-----[ $NOW ]-----" >> $DEPLOY_LOG
