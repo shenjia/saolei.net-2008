@@ -32,21 +32,19 @@ def encode_path(path):
 def now():
     return time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
 
-def log(string):
-    print(log)
-    os.system('echo "' + string + '" >> ' + DEPLOY_LOG)
-
-def log_with_time(string, file=DEPLOY_LOG):
+def log(string, file=DEPLOY_LOG):
+    print(string)
     os.system('echo "[' + now() + '] ' + string + '" >> ' + file)
 
 def shell(command):
     return os.popen(command).read()
 
 def shell_with_log(command):
-    log_with_time(command, file=SHELL_LOG)
+    log(command, file=SHELL_LOG)
     return shell(command)
 
 def check_sync_files():
+    log('start git pull...')
     files = shell(DEPLOY_PATH + '/git_pull_diff.sh').strip().split('\n')
     commit = files.pop(0) if files else 'none'
     sync_files = []
@@ -123,3 +121,5 @@ if files:
 
     # 部署文件更新
     deploy(files)
+
+log('done!')
