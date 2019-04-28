@@ -5,7 +5,7 @@ Dim Ranks(28)
 Dim player
 Dim RankNum
 Dim Seed
-Dim id 
+Dim id  
 %>
 <!--#include virtual="/Models/Common/Const.asp"-->
 <!--#include virtual="/Models/Common/ConnDB.asp"-->
