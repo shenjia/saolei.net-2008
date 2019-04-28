@@ -39,7 +39,7 @@ def git_pull():
     shell('date >> ' + GIT_LOG)
     shell_with_log('git fetch')
     shell_with_log('git branch ' + GIT_BRANCH)
-    shell_with_log('git pull origin ' + GIT_BRANCH + ' >> ' + GIT_LOG + ' 2>&1')
+    shell_with_log('git pull origin ' + GIT_BRANCH) #+ ' >> ' + GIT_LOG + ' 2>&1')
     new_commit = shell('git log|head -n 1|sed \'s/commit //\'')
     return old_commit, new_commit
     
