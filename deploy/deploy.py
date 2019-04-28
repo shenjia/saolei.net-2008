@@ -21,18 +21,24 @@ DEPLOY_LOG = DEPLOY_PATH + '/deploy.log'
 GIT_LOG = DEPLOY_PATH + '/git.log'
 
 
-def log(string):
+def log(string, file=DEPLOY_LOG):
     now = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
-    os.system('echo "[' + now + '] ' + string + '" >> ' + DEPLOY_LOG)
+    os.system('echo "[' + now + '] ' + string + '" >> ' + file)
+
+def shell(command):
+    return os.popen('git log|head -n 1|sed \'s/commit //\'').read()
+
+def shell_with_log(command):
+    log(command)
+    return shell(command)
+
 
 def git_pull():
     os.chdir(GIT_REPO_PATH)
-    old_commit = os.popen('git log|head -n 1|sed \'s/commit //\'').read()
-    os.system('date >> ' + GIT_LOG)
-    command = 'git pull origin ' + GIT_BRANCH + ' >> ' + GIT_LOG + ' 2>&1'
-    os.system(command)
-    log(command)
-    new_commit = os.popen('git log|head -n 1|sed \'s/commit //\'').read()
+    old_commit = shell('git log|head -n 1|sed \'s/commit //\'')
+    shell('date >> ' + GIT_LOG)
+    shell_with_log('git pull origin ' + GIT_BRANCH + ' >> ' + GIT_LOG + ' 2>&1')
+    new_commit = shell('git log|head -n 1|sed \'s/commit //\'')
     return old_commit, new_commit
     
 
