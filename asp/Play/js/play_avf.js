@@ -47,6 +47,16 @@ function loadVideo(name){
     xmlhttp.send();
 }
 
+//录像播放错误
+function videoError(message){
+    //以遮罩是否显示作为是否执行操作的判断依据,忘了有啥用了，先放着吧（应该是前进后退？）
+    if($('#divPageMask', parent.document).width()>0){
+        alert(message);
+        $('#Window_Frame', parent.document).fadeIn(0);
+        $('#Window_Video', parent.document).fadeOut(0);
+    }
+}
+
 //隐藏当前窗口并结束录像播放
 function closeVideo(){
     // container.init(0);
@@ -67,15 +77,25 @@ function exitVideo(){
     window.parent.document.getElementById('Window_Frame').style.display='block';
 }
 
+function charCodeAt(char){
+    //当出现在文件意外结尾会有undefined对象
+    //对undefined对象进行charCodeAt操作时
+    //先向用户报错再停止程序运行(charCodeAt操作报错即停止运行)
+    if(char==undefined){
+        videoError('录像文件意外结尾，请检查录像文件！');
+    }
+    return char.charCodeAt();
+}
+
 function playAvfVideo(result){
 	reset();
     //当读取完成后回调这个函数,然后此时文件的内容存储到了result中,直接操作即可
     // console.log(this.result);
     var board=new Array();//雷的分布
     number=5;//字符读取进度，不要放在level定义下面
-    var level=result[number].charCodeAt()-2;//级别
+    var level=charCodeAt(result[number])-2;//级别
 
-    var timestamp="Timestamp:";//时间戳
+    var timestamp="";//时间戳
     var events=new Array();//鼠标事件
     video=new Array();
     path=0;
@@ -91,18 +111,17 @@ function playAvfVideo(result){
     	}
         for(var i=++number;i<number+2*container.bombNumber;i+=2)
         {
-        	board[container.columns*(result[i].charCodeAt()-1)+(result[i+1].charCodeAt()-1)]=1;
-        	// console.log(result[i].charCodeAt()+' '+result[i+1].charCodeAt());
+        	board[container.columns*(charCodeAt(result[i])-1)+(charCodeAt(result[i+1])-1)]=1;
+        	// console.log(charCodeAt(result[i])+' '+charCodeAt(result[i+1]));
         }
-        container.set_viedo_mine(board);//按录像布雷
 
-        while(result[number]!='|'){//时间戳开始标志
+        while(number<result.length&&(result[number-2]!='['||result[number]!='|')){//时间戳开始标志
         	number++;
-        	// console.log(number+':'+result[number].charCodeAt());
+        	// console.log(number+':'+charCodeAt(result[number]));
         }
 
-        // console.log(result[number-4].charCodeAt()+'..............................');
-        if(result[number-4].charCodeAt()==17){//question marks
+        // console.log(charCodeAt(result[number-4])+'..............................');
+        if(charCodeAt(result[number-4])==17){//question marks
         	document.getElementById("question").innerHTML='取消问号';
 			question=true;
         }
@@ -112,12 +131,14 @@ function playAvfVideo(result){
         }
 
         number++;
-        while(result[number]!='|'){//时间戳结束标志
+        while(number<result.length&&result[number]!=']'){//时间戳结束标志
         	timestamp+=result[number];
         	// console.log(number+':'+result[number]);
         	number++;
         }//时间戳读取完成
-        // console.log(timestamp);
+        let array=timestamp.split("|");
+        let last=array[array.length-1];
+        timestamp=array[0];
 
         for(var i=0;i<7;i++){
         	events[i]=0;
@@ -125,14 +146,18 @@ function playAvfVideo(result){
         while(events[2]!=1||events[1]>1){
         	events[0]=events[1];
         	events[1]=events[2];
-        	events[2]=result[number++].charCodeAt();
+        	events[2]=charCodeAt(result[number++]);
         }
         for(var i=3;i<8;i++){
-        	events[i]=result[number++].charCodeAt();
+        	events[i]=charCodeAt(result[number++]);
         }
         while(true){	
         	video[size]=new Mouse_event();
         	video[size].mouse=events[0];
+
+            //当鼠标有左键和移动外的事件时判断style为FL，否则为undefined(NF)
+            if(events[0]!=1&&events[0]!=3&&events[0]!=5&&events[0]!=21)video[0].style="FL";
+
         	video[size].rows=parseInt((events[1]*256+events[3])/16+1);
         	video[size].columns=parseInt((events[5]*256+events[7])/16+1);
         	video[size].x=events[1]*256+events[3];
@@ -149,10 +174,28 @@ function playAvfVideo(result){
 
         	if(video[size].sec<0)break;//出错处理
         	for(var i=0;i<8;++i){
-        		events[i]=result[number++].charCodeAt();
+        		events[i]=charCodeAt(result[number++]);
         	}
         	size++;
         }//events时间读取完成
+
+        //以iframe的src属性判断当前界面是否为录像上传界面
+        if($('#Window_Frame', parent.document).attr('src')==="/Video/Upload.asp"){
+            let inputBv=$('#Window_Frame', parent.document).contents().find("input[name='Video_3BV']")[0];
+            let inputTime=$('#Window_Frame', parent.document).contents().find("input[name='Video_Score']")[0];
+            let inputStyle=$('#Window_Frame', parent.document).contents().find("input[name='Video_IsNoFrag']")[0];
+            inputBv.value=parseInt(last.substring(1,last.lastIndexOf("T")));
+            inputTime.value=Math.round((parseFloat(last.substring(last.lastIndexOf("T")+1))-1)*100)/100;
+            if(video[0].style==="FL"){//默认undefined为NF
+                inputStyle.checked=false;
+            }else{
+                inputStyle.checked=true;
+            }
+            $('#Window_Video', parent.document).fadeOut(0);//防止显示录像播放界面
+            return;
+        }
+
+        container.set_viedo_mine(board);//按录像布雷`
         
     	while(number<result.length){
             if(result.substring(++number,number+10)=="RealTime: "){
@@ -168,20 +211,20 @@ function playAvfVideo(result){
         console.log('Realtime: '+realtime);
 
         if(result.substring(number,number+6)=="Skin: "){
-            while(number<result.length&&result[number].charCodeAt()!=13){
+            while(number<result.length&&charCodeAt(result[number])!=13){
                 skin+=result[number];
                 number++;
             }
             console.log(skin);
 
         	// number++;//使当前读取进度number位于间隔符后一位
-        	while(++number<result.length&&result[number].charCodeAt()!=13){
+        	while(++number<result.length&&charCodeAt(result[number])!=13){
 	        	player+=result[number];
 	        }//标志读取完成
             console.log('Player: '+player);
 
             for(let index=0;index<player.length;index++){
-                if(player[index].charCodeAt()>128&&xmlhttp!=null){
+                if(charCodeAt(player[index])>128&&xmlhttp!=null){
                     //扫雷网不需要考虑上传本地录像导致avf数据来源不同，即selectedFile与xmlhttp
                     let blob=new Blob([xmlhttp.response.slice(number-player.length,number)]);
                     xmlhttp=null;//为了下一次Avf录像判断用户标识是否含有中文符号并截取Blob
@@ -202,9 +245,8 @@ function playAvfVideo(result){
                         video[0].player=player;
                         video[0].level=level;
                         video[0].board=board;
-                        // console.log(video);
                         start_avf(video);
-                        video_invalid=false;                
+                        video_invalid=false;          
                     }
                     break;
                 }else if(index==player.length-1){//全部不包含中文字符
@@ -213,13 +255,13 @@ function playAvfVideo(result){
                     video[0].player=player;
                     video[0].level=level;
                     video[0].board=board;
-                    // console.log(video);
                     start_avf(video);
                     video_invalid=false;
                 }
             }
         }
-
+    }else{
+        videoError("游戏级别读取出错");
     }
 }
 
@@ -230,7 +272,7 @@ function playMvfVideo(result){
     number=0;//字符读取进度
     video=new Array();
 
-    if(result[0].charCodeAt()==0x11&&result[1].charCodeAt()==0x4D){
+    if(charCodeAt(result[0])==0x11&&charCodeAt(result[1])==0x4D){
     	// console.log(result[27]);
     	if(result[27]==5){//此处判断不能进行charCodeAt()操作
     		number=74;
@@ -254,7 +296,7 @@ function playMvfVideo(result){
     		start_avf(video);//播放录像
     		video_invalid=false;
     	}
-    }else if(result[0].charCodeAt()==0x00&&result[1].charCodeAt()==0x00){
+    }else if(charCodeAt(result[0])==0x00&&charCodeAt(result[1])==0x00){
     	console.log("软件版本: 0.97 hacked(headless)");
     	number=7;//丢失部分信息的mvf文件
 		read_097(result);//读取事件
@@ -263,13 +305,15 @@ function playMvfVideo(result){
 		video_invalid=false;
     }else{
     	number=-1;
-		read_pre(result);//读取事件
-		container.set_viedo_mine(video[0].board);//按录像布雷
-		start_avf(video);//播放录像
-		video_invalid=false;
+        if(read_pre(result)){//读取事件
+    		container.set_viedo_mine(video[0].board);//按录像布雷
+    		start_avf(video);//播放录像
+    		video_invalid=false;
+        }
     }
 }
 
+//选择本地文件进行录像播放
 function fileImport() {
     //获取读取文件的File对象
     var selectedFile = document.getElementById('files').files[0];
@@ -285,7 +329,7 @@ function fileImport() {
 	    }
 	    analyze_video(name,selectedFile);
 	}else{
-		log("请选择一个录像文件");
+		console.log("请选择一个录像文件");
 	}
 }
 
@@ -296,7 +340,7 @@ function analyze_video(name,selectedFile){
         reader.readAsBinaryString(selectedFile);//读取文件的内容,也可以读取文件的URL
         reader.onabort = function () {  
             console.log("中断读取....");  
-        }  
+        }
         reader.onerror = function () {  
             console.log("读取异常....");  
         }
@@ -329,17 +373,18 @@ function read_board(result,add){
 	var m=0;//雷数
 	var pos=0;//雷的位置
 	video[0].board=new Array();
-	w=result[++number].charCodeAt();
-	h=result[++number].charCodeAt();
+	w=charCodeAt(result[++number]);
+	h=charCodeAt(result[++number]);
 	for(var i=0;i<w*h;i++){
 		video[0].board[i]=0;
 	}
-	var m=(result[++number].charCodeAt())*256+result[++number].charCodeAt();
+	var m=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
 	// console.log('Width: '+w+'  Height: '+h+'  Mines: '+m);
 	for(var i=0;i<m;i++){
-		pos=result[++number].charCodeAt()+add+(result[++number].charCodeAt()+add)*w;
+		pos=charCodeAt(result[++number])+add+(charCodeAt(result[++number])+add)*w;
 		if(pos>=w*h||pos<0){
 			console.log("录像读取错误");
+            videoError("录像读取错误");
 			return false;
 		}
 		video[0].board[pos]=1;
@@ -374,24 +419,26 @@ function read_pre(result){//0.97clone
 	var pos=0;//雷的位置
 	var has_name=false;
 	video[0].board=new Array();
-	w=result[++number].charCodeAt();
-	h=result[++number].charCodeAt();
+	w=charCodeAt(result[++number]);
+	h=charCodeAt(result[++number]);
 	for(var i=0;i<w*h;i++){
 		video[0].board[i]=0;
 	}
-	var m=(result[++number].charCodeAt())*256+result[++number].charCodeAt();
+	var m=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
 	// console.log('Width: '+w+'  Height: '+h+'  Mines: '+m);
 	for(var i=0;i<m;i++){
-		pos=result[++number].charCodeAt()+(result[++number].charCodeAt())*w;
+		pos=charCodeAt(result[++number])+(charCodeAt(result[++number]))*w;
 		if(pos>=w*h||pos<0){
 			console.log("录像读取错误");
+            videoError("录像读取错误");
+            undefined.charCodeAt();//通过调用不可用函数进行函数中断，可能不太好？
 			return false;
 		}
 		video[0].board[pos]=1;
 	}
 	// log(video[0].board);
 
-	if(result[++number].charCodeAt()){//question marks
+	if(charCodeAt(result[++number])){//question marks
 		console.log("问号模式: on");
 		document.getElementById("question").innerHTML='取消问号';
 		question=true;
@@ -399,12 +446,12 @@ function read_pre(result){//0.97clone
     	document.getElementById("question").innerHTML='标记问号';
 		question=false;
     }
-	var c=result[++number].charCodeAt();
+	var c=charCodeAt(result[++number]);
 	var now=++number;
 	var filesize=result.length;
 	var after_events;
 	var last=result[result.length-1];
-	if(last.charCodeAt()){
+	if(charCodeAt(last)){
 		if(result[result.length-13==' ']&&result[result.length-12==' ']&&result[result.length-11==' ']){
 			after_events=filesize-113;
 			has_name=true;
@@ -424,6 +471,7 @@ function read_pre(result){//0.97clone
 	else if(w==30 && h==16) video[0].level=3;
 	else {
 		video=new Array();
+        videoError("录像级别读取错误");
 		return false;
 	}
 	container.init(video[0].level);
@@ -433,8 +481,8 @@ function read_pre(result){//0.97clone
 	// console.log('after_events:'+after_events);
 
 	number=after_events-1;
-	var score_sec=(result[++number].charCodeAt())*256+result[++number].charCodeAt();
-	var score_ths=result[++number].charCodeAt()*10;
+	var score_sec=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
+	var score_ths=charCodeAt(result[++number])*10;
 	console.log('Time: '+score_sec+'.'+score_ths);
 
 	video[0].player=new Array();
@@ -454,7 +502,7 @@ function read_pre(result){//0.97clone
 	while(now<after_events){
 		if(size>0)video[size]=new Array();
 		for(var k=0;k<8;k++){
-			e[k]=result[++number].charCodeAt();
+			e[k]=charCodeAt(result[++number]);
 		}
 						
 		video[size].sec=e[0];
@@ -594,21 +642,21 @@ function read_pre(result){//0.97clone
 function read_2007(result){//0.97clone
 	video[0]=new Array();
 
-	var mouth=result[number].charCodeAt();
-	var day=result[++number].charCodeAt();
-	var year=(result[++number].charCodeAt())*256+result[++number].charCodeAt();
-	var hour=result[++number].charCodeAt();
-	var min=result[++number].charCodeAt();
-	var sec=result[++number].charCodeAt();
-	var level=result[++number].charCodeAt();
+	var mouth=charCodeAt(result[number]);
+	var day=charCodeAt(result[++number]);
+	var year=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
+	var hour=charCodeAt(result[++number]);
+	var min=charCodeAt(result[++number]);
+	var sec=charCodeAt(result[++number]);
+	var level=charCodeAt(result[++number]);
 
 	container.init(level);
 
-	var mode=result[++number].charCodeAt();
-	var score_ths=(result[++number].charCodeAt())*65536+(result[++number].charCodeAt())*256+result[++number].charCodeAt();
+	var mode=charCodeAt(result[++number]);
+	var score_ths=(charCodeAt(result[++number]))*65536+(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
 	var score_sec=parseInt(score_ths/1000);
 	score_ths%=1000;
-	if(result[++number].charCodeAt()){//question marks
+	if(charCodeAt(result[++number])){//question marks
 		console.log("问号模式: on");
 		document.getElementById("question").innerHTML='取消问号';
 		question=true;
@@ -622,14 +670,14 @@ function read_2007(result){//0.97clone
 	console.log("Mode: "+mode_names[mode]);
 	read_board(result,-1);
 
-	var len=result[++number].charCodeAt();//标识长度
+	var len=charCodeAt(result[++number]);//标识长度
 	video[0].player=new Array();
 	for(var i=0;i<len;i++){
 		video[0].player+=result[++number];//此处不能进行charCodeAt()操作
 	}
 	console.log('用户标识: '+video[0].player);
 
-	var leading=(result[++number].charCodeAt())*256+result[++number].charCodeAt();
+	var leading=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
 	var num1=Math.sqrt(leading);
 	var num2=Math.sqrt(leading+1000.0);
 	var num3=Math.sqrt(num1+1000.0);
@@ -659,11 +707,11 @@ function read_2007(result){//0.97clone
 		}
 	}
 
-	video[0].size=(result[++number].charCodeAt())*65536+(result[++number].charCodeAt())*256+result[++number].charCodeAt();
+	video[0].size=(charCodeAt(result[++number]))*65536+(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
 	// console.log('size'+video[0].size);
 	for(var i=0;i<video[0].size;i++){
 		for(var k=0;k<6;k++){
-			e[k]=result[++number].charCodeAt();
+			e[k]=charCodeAt(result[++number]);
 		}
 		if(i>0)video[i]=new Array();
 		video[i].rb=apply_perm(0,byte,bit,e);
@@ -788,25 +836,25 @@ function read_2007(result){//0.97clone
 function read_097(result){//0.97clone
 	video[0]=new Array();
 
-	var mouth=result[number].charCodeAt();
-	var day=result[++number].charCodeAt();
-	var year=(result[++number].charCodeAt())*256+result[++number].charCodeAt();
-	var hour=result[++number].charCodeAt();
-	var min=result[++number].charCodeAt();
-	var sec=result[++number].charCodeAt();
-	var level=result[++number].charCodeAt();
+	var mouth=charCodeAt(result[number]);
+	var day=charCodeAt(result[++number]);
+	var year=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
+	var hour=charCodeAt(result[++number]);
+	var min=charCodeAt(result[++number]);
+	var sec=charCodeAt(result[++number]);
+	var level=charCodeAt(result[++number]);
 
 	container.init(level);
 
-	var mode=result[++number].charCodeAt();
-	var score_sec=(result[++number].charCodeAt())*256+result[++number].charCodeAt();
-	var score_ths=result[++number].charCodeAt()*10;
-	var bbbv=(result[++number].charCodeAt())*256+result[++number].charCodeAt();
-	var solved_bbbv=(result[++number].charCodeAt())*256+result[++number].charCodeAt();
-	var lcl=(result[++number].charCodeAt())*256+result[++number].charCodeAt();
-	var dcl=(result[++number].charCodeAt())*256+result[++number].charCodeAt();
-	var rcl=(result[++number].charCodeAt())*256+result[++number].charCodeAt();
-	if(result[++number].charCodeAt()){//question marks
+	var mode=charCodeAt(result[++number]);
+	var score_sec=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
+	var score_ths=charCodeAt(result[++number])*10;
+	var bbbv=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
+	var solved_bbbv=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
+	var lcl=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
+	var dcl=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
+	var rcl=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
+	if(charCodeAt(result[++number])){//question marks
 		console.log("问号模式: on");
 		document.getElementById("question").innerHTML='取消问号';
 		question=true;
@@ -822,14 +870,14 @@ function read_097(result){//0.97clone
 	// console.log('LeftClicks:'+lcl+'  RightClicks:'+rcl+'  DoubleClicks:'+dcl);
 	read_board(result,-1);
 
-	var len=result[++number].charCodeAt();//标识长度
+	var len=charCodeAt(result[++number]);//标识长度
 	video[0].player=new Array();
 	for(var i=0;i<len;i++){
 		video[0].player+=result[++number];//此处不能进行charCodeAt()操作
 	}
 	console.log('用户标识: '+video[0].player);
 
-	var leading=(result[++number].charCodeAt())*256+result[++number].charCodeAt();
+	var leading=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
 	var num1=Math.sqrt(leading);
 	var num2=Math.sqrt(leading+1000.0);
 	var num3=Math.sqrt(num1+1000.0);
@@ -857,11 +905,11 @@ function read_097(result){//0.97clone
 		}
 	}
 
-	video[0].size=(result[++number].charCodeAt())*65536+(result[++number].charCodeAt())*256+result[++number].charCodeAt();
+	video[0].size=(charCodeAt(result[++number]))*65536+(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
 	// console.log('size:'+video[0].size);
 	for(var i=0;i<video[0].size;i++){
 		for(var k=0;k<5;k++){
-			e[k]=result[++number].charCodeAt();
+			e[k]=charCodeAt(result[++number]);
 		}
 		if(i>0)video[i]=new Array();
 		video[i].rb=apply_perm(0,byte,bit,e);

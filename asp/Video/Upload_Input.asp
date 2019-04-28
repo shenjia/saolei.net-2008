@@ -73,7 +73,7 @@ If Check_Result <> "Fail" Then
 					<tr>
 						<td class="Text">
 						请选择 <span class="Title">avf</span> 录像文件：
-						<input name="Video" type="File" class="input-no" size="20" maxlength="100"><br>
+						<input name="Video" type="File" class="input-no" size="20" maxlength="100" onchange="AnalyzeFile(this.files[0]);"><br>
 						请输入录像３ＢＶ值：
 						<input name="Video_3BV" type="text" class="input-no" size="3" maxlength="3" onFocus="Show('For_Video_3BV')" onBlur="Hide_3BV()">
 						<span id="For_Video_3BV" style="display: none">&nbsp;<a href="/Help/Upload_3BV.asp" class="Sign">怎样查看录像3BV值？</a></span> <br>
@@ -160,6 +160,14 @@ If Check_Result <> "Fail" Then
 			Upload_Form.Video_Score.blur();
 			parent.End_Mask();
 			parent.document.getElementById('Window_Box').style.display='none';
+	}
+
+	function AnalyzeFile(selectedFile){
+		if(parent.document.getElementById("Window_Border")!=null){
+			parent.document.getElementById('Window_Video').contentWindow.analyze_video(selectedFile.name,selectedFile);
+		}else{
+			console.log("未找到analyze_video函数");
+		}
 	}
 	</script>
 	<%
