@@ -1,4 +1,4 @@
-"use strict";//js真的很严格
+﻿"use strict";//js真的很严格
 
 //全局变量
 var gameover=false;//游戏结束标志
@@ -303,39 +303,39 @@ Container.prototype.replay_video=function(){
 	}
 }
 
-Container.prototype.reset_mine=function(){
-	$('#mark_span').html('UPK mode');
-	$('#mark_span').attr('title',$('#mark_span').html());
-	if(left_count!=0||gameover==true){
-		if(document.getElementById("mouse_point")){
-			$("div#mouse_point").remove();
-		}
-		change_top_count("mine_count",container.minenumber=container.bombNumber);
-		reset();//重置时间
-		gameover=false;
-		firstclick=false;
-		leftClick=false;
-		rightClick=false;
-		left_invalid=false;
-		right_invalid=false;
-		middle_invalid=false;
-		left_count=0;
-		right_count=0;
-		double_count=0;
-		ces_count=0;
-		reset_begin=true;
-		path=0;
-		console.log("重开布雷");
-		for(var i in this.childObject){
-			this.childObject[i].changeStyle("block");
-			this.childObject[i].isOpen=false;
-			this.childObject[i].is_bv=true;
-		}
-	}
-	else{
-		console.log('重新布雷无效');
-	}
-};
+// Container.prototype.reset_mine=function(){
+// 	$('#mark_span').html('UPK mode');
+// 	$('#mark_span').attr('title',$('#mark_span').html());
+// 	if(left_count!=0||gameover==true){
+// 		if(document.getElementById("mouse_point")){
+// 			$("div#mouse_point").remove();
+// 		}
+// 		change_top_count("mine_count",container.minenumber=container.bombNumber);
+// 		reset();//重置时间
+// 		gameover=false;
+// 		firstclick=false;
+// 		leftClick=false;
+// 		rightClick=false;
+// 		left_invalid=false;
+// 		right_invalid=false;
+// 		middle_invalid=false;
+// 		left_count=0;
+// 		right_count=0;
+// 		double_count=0;
+// 		ces_count=0;
+// 		reset_begin=true;
+// 		path=0;
+// 		console.log("重开布雷");
+// 		for(var i in this.childObject){
+// 			this.childObject[i].changeStyle("block");
+// 			this.childObject[i].isOpen=false;
+// 			this.childObject[i].is_bv=true;
+// 		}
+// 	}
+// 	else{
+// 		console.log('重新布雷无效');
+// 	}
+// };
 
 Container.prototype.play_avf=function(video,size,realtime,player){
 	var id=0;
@@ -816,7 +816,7 @@ document.onkeydown=function(event){
 		}else if(e.keyCode==51){//3，高级
 			container.init(3);
 		}else if(e.keyCode==114){//F3，重开
-			container.reset_mine();
+			// container.reset_mine();
 		}else if(e.keyCode==116){//F5，打开录像
 			$("#files").click();
 		}else if(e.keyCode==115){//F4，录像回放
