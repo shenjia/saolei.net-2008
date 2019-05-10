@@ -18,6 +18,7 @@ var current=0;//当前block
 var front=0;//前一个block
 var size=0;//录像事件总长度
 var video_play=false;//change_speed函数中防止多次重置定时器
+var game_level=0;//判断弹窗位置，只用了一次，可以考虑化简
 function reset()//时间重置函数
 {
 	window.clearInterval(int);
@@ -50,7 +51,7 @@ function start()//开始函数
 	begintime=new Date();
 	window.clearInterval(int);
 	int=setInterval(timer,10);
-	console.log("start:"+begintime.getMinutes()+'.'+begintime.getSeconds()+'.'+begintime.getMilliseconds());
+	log("start:"+begintime.getMinutes()+'.'+begintime.getSeconds()+'.'+begintime.getMilliseconds());
 	
 }
 
@@ -93,6 +94,34 @@ function timer()//计时函数
 	}
 }
 
+function resize_iframe(){
+	//扫雷网弹窗
+	var width_border=document.getElementById('border').offsetWidth;
+	var width_control=document.getElementById('video_control').offsetWidth;
+	var height_border=document.getElementById('border').offsetHeight;
+	var height_control=document.getElementById('video_control').offsetHeight;
+	window.parent.document.getElementById('Window_Video').width=width_border>width_control?width_border:width_control+8;
+    window.parent.document.getElementById('Window_Video').height=height_border+height_control+6;
+    
+    //屏幕可用高度，最大值针对手机竖屏设置，避免录像窗口位置过低
+    var clientHeight=window.parent.document.body.clientHeight<1100?window.parent.document.body.clientHeight:1100;
+    if(game_level==3){
+		//当前所在frame居中
+		window.parent.document.getElementById('Window_Border').style.left=(window.parent.document.body.clientWidth-644)/2;
+		window.parent.document.getElementById('Window_Border').style.top=window.parent.document.body.scrollTop+(clientHeight-412)/2;
+	}else if(game_level==2){
+		//当前所在frame居中
+		window.parent.document.getElementById('Window_Border').style.left=(
+		window.parent.document.body.clientWidth-475)/2;
+		window.parent.document.getElementById('Window_Border').style.top=window.parent.document.body.scrollTop+(clientHeight-412)/2;
+	}if(game_level==1){
+		//当前所在frame居中
+		window.parent.document.getElementById('Window_Border').style.left=(
+		window.parent.document.body.clientWidth-475)/2;
+		window.parent.document.getElementById('Window_Border').style.top=window.parent.document.body.scrollTop+(clientHeight-393)/2;
+	}
+}
+
 function start_avf(video)//开始函数
 {
 	if(video==0){
@@ -103,7 +132,7 @@ function start_avf(video)//开始函数
 	gameover=true;
 	size=video[0].size;
 	// for(i=0;i<1;i++){
-	// 	console.log(video[i]);
+	// 	log(video[i]);
 	// }
 	
 
@@ -123,33 +152,10 @@ function start_avf(video)//开始函数
 	}
 	document.getElementById("video_control").style.display="block";
 
-	//扫雷网弹窗
-	var width_border=document.getElementById('border').offsetWidth;
-	var width_control=document.getElementById('video_control').offsetWidth;
-	var height_border=document.getElementById('border').offsetHeight;
-	var height_control=document.getElementById('video_control').offsetHeight;
-	window.parent.document.getElementById('Window_Video').width=width_border>width_control?width_border:width_control+8;
-    window.parent.document.getElementById('Window_Video').height=height_border+height_control+6;
-    
-    //屏幕可用高度，最大值针对手机竖屏设置，避免录像窗口位置过低
-    var clientHeight=window.parent.document.body.clientHeight<1100?window.parent.document.body.clientHeight:1100;
-    if(video[0].level==3){
-		//当前所在frame居中
-		window.parent.document.getElementById('Window_Border').style.left=(window.parent.document.body.clientWidth-644)/2;
-		window.parent.document.getElementById('Window_Border').style.top=window.parent.document.body.scrollTop+(clientHeight-412)/2;
-	}else if(video[0].level==2){
-		//当前所在frame居中
-		window.parent.document.getElementById('Window_Border').style.left=(
-		window.parent.document.body.clientWidth-475)/2;
-		window.parent.document.getElementById('Window_Border').style.top=window.parent.document.body.scrollTop+(clientHeight-412)/2;
-	}if(video[0].level==1){
-		//当前所在frame居中
-		window.parent.document.getElementById('Window_Border').style.left=(
-		window.parent.document.body.clientWidth-475)/2;
-		window.parent.document.getElementById('Window_Border').style.top=window.parent.document.body.scrollTop+(clientHeight-393)/2;
-	}
+	game_level=video[0].level;
+	resize_iframe();
 
-	console.log("start:"+new Date().getMinutes()+'.'+new Date().getSeconds()+'.'+new Date().getMilliseconds());
+	log("start:"+new Date().getMinutes()+'.'+new Date().getSeconds()+'.'+new Date().getMilliseconds());
 	window.clearInterval(int);
 	int=setInterval(timer_avf,0);
 	begintime=0;//开始时间
@@ -187,7 +193,7 @@ function restart_avf(){//回访
 		video_play=true;
 		window.clearInterval(int);
 		int=setInterval(timer_avf,0);
-		console.log(plan);
+		log(plan);
 	}else{
 		container.replay_video();
 	}
@@ -274,7 +280,7 @@ function timer_avf(){
 	if((second*1000+millisecond*10)>video[0].realtime*1000){//高倍速时间有延迟，自欺欺人解决法
 		second=video[size-1].sec;
 		millisecond=video[size-1].hun;
-		console.log('录像实际时间:'+second+'.'+millisecond);
+		log('录像实际时间:'+second+'.'+millisecond);
 	}
 
 	while(plan<size&&(second*1000+millisecond*10)>=(video[plan].sec*1000+video[plan].hun*10)){
@@ -318,7 +324,7 @@ function timer_avf(){
 			else if(video[plan].mouse==65||video[plan].mouse==193){//mr
 				middle_invalid=false;
 			}
-			// console.log(111);
+			// log(111);
 			plan++;
 			continue;
 		}
@@ -460,19 +466,19 @@ function timer_avf(){
 	change_top_count("time_count",parseInt(second)+1);
 	document.getElementById('RTime').innerText=(second+millisecond/100).toFixed(2);
 
-	// counters_3BV();
+	counters_3BV();
 	document.getElementById('Ces').innerText=ces_count+'@'+(ces_count/(second+millisecond/100)).toFixed(2);
 	document.getElementById('Right').innerText=right_count+'@'+(right_count/(second+millisecond/100)).toFixed(2);
 	document.getElementById('Left').innerText=left_count+'@'+(left_count/(second+millisecond/100)).toFixed(2);
-	// document.getElementById('Flags').innerText=container.bombNumber-container.minenumber;
+	document.getElementById('Flags').innerText=container.bombNumber-container.minenumber;
 	document.getElementById('Double').innerText=double_count+'@'+(double_count/(second+millisecond/100)).toFixed(2);
 	document.getElementById('Cl').innerText=(left_count+right_count+double_count)+'@'+((left_count+right_count+double_count)/(second+millisecond/100)).toFixed(2);
 
 
 	
 	if(second>video[size-1].sec+2){//简单的出错处理,可能出现错误判断导致录像中断的bug，2秒为容错值
-		console.log(second+'.'+speed+'.'+second/speed);
-		console.log("录像播放错误");
+		log(second+'.'+speed+'.'+second/speed);
+		log("录像播放错误");
 		stop();
 	}
 	if(plan==23941){
@@ -485,7 +491,7 @@ function stop()//暂停函数
 	// console.timeEnd("控制台计时器");
 	window.clearInterval(int);
 	var stoptime=new Date();
-	console.log("stop:"+stoptime.getMinutes()+'.'+stoptime.getSeconds()+'.'+stoptime.getMilliseconds());
+	log("stop:"+stoptime.getMinutes()+'.'+stoptime.getSeconds()+'.'+stoptime.getMilliseconds());
 	var stop_minutes=stoptime.getMinutes();
 	var stop_seconds=stoptime.getSeconds();
 	var stop_milliseconds=stoptime.getMilliseconds();
@@ -502,7 +508,7 @@ function stop()//暂停函数
 	{
 		stop_minutes+=60;
 	}
-	console.log('运行时间:'+((stop_minutes-begintime.getMinutes())*60+(stop_seconds-begintime.getSeconds())+(stop_milliseconds-begintime.getMilliseconds())/1000).toFixed(2));
+	log('运行时间:'+((stop_minutes-begintime.getMinutes())*60+(stop_seconds-begintime.getSeconds())+(stop_milliseconds-begintime.getMilliseconds())/1000).toFixed(2));
 	// second=(stop_minutes-begintime.getMinutes())*60+(stop_seconds-begintime.getSeconds());
 	// millisecond=parseInt((stop_milliseconds-begintime.getMilliseconds())/10);
 }
@@ -531,7 +537,7 @@ function change_top_count(id,count)//修改顶部计时器背景
 	var a=parseInt(Math.abs(count)/100)%10;
 	var b=parseInt((Math.abs(count)/10))%10;
 	var c=Math.abs(count)%10;
-	// console.log("count"+count+" a:"+a+" b:"+b+" c:"+c);
+	// log("count"+count+" a:"+a+" b:"+b+" c:"+c);
 	var image=document.getElementById(id).getElementsByTagName("img");
 	if(count<-10){
 		image[0].src="image/number_minus.bmp";
@@ -609,6 +615,7 @@ function counters_3BV(){//计算3BV
 		}else if(container.bombNumber==99){
 			document.getElementById('STNB').innerText=(435.001/(Math.pow(second+millisecond/100,1.7)/bbbv_done)).toFixed(2);
 		}
+		document.getElementById('Path').innerText=Math.round(video[plan].path);
 		document.getElementById('QG').innerText=(Math.pow(second+millisecond/100,1.7)/bbbv_done).toFixed(3);
 		document.getElementById('Thrp').innerText=(bbbv_done/ces_count).toFixed(3);
 		document.getElementById('Corr').innerText=(ces_count/(left_count+right_count+double_count)).toFixed(3);
@@ -666,10 +673,6 @@ function Mouse_event(){//记录鼠标事件
 	this.x=null;
 	this.y=null;
 	this.path=null;
-}
-
-function log(text){
-	return console.log(text);
 }
 
 function mobile_mark(){//解决手机端没有双击事件
