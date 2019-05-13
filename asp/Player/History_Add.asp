@@ -22,6 +22,10 @@ If Check_Result <> "Fail" Then
 		margin-bottom: 0px;
 		background-color: #333333;
 	}
+	/*新增div容器用以控制宽度*/
+	td div{
+		width: 60;
+	}
 	-->
 	</style>
 	<link href="/Models/Css/2008.css" rel="stylesheet" type="text/css">
@@ -30,7 +34,7 @@ If Check_Result <> "Fail" Then
 	<table width="290" border="0" cellspacing="5" cellpadding="0">
 	  <form name="History_Form" action="Action/History_Add_Action.asp" method="post" target="Action">
 	  <tr>
-		<td valign="top" class="Title">撰写历程</td>
+		<td valign="top" class="Title"><div>撰写历程</div></td>
 		<td colspan="2" valign="top" class="Text">重大进步、参与活动等值得纪念的事件</td>
 	  </tr>
 	  <tr>
@@ -54,8 +58,8 @@ If Check_Result <> "Fail" Then
 	  </tr>
 	  <tr>
 		<td width="60" valign="top" class="Text">此月历程：<br>      </td>
-		<td colspan="2" valign="top" class="High"><textarea name="History_Text" cols="36" rows="10" wrap="VIRTUAL" class="input-no" onpropertychange="Text_Number.innerText=100-this.value.length;"></textarea><br>
-	您还可输入<span id="Text_Number">100</span>字</td>
+		<td colspan="2" valign="top" class="High"><textarea name="History_Text" cols="31" rows="11" wrap="VIRTUAL" class="input-no" onpropertychange="Text_Number.innerText=100-this.value.length;"></textarea><br>
+	您还可输入<span id="Text_Number">100</span>字</a></td>
 	  </tr>
 	  <tr>
 		<td valign="top" class="Text">&nbsp;</td>
