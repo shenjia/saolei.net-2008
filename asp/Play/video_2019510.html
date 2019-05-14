@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
-	<link type="text/css" rel="styleSheet"  href="./css/mine.css?v=2019425" />
+	<link type="text/css" rel="styleSheet"  href="./css/mine_2019510.css" />
 
 </head>  
 
@@ -107,7 +107,7 @@
 
 						<!-- 游戏菜单 -->
 						<div class="dropdown" style="display: none;">
-							<button class="dropbtn" onclick="document.getElementById('dropdown-content').style.display='block';stopPropagation(event);" onmouseout="document.getElementById('dropdown-content').style.display='none';">游戏</button>
+							<button class="dropbtn" onclick="document.getElementById('dropdown-content').style.display='block';event.stopPropagation();" onmouseout="document.getElementById('dropdown-content').style.display='none';">游戏</button>
 							<div id="dropdown-content" class="dropdown-content"  onclick="document.getElementById('dropdown-content').style.display='none';">
 								<button id="new" type="button" onclick="container.init(0);" onmouseout="document.getElementById('dropdown-content').style.display='none';" onmouseover="document.getElementById('dropdown-content').style.display='block';">新游戏<span>F2</span></button>
 								<button id="new" type="button" onclick="container.reset_mine();" onmouseout="document.getElementById('dropdown-content').style.display='none';" onmouseover="document.getElementById('dropdown-content').style.display='block';">重开<span>F3</span></button>
@@ -139,7 +139,7 @@
 					</div>
 
 					<!-- 顶部功能栏 -->
-					<div id="top" onclick="container.reset_mine();" onmousedown="change_top_image('face','face_press');" onmouseup="change_top_image('face','face_normal');" onmouseout="change_top_sunglasses();stopPropagation(event);">
+					<div id="top" onclick="container.reset_mine();" onmousedown="change_top_image('face','face_press');" onmouseup="change_top_image('face','face_normal');" onmouseout="change_top_sunglasses();event.stopPropagation();">
 
 						<div id="mine_count">
 							<img src="image/number_0.bmp" />
@@ -147,7 +147,7 @@
 							<img src="image/number_0.bmp" />
 						</div>
 						
-						<div id="face" title="UPK" >
+						<div id="face" title="UPK">
 							<img src="image/face_normal.bmp" />
 						</div>
 
@@ -175,7 +175,7 @@
 					<span title="点击复原" id="speed_value" onclick="reset_speed()" >1.00x</span>
 
 					<div id="rate_control" >
-						<input title="进度调节" type="range" id="range_rate" value="0" oninput="change_rate_value()" min="0" max="1000" step="1" ontouchmove="stopPropagation(event);" onmouseup="change_rate()" ontouchend="change_rate()" />  
+						<input title="进度调节" type="range" id="range_rate" value="0" oninput="change_rate_value()" min="0" max="1000" step="1" ontouchmove="event.stopPropagation();" onmouseup="change_rate()" ontouchend="change_rate()" />  
 					</div>
 					<span title="时间" id="rate_value">0.00</span>
 
@@ -223,31 +223,19 @@
 	
 	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
 
-	<script type="text/javascript" src="./js/public.js?v=2019425"></script>
-	<script type="text/javascript" src="./js/mine.js?v=2019425"></script>
-	<script type="text/javascript" src="./js/play_avf.js?v=2019425"></script>
-
 	<script type="text/javascript">
-
-		function stopPropagation(e){
-			//IE兼容
-		    e=window.event||e;
-		    if(document.all){
-			        e.cancelBubble=true;
-		    }else{
-			        e.stopPropagation();
-		    }
-		}
-
-		// 页面加载完成之后进行录像播放
-		window.onload=function(){
-			// alert('onload');
-			// loadVideo(window.parent.document.getElementById('Window_Video').name);
+		var is_log=false;
+		function log(msg){
+			if(window.console&&is_log){
+				console.warn(msg);
+			}
 		}
 	</script>
 
+	<script type="text/javascript" src="./js/public_2019510.js"></script>
+	<script type="text/javascript" src="./js/mine_2019510.js"></script>
+	<script type="text/javascript" src="./js/play_avf_2019510.js"></script>
+
 </body>
-
-
 
 </html>
