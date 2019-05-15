@@ -76,23 +76,26 @@ function Img()
   ImgLink=window.prompt('请输入图片链接,例如:http://www.saolei.net/Models/Images/Common/Logo_Chinese.gif','http://')
   if(ImgLink!=null&&ImgLink!='')//此处需要判断null和空字符串
   {
+    let start=textarea.selectionStart;//选择内容的开始位置
     let end=textarea.selectionEnd;//选择内容的结束位置
     textarea.focus();//获取焦点，不然无法进行其他操作
-    textarea.setSelectionRange(end,end);
+    textarea.setSelectionRange(start,end);
     textarea.setRangeText('[img]'+ImgLink+'[/img]');
-    textarea.setSelectionRange(end,end+11+ImgLink.length); 
+    textarea.setSelectionRange(start,end+11+ImgLink.length); 
   }
  }
 function Url()
  {
   Link=window.prompt('请输入网页链接,例如:http://www.saolei.net/','http://')
-  if(ImgLink!=null&&Link!='')
+  if(Link!=null&&Link!='')
   {
+    let start=textarea.selectionStart;//选择内容的开始位置
     let end=textarea.selectionEnd;//选择内容的结束位置
+    alert(start+" "+end);
     textarea.focus();//获取焦点，不然无法进行其他操作
-    textarea.setSelectionRange(end,end);
+    textarea.setSelectionRange(start,end);
     textarea.setRangeText('[url '+Link+'/]'+Link+'[/url]');
-    textarea.setSelectionRange(end,end+13+2*Link.length);
+    textarea.setSelectionRange(start,end+13+2*Link.length);
   }
  }
 </script>
