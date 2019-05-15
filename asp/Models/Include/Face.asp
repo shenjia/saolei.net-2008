@@ -65,25 +65,34 @@ function Face()
 function addFace(I)
  {
   Hide('Face_Box');
-  document.Title_Form.Title_Text.focus();
-  document.selection.createRange().text+='[face]'+I+'[/face]'; 
+  let end=textarea.selectionEnd;//选择内容的结束位置
+  textarea.focus();//获取焦点，不然无法进行其他操作
+  textarea.setSelectionRange(end,end);
+  textarea.setRangeText('[face]'+I+'[/face]');
+  textarea.setSelectionRange(end,end+13+I.toString().length); 
  }
 function Img()
  {
   ImgLink=window.prompt('请输入图片链接,例如:http://www.saolei.net/Models/Images/Common/Logo_Chinese.gif','http://')
-  if(ImgLink!='')
+  if(ImgLink!=null&&ImgLink!='')//此处需要判断null和空字符串
   {
-  document.Title_Form.Title_Text.focus();
-  document.selection.createRange().text+='[img]'+ImgLink+'[/img]'; 
+    let end=textarea.selectionEnd;//选择内容的结束位置
+    textarea.focus();//获取焦点，不然无法进行其他操作
+    textarea.setSelectionRange(end,end);
+    textarea.setRangeText('[img]'+ImgLink+'[/img]');
+    textarea.setSelectionRange(end,end+11+ImgLink.length); 
   }
  }
 function Url()
  {
   Link=window.prompt('请输入网页链接,例如:http://www.saolei.net/','http://')
-  if(Link!='')
+  if(ImgLink!=null&&Link!='')
   {
-  document.Title_Form.Title_Text.focus();
-  document.selection.createRange().text+='[url '+Link+'/]'+Link+'[/url]'; 
+    let end=textarea.selectionEnd;//选择内容的结束位置
+    textarea.focus();//获取焦点，不然无法进行其他操作
+    textarea.setSelectionRange(end,end);
+    textarea.setRangeText('[url '+Link+'/]'+Link+'[/url]');
+    textarea.setSelectionRange(end,end+13+2*Link.length);
   }
  }
 </script>
