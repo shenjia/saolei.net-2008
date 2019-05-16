@@ -35,86 +35,86 @@ body {
 			<tr height="25px">
 				<td align="center" class="Bold">No. <span class="Signest">1</span></td>
 				<td align="center" class="High">Kamil Muranski</td>
-				<td align="center" class="Text"><span class="Beg">1.26</span></td>
-				<td align="center" class="Text"><span class="Int">8.50</span></td>
-				<td align="center" class="Text"><span class="Exp">32.13</span></td>
-				<td align="center" class="Text"><span class="Signest">41</span></td>
+				<td align="center" class="Text"><span class="Beg">0.49</span></td>
+				<td align="center" class="Text"><span class="Int">7.03</span></td>
+				<td align="center" class="Text"><span class="Exp">31.13</span></td>
+				<td align="center" class="Text"><span class="Signest">39</span></td>
 			</tr>
 			<tr height="25px">
               <td align="center" class="Bold">No. <span class="Signest">2</span></td>
               <td align="center" class="High">Ian Fraser</td>
-              <td align="center" class="Text"><span class="Beg">1.60</span></td>
-              <td align="center" class="Text"><span class="Int">10.45</span></td>
-              <td align="center" class="Text"><span class="Exp">33.95</span></td>
-              <td align="center" class="Text"><span class="Signest">44</span></td>
+              <td align="center" class="Text"><span class="Beg">0.60</span></td>
+              <td align="center" class="Text"><span class="Int">9.45</span></td>
+              <td align="center" class="Text"><span class="Exp">32.95</span></td>
+              <td align="center" class="Text"><span class="Signest">43</span></td>
   </tr>
 			<tr height="25px">
 			  <td align="center" class="Bold">No. <span class="Signest">3</span></td>
-			  <td align="center" class="High">Manuel Heider </td>
-			  <td align="center" class="Text"><span class="Beg">1.99</span></td>
-			  <td align="center" class="Text"><span class="Int">10.20</span></td>
-			  <td align="center" class="Text"><span class="Exp">37.48</span></td>
-			  <td align="center" class="Text"><span class="Signest">48</span></td>
+			  <td align="center" class="High">Fritz</td>
+			  <td align="center" class="Text"><span class="Beg">0.76</span></td>
+			  <td align="center" class="Text"><span class="Int">9.42</span></td>
+			  <td align="center" class="Text"><span class="Exp">34.62</span></td>
+			  <td align="center" class="Text"><span class="Signest">45</span></td>
   </tr>
 			<tr height="25px">
-			  <td align="center" class="Bold">No. <span class="Signest">4</span></td>
-			  <td align="center" class="High">Dion Tiu </td>
-			  <td align="center" class="Text"><span class="Beg">1.70</span></td>
-			  <td align="center" class="Text"><span class="Int">10.67</span></td>
-			  <td align="center" class="Text"><span class="Exp">37.77</span></td>
-			  <td align="center" class="Text"><span class="Signest">48</span></td>
+			  <td align="center" bgcolor="#444444" class="Bold">No. <span class="Signest">4</span></td>
+			  <td align="center" bgcolor="#444444" class="Sign">Guo Wei Jia</td>
+			  <td align="center" bgcolor="#444444" class="Text"><span class="Beg">0.65</span></td>
+			  <td align="center" bgcolor="#444444" class="Text"><span class="Int">9.50</span></td>
+			  <td align="center" bgcolor="#444444" class="Text"><span class="Exp">36.03</span></td>
+			  <td align="center" bgcolor="#444444" class="Text"><span class="Signest">47</span></td>
   </tr>
 			<tr height="25px">
-			  <td align="center" bgcolor="#444444" class="Bold">No. <span class="Signest">5</span></td>
-			  <td align="center" bgcolor="#444444" class="Sign">Zhang Shen jia</td>
-			  <td align="center" bgcolor="#444444" class="Text"><span class="Beg">1.98</span></td>
-			  <td align="center" bgcolor="#444444" class="Text"><span class="Int">11.34</span></td>
-			  <td align="center" bgcolor="#444444" class="Text"><span class="Exp">38.82</span></td>
-			  <td align="center" bgcolor="#444444" class="Text"><span class="Signest">50</span></td>
+			  <td align="center" class="Bold">No. <span class="Signest">5</span></td>
+              <td align="center" class="High">Thomas Kolar</td>
+              <td align="center" class="Text"><span class="Beg">0.51</span></td>
+			  <td align="center" class="Text"><span class="Int">9.07</span></td>
+			  <td align="center" class="Text"><span class="Exp">36.73</span></td>
+			  <td align="center" class="Text"><span class="Signest">47</span></td>
   </tr>
 			<tr height="25px">
 			  <td align="center" class="Bold">No. <span class="Signest">6</span></td>
-			  <td align="center" class="High">Oliver Scheer </td>
-			  <td align="center" class="Text"><span class="Beg">1.93</span></td>
-			  <td align="center" class="Text"><span class="Int">11.99</span></td>
-			  <td align="center" class="Text"><span class="Exp">39.84</span></td>
-			  <td align="center" class="Text"><span class="Signest">51</span></td>
+			  <td align="center" class="High">Manuel Helder</td>
+			  <td align="center" class="Text"><span class="Beg">0.90</span></td>
+			  <td align="center" class="Text"><span class="Int">9.13</span></td>
+			  <td align="center" class="Text"><span class="Exp">36.48</span></td>
+			  <td align="center" class="Text"><span class="Signest">47</span></td>
   </tr>
 			<tr height="25px">
-			  <td align="center" class="Bold">No. <span class="Signest">7</span></td>
-			  <td align="center" class="High">Fritz Lr</td>
-			  <td align="center" class="Text"><span class="Beg">1.64</span></td>
-			  <td align="center" class="Text"><span class="Int">10.82</span></td>
-			  <td align="center" class="Text"><span class="Exp">40.58</span></td>
-			  <td align="center" class="Text"><span class="Signest">51</span></td>
+			  <td align="center" bgcolor="#444444" class="Bold">No. <span class="Signest">7</span></td>
+			  <td align="center" bgcolor="#444444" class="Sign">Zhou Dan</td>
+			  <td align="center" bgcolor="#444444" class="Text"><span class="Beg">0.54</span></td>
+			  <td align="center" bgcolor="#444444" class="Text"><span class="Int">9.30</span></td>
+			  <td align="center" bgcolor="#444444" class="Text"><span class="Exp">36.81</span></td>
+			  <td align="center" bgcolor="#444444" class="Text"><span class="Signest">47</span></td>
   </tr>
 			<tr height="25px">
 			  <td align="center" class="Bold">No. <span class="Signest">8</span></td>
-			  <td align="center" class="High">Damien Moore </td>
-			  <td align="center" class="Text"><span class="Beg">1.67</span></td>
-			  <td align="center" class="Text"><span class="Int">11.11</span></td>
-			  <td align="center" class="Text"><span class="Exp">40.34</span></td>
-			  <td align="center" class="Text"><span class="Signest">52</span></td>
+			  <td align="center" class="High">Dion Tiu</td>
+			  <td align="center" class="Text"><span class="Beg">0.70</span></td>
+			  <td align="center" class="Text"><span class="Int">9.67</span></td>
+			  <td align="center" class="Text"><span class="Exp">36.77</span></td>
+			  <td align="center" class="Text"><span class="Signest">48</span></td>
   </tr>
 <tr height="25px">
               <td align="center" bgcolor="#444444" class="Bold">No. <span class="Signest">9</span></td>
-    <td align="center" bgcolor="#444444" class="Sign">Yang Xiao Yang</td>
-    <td align="center" bgcolor="#444444" class="Text"><span class="Beg">2.57</span></td>
-    <td align="center" bgcolor="#444444" class="Text"><span class="Int">11.60</span></td>
-    <td align="center" bgcolor="#444444" class="Text"><span class="Exp">40.82</span></td>
-    <td align="center" bgcolor="#444444" class="Text"><span class="Signest">53</span></td>
+    <td align="center" bgcolor="#444444" class="Sign">Zhang Shen Jia</td>
+    <td align="center" bgcolor="#444444" class="Text"><span class="Beg">0.98</span></td>
+    <td align="center" bgcolor="#444444" class="Text"><span class="Int">10.34</span></td>
+    <td align="center" bgcolor="#444444" class="Text"><span class="Exp">37.82</span></td>
+    <td align="center" bgcolor="#444444" class="Text"><span class="Signest">50</span></td>
   </tr>
 			<tr height="25px">
 			  <td align="center" class="Bold">No. <span class="Signest">10</span></td>
-			  <td align="center" class="High">Roman Gammel </td>
-			  <td align="center" class="Text"><span class="Beg">1.87</span></td>
-			  <td align="center" class="Text"><span class="Int">10.29</span></td>
-			  <td align="center" class="Text"><span class="Exp">42.86</span></td>
-			  <td align="center" class="Text"><span class="Signest">53</span></td>
+			  <td align="center" class="High">Pavel Mishin</td>
+			  <td align="center" class="Text"><span class="Beg">0.81</span></td>
+			  <td align="center" class="Text"><span class="Int">9.63</span></td>
+			  <td align="center" class="Text"><span class="Exp">38.98</span></td>
+			  <td align="center" class="Text"><span class="Signest">50</span></td>
   </tr>
 			<tr height="25px" align="right">
 			  <td height="35" colspan="2" align="left" class="Text"><a href="http://www.minesweeper.info/worldranking.html" target="_blank" class="Sign">点击查看完整世界排行</a></td>
-              <td height="35" colspan="4" class="Text"><p>更新时间：<span class="Title">2010.8.5</span></p></td>
+              <td height="35" colspan="4" class="Text"><p>更新时间：<span class="Title">2014.8.17</span></p></td>
   </tr>
 </table>
 </body>

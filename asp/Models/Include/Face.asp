@@ -91,7 +91,6 @@ function Url()
   {
     let start=textarea.selectionStart;//选择内容的开始位置
     let end=textarea.selectionEnd;//选择内容的结束位置
-    alert(start+" "+end);
     textarea.focus();//获取焦点，不然无法进行其他操作
     textarea.setSelectionRange(start,end);
     textarea.setRangeText('[url '+Link+'/]'+Link+'[/url]');
