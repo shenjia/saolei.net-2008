@@ -453,6 +453,7 @@ function timer_avf(){
 
 		else if(video[plan].mouse==65||video[plan].mouse==193){//mr
 			middle_invalid=false;
+			double_count++;
 			current.change_around_normal();
 			current.openaround();
 		}
@@ -615,7 +616,7 @@ function counters_3BV(){//计算3BV
 		}else if(container.bombNumber==99){
 			document.getElementById('STNB').innerText=(435.001/(Math.pow(second+millisecond/100,1.7)/bbbv_done)).toFixed(2);
 		}
-		document.getElementById('Path').innerText=Math.round(video[plan].path);
+		if(plan>0)document.getElementById('Path').innerText=Math.round(video[plan-1].path);
 		document.getElementById('QG').innerText=(Math.pow(second+millisecond/100,1.7)/bbbv_done).toFixed(3);
 		document.getElementById('Thrp').innerText=(bbbv_done/ces_count).toFixed(3);
 		document.getElementById('Corr').innerText=(ces_count/(left_count+right_count+double_count)).toFixed(3);
