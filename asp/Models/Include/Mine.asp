@@ -48,8 +48,11 @@ function Mine()
 }
 function addMine(I)
  {
-	document.Title_Form.Title_Text.focus();
-	document.selection.createRange().text+='['+I+']'; 
+	let end=textarea.selectionEnd;//选择内容的结束位置
+	textarea.focus();//获取焦点，不然无法进行其他操作
+	textarea.setSelectionRange(end,end);
+	textarea.setRangeText('['+I+']');
+	textarea.setSelectionRange(end,end+2+I.toString().length);
  }
 function KeyDown(){ 
 	if (Mine_Box.style.display=='')  
