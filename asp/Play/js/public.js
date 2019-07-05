@@ -418,7 +418,7 @@ function timer_avf(){
 				left_count++;
 			}
 			if(current.isOpen==false&&rightClick==false){
-				if(current.getStyle()=="opening"||plan==1||plan==2){
+				if(current.getStyle()=="opening"||current.getStyle()=="block"||plan==1||plan==2){
 					//同样是很迷的判定
 					//avf可能第二个操作时lr（plan==1）
 					//mvf可能第三个操作是lr（plan==2）
