@@ -1,4 +1,4 @@
-"use strict";//js真的很严格
+﻿"use strict";//js真的很严格
 
 //全局变量
 var gameover=false;//游戏结束标志
@@ -29,7 +29,7 @@ function Container(d,e,f){
 
 Container.prototype.init=function(level){
 	reset();
-	// console.log("newgame");
+	// log("newgame");
 	gameover=false;
 	firstclick=true;
 	leftClick=false;
@@ -194,7 +194,7 @@ Container.prototype.add_mark=function(){//添加标识
 
 Container.prototype.set_mine=function(bomb_id){
 	reset();//重置时间
-	console.log("新游戏布雷1111");
+	log("新游戏布雷1111");
 	gameover=false;
 	leftClick=false;
 	rightClick=false;
@@ -255,7 +255,7 @@ Container.prototype.set_viedo_mine=function(board){
 	right_count=0;
 	double_count=0;
 	ces_count=0;
-	console.log("录像布雷");
+	log("录像布雷");
 	for(var i in board){
 		if(board[i]==1){
 			this.childObject[i].isBomb=true;
@@ -299,7 +299,7 @@ Container.prototype.replay_video=function(){
 		container.set_viedo_mine(video[0].board);
 		start_avf(video);
 	}else{
-		console.log("录像重放错误");
+		log("录像重放错误");
 	}
 }
 
@@ -325,7 +325,7 @@ Container.prototype.reset_mine=function(){
 		ces_count=0;
 		reset_begin=true;
 		path=0;
-		console.log("重开布雷");
+		log("重开布雷");
 		for(var i in this.childObject){
 			this.childObject[i].changeStyle("block");
 			this.childObject[i].isOpen=false;
@@ -333,7 +333,7 @@ Container.prototype.reset_mine=function(){
 		}
 	}
 	else{
-		console.log('重新布雷无效');
+		log('重新布雷无效');
 	}
 };
 
@@ -745,7 +745,7 @@ Block.prototype.win=function(){
 			path=parseInt(video[size-1].path);
 		}
 		gameover=true;
-		console.log("You Win!");
+		log("You Win!");
 		var parent=document.getElementById("container");
 		for(var i=0;i<container.childObject.length;i++){
 			if(container.childObject[i].html.className=="block"){
@@ -782,11 +782,11 @@ EventUtil.removeEvent=function(a,b,c){
 document.onmousedown=function() { 
 	if(gameover==false){
 		if(event.button==0){
-		// console.log("leftdown");
+		// log("leftdown");
 		leftClick=true;
 	} 
 	if(event.button==2){
-		// console.log("rightdown");
+		// log("rightdown");
 		rightClick=true;
 	} 
 }
@@ -794,11 +794,11 @@ document.onmousedown=function() {
 document.onmouseup=function() { 
 	if(gameover==false){
 		if(event.button==0){
-		// console.log("leftup");
+		// log("leftup");
 		leftClick=false;
 	} 
 	if(event.button==2){
-		// console.log("rightup");
+		// log("rightup");
 		rightClick=false;
 	} 
 }
@@ -807,15 +807,16 @@ document.onkeydown=function(event){
 	var e = event || window.event || arguments.callee.caller.arguments[0];
 	var prevent=true;
 	if(e&&!document.getElementById('mark_input')){//修改标志时阻止触发快捷键，若修改需修改双处
-		if(e.keyCode==113){//F2，新游戏
-			container.init(0);
-		}else if(e.keyCode==49){//1，初级
-			container.init(1);
-		}else if(e.keyCode==50){//2，中级
-			container.init(2);
-		}else if(e.keyCode==51){//3，高级
-			container.init(3);
-		}else if(e.keyCode==114){//F3，重开
+		// if(e.keyCode==113){//F2，新游戏
+		// 	container.init(0);
+		// }else if(e.keyCode==49){//1，初级
+		// 	container.init(1);
+		// }else if(e.keyCode==50){//2，中级
+		// 	container.init(2);
+		// }else if(e.keyCode==51){//3，高级
+		// 	container.init(3);
+		// }else 
+		if(e.keyCode==114){//F3，重开
 			container.reset_mine();
 		}else if(e.keyCode==116){//F5，打开录像
 			$("#files").click();
@@ -845,7 +846,7 @@ container.add_mark();
 // 		var mobile='';
 // 		if((image_type=='.jpg'&&image_order<=jpg_count)||(image_type=='.png'&&image_order<=png_count)){
 // 			document.getElementById('backgroung_image').getElementsByTagName('img')[0].src='image/mobile/background_0'+image_order+image_type;
-// 			console.log('background_0'+image_order+image_type);
+// 			log('background_0'+image_order+image_type);
 // 		}
 // 		// document.getElementById('backgroung_image').getElementsByTagName('img')[0].src='image/mobile/background_01.jpg';
 // 		return;
@@ -857,7 +858,7 @@ container.add_mark();
 // 	var mobile='';
 // 	if((image_type=='.jpg'&&image_order<=jpg_count)||(image_type=='.png'&&image_order<=png_count)){
 // 		document.getElementById('backgroung_image').getElementsByTagName('img')[0].src='image/computer/background_'+image_order+image_type;
-// 		console.log('background_'+image_order+image_type);
+// 		log('background_'+image_order+image_type);
 // 	}
 // 	// document.getElementById('backgroung_image').getElementsByTagName('img')[0].src='image/mobile/background_1.jpg';
 // }

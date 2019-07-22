@@ -40,7 +40,7 @@ If Message = "No" And Check_Result <> "Fail" Then
 	Call End_Conn()
 	
 	If From = "Box" Then
-		Act = "top.Window_Frame.location='/Message/Box.asp';"
+		Act = "parent.location='/Message/Box.asp';"
 	Else
 		Act = "top.End_Mask();top.document.getElementById('Window_Box').style.display='none';"			
 	End If

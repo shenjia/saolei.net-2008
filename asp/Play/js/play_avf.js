@@ -27,8 +27,8 @@ function loadVideo(name){
 	xmlhttp.onreadystatechange=function(){
         if(xmlhttp.readyState==4){
             if(xmlhttp.status==200||xmlhttp.status==0){
-                console.log('----- 播放录像 -----');
-                console.log("服务器响应: "+xmlhttp.status);
+                log('----- 播放录像 -----');
+                log("服务器响应: "+xmlhttp.status);
                 //xmlhttp.response为Blob对象，还需通过Filereader转为BinaryString编码格式
                 analyze_video(name,xmlhttp.response);
 
@@ -61,6 +61,8 @@ function videoError(message){
 function closeVideo(){
     // container.init(0);
     if($('#divPageMask', parent.document).width()>0){//以遮罩是否显示作为是否执行操作的判断依据
+        //重置主页面弹窗位置
+        $("#Window_Frame", parent.document)[0].contentWindow.resize_iframe();
         $('#Window_Frame', parent.document).fadeIn(fade);
         $('#Window_Video', parent.document).fadeOut(fade);//callback不带括号为淡出后执行，加括号为立即执行
     }else{
@@ -90,7 +92,7 @@ function charCodeAt(char){
 function playAvfVideo(result){
 	reset();
     //当读取完成后回调这个函数,然后此时文件的内容存储到了result中,直接操作即可
-    // console.log(this.result);
+    // log(this.result);
     var board=new Array();//雷的分布
     number=5;//字符读取进度，不要放在level定义下面
     var level=charCodeAt(result[number])-2;//级别
@@ -112,15 +114,15 @@ function playAvfVideo(result){
         for(var i=++number;i<number+2*container.bombNumber;i+=2)
         {
         	board[container.columns*(charCodeAt(result[i])-1)+(charCodeAt(result[i+1])-1)]=1;
-        	// console.log(charCodeAt(result[i])+' '+charCodeAt(result[i+1]));
+        	// log(charCodeAt(result[i])+' '+charCodeAt(result[i+1]));
         }
 
         while(number<result.length&&(result[number-2]!='['||result[number]!='|')){//时间戳开始标志
         	number++;
-        	// console.log(number+':'+charCodeAt(result[number]));
+        	// log(number+':'+charCodeAt(result[number]));
         }
 
-        // console.log(charCodeAt(result[number-4])+'..............................');
+        // log(charCodeAt(result[number-4])+'..............................');
         if(charCodeAt(result[number-4])==17){//question marks
         	document.getElementById("question").innerHTML='取消问号';
 			question=true;
@@ -133,7 +135,7 @@ function playAvfVideo(result){
         number++;
         while(number<result.length&&result[number]!=']'){//时间戳结束标志
         	timestamp+=result[number];
-        	// console.log(number+':'+result[number]);
+        	// log(number+':'+result[number]);
         	number++;
         }//时间戳读取完成
         let array=timestamp.split("|");
@@ -208,20 +210,20 @@ function playAvfVideo(result){
             realtime+=result[number];
             number++;
         }
-        console.log('Realtime: '+realtime);
+        log('Realtime: '+realtime);
 
         if(result.substring(number,number+6)=="Skin: "){
             while(number<result.length&&charCodeAt(result[number])!=13){
                 skin+=result[number];
                 number++;
             }
-            console.log(skin);
+            log(skin);
 
         	// number++;//使当前读取进度number位于间隔符后一位
         	while(++number<result.length&&charCodeAt(result[number])!=13){
 	        	player+=result[number];
 	        }//标志读取完成
-            console.log('Player: '+player);
+            log('Player: '+player);
 
             for(let index=0;index<player.length;index++){
                 if(charCodeAt(player[index])>128&&xmlhttp!=null){
@@ -231,14 +233,14 @@ function playAvfVideo(result){
                     var reader = new FileReader();//这是核心,读取操作就是由它完成.
                     reader.readAsText(blob,"gb2312");//读取文件的内容,也可以读取文件的URL
                     reader.onabort = function () {
-                        console.log("读取中断....");
+                        log("读取中断....");
                     }
                     reader.onerror = function () {
-                        console.log("读取异常....");
+                        log("读取异常....");
                     }
                     reader.onload = function () {
                         player=this.result;
-                        console.log('Player(GB2312): '+player);
+                        log('Player(GB2312): '+player);
 
                         video[0].size=size;
                         video[0].realtime=realtime;
@@ -268,36 +270,36 @@ function playAvfVideo(result){
 function playMvfVideo(result){
 	reset();
     //当读取完成后回调这个函数,然后此时文件的内容存储到了result中,直接操作即可
-    // console.log(this.result);
+    // log(this.result);
     number=0;//字符读取进度
     video=new Array();
 
     if(charCodeAt(result[0])==0x11&&charCodeAt(result[1])==0x4D){
-    	// console.log(result[27]);
+    	// log(result[27]);
     	if(result[27]==5){//此处判断不能进行charCodeAt()操作
     		number=74;
-    		console.log("软件版本: Clone 0.97");
+    		log("软件版本: Clone 0.97");
     		read_097(result);//读取事件
     		container.set_viedo_mine(video[0].board);//按录像布雷
     		start_avf(video);//播放录像
     		video_invalid=false;
     	}else if(result[27]==6 || result[27]==7){
     		number=71;
-    		console.log("软件版本: Clone 2007");
+    		log("软件版本: Clone 2007");
     		read_2007(result);//读取事件
     		container.set_viedo_mine(video[0].board);//按录像布雷
     		start_avf(video);//播放录像
     		video_invalid=false;
     	}else if(result[27]==8){
     		number=74;
-    		console.log("软件版本: Clone 0.97 funny mode");
+    		log("软件版本: Clone 0.97 funny mode");
     		read_097(result);//读取事件
     		container.set_viedo_mine(video[0].board);//按录像布雷
     		start_avf(video);//播放录像
     		video_invalid=false;
     	}
     }else if(charCodeAt(result[0])==0x00&&charCodeAt(result[1])==0x00){
-    	console.log("软件版本: 0.97 hacked(headless)");
+    	log("软件版本: 0.97 hacked(headless)");
     	number=7;//丢失部分信息的mvf文件
 		read_097(result);//读取事件
 		container.set_viedo_mine(video[0].board);//按录像布雷
@@ -317,19 +319,19 @@ function playMvfVideo(result){
 function fileImport() {
     //获取读取文件的File对象
     var selectedFile = document.getElementById('files').files[0];
-    // console.log(selectedFile);
+    // log(selectedFile);
     if(selectedFile){//如果有选择文件，避免undefined报错
 	    var name = selectedFile.name;//读取选中文件的文件名
 	    var size = selectedFile.size;//读取选中文件的大小
-	    console.log("文件名:"+name);
-	    console.log("文件大小:"+(size/1024).toFixed(2)+"kb");
+	    log("文件名:"+name);
+	    log("文件大小:"+(size/1024).toFixed(2)+"kb");
 	    if((size/1024).toFixed(2)>5120){//限制文件大小5M
-	    	console.log("录像文件过大，请重新选择");
+	    	log("录像文件过大，请重新选择");
 	    	return false;
 	    }
 	    analyze_video(name,selectedFile);
 	}else{
-		console.log("请选择一个录像文件");
+		log("请选择一个录像文件");
 	}
 }
 
@@ -339,10 +341,10 @@ function analyze_video(name,selectedFile){
         var reader = new FileReader();//这是核心,读取操作就是由它完成.
         reader.readAsBinaryString(selectedFile);//读取文件的内容,也可以读取文件的URL
         reader.onabort = function () {  
-            console.log("中断读取....");  
+            log("中断读取....");  
         }
         reader.onerror = function () {  
-            console.log("读取异常....");  
+            log("读取异常....");  
         }
         reader.onload = function () {
             playAvfVideo(this.result);
@@ -352,16 +354,16 @@ function analyze_video(name,selectedFile){
         var reader = new FileReader();//这是核心,读取操作就是由它完成.
         reader.readAsBinaryString(selectedFile);//读取文件的内容,也可以读取文件的URL
         reader.onabort = function () {  
-            console.log("读取中断....");  
+            log("读取中断....");  
         }  
         reader.onerror = function () {  
-            console.log("读取异常....");  
+            log("读取异常....");  
         }  
         reader.onload = function () {
             playMvfVideo(this.result);
         }
     }else{
-        console.log("录像格式错误，请重新选择");
+        log("录像格式错误，请重新选择");
         alert("录像格式错误！");
         closeVideo();
     }
@@ -379,11 +381,11 @@ function read_board(result,add){
 		video[0].board[i]=0;
 	}
 	var m=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
-	// console.log('Width: '+w+'  Height: '+h+'  Mines: '+m);
+	// log('Width: '+w+'  Height: '+h+'  Mines: '+m);
 	for(var i=0;i<m;i++){
 		pos=charCodeAt(result[++number])+add+(charCodeAt(result[++number])+add)*w;
 		if(pos>=w*h||pos<0){
-			console.log("录像读取错误");
+			log("录像读取错误");
             videoError("录像读取错误");
 			return false;
 		}
@@ -400,7 +402,7 @@ function read_board(result,add){
 // 检查宽高变化来检测屏幕是否旋转
 // 暂不使用resize,避免调整窗口大小时重复background_reload()
 window.addEventListener("orientationchange",function() {
-    console.log('屏幕：'+window.orientation+'度');
+    log('屏幕：'+window.orientation+'度');
     // background_reload();
     if(window.orientation == 90 || window.orientation == -90){
     	document.getElementsByTagName("meta")[1]["content"]=('width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0');
@@ -425,11 +427,11 @@ function read_pre(result){//0.97clone
 		video[0].board[i]=0;
 	}
 	var m=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
-	// console.log('Width: '+w+'  Height: '+h+'  Mines: '+m);
+	// log('Width: '+w+'  Height: '+h+'  Mines: '+m);
 	for(var i=0;i<m;i++){
 		pos=charCodeAt(result[++number])+(charCodeAt(result[++number]))*w;
 		if(pos>=w*h||pos<0){
-			console.log("录像读取错误");
+			log("录像读取错误");
             videoError("录像读取错误");
             undefined.charCodeAt();//通过调用不可用函数进行函数中断，可能不太好？
 			return false;
@@ -439,7 +441,7 @@ function read_pre(result){//0.97clone
 	// log(video[0].board);
 
 	if(charCodeAt(result[++number])){//question marks
-		console.log("问号模式: on");
+		log("问号模式: on");
 		document.getElementById("question").innerHTML='取消问号';
 		question=true;
 	}else{
@@ -455,16 +457,16 @@ function read_pre(result){//0.97clone
 		if(result[result.length-13==' ']&&result[result.length-12==' ']&&result[result.length-11==' ']){
 			after_events=filesize-113;
 			has_name=true;
-			console.log("软件版本: Clone 0.76");
+			log("软件版本: Clone 0.76");
 		}else{
 			after_events=filesize-13;
 			has_name=false;
-			console.log("软件版本: Clone <=0.75");
+			log("软件版本: Clone <=0.75");
 		}
 	}else{
 		after_events=filesize-125;
 		has_name=true;
-		console.log("软件版本: Clone <=0.96");
+		log("软件版本: Clone <=0.96");
 	}
 	if(w==8 && h==8) video[0].level=1;
 	else if(w==16 && h==16) video[0].level=2;
@@ -476,14 +478,14 @@ function read_pre(result){//0.97clone
 	}
 	container.init(video[0].level);
 
-	// console.log('now:'+now);
-	// console.log('filesize:'+filesize);
-	// console.log('after_events:'+after_events);
+	// log('now:'+now);
+	// log('filesize:'+filesize);
+	// log('after_events:'+after_events);
 
 	number=after_events-1;
 	var score_sec=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
 	var score_ths=charCodeAt(result[++number])*10;
-	console.log('Time: '+score_sec+'.'+score_ths);
+	log('Time: '+score_sec+'.'+score_ths);
 
 	video[0].player=new Array();
 
@@ -495,7 +497,7 @@ function read_pre(result){//0.97clone
 			video[0].player+=result[++number];
 		}
 	}
-	console.log('用户标识: '+video[0].player);
+	log('用户标识: '+video[0].player);
 	number=now-1;
 	var e=new Array();
 	var size=0;
@@ -528,7 +530,7 @@ function read_pre(result){//0.97clone
 		video[size++].weirdness_bit=e[7];
 		now+=8;
 	}
-	// console.log(now);
+	// log(now);
 	video[size].lb=video[size].mb=video[size].rb=0;
 	video[size].x=video[size-1].x;
 	video[size].y=video[size-1].y;
@@ -636,7 +638,7 @@ function read_pre(result){//0.97clone
 		}
 	}
 	video[0].size=size+1;//mvf没有sec=-1的结束标志，与avf播放兼容要size+1
-	// console.log(video);
+	// log(video);
 }
 
 function read_2007(result){//0.97clone
@@ -657,17 +659,17 @@ function read_2007(result){//0.97clone
 	var score_sec=parseInt(score_ths/1000);
 	score_ths%=1000;
 	if(charCodeAt(result[++number])){//question marks
-		console.log("问号模式: on");
+		log("问号模式: on");
 		document.getElementById("question").innerHTML='取消问号';
 		question=true;
 	}else{
     	document.getElementById("question").innerHTML='标记问号';
 		question=false;
     }
-	// console.log('Timestamp: '+year+'-'+mouth+'-'+day+' '+hour+':'+min+':'+sec);
-	// console.log('Level: '+level+'  Score:'+score_sec+'.'+three_char(score_ths));
+	// log('Timestamp: '+year+'-'+mouth+'-'+day+' '+hour+':'+min+':'+sec);
+	// log('Level: '+level+'  Score:'+score_sec+'.'+three_char(score_ths));
 	var mode_names=new Array("","classic","density","UPK","cheat");
-	console.log("Mode: "+mode_names[mode]);
+	log("Mode: "+mode_names[mode]);
 	read_board(result,-1);
 
 	var len=charCodeAt(result[++number]);//标识长度
@@ -675,7 +677,7 @@ function read_2007(result){//0.97clone
 	for(var i=0;i<len;i++){
 		video[0].player+=result[++number];//此处不能进行charCodeAt()操作
 	}
-	console.log('用户标识: '+video[0].player);
+	log('用户标识: '+video[0].player);
 
 	var leading=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
 	var num1=Math.sqrt(leading);
@@ -708,7 +710,7 @@ function read_2007(result){//0.97clone
 	}
 
 	video[0].size=(charCodeAt(result[++number]))*65536+(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
-	// console.log('size'+video[0].size);
+	// log('size'+video[0].size);
 	for(var i=0;i<video[0].size;i++){
 		for(var k=0;k<6;k++){
 			e[k]=charCodeAt(result[++number]);
@@ -830,7 +832,7 @@ function read_2007(result){//0.97clone
 		}
 	}
 	video[0].size=size+1;//mvf没有sec=-1的结束标志，与avf播放兼容要size+1
-	// console.log(video);
+	// log(video);
 }
 
 function read_097(result){//0.97clone
@@ -855,19 +857,19 @@ function read_097(result){//0.97clone
 	var dcl=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
 	var rcl=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
 	if(charCodeAt(result[++number])){//question marks
-		console.log("问号模式: on");
+		log("问号模式: on");
 		document.getElementById("question").innerHTML='取消问号';
 		question=true;
 	}else{
     	document.getElementById("question").innerHTML='标记问号';
 		question=false;
     }
-	// console.log('Timestamp: '+year+'-'+mouth+'-'+day+' '+hour+':'+min+':'+sec);
-	// console.log('Level: '+level+'  Score:'+score_sec+'.'+three_char(score_ths));
+	// log('Timestamp: '+year+'-'+mouth+'-'+day+' '+hour+':'+min+':'+sec);
+	// log('Level: '+level+'  Score:'+score_sec+'.'+three_char(score_ths));
 	var mode_names=new Array("","classic","density","UPK","cheat");
-	console.log("Mode: "+mode_names[mode]);
-	// console.log('3BV:'+bbbv+'  Solved3BV:'+solved_bbbv);
-	// console.log('LeftClicks:'+lcl+'  RightClicks:'+rcl+'  DoubleClicks:'+dcl);
+	log("Mode: "+mode_names[mode]);
+	// log('3BV:'+bbbv+'  Solved3BV:'+solved_bbbv);
+	// log('LeftClicks:'+lcl+'  RightClicks:'+rcl+'  DoubleClicks:'+dcl);
 	read_board(result,-1);
 
 	var len=charCodeAt(result[++number]);//标识长度
@@ -875,7 +877,7 @@ function read_097(result){//0.97clone
 	for(var i=0;i<len;i++){
 		video[0].player+=result[++number];//此处不能进行charCodeAt()操作
 	}
-	console.log('用户标识: '+video[0].player);
+	log('用户标识: '+video[0].player);
 
 	var leading=(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
 	var num1=Math.sqrt(leading);
@@ -894,7 +896,7 @@ function read_097(result){//0.97clone
 	s+=sprintf(parseInt(Math.round(Math.abs(Math.cos(Math.sqrt(num2+1000.0))*mult))));
 	if(s[40])s[40]=0;
 	cur=0;
-	// console.log(s);
+	// log(s);
 	for(var i=0;i<=9;++i){
 		for(var j=0;j<40;++j){
 			if(s[j]==i)
@@ -906,7 +908,7 @@ function read_097(result){//0.97clone
 	}
 
 	video[0].size=(charCodeAt(result[++number]))*65536+(charCodeAt(result[++number]))*256+charCodeAt(result[++number]);
-	// console.log('size:'+video[0].size);
+	// log('size:'+video[0].size);
 	for(var i=0;i<video[0].size;i++){
 		for(var k=0;k<5;k++){
 			e[k]=charCodeAt(result[++number]);
@@ -1026,7 +1028,7 @@ function read_097(result){//0.97clone
 		}
 	}
 	video[0].size=size+1;//mvf没有sec=-1的结束标志，与avf播放兼容要size+1
-	// console.log(video);
+	// log(video);
 }
 
 function apply_perm(num,byte,bit,event){
