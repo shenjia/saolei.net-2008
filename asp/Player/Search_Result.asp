@@ -36,8 +36,8 @@ If Message = "No" And Check_Result <> "Fail" Then
       <tr>
         <td bgcolor="#444444"><table width="420" border="0" cellspacing="0" cellpadding="0">
             <tr bgcolor="#555555">
-              <td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">¡¡²éÕÒÓÃ»§½á¹û</td>
-              <td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">¡Á</td>
+              <td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">ã€€æŸ¥æ‰¾ç”¨æˆ·ç»“æœ</td>
+              <td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">Ã—</td>
             </tr>
           </table>
             <table width="420" border="0" cellspacing="10" cellpadding="0">
@@ -107,15 +107,15 @@ Sub Check_Input()
 	
 	Message = "No"
 	
-	If Session("Search_Player_Text") <> "" And Check_Str(Session("Search_Player_Text")) Then Message = "ÄúÔÚ[Â¼Ïó±êÊ¶ÎÄ×Ö]ÖĞÊäÈëÁË·Ç·¨×Ö·û!"
-	If Session("Search_Player_Email") <> "" And Check_Str(Session("Search_Player_Email")) Then Message = "ÄúÔÚ[µç×ÓÓÊÏä]ÖĞÊäÈëÁË·Ç·¨×Ö·û!"
-	If Session("Search_Player_QQ") <> "" And Check_Express(Session("Search_Player_QQ"),"\d{5,12}") Then Message = "ÄúÊäÈëµÄ[QQºÅÂë]²»ºÏ·¨!"
-	If Session("Search_Player_Name_Net") <> "" And Check_Str(Session("Search_Player_Name_Net")) Then Message = "ÄúÔÚ[ÍøÃû]ÖĞÊäÈëÁË·Ç·¨×Ö·û!"
-	If Session("Search_Player_Name_English") <> "" And Check_Express(Session("Search_Player_Name_English"),"^(\w|\s){1,20}$") Then Message = "ÄúÊäÈëµÄ[ĞÕÃûÆ´Òô]²»ºÏ·¨!"
-	If Session("Search_Player_Name_Chinese") <> "" And Check_Express(Session("Search_Player_Name_Chinese"),"^([\u4E00-\u9FA5]{1,12})$") Then Message = "ÄúÊäÈëµÄ[ÖĞÎÄĞÕÃû]²»ºÏ·¨!"
-	If Session("Search_Player_Name") <> "" And Check_Express(Session("Search_Player_Name"),"^\w{1,12}$") Then Message = "ÄúÊäÈëµÄ[µÇÂ½Ãû³Æ]²»ºÏ·¨!"
-	If Session("Search_Player_Id") <> "" And Check_Express(Session("Search_Player_Id"),"\d{1,6}") Then Message = "ÄúÊäÈëµÄ[ÓÃ»§ID]²»ºÏ·¨!"
-	If Session("Search_Player_IP") <> "" And Check_Express(Session("Search_Player_IP"),"\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}") Then Message = "ÄúÊäÈëµÄ[µÇÂ½IPµØÖ·]²»ºÏ·¨!"
+	If Session("Search_Player_Text") <> "" And Check_Str(Session("Search_Player_Text")) Then Message = "æ‚¨åœ¨[å½•è±¡æ ‡è¯†æ–‡å­—]ä¸­è¾“å…¥äº†éæ³•å­—ç¬¦!"
+	If Session("Search_Player_Email") <> "" And Check_Str(Session("Search_Player_Email")) Then Message = "æ‚¨åœ¨[ç”µå­é‚®ç®±]ä¸­è¾“å…¥äº†éæ³•å­—ç¬¦!"
+	If Session("Search_Player_QQ") <> "" And Check_Express(Session("Search_Player_QQ"),"\d{5,12}") Then Message = "æ‚¨è¾“å…¥çš„[QQå·ç ]ä¸åˆæ³•!"
+	If Session("Search_Player_Name_Net") <> "" And Check_Str(Session("Search_Player_Name_Net")) Then Message = "æ‚¨åœ¨[ç½‘å]ä¸­è¾“å…¥äº†éæ³•å­—ç¬¦!"
+	If Session("Search_Player_Name_English") <> "" And Check_Express(Session("Search_Player_Name_English"),"^(\w|\s){1,20}$") Then Message = "æ‚¨è¾“å…¥çš„[å§“åæ‹¼éŸ³]ä¸åˆæ³•!"
+	If Session("Search_Player_Name_Chinese") <> "" And Check_Express(Session("Search_Player_Name_Chinese"),"^([\u4E00-\u9FA5]{1,12})$") Then Message = "æ‚¨è¾“å…¥çš„[ä¸­æ–‡å§“å]ä¸åˆæ³•!"
+	If Session("Search_Player_Name") <> "" And Check_Express(Session("Search_Player_Name"),"^\w{1,12}$") Then Message = "æ‚¨è¾“å…¥çš„[ç™»é™†åç§°]ä¸åˆæ³•!"
+	If Session("Search_Player_Id") <> "" And Check_Express(Session("Search_Player_Id"),"\d{1,6}") Then Message = "æ‚¨è¾“å…¥çš„[ç”¨æˆ·ID]ä¸åˆæ³•!"
+	If Session("Search_Player_IP") <> "" And Check_Express(Session("Search_Player_IP"),"[01234567890.]+") Then Message = "æ‚¨è¾“å…¥çš„[ç™»é™†IPåœ°å€]ä¸åˆæ³•!"
 	If Message <> "No" Then
 		Act="Back"
 		Call Error()
