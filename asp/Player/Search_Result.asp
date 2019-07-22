@@ -16,7 +16,7 @@ If Message = "No" And Check_Result <> "Fail" Then
 	%>
 	<html>
 	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<style type="text/css">
 	<!--
 	body {
