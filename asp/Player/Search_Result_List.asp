@@ -40,9 +40,9 @@ If Check_Result <> "Fail" Then
 
 		Call Start_Conn()
 		
-		Beg_Text = "³õ¼¶"
-		Int_Text = "ÖĞ¼¶"
-		Exp_Text = "¸ß¼¶"
+		Beg_Text = "åˆçº§"
+		Int_Text = "ä¸­çº§"
+		Exp_Text = "é«˜çº§"
 		
 		SQL_Text = "Player_Search '"&Session("Search_Player_Id")&"','"&Session("Search_Player_Name")&"','"&Session("Search_Player_Name_Chinese")&"','"&Session("Search_Player_Name_English")&"','"&Session("Search_Player_Name_Net")&"','"&Session("Search_Player_Area")&"','"&Session("Search_Player_QQ")&"','"&Session("Search_Player_Email")&"','"&Session("Search_Player_Text")&"','"&Session("Search_Player_IP")&"',"&Point&","&CInt(Page)
 		rs.Open SQL_Text,Conn,3,1
@@ -61,16 +61,16 @@ If Check_Result <> "Fail" Then
 		
 			Do While Not rs.Eof
 				If rs("Player_IsHero") Then
-					Rank_Text="<span class=World1>¡¾Éñ½ç¡¿</span>"
+					Rank_Text="<span class=World1>ã€ç¥ç•Œã€‘</span>"
 				Else
-					Rank_Text="<span class=World2>¡¾ÈË½ç¡¿</span>"
+					Rank_Text="<span class=World2>ã€äººç•Œã€‘</span>"
 				End If
 				If rs("Player_Sex") Then
 					Player_Sex_Text = "GG"
 				Else
 					Player_Sex_Text = "mm"
 				End If
-				%><tr style="cursor: pointer " onMouseOver="this.style.background='#555555';" onMouseOut="this.style.background='#444444';" onClick="window.open('/Player/Index.asp?Id=<%=rs("Player_Id")%>');">
+				%><tr style="cursor: pointer " onMouseOver="this.style.background='#555555';" onMouseOut="this.style.background='#444444';" onClick="window.open('/Player/Index.asp?Id=<%=rs("Player_Id")%>');" title="ä¸Šæ¬¡ç™»å½•IPï¼š<%=rs("Player_IP")%>">
 				<td class="Text" height="20">
 				<%=Rank_Text%><span class="Texts">[</span><span class="<%=rs("Player_Title")%>"><%=rs("Player_Title")%></span><span class="Texts">]</span> <span class="High"><%=rs("Player_Name_Chinese")%></span>
 				<span class="Title"><%=rs("Player_Area")%></span><span class="Counter"><%=Player_Sex_Text%></span>				
@@ -90,9 +90,9 @@ If Check_Result <> "Fail" Then
 		<td width="20" height="15" align="center" valign="top">
 		<%
 		If Page = 1 Then
-			%><span class="uButton" onMouseOver="Show('Pages');" onMouseOut="Hide('Pages');">¡ø</span><%
+			%><span class="uButton" onMouseOver="Show('Pages');" onMouseOut="Hide('Pages');">â–²</span><%
 		Else
-			%><span class="eButton" onMouseOver="this.className='hButton';Show('Pages');" onMouseOut="this.className='eButton';Hide('Pages');" onClick="location='?Page=<%=Page-1%>'">¡ø</span><%
+			%><span class="eButton" onMouseOver="this.className='hButton';Show('Pages');" onMouseOut="this.className='eButton';Hide('Pages');" onClick="location='?Page=<%=Page-1%>'">â–²</span><%
 		End If
 		%>
 		</td>
@@ -107,9 +107,9 @@ If Check_Result <> "Fail" Then
 		<td width="20" height="15" align="center" valign="bottom">
 		<%
 		If CInt(Page) >= CInt(Max_Page) Then
-			%><span class="uButton" onMouseOver="Show('Pages');" onMouseOut="Hide('Pages');">¨‹</span><%
+			%><span class="uButton" onMouseOver="Show('Pages');" onMouseOut="Hide('Pages');">â–¼</span><%
 		Else
-			%><span class="eButton" onMouseOver="this.className='hButton';Show('Pages');" onMouseOut="this.className='eButton';Hide('Pages');" onClick="location='?Page=<%=Page+1%>'">¨‹</span><%
+			%><span class="eButton" onMouseOver="this.className='hButton';Show('Pages');" onMouseOut="this.className='eButton';Hide('Pages');" onClick="location='?Page=<%=Page+1%>'">â–¼</span><%
 		End If
 		%></td>
 	  </tr>
