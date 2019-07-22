@@ -16,7 +16,7 @@ If Check_Result <> "Fail" Then
 	%>
 	<html>
 	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 	<style type="text/css">
 	<!--
 	body {
@@ -70,7 +70,7 @@ If Check_Result <> "Fail" Then
 				Else
 					Player_Sex_Text = "mm"
 				End If
-				%><tr title="上次登录IP：<%=rs("Player_IP")%>" style="cursor: pointer " onMouseOver="this.style.background='#555555';" onMouseOut="this.style.background='#444444';" onClick="window.open('/Player/Index.asp?Id=<%=rs("Player_Id")%>');">
+				%><tr title="最近登录IP：<%=rs("Player_IP")%>" style="cursor: pointer " onMouseOver="this.style.background='#555555';" onMouseOut="this.style.background='#444444';" onClick="window.open('/Player/Index.asp?Id=<%=rs("Player_Id")%>');">
 				<td class="Text" height="20">
 				<%=Rank_Text%><span class="Texts">[</span><span class="<%=rs("Player_Title")%>"><%=rs("Player_Title")%></span><span class="Texts">]</span> <span class="High"><%=rs("Player_Name_Chinese")%></span>
 				<span class="Title"><%=rs("Player_Area")%></span><span class="Counter"><%=Player_Sex_Text%></span>				
