@@ -106,7 +106,7 @@
         <td class="High">Yu Suzuki</td>
         <td class="Text Beg">0.74</td>
         <td class="Text Int">9.77</td>
-        <td class="Text Exp">33.96</td>
+        <td class="Text Exp">33.66</td>
         <td class="Text Signest">45</td>
     </tr>
     <tr class="Ours">
@@ -127,7 +127,7 @@
     </tr>
     <tr align="right">
         <td colspan="2" class="Text" height="35" align="left"><a href="http://www.minesweeper.info/worldranking.html" target="_blank" class="Sign">点击查看完整世界排行</a></td>
-        <td colspan="4" class="Text" height="35"><p>更新时间：<span class="Title">2019.5.15</span></p></td>
+        <td colspan="4" class="Text" height="35"><p>更新时间：<span class="Title">2019.9.5</span></p></td>
     </tr>
     </tbody>
 </table>
