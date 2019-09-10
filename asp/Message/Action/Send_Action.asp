@@ -51,6 +51,11 @@ If Message = "No" And Check_Result <> "Fail" Then
 
 			Message = "No"
 			Call Error()
+
+		Case "No_Video"
+		
+			Message = "没有成功上传录像者无权发送短消息!"
+			Call Error()
 			
 		Case "Send_Fail"
 		
