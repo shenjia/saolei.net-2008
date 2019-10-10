@@ -1040,5 +1040,5 @@ function sprintf(num) {//格式化数字为%8d,返回值为字符串型（影响
 	for(var i=0;i<add;i++){
 		num='0'+num;
 	}
-	return num;
+	return num.toString().slice(-8);//截取末8位有效字符串
 }
