@@ -58,7 +58,7 @@
         <td class="High">Wei-Jia Guo</td>
         <td class="Text Beg">0.54</td>
         <td class="Text Int">7.51</td>
-        <td class="Text Exp">33.25</td>
+        <td class="Text Exp">33.18</td>
         <td class="Text Signest">42</td>
     </tr>
     <tr class="Ours">
@@ -106,8 +106,8 @@
         <td class="High">Yu Suzuki</td>
         <td class="Text Beg">0.74</td>
         <td class="Text Int">9.77</td>
-        <td class="Text Exp">33.66</td>
-        <td class="Text Signest">45</td>
+        <td class="Text Exp">33.27</td>
+        <td class="Text Signest">44</td>
     </tr>
     <tr class="Ours">
         <td class="Bold">No. <span class="Signest">9</span></td>
@@ -127,7 +127,7 @@
     </tr>
     <tr align="right">
         <td colspan="2" class="Text" height="35" align="left"><a href="http://www.minesweeper.info/worldranking.html" target="_blank" class="Sign">点击查看完整世界排行</a></td>
-        <td colspan="4" class="Text" height="35"><p>更新时间：<span class="Title">2019.9.5</span></p></td>
+        <td colspan="4" class="Text" height="35"><p>更新时间：<span class="Title">2019.10.8</span></p></td>
     </tr>
     </tbody>
 </table>
