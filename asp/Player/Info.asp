@@ -119,7 +119,7 @@ body {
 		<td width="120" align="left" valign="top" class="Text">
 			<%
 			If Player_Image Then
-				%><img src="/Models/Images/Player/<%=Player_Id%>.jpg" border="1" align="absmiddle" style="border-color:#999999;"><%
+				%><img src="/Models/Images/Player/<%=Player_Id%>.jpg" border="1" align="absmiddle" style="border-color:#999999; width:100px; height:100px;"><%
 			Else
 				%><img src="/Models/Images/Player/No.jpg" border="1" align="absmiddle" style="border-color:#999999; cursor:pointer" onclick="top.Window('/Help/Image.asp');" title="如何上传照片？"><%
 			End If
