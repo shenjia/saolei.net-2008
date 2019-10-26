@@ -20,6 +20,10 @@ body {
 }
 .tbl {table-layout:fixed}
 .td {overflow:hidden;}
+.Text {display:flex;}
+a:link {overflow: hidden;text-overflow: ellipsis;display: block;}
+.short {max-width: 160px;}
+.long {max-width: 175px;}
 -->
 </style>
 <link href="/Models/Css/2008.css" rel="stylesheet" type="text/css">
@@ -51,7 +55,7 @@ body {
 			%>
 			<tr class="Text" onMouseOver="Title_<%=rs("Title_Id")%>.className='Sign';this.style.background='#444444';" onMouseOut="Title_<%=rs("Title_Id")%>.className='<%=Cls%>';this.style.background='#333333';">
 			<td width="80%" class="td" valign="top" nowrap><div class="Text">
-			<img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle">&nbsp;[<%Execute "Response.Write("&rs("Title_Model")&"_Text)"%>]&nbsp;<a id="Title_<%=rs("Title_Id")%>" href="/BBS/Title.asp?Id=<%=rs("Title_Id")%>" class="<%=Cls%>" target="_blank"><%=rs("Title_Name")%></a><%If rs("Title_IsNice") Then%><span class="Sign">.¾«</span><%End If%></div></td>
+			<img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle">&nbsp;[<%Execute "Response.Write("&rs("Title_Model")&"_Text)"%>]&nbsp;<div class=<%If rs("Title_IsNice") Then%>"short"<%else%>"long"<%End If%>><a id="Title_<%=rs("Title_Id")%>" href="/BBS/Title.asp?Id=<%=rs("Title_Id")%>" class="<%=Cls%>" target="_blank"><%=rs("Title_Name")%></a></div><%If rs("Title_IsNice") Then%><span class="Sign">.¾«</span><%End If%></div></td>
 		  <td width="20%" class="td" valign="top" align="center"><div class="Text"><%=Month(rs("Title_Post_Time"))%>-<%=Day(rs("Title_Post_Time"))%></div></td></tr><%
 			rs.MoveNext
 		Loop		
