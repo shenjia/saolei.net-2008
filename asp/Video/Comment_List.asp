@@ -21,7 +21,7 @@ body {
 	margin-bottom: 0px;
 	background-color: #444444;
 }
-.Text {word-break: break-word!important;}
+.Text {word-break: break-word !important;}
 -->
 </style>
 <link href="/Models/Css/2008.css" rel="stylesheet" type="text/css">
