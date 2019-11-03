@@ -64,7 +64,7 @@ Else
 	  <tr>
 		<td width="604" height="500" valign="top">
 		<%
-		If Session("Title_Page")=1 Then
+		If Session("Title_Page") Then
 		
 			Notice_Text = "公告"
 			Skill_Text = "技术"
