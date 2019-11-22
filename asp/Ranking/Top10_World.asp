@@ -111,23 +111,23 @@
     </tr>
     <tr class="Ours">
         <td class="Bold">No. <span class="Signest">9</span></td>
+        <td class="High">Shao-Wu Zhang</td>
+        <td class="Text Beg">0.53</td>
+        <td class="Text Int">8.26</td>
+        <td class="Text Exp">35.27</td>
+        <td class="Text Signest">45</td>
+    </tr>
+    <tr class="Ours">
+        <td class="Bold">No. <span class="Signest">10</span></td>
         <td class="High">Li Ming-Xuan</td>
         <td class="Text Beg">0.91</td>
         <td class="Text Int">9.36</td>
         <td class="Text Exp">34.25</td>
         <td class="Text Signest">45</td>
     </tr>
-    <tr>
-        <td class="Bold">No. <span class="Signest">10</span></td>
-        <td class="High">Fritz [------]</td>
-        <td class="Text Beg">0.76</td>
-        <td class="Text Int">9.42</td>
-        <td class="Text Exp">34.62</td>
-        <td class="Text Signest">45</td>
-    </tr>
     <tr align="right">
         <td colspan="2" class="Text" height="35" align="left"><a href="http://www.minesweeper.info/worldranking.html" target="_blank" class="Sign">点击查看完整世界排行</a></td>
-        <td colspan="4" class="Text" height="35"><p>更新时间：<span class="Title">2019.10.8</span></p></td>
+        <td colspan="4" class="Text" height="35"><p>更新时间：<span class="Title">2019.11.22</span></p></td>
     </tr>
     </tbody>
 </table>
