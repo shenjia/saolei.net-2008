@@ -51,10 +51,17 @@ If Message = "No" And Check_Result <> "Fail" Then
 			Act = "parent.location='/BBS/BBS_"&Title_Model&".asp?Page=1';"
 			Call Error()
 			
-		Case "Post_Fail"
+		Case "Post_Fail_User"
 		
 			Call End_Conn()
 			Message = "用户不存在!"
+			Act = "No"
+			Call Error()
+
+		Case "Post_Fail_Newbee"
+		
+			Call End_Conn()
+			Message = "加入排行后才能发布主题!新人有问题请加首页的QQ群，或发短消息给管理员，感谢理解：）"
 			Act = "No"
 			Call Error()
 	

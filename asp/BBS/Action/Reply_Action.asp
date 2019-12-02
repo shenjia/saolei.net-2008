@@ -61,6 +61,13 @@ If Message = "No" And Check_Result <> "Fail" Then
 			Message = "主题不存在!"
 			Act = "top.location='/BBS/Index.asp'"
 			Call Error()
+
+		Case "Reply_Fail_Newbee"
+		
+			Call End_Conn()
+			Message = "加入排行后才能进行回复!新人有问题请加首页的QQ群，或发短消息给管理员，感谢理解：）"
+			Act = "No"
+			Call Error()
 	
 	End Select
 	
