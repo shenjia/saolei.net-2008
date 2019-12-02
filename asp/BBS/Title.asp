@@ -151,7 +151,16 @@ If Message = "No" Then
 				</td>
 				<%Else%>
 				<td width="100">
-					<table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="<%If Session("Player_Id")<>"" Then%>location='/BBS/Reply.asp?Id=<%=Title_Id%>';<%Else%>top.Window('/Player/Login.asp');<%End If%>">
+					<table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="<%
+						If Session("Player_Id")<>"" Then
+							If Session("Player_Rank") = 0 Then
+								%>alert('加入排行后才能回复主题!新人有问题请加首页的QQ群，或发短消息给管理员，感谢理解：）');<%
+							Else
+								%>location='/BBS/Reply.asp?Id=<%=Title_Id%>';<%
+							End If
+						Else
+							%>top.Window('/Player/Login.asp');<%
+						End If%>">
 					<tr>
 					<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">回复此主题</td>
 					</tr>

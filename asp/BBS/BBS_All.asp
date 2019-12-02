@@ -56,7 +56,16 @@ Else
 	<table width="575" border="0" cellspacing="0" cellpadding="0">
 	<tr>
 	<td width="110">
-		<table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="<%If Session("Player_Id")<>"" Then%>location='/BBS/Post.asp?Model=No';<%Else%>top.Window('/Player/Login.asp');<%End If%>">
+		<table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="<%
+		If Session("Player_Id")<>"" Then
+			If Session("Player_Rank") = 0 Then
+				%>alert('加入排行后才能发布主题!新人有问题请加首页的QQ群，或发短消息给管理员，感谢理解：）');<%
+			Else
+				%>location='/BBS/Post.asp?Model=No';<%
+			End If
+		Else
+			%>top.Window('/Player/Login.asp');<%
+		End If%>">
 		<tr>
 		<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">发表新主题</td>
 		</tr>
