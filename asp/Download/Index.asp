@@ -41,8 +41,8 @@ body {
 						<img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle"> <a href="Viennasweeper_3.0.zip" class="Text">Viennasweeper 3.0</a> <br>
 						<img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle"> <a href="Minesweeper_2000XP.exe" class="Text">Minesweeper 2000/XP</a> <br>
                     <img src="/Models/Images/Common/Yellow.GIF" alt="" width="7" height="25" align="absmiddle"> <a href="MineSweeper_Solver.exe" class="Text">Minesweeper Solver</a><br>
-						<img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle"> <a href="Saolei.net&#20998;&#36776;&#29575;&#35843;&#25972;&#24037;&#20855;.exe" class="High">Saolei.net分辨率调整工具</a><br>
-				  <img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle"> <a href="Saolei.net&#22320;&#22270;&#36716;&#25442;&#24037;&#20855;.rar" class="High">Saolei.net地图转换工具</a><br>
+						<img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle"> <a href="&#20998;&#36776;&#29575;&#35843;&#25972;&#24037;&#20855;.exe" class="High">扫雷网分辨率调整工具</a><br>
+				  <img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle"> <a href="&#22320;&#22270;&#36716;&#25442;&#24037;&#20855;.rar" class="High">扫雷网地图转换工具</a><br>
 						<img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle"> <a href="MPlayer_v2.0.2.apk" class="Text">Android录像播放器 2.0.2</a> <br>
 						<img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle"> <a href="NotMinesweeper_V1.0.19.apk" class="Text">Android雷感训练器 1.0.19</a> <br>
 

@@ -1,4 +1,4 @@
-
+<!--#include virtual="/Models/Common/Const.asp"-->
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
@@ -226,7 +226,7 @@ function Select()
 
 <table width="910" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr height="100">
-    <td height="60" align="center" class="High">Copyright @ 2008　<a href="http://www.saolei.net" target="_blank" class="High">中国扫雷网<b>Saolei.net</b></a>　版权所有</td>
+    <td height="60" align="center" class="High">Copyright @ 2008　<a href="<%=Domain%>" target="_blank" class="High">中国扫雷网<b>Saolei.net</b></a>　版权所有</td>
   </tr>
 </table>
 </body>
