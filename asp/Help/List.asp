@@ -32,7 +32,6 @@ body {
 <img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle">&nbsp;<a href="javascript:;" onClick="top.Window('/Help/Video.asp?From=Index');" class="Text">如何观看本网站的录像？</a><br>
 <img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle">&nbsp;<a href="/BBS/Title.asp?Id=283" target="_blank" class="Text">怎样调整屏幕分辨率？</a><br>
 <img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle">&nbsp;<a href="/BBS/Title.asp?Id=1187" target="_blank" class="Text">怎样加入扫雷网QQ群？</a><br>
-http://saolei.net/BBS/Title.asp?Id=1187
 
 	</td>
   </tr>

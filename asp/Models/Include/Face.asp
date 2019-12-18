@@ -73,7 +73,7 @@ function addFace(I)
  }
 function Img()
  {
-  ImgLink=window.prompt('请输入图片链接,例如:http://www.saolei.net/Models/Images/Common/Logo_Chinese.gif','http://')
+  ImgLink=window.prompt('请输入图片链接,例如:http://xxx.com/1.jpg','http://')
   if(ImgLink!=null&&ImgLink!='')//此处需要判断null和空字符串
   {
     let start=textarea.selectionStart;//选择内容的开始位置
@@ -86,7 +86,7 @@ function Img()
  }
 function Url()
  {
-  Link=window.prompt('请输入网页链接,例如:http://www.saolei.net/','http://')
+  Link=window.prompt('请输入网页链接,例如:http://www.baidu.com/','http://')
   if(Link!=null&&Link!='')
   {
     let start=textarea.selectionStart;//选择内容的开始位置

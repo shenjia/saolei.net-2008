@@ -62,7 +62,7 @@ body {
   <span class="Title">管理办法</span><br>
   　　※ 对符合以上规定的优秀主题，将加入精华或进行加亮。<br>
   　　※ 对不符合以上规定的主题和回复，将直接删除。情况恶劣时可封停直至删除用户。<br>
-  <span class="Sign">　　中国扫雷网Saolei.net管理团队保留对以上条例的最终解释权。</span><br>
+  <span class="Sign">　　扫雷网管理团队保留对以上条例的最终解释权。</span><br>
 				      </p></td>
 				</tr>
 				<tr>

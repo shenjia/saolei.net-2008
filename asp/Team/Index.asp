@@ -79,17 +79,7 @@ body {
 					</td>
 				</tr>
 				<tr>
-				  <td width="235" class="Text"><%If ZhaoPin=1 Then%><table width="180" height="30" border="0" align="center" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="window.open('http://www.saolei.net/BBS/Title.asp?Id=13029');">
-                    <tr>
-                      <td align="center" bgcolor="#555555" class="Sign" onMouseOver="this.className='Sign';" onMouseOut="this.className='Sign';">正在招聘,请点击查看!</td>
-                    </tr>
-                  </table><%Else%><table width="180" height="30" border="0" align="center" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="">
-                    <tr>
-                      <td align="center" bgcolor="#555555" class="Text" onMouseOver="this.className='Text';" onMouseOut="this.className='Text';">目前暂不招聘,请保持关注</td>
-                    </tr>
-                  </table><%End If%>
-				  </td>
-				  <td width="235" class="Text"><table width="180" height="30" border="0" align="center" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="Cancel();">
+				  <td width="470" class="Text"><table width="180" height="30" border="0" align="center" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="Cancel();">
                     <tr>
                       <td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">各位辛苦了，在下告退</td>
                     </tr>

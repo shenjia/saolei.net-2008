@@ -68,7 +68,7 @@ function Init()
                   </tr>
                   <tr class="Text">
                     <td class="Highest">2007.7.20</td>
-                    <td>发布 <a href="/Download/&#20998;&#36776;&#29575;&#35843;&#25972;&#24037;&#20855;.exe" target="_blank" class="Sign">Saolei.net分辨率调整工具</a></td>
+                    <td>发布 <a href="/Download/&#20998;&#36776;&#29575;&#35843;&#25972;&#24037;&#20855;.exe" target="_blank" class="Sign">分辨率调整工具</a></td>
                   </tr>
                   <tr class="Text">
                     <td class="Highest">2007.7.17</td>

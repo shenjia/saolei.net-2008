@@ -27,13 +27,13 @@ body {
 		<td bgcolor="#444444">
 			<table width="270" border="0" cellspacing="0" cellpadding="0">
 				<tr bgcolor="#555555">
-					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">　Saolei.net升级通知</td>
+					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">　网站升级通知</td>
 					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">×</td>
 			</tr>
 			</table>
 			<table width="270" border="0" cellspacing="10" cellpadding="0">
 				<tr>
-				  <td class="Text">					  <p class="Text"><span class="Sign">Saolei.net新2008版</span>将在<span class="Title">2008年1月1日</span>推出，为了升级程序和数据，旧版网站暂时关闭，敬请期待！<br>
+				  <td class="Text">					  <p class="Text"><span class="Sign">网站新2008版</span>将在<span class="Title">2008年1月1日</span>推出，为了升级程序和数据，旧版网站暂时关闭，敬请期待！<br>
 				  </p>
 			      </td>
 				</tr>
