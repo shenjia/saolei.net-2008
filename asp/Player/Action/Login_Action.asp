@@ -33,6 +33,7 @@ If Message = "No" Then
 	cmd.Parameters.Append cmd.CreateParameter("@Player_IsMaster",3,2)
 	cmd.Parameters.Append cmd.CreateParameter("@Player_Area",200,2,12)
 	cmd.Parameters.Append cmd.CreateParameter("@Player_Sex",3,2)
+	cmd.Parameters.Append cmd.CreateParameter("@Player_Rank",3,2)
 	cmd.Parameters.Append cmd.CreateParameter("@Result",200,2,20)
 	
 	cmd("@Player_Name") = Player_Name
@@ -55,6 +56,7 @@ If Message = "No" Then
 			Session("Player_IsMaster") = cmd("@Player_IsMaster")
 			Session("Player_Area") = cmd("@Player_Area")
 			Session("Player_Sex") = cmd("@Player_Sex")
+			Session("Player_Rank") = cmd("@Player_Rank")
 			If Session("Player_Sex") Then
 				Session("Player_Sex_Text") = "GG"
 			Else
