@@ -104,10 +104,6 @@ function charCodeAt(char){
     return char.charCodeAt();
 }
 
-function clearFile(){
-
-}
-
 function playAvfVideo(result){
 	reset();
     //当读取完成后回调这个函数,然后此时文件的内容存储到了result中,直接操作即可
