@@ -38,7 +38,7 @@ function loadVideo(name){
                 });
             }else{
                 //录像读取错误，弹出提示信息
-                alert("录像获取："+xmlhttp.status+" 错误");
+                videoError("录像获取："+xmlhttp.status+" 错误");
                 closeVideo();
             }
         }
@@ -49,11 +49,26 @@ function loadVideo(name){
 
 //录像播放错误
 function videoError(message){
-    //以遮罩是否显示作为是否执行操作的判断依据,忘了有啥用了，先放着吧（应该是前进后退？）
-    if($('#divPageMask', parent.document).width()>0){
+    //上传录像时出错
+    if($('#Window_Frame', parent.document).attr('src')==="/Video/Upload.asp"){
+        let inputFile=$('#Window_Frame', parent.document).contents().find("input[name='Video']")[0];
+        let inputBv=$('#Window_Frame', parent.document).contents().find("input[name='Video_3BV']")[0];
+        let inputTime=$('#Window_Frame', parent.document).contents().find("input[name='Video_Score']")[0];
+        let inputStyle=$('#Window_Frame', parent.document).contents().find("input[name='Video_IsNoFrag']")[0];
+        inputFile.value="";
+        inputFile=null;
+        inputBv.value="";
+        inputTime.value="";
+        inputStyle.checked=false;
+        alert(message);
+        $('#Window_Video', parent.document).fadeOut(0);//防止显示录像播放界面
+    //录像播放时出错，以遮罩是否显示作为是否执行操作的判断依据,忘了有啥用了，先放着吧（应该是前进后退？）
+    }else if($('#divPageMask', parent.document).width()>0){
         alert(message);
         $('#Window_Frame', parent.document).fadeIn(0);
         $('#Window_Video', parent.document).fadeOut(0);
+    }else{
+        alert(message);
     }
 }
 
@@ -87,6 +102,10 @@ function charCodeAt(char){
         videoError('录像文件意外结尾，请检查录像文件！');
     }
     return char.charCodeAt();
+}
+
+function clearFile(){
+
 }
 
 function playAvfVideo(result){
@@ -183,21 +202,27 @@ function playAvfVideo(result){
 
         //以iframe的src属性判断当前界面是否为录像上传界面
         if($('#Window_Frame', parent.document).attr('src')==="/Video/Upload.asp"){
+            let videoModel=$('#Window_Frame', parent.document).contents().find("input[name='Video_Model']")[0].value;
+            let models=["Beg","Int","Exp"];
             let inputBv=$('#Window_Frame', parent.document).contents().find("input[name='Video_3BV']")[0];
             let inputTime=$('#Window_Frame', parent.document).contents().find("input[name='Video_Score']")[0];
             let inputStyle=$('#Window_Frame', parent.document).contents().find("input[name='Video_IsNoFrag']")[0];
-            inputBv.value=parseInt(last.substring(1,last.lastIndexOf("T")));
-            inputTime.value=Math.round((parseFloat(last.substring(last.lastIndexOf("T")+1))-1)*100)/100;
-            if(video[0].style==="FL"){//默认undefined为NF
-                inputStyle.checked=false;
+            if(models[level-1]!==videoModel){
+                videoError("录像级别错误，请重新选择！");
             }else{
-                inputStyle.checked=true;
+                inputBv.value=parseInt(last.substring(1,last.lastIndexOf("T")));
+                inputTime.value=Math.round((parseFloat(last.substring(last.lastIndexOf("T")+1))-1)*100)/100;
+                if(video[0].style==="FL"){//默认undefined为NF
+                    inputStyle.checked=false;
+                }else{
+                    inputStyle.checked=true;
+                }    
             }
             $('#Window_Video', parent.document).fadeOut(0);//防止显示录像播放界面
             return;
         }
 
-        container.set_viedo_mine(board);//按录像布雷`
+        container.set_viedo_mine(board);//按录像布雷
         
     	while(number<result.length){
             if(result.substring(++number,number+10)=="RealTime: "){
@@ -364,7 +389,7 @@ function analyze_video(name,selectedFile){
         }
     }else{
         log("录像格式错误，请重新选择");
-        alert("录像格式错误！");
+        videoError("录像格式错误！");
         closeVideo();
     }
 }
