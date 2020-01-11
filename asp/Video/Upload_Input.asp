@@ -163,10 +163,8 @@ If Check_Result <> "Fail" Then
 	}
 
 	function AnalyzeFile(selectedFile){
-		if(parent.document.getElementById("Window_Border")!=null){
+		if (parent.document.getElementById("Window_Border") != null && selectedFile != null){
 			parent.document.getElementById('Window_Video').contentWindow.analyze_video(selectedFile.name,selectedFile);
-		}else{
-			console.log("Î´ÕÒµ½analyze_videoº¯Êý");
 		}
 	}
 	</script>
