@@ -16,15 +16,6 @@ Call Get_Input()
 
 If Check_Result <> "Fail" Then
 
-	Call Start_Conn()
-	
-	SQL_Text = "Player_Read "&Session("Player_Id")
-	rs.Open SQL_Text,Conn,3,1
-	
-	Player_Text = rs("Player_Text")
-	
-	Call End_Conn()
-
 	Beg_Text = "初级"
 	Int_Text = "中级"
 	Exp_Text = "高级"
@@ -89,7 +80,6 @@ If Check_Result <> "Fail" Then
 						请输入录像时间成绩：
 						  <input name="Video_Score" type="text" class="input-no" size="6" maxlength="6" onFocus="Show('For_Video_Score')" onBlur="Hide('For_Video_Score')"><input type="checkbox" name="Video_IsNoFrag" value="1">&nbsp;盲扫
 						  <span id="For_Video_Score" class="High" style="display: none">※精确到两位小数</span><br>
-						用户的录像标识文字：<span name="Player_Text" class="Sign"><%=Player_Text%></span><br/>
 						※为和mvf录像成绩保持兼容，avf录像的成绩会自动加上1秒
 
 						<input name="Video_Model" type="hidden" value="<%=Video_Model%>">
