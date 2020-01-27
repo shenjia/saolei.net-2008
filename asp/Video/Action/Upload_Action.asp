@@ -28,6 +28,8 @@ Video_Score = upload.form("Video_Score")
 Video_3BV = upload.form("Video_3BV")
 Video_Type = LCase(Right(file.fileName,3))
 
+Call Check_Input()
+
 Session("Upload_Video_Model") = Video_Model
 Session("Upload_Video_Score") = Video_Score
 
@@ -44,8 +46,6 @@ If Video_IsNoFrag = "1" Then
 Else
 	Video_IsNoFrag = 0
 End If
-
-Call Check_Input()
 
 Video_3BV = CInt(Video_3BV)
 
@@ -151,7 +151,7 @@ Sub Check_Input()
 	If Not IsNumeric(Video_Score) Then
 		Message = "您输入的[录象时间成绩]不合法!"
 	Else 
-		If Video_Score < 1 Or Video_Score >999.99 Then Message = "您输入的[录象时间成绩]不合法!"
+		If Video_Score <= 0 Or Video_Score >999.99 Then Message = "您输入的[录象时间成绩]不合法!"
 	End If
 	If Video_Score = "" Then Message = "请输入[录象时间成绩]!"
 	If Not IsNumeric(Video_3BV) Then
