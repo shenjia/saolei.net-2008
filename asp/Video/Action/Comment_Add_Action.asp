@@ -53,6 +53,13 @@ If Message = "No" And Check_Result <> "Fail" Then
 			Message = "此录像不存在!"
 			Act = "No"
 			Call Error()
+
+		Case "Add_Fail_Newbee"
+		
+			Call End_Conn()
+			Message = "加入排行后才能发布!新人有问题请加首页的QQ群，或发短消息给管理员，感谢理解：）"
+			Act = "No"
+			Call Error()
 			
 	End Select
 
