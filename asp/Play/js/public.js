@@ -489,9 +489,6 @@ function timer_avf(){
 		log("录像播放错误");
 		stop();
 	}
-	if(plan==23941){
-		window.clearInterval(int);
-	}
 }
 
 function stop()//暂停函数
