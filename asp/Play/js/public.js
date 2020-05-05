@@ -332,7 +332,9 @@ function timer_avf(){
 		front=current;
 		current=container.childObject[(video[plan].columns-1)*container.columns+(video[plan].rows-1)];
 
-		if(video[plan].mouse==1&&front!=current){//mv
+		// 不需要判断 video[plan].mouse==1，只要前后两个方块位置不同即认为有进行移动
+		// 如 0.00 时间内的移动事件（mv）没有被记录在录像信息当中，但是可能进行过移动
+		if(front!=current){//mv
 
 			//此判断要在下句判断之前
 			//避免执行中键操作时current.change_around_opening()操作之后
@@ -358,6 +360,10 @@ function timer_avf(){
 			}else if(middle_invalid==true){
 				current.change_around_opening();
 			}
+		}
+
+		if(video[plan].mouse==1){//mv
+			// 空语句，移动事件在前面已经处理过，如果是移动事件则无需进行后面的判断
 		}
 
 		else if(video[plan].mouse==3){//lc
