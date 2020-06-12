@@ -415,15 +415,7 @@ If Message = "No" Then
 				<table width="303" border="0" cellpadding="5" cellspacing="1" bgcolor="#666666">
 				  <tr bgcolor="#333333">
 					<td height="195" align="center" valign="top" class="Text">
-					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-					<!-- ÂÛÌ³ÎÄÕÂ²à±ßÀ¸ -->
-					<ins class="adsbygoogle"
-					     style="display:inline-block;width:300px;height:250px"
-					     data-ad-client="ca-pub-5867628704806120"
-					     data-ad-slot="5455939895"></ins>
-					<script>
-					(adsbygoogle = window.adsbygoogle || []).push({});
-					</script>
+						<img src="/Models/Images/Ad/bbs.png"/>
 					</td>
 				  </tr>
 				</table>
