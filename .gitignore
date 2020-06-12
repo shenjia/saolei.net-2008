@@ -2,3 +2,5 @@
 .DS_Store
 asp/Models/Common/ConstDB.asp
 deploy/check_words.sql
+asp/Video/Mvf
+.idea/
