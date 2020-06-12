@@ -90,52 +90,52 @@ body {
 <table width="270" border="0" cellspacing="0" cellpadding="0">
   <tr class="Text" onMouseOver="Player_Beg_3BVS.className='High';Box_Beg_3BVS.style.background='#999999';Bar_Beg_3BVS.style.background='#999999';Best_Beg_3BVS.className='Counter';" onMouseOut="Player_Beg_3BVS.className='Text';Box_Beg_3BVS.style.background='#777777';Bar_Beg_3BVS.style.background='#777777';Best_Beg_3BVS.className='Counters';">
     <td id="Player_Beg_3BVS" width="66" align="left" valign="middle" class="Text">初级3BV/s</td>
-    <td width="177" align="left" valign="middle">
-	<%Call Bar("Beg_3BVS",Player_Beg_3BVS,Best_Beg_3BVS,170,10)%>
+    <td width="170" align="left" valign="middle">
+	<%Call Bar("Beg_3BVS",Player_Beg_3BVS,Best_Beg_3BVS,160,10)%>
 	</td>
-    <td id="Best_Beg_3BVS" width="27" align="center" valign="middle" class="Counters"><%=FormatNumber(Player_Beg_3BVS,2,True)%></td>
+    <td id="Best_Beg_3BVS" width="40" align="center" valign="middle" class="Counters"><%=FormatNumber(Player_Beg_3BVS,2,True)%></td>
   </tr>
   <tr class="Text" onMouseOver="Player_Int_Score.className='High';Box_Int_Score.style.background='#999999';Bar_Int_Score.style.background='#999999';Best_Int_Score.className='Counter';" onMouseOut="Player_Int_Score.className='Text';Box_Int_Score.style.background='#777777';Bar_Int_Score.style.background='#777777';Best_Int_Score.className='Counters';">
     <td id="Player_Int_Score" width="66" align="left" valign="middle" class="Text">中级成绩</td>
-    <td width="177" align="left" valign="middle">
-	<%Call Bar("Int_Score",Best_Int_Score,Player_Int_Score,170,10)%>
+    <td width="170" align="left" valign="middle">
+	<%Call Bar("Int_Score",Best_Int_Score,Player_Int_Score,160,10)%>
 	</td>
-    <td id="Best_Int_Score" width="27" align="center" valign="middle" class="Counters"><%=FormatNumber(Player_Int_Score,2,True)%></td>
+    <td id="Best_Int_Score" width="40" align="center" valign="middle" class="Counters"><%=FormatNumber(Player_Int_Score,2,True)%></td>
   </tr>
   <tr class="Text" onMouseOver="Player_Int_3BVS.className='High';Box_Int_3BVS.style.background='#999999';Bar_Int_3BVS.style.background='#999999';Best_Int_3BVS.className='Counter';" onMouseOut="Player_Int_3BVS.className='Text';Box_Int_3BVS.style.background='#777777';Bar_Int_3BVS.style.background='#777777';Best_Int_3BVS.className='Counters';">
     <td id="Player_Int_3BVS" width="66" align="left" valign="middle" class="Text">中级3BV/s</td>
-    <td width="177" align="left" valign="middle">
-	<%Call Bar("Int_3BVS",Player_Int_3BVS,Best_Int_3BVS,170,10)%>
+    <td width="170" align="left" valign="middle">
+	<%Call Bar("Int_3BVS",Player_Int_3BVS,Best_Int_3BVS,160,10)%>
 	</td>
-    <td id="Best_Int_3BVS" width="27" align="center" valign="middle" class="Counters"><%=FormatNumber(Player_Int_3BVS,2,True)%></td>
+    <td id="Best_Int_3BVS" width="40" align="center" valign="middle" class="Counters"><%=FormatNumber(Player_Int_3BVS,2,True)%></td>
   </tr>
   <tr class="Text" onMouseOver="Player_Exp_Score.className='High';Box_Exp_Score.style.background='#999999';Bar_Exp_Score.style.background='#999999';Best_Exp_Score.className='Counter';" onMouseOut="Player_Exp_Score.className='Text';Box_Exp_Score.style.background='#777777';Bar_Exp_Score.style.background='#777777';Best_Exp_Score.className='Counters';">
     <td id="Player_Exp_Score" width="66" align="left" valign="middle" class="Text">高级成绩</td>
-    <td width="177" align="left" valign="middle">
-	<%Call Bar("Exp_Score",Best_Exp_Score,Player_Exp_Score,170,10)%>
+    <td width="170" align="left" valign="middle">
+	<%Call Bar("Exp_Score",Best_Exp_Score,Player_Exp_Score,160,10)%>
 	</td>
-    <td id="Best_Exp_Score" width="27" align="center" valign="middle" class="Counters"><%=FormatNumber(Player_Exp_Score,2,True)%></td>
+    <td id="Best_Exp_Score" width="40" align="center" valign="middle" class="Counters"><%=FormatNumber(Player_Exp_Score,2,True)%></td>
   </tr>
   <tr class="Text" onMouseOver="Player_Exp_3BVS.className='High';Box_Exp_3BVS.style.background='#999999';Bar_Exp_3BVS.style.background='#999999';Best_Exp_3BVS.className='Counter';" onMouseOut="Player_Exp_3BVS.className='Text';Box_Exp_3BVS.style.background='#777777';Bar_Exp_3BVS.style.background='#777777';Best_Exp_3BVS.className='Counters';">
     <td id="Player_Exp_3BVS" width="66" align="left" valign="middle" class="Text">高级3BV/s</td>
-    <td width="177" align="left" valign="middle">
-	<%Call Bar("Exp_3BVS",Player_Exp_3BVS,Best_Exp_3BVS,170,10)%>
+    <td width="170" align="left" valign="middle">
+	<%Call Bar("Exp_3BVS",Player_Exp_3BVS,Best_Exp_3BVS,160,10)%>
 	</td>
-    <td id="Best_Exp_3BVS" width="27" align="center" valign="middle" class="Counters"><%=FormatNumber(Player_Exp_3BVS,2,True)%></td>
+    <td id="Best_Exp_3BVS" width="40" align="center" valign="middle" class="Counters"><%=FormatNumber(Player_Exp_3BVS,2,True)%></td>
   </tr>
   <tr class="Text" onMouseOver="Player_Sum_Score.className='High';Box_Sum_Score.style.background='#999999';Bar_Sum_Score.style.background='#999999';Best_Sum_Score.className='Counter';" onMouseOut="Player_Sum_Score.className='Text';Box_Sum_Score.style.background='#777777';Bar_Sum_Score.style.background='#777777';Best_Sum_Score.className='Counters';">
     <td id="Player_Sum_Score" width="66" align="left" valign="middle" class="Text">总计成绩</td>
-    <td width="177" align="left" valign="middle">
-	<%Call Bar("Sum_Score",Best_Sum_Score,Player_Sum_Score,170,10)%>
+    <td width="170" align="left" valign="middle">
+	<%Call Bar("Sum_Score",Best_Sum_Score,Player_Sum_Score,160,10)%>
 	</td>
-    <td id="Best_Sum_Score" width="27" align="center" valign="middle" class="Counters"><%=FormatNumber(Player_Sum_Score,2,True)%></td>
+    <td id="Best_Sum_Score" width="40" align="center" valign="middle" class="Counters"><%=FormatNumber(Player_Sum_Score,2,True)%></td>
   </tr>
   <tr class="Text" onMouseOver="Player_Sum_3BVS.className='High';Box_Sum_3BVS.style.background='#999999';Bar_Sum_3BVS.style.background='#999999';Best_Sum_3BVS.className='Counter';" onMouseOut="Player_Sum_3BVS.className='Text';Box_Sum_3BVS.style.background='#777777';Bar_Sum_3BVS.style.background='#777777';Best_Sum_3BVS.className='Counters';">
     <td id="Player_Sum_3BVS" width="66" align="left" valign="middle" class="Text">总计3BV/s</td>
-    <td width="177" align="left" valign="middle">
-	<%Call Bar("Sum_3BVS",Player_Sum_3BVS,Best_Sum_3BVS,170,10)%>
+    <td width="170" align="left" valign="middle">
+	<%Call Bar("Sum_3BVS",Player_Sum_3BVS,Best_Sum_3BVS,160,10)%>
 	</td>
-    <td id="Best_Sum_3BVS" width="27" align="center" valign="middle" class="Counters"><%=FormatNumber(Player_Sum_3BVS,2,True)%></td>
+    <td id="Best_Sum_3BVS" width="40" align="center" valign="middle" class="Counters"><%=FormatNumber(Player_Sum_3BVS,2,True)%></td>
   </tr>
 </table>
   </td>
