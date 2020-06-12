@@ -414,8 +414,8 @@ If Message = "No" Then
 				</table>
 				<table width="303" border="0" cellpadding="5" cellspacing="1" bgcolor="#666666">
 				  <tr bgcolor="#333333">
-					<td height="195" align="center" valign="top" class="Text">
-						<img src="/Models/Images/Ad/bbs.png"/>
+					<td height="136" align="center" valign="top" class="Text">
+						<a href="https://mp.weixin.qq.com/s/ZojyheEDOnBIiJaxFSgKNA" target="_blank"><img src="/Models/Images/Ad/bbs.png"/></a>
 					</td>
 				  </tr>
 				</table>
