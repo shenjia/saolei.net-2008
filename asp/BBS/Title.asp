@@ -421,7 +421,7 @@ If Message = "No" Then
 							</table>
 						</td>
 						<td align="right" class="Text">
-							<a href="javascript:;" class="Text" onclick="document.getElementById('ad').remove();Action.location='/BBS/Action/Hide_Ad_Action.asp">近期不再显示</a>
+							<a href="javascript:;" class="Text" onclick="document.getElementById('ad').remove();Action.location='/BBS/Action/Hide_Ad_Action.asp'">近期不再显示</a>
 						</td>
 					</tr>
 				</table>	
