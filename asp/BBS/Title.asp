@@ -407,26 +407,33 @@ If Message = "No" Then
 			<td></td>
 		  </tr>
 		</table>
-				<table border="0" cellpadding="0" cellspacing="1" bgcolor="#444444">
-				  <tr align="center" height="25">
-					<td width="100" class="High" bgcolor="#444444">赞助广告</td>
-				  </tr>
-				</table>
-				<table width="303" border="0" cellpadding="5" cellspacing="1" bgcolor="#666666">
+		<%
+		If Request.Cookies("Saolei.wang")("NO_AD") <> 1 Then
+		%>
+		<div id="ad">
+				<table width="303" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td>
+							<table border="0" cellpadding="0" cellspacing="1" bgcolor="#444444">
+							  <tr align="center" height="25">
+								<td width="100" class="High" bgcolor="#444444">赞助广告</td>
+							  </tr>
+							</table>
+						</td>
+						<td align="right" class="Text">
+							<a href="javascript:;" class="Text" onclick="document.getElementById('ad').remove();Action.location='/BBS/Action/Hide_Ad_Action.asp'">近期不再显示</a>
+						</td>
+					</tr>
+				</table>	
+				<table width="303" border="0" cellpadding="1" cellspacing="1" bgcolor="#666666">
 				  <tr bgcolor="#333333">
-					<td height="195" align="center" valign="top" class="Text">
-					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-					<!-- 论坛文章侧边栏 -->
-					<ins class="adsbygoogle"
-					     style="display:inline-block;width:300px;height:250px"
-					     data-ad-client="ca-pub-5867628704806120"
-					     data-ad-slot="5455939895"></ins>
-					<script>
-					(adsbygoogle = window.adsbygoogle || []).push({});
-					</script>
+					<td height="126" align="center" valign="top" class="Text">
+						<a href="https://mp.weixin.qq.com/s/ZojyheEDOnBIiJaxFSgKNA" target="_blank"><img src="/Models/Images/Ad/bbs.png"/></a>
 					</td>
 				  </tr>
 				</table>
+			</div>
+			<%End If%>
 			</td>
 		  </tr>
 		</table>
