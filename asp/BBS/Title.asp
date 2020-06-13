@@ -408,7 +408,7 @@ If Message = "No" Then
 		  </tr>
 		</table>
 		<%
-		If Request.Cookies("Saolei.NO_AD") <> 1 Then
+		If Request.Cookies("Saolei.wang")("NO_AD") <> 1 Then
 		%>
 		<div id="ad">
 				<table width="303" border="0" cellpadding="0" cellspacing="0">

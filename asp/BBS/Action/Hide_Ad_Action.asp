@@ -1,3 +1,3 @@
 <%
-Response.Cookies("Saolei.NO_AD") = 1
-Response.Cookies("Saolei.NO_AD").Expires = Date()+7
+Response.Cookies("Saolei.wang")("NO_AD") = 1
+Response.Cookies("Saolei.wang").Expires = Date()+7
