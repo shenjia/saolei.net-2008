@@ -128,9 +128,9 @@ body {
 				<td width="120" height="105" align="left" valign="top" class="Text">
 			<%
 			If Player_Image Then
-				%><img src="/Models/Images/Player/<%=Player_Id%>.jpg" border="1" align="absmiddle" style="border-color:#999999;"><%
+				%><img width="100" height="100" src="/Models/Images/Player/<%=Player_Id%>.jpg" border="1" align="absmiddle" style="border-color:#999999;"><%
 			Else
-				%><img src="/Models/Images/Player/No.jpg" border="1" align="absmiddle" style="border-color:#999999; cursor:pointer" onclick="top.Window('/Help/Image.asp');" title="如何上传照片？"><%
+				%><img width="100" height="100" src="/Models/Images/Player/No.jpg" border="1" align="absmiddle" style="border-color:#999999; cursor:pointer" onclick="top.Window('/Help/Image.asp');" title="如何上传照片？"><%
 			End If
 			%>
 			</td></tr>
