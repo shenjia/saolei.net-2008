@@ -194,7 +194,12 @@ function playAvfVideo(result){
         		events[i]=charCodeAt(result[number++]);
         	}
         	size++;
-        }//events时间读取完成
+		}//events时间读取完成
+		
+		// 根据最后一个事件记录的信息获取录像真实时间，录像内用明文记录的时间信息可能和实际有较大偏差
+		// 注意hun位数不足时需要补0
+		realtime = video[size-1].sec + "." + two_char(video[size-1].hun);
+        log('Realtime: ' + realtime);
 
         //以iframe的src属性判断当前界面是否为录像上传界面
         if($('#Window_Frame', parent.document).attr('src')==="/Video/Upload.asp"){
@@ -207,7 +212,7 @@ function playAvfVideo(result){
                 videoError("录像级别错误，请重新选择！");
             }else{
                 inputBv.value=parseInt(last.substring(1,last.lastIndexOf("T")));
-                inputTime.value=Math.round((parseFloat(last.substring(last.lastIndexOf("T")+1))-1)*100)/100;
+                inputTime.value=realtime;
                 if(video[0].style==="FL"){//默认undefined为NF
                     inputStyle.checked=false;
                 }else{
@@ -219,19 +224,10 @@ function playAvfVideo(result){
         }
 
         container.set_viedo_mine(board);//按录像布雷
-        
-    	while(number<result.length){
-            if(result.substring(++number,number+10)=="RealTime: "){
-                number+=10;
-                break;
-            }
-    	}
 
         while(number<result.length&&result.substring(number,number+6)!="Skin: "){
-            realtime+=result[number];
             number++;
         }
-        log('Realtime: '+realtime);
 
         if(result.substring(number,number+6)=="Skin: "){
             while(number<result.length&&charCodeAt(result[number])!=13){
