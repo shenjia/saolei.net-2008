@@ -55,19 +55,19 @@
     </tr>
     <tr class="Ours">
         <td class="Bold">No. <span class="Signest">2</span></td>
+        <td class="High">Ze-En Ju</td>
+        <td class="Text Beg">0.49</td>
+        <td class="Text Int">7.76</td>
+        <td class="Text Exp">31.62</td>
+        <td class="Text Signest">40</td>
+    </tr>
+    <tr class="Ours">
+        <td class="Bold">No. <span class="Signest">3</span></td>
         <td class="High">Wei-Jia Guo</td>
         <td class="Text Beg">0.54</td>
         <td class="Text Int">7.51</td>
         <td class="Text Exp">32.02</td>
         <td class="Text Signest">41</td>
-    </tr>
-    <tr class="Ours">
-        <td class="Bold">No. <span class="Signest">3</span></td>
-        <td class="High">Ze-En Ju</td>
-        <td class="Text Beg">0.49</td>
-        <td class="Text Int">7.76</td>
-        <td class="Text Exp">32.93</td>
-        <td class="Text Signest">42</td>
     </tr>
     <tr class="Ours">
         <td class="Bold">No. <span class="Signest">4</span></td>
@@ -119,15 +119,15 @@
     </tr>
     <tr class="Ours">
         <td class="Bold">No. <span class="Signest">10</span></td>
-        <td class="High">Shao-Wu Zhang</td>
-        <td class="Text Beg">0.53</td>
-        <td class="Text Int">8.26</td>
-        <td class="Text Exp">35.27</td>
-        <td class="Text Signest">45</td>
+        <td class="High">Yao-Yu Zhu</td>
+        <td class="Text Beg">0.75</td>
+        <td class="Text Int">8.36</td>
+        <td class="Text Exp">34.68</td>
+        <td class="Text Signest">44</td>
     </tr>
     <tr align="right">
         <td colspan="2" class="Text" height="35" align="left"><a href="http://www.minesweeper.info/worldranking.html" target="_blank" class="Sign">点击查看完整世界排行</a></td>
-        <td colspan="4" class="Text" height="35"><p>更新时间：<span class="Title">2020.5.16</span></p></td>
+        <td colspan="4" class="Text" height="35"><p>更新时间：<span class="Title">2020.7.19</span></p></td>
     </tr>
     </tbody>
 </table>
