@@ -77,8 +77,6 @@ body {
 			Call End_Conn()
 			%>
               </tr>
-            </table>
-		<table width="595" border="0" cellpadding="10" cellspacing="1" bgcolor="#666666">
 		  <tr bgcolor="#333333">
 			<td height="535" valign="top" class="Text"><table width="575" border="0" cellspacing="0" cellpadding="0">
               <tr>
