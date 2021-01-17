@@ -7,7 +7,7 @@
 domain = "saolei.wang"
 Domain = "Saolei.wang"
 URL = "http://saolei.wang"
-ICP = "陕ICP备19026089号"
+ICP = "陕ICP备19026089号-1"
 
 Site_Name = " - 扫雷网 " + Domain
 Index_Title = "扫雷网 " + Domain + " - 扫雷,扫雷排行,扫雷录像,扫雷下载,扫雷教程,扫雷纪录,扫雷高手,扫雷玩家,扫雷论坛,扫雷秘籍,扫雷技巧,Minesweeper,Minesweeper Clone"
