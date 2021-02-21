@@ -462,7 +462,9 @@ function timer_avf(){
 			middle_invalid=false;
 			double_count++;
 			current.change_around_normal();
-			current.openaround();
+			if(current.isOpen==true&&current.bombNumAround>0){
+				current.openaround();
+			}
 		}
 		plan++;
 	}
