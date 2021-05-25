@@ -45,7 +45,7 @@
         <td width="40">Exp</td>
         <td width="25">Sum</td>
     </tr>
-    <tr lass="Ours">
+    <tr class="Ours">
         <td class="Bold">No. <span class="Signest">1</span></td>
         <td class="High">Ze-En Ju</td>
         <td class="Text Beg">0.49</td>
