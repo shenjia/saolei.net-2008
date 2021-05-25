@@ -45,21 +45,21 @@
         <td width="40">Exp</td>
         <td width="25">Sum</td>
     </tr>
-    <tr>
+    <tr lass="Ours">
         <td class="Bold">No. <span class="Signest">1</span></td>
+        <td class="High">Ze-En Ju</td>
+        <td class="Text Beg">0.49</td>
+        <td class="Text Int">7.30</td>
+        <td class="Text Exp">28.84</td>
+        <td class="Text Signest">37</td>
+    </tr>
+    <tr>
+        <td class="Bold">No. <span class="Signest">2</span></td>
         <td class="High">Kamil Muranski</td>
         <td class="Text Beg">0.49</td>
         <td class="Text Int">7.03</td>
         <td class="Text Exp">31.13</td>
         <td class="Text Signest">39</td>
-    </tr>
-    <tr class="Ours">
-        <td class="Bold">No. <span class="Signest">2</span></td>
-        <td class="High">Ze-En Ju</td>
-        <td class="Text Beg">0.49</td>
-        <td class="Text Int">7.76</td>
-        <td class="Text Exp">31.62</td>
-        <td class="Text Signest">40</td>
     </tr>
     <tr class="Ours">
         <td class="Bold">No. <span class="Signest">3</span></td>
@@ -101,8 +101,16 @@
         <td class="Text Exp">32.95</td>
         <td class="Text Signest">43</td>
     </tr>
-    <tr>
+    <tr class="Ours">
         <td class="Bold">No. <span class="Signest">8</span></td>
+        <td class="High">Yao-Yu Zhu</td>
+        <td class="Text Beg">0.75</td>
+        <td class="Text Int">8.36</td>
+        <td class="Text Exp">33.98</td>
+        <td class="Text Signest">44</td>
+    </tr>
+    <tr>
+        <td class="Bold">No. <span class="Signest">9</span></td>
         <td class="High">Pavel Mishin</td>
         <td class="Text Beg">0.76</td>
         <td class="Text Int">8.41</td>
@@ -110,24 +118,16 @@
         <td class="Text Signest">44</td>
     </tr>
     <tr>
-        <td class="Bold">No. <span class="Signest">9</span></td>
+        <td class="Bold">No. <span class="Signest">10</span></td>
         <td class="High">Yu Suzuki</td>
         <td class="Text Beg">0.74</td>
         <td class="Text Int">9.77</td>
         <td class="Text Exp">33.27</td>
         <td class="Text Signest">44</td>
     </tr>
-    <tr class="Ours">
-        <td class="Bold">No. <span class="Signest">10</span></td>
-        <td class="High">Yao-Yu Zhu</td>
-        <td class="Text Beg">0.75</td>
-        <td class="Text Int">8.36</td>
-        <td class="Text Exp">34.68</td>
-        <td class="Text Signest">44</td>
-    </tr>
     <tr align="right">
-        <td colspan="2" class="Text" height="35" align="left"><a href="http://www.minesweeper.info/worldranking.html" target="_blank" class="Sign">点击查看完整世界排行</a></td>
-        <td colspan="4" class="Text" height="35"><p>更新时间：<span class="Title">2020.7.19</span></p></td>
+        <td colspan="2" class="Text" height="35" align="left"><a href="https://minesweepergame.com/world-rankings.php" target="_blank" class="Sign">点击查看完整世界排行</a></td>
+        <td colspan="4" class="Text" height="35"><p>更新时间：<span class="Title">2021.5.25</span></p></td>
     </tr>
     </tbody>
 </table>
