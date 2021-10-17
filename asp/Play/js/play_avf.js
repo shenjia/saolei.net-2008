@@ -332,6 +332,31 @@ function playMvfVideo(result){
     }
 }
 
+function playRmvVideo(result) {
+  let video = new RMVVideo(result);
+  if($('#Window_Frame', parent.document).attr('src')==="/Video/Upload.asp"){
+    let videoModel=$('#Window_Frame', parent.document).contents().find("input[name='Video_Model']")[0].value;
+    let models = {
+      "Beg": "beginner",
+      "Int": "intermediate",
+      "Exp": "expert"
+    };
+    let inputBv=$('#Window_Frame', parent.document).contents().find("input[name='Video_3BV']")[0];
+    let inputTime=$('#Window_Frame', parent.document).contents().find("input[name='Video_Score']")[0];
+    let inputStyle=$('#Window_Frame', parent.document).contents().find("input[name='Video_IsNoFrag']")[0];
+
+    if (video.properties.level !== models[videoModel]) {
+        videoError("录像级别错误，请重新选择！");
+    } else {
+        inputBv.value = video.bbbv;
+        inputTime.value = (video.timeth/1000 + 1).toFixed(2);
+        inputStyle.checked = !!video.properties.nonflagging;
+    }
+    $('#Window_Video', parent.document).fadeOut(0);//防止显示录像播放界面
+    return;
+  }
+}
+
 //选择本地文件进行录像播放
 function fileImport() {
     //获取读取文件的File对象
@@ -378,6 +403,18 @@ function analyze_video(name,selectedFile){
         }  
         reader.onload = function () {
             playMvfVideo(this.result);
+        }
+    }else if('.rmv'==type){
+        var reader = new FileReader();//这是核心,读取操作就是由它完成.
+        reader.readAsBinaryString(selectedFile);//读取文件的内容,也可以读取文件的URL
+        reader.onabort = function () {
+            log("读取中断....");
+        }
+        reader.onerror = function () {
+            log("读取异常....");
+        }
+        reader.onload = function () {
+            playRmvVideo(this.result);
         }
     }else{
         log("录像格式错误，请重新选择");
