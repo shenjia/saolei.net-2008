@@ -175,6 +175,8 @@ class RMVVideo {
   }
 
   consume_str(num_bytes) {
+    // distinguish from eof
+    if (num_bytes === 0) return "";
     let result = this.replay_str.slice(
       this.read_pos,
       this.read_pos + num_bytes
