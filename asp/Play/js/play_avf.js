@@ -332,6 +332,93 @@ function playMvfVideo(result){
     }
 }
 
+function playRmvVideo(result) {
+  let rmv_video = new RMVVideo(result);
+  if($('#Window_Frame', parent.document).attr('src')==="/Video/Upload.asp"){
+    // we're uploading, just analyze the video instead of playing it
+    let videoModel=$('#Window_Frame', parent.document).contents().find("input[name='Video_Model']")[0].value;
+    let models = {
+      "Beg": "beginner",
+      "Int": "intermediate",
+      "Exp": "expert"
+    };
+    let inputBv=$('#Window_Frame', parent.document).contents().find("input[name='Video_3BV']")[0];
+    let inputTime=$('#Window_Frame', parent.document).contents().find("input[name='Video_Score']")[0];
+    let inputStyle=$('#Window_Frame', parent.document).contents().find("input[name='Video_IsNoFrag']")[0];
+
+    if (rmv_video.properties.level !== models[videoModel]) {
+        videoError("录像级别错误，请重新选择！");
+    } else {
+        inputBv.value = rmv_video.bbbv;
+        inputTime.value = (rmv_video.timeth/1000 + 1).toFixed(2);
+        inputStyle.checked = !!rmv_video.properties.nonflagging;
+    }
+    $('#Window_Video', parent.document).fadeOut(0);//防止显示录像播放界面
+    return;
+  }
+  // play the video
+  reset();
+
+  // initialize board
+  let board = new Array(rmv_video.rows*rmv_video.cols);
+  board.fill(0);
+  for (let [row, col] of rmv_video.mines) {
+    board[rmv_video.cols*row+col] = 1;
+  }
+
+  // initialize container
+  let levels = {
+    beginner: 1,
+    intermediate: 2,
+    expert: 3
+  };
+  let level = levels[rmv_video.properties.level];
+  container.init(level);
+  container.set_viedo_mine(board);
+
+  // fill video
+  let rmv_events = {
+    move: 1,
+    lmb_down: 3,
+    lmb_up: 5,
+    rmb_down: 9,
+    rmb_up: 17,
+    mmb_down: 33,
+    mmb_up: 65,
+  };
+  // convert mouse events
+  video = new Array();
+  for (let rmv_event of rmv_video.events) {
+    // ignore board events since the player autofills them
+    if (rmv_event.type !== "mouse") continue;
+    let event = new Mouse_event();
+    event.x = rmv_event.xpos;
+    event.y = rmv_event.ypos;
+    event.rows = parseInt(event.x/16) + 1;
+    event.columns = parseInt(event.y/16) + 1;
+    if (event.rows <= 0) {
+      event.rows = rmv_video.rows + 1;
+    }
+    if (event.columns <= 0) {
+      event.columns = rmv_video.cols + 1;
+    }
+    event.sec = rmv_event.gametime/1000 >> 0;
+    event.hun = (rmv_event.gametime/10 >> 0) % 100;
+    event.path = 0; //TBD
+    event.mouse = rmv_events[rmv_event.subtype];
+    video.push(event);
+  }
+  // put metadata in video[0]
+  video[0].level = level;
+  video[0].board = board;
+  video[0].size = video.length;
+  video[0].player = rmv_video.player_data.name;
+  video[0].realtime = rmv_video.timeth/1000;
+
+  // play the video
+  start_avf(video);
+}
+
 //选择本地文件进行录像播放
 function fileImport() {
     //获取读取文件的File对象
@@ -378,6 +465,18 @@ function analyze_video(name,selectedFile){
         }  
         reader.onload = function () {
             playMvfVideo(this.result);
+        }
+    }else if('.rmv'==type){
+        var reader = new FileReader();//这是核心,读取操作就是由它完成.
+        reader.readAsBinaryString(selectedFile);//读取文件的内容,也可以读取文件的URL
+        reader.onabort = function () {
+            log("读取中断....");
+        }
+        reader.onerror = function () {
+            log("读取异常....");
+        }
+        reader.onload = function () {
+            playRmvVideo(this.result);
         }
     }else{
         log("录像格式错误，请重新选择");

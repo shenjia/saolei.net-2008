@@ -33,7 +33,7 @@ Call Check_Input()
 Session("Upload_Video_Model") = Video_Model
 Session("Upload_Video_Score") = Video_Score
 
-If Video_Type <> "avf" And Video_Type <> "mvf" Then
+If Video_Type <> "avf" And Video_Type <> "mvf" And Video_Type <> "rmv" Then
 	Video_Type = "avf"
 End If
 
