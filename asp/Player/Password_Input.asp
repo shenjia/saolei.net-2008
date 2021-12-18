@@ -49,7 +49,7 @@ If Message = "No" Then
 	}
 	-->
 	</style>
-	<link href="/Models/Css/2008.css" rel="stylesheet" type="text/css">
+	<link href="/Models/Css/2008.css?v=20211218" rel="stylesheet" type="text/css">
 	<!--#include virtual="/Models/Include/Windows.asp"-->
 	</head>
 	<body onload="Window_Load();Player_Form.Player_Name.select();" onMousemove="move()" topmargin=0 leftmargin=0 scroll=no>

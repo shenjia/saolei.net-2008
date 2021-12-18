@@ -37,7 +37,7 @@ If Video_Type <> "avf" And Video_Type <> "mvf" And Video_Type <> "rmv" Then
 	Video_Type = "avf"
 End If
 
-If Video_Type = "avf" Then
+If Video_Type = "avf" Or Video_Type = "rmv" Then
 	Video_Score = Video_Score + 1
 End If
 

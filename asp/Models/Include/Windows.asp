@@ -48,13 +48,6 @@ parent.window.onresize = function () {
 		if(parent.document.getElementById('Window_Box').style.display=='block'&&parent.document.getElementById('Window_Frame').style.display!='none'){
 			resize_iframe();
 		}
-
-		// 当前是否需要重新调整录像窗口位置
-		// 需要判断Window_Border的样式是因为首次进入页面时默认为none
-		// 此时调整窗口大小时无需调整录像窗口位置
-		if(parent.document.getElementById('Window_Border').style.display=='block'&&parent.document.getElementById('Window_Video').style.display=='block'){
-	    	parent.document.getElementById('Window_Video').contentWindow.resize_iframe();
-		}
 	}
 }
 function resize_iframe(){
