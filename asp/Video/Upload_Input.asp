@@ -34,7 +34,7 @@ If Check_Result <> "Fail" Then
 	}
 	-->
 	</style>
-	<link href="/Models/Css/2008.css" rel="stylesheet" type="text/css">
+	<link href="/Models/Css/2008.css?v=20211218" rel="stylesheet" type="text/css">
 	<!--#include virtual="/Models/Include/Windows.asp"-->
 	</head>
 	<body onload="Window_Load();Upload_Form.Video.select();" onMousemove="move()" topmargin=0 leftmargin=0 scroll=no>
@@ -73,7 +73,7 @@ If Check_Result <> "Fail" Then
 					<tr>
 						<td class="Text">
 						请选择 <span class="Title">avf</span> 录像文件：
-						<input name="Video" type="File" class="input-no" size="20" maxlength="100" onchange="AnalyzeFile(this.files[0]);"><br>
+						<input name="Video" type="File" class="input-no" size="20" maxlength="100" onchange="AnalyzeFiles(this.files)"><br>
 						请输入录像３ＢＶ值：
 						<input name="Video_3BV" type="text" class="input-no" size="3" maxlength="3" onFocus="Show('For_Video_3BV')" onBlur="Hide_3BV()">
 						<span id="For_Video_3BV" style="display: none">&nbsp;<a href="/Help/Upload_3BV.asp" class="Sign">怎样查看录像3BV值？</a></span> <br>
@@ -162,11 +162,42 @@ If Check_Result <> "Fail" Then
 			parent.document.getElementById('Window_Box').style.display='none';
 	}
 
-	function AnalyzeFile(selectedFile){
-		if (parent.document.getElementById("Window_Border") != null && selectedFile != null){
-			parent.document.getElementById('Window_Video').contentWindow.analyze_video(selectedFile.name,selectedFile);
-		}
-	}
+    function Error(msg) {
+        const iframe = parent.document.getElementById('Window_Frame')
+        if (iframe) {
+            iframe.contentDocument.querySelector("input[name='Video']").value = ""
+            iframe.contentDocument.querySelector("input[name='Video_3BV']").value = ""
+            iframe.contentDocument.querySelector("input[name='Video_Score']").value = ""
+            iframe.contentDocument.querySelector("input[name='Video_IsNoFrag']").checked = false
+        }
+        alert(msg)
+    }
+
+    function AnalyzeSuccess(video) {
+        const iframe = parent.document.getElementById('Window_Frame')
+        if (!video || !iframe) return
+        const levelArr = ['Unknown', 'Beg', 'Int', 'Exp', 'Cus']
+        if (levelArr[video.getLevel()] !== iframe.contentDocument.querySelector("input[name='Video_Model']").value) {
+            Error('录像级别错误，请重新选择！')
+            return
+        }
+        iframe.contentDocument.querySelector("input[name='Video_3BV']").value = video.getBBBV()
+        iframe.contentDocument.querySelector("input[name='Video_Score']").value = (video.getTime() / 1000).toFixed(2)
+        iframe.contentDocument.querySelector("input[name='Video_IsNoFrag']").checked = video.getRightClicks() === 0 && video.getDoubleClicks() === 0
+    }
+
+    function AnalyzeFiles(files) {
+        const iframe = parent.document.getElementById('Window_Frame')
+        if (!files || !iframe || !parent.flop) return
+        const name = files[0].name
+        const type = name.indexOf('.') !== -1 ? name.substring(name.lastIndexOf('.') + 1) : ''
+        if (type !== 'avf' && type !== 'mvf' && type !== 'rmv') {
+            Error('录像格式错误，请重新选择！')
+            return
+        }
+        parent.flop.parseFiles(files, AnalyzeSuccess)
+    }
+
 	</script>
 	<%
 	

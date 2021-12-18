@@ -111,7 +111,7 @@ Select Case Result
 		}
 		-->
 		</style>
-		<link href="/Models/Css/2008.css" rel="stylesheet" type="text/css">
+		<link href="/Models/Css/2008.css?v=20211218" rel="stylesheet" type="text/css">
 		<!--#include virtual="/Models/Include/Windows.asp"-->
 		</head>
 		<body onLoad="Window_Load();<%If Session("Player_Id") <> "" Then%>Comment_Form.Comment_Text.select();<%End If%>" onMousemove="move()" topmargin=0 leftmargin=0 scroll=no>
@@ -154,11 +154,7 @@ Select Case Result
 							<%If Video_Freeze Then
 								Call Button("为什么冻结?",100,40,"location='/Help/Freeze.asp';",1)
 							Else
-								If Session("Player_Id") <> "" Then
-									Act = "loadVideo('"&Video_Path&"');"
-								Else
-									Act = "loadVideo('"&Video_Path&"');"
-								End If
+								Act = "playVideo('"&Video_Path&"');"
 								Call Button("在线播放",100,40,Act,0)
 							End If%>
 							</td>
@@ -293,23 +289,25 @@ Select Case Result
 				parent.document.getElementById('Window_Box').style.display='none';
 		}
 
-		function loadVideo(path){
-			var isIE=window.ActiveXObject || "ActiveXObject" in window;
-			if(isIE){
-				alert('暂不支持 IE 内核 ,请更换浏览器或内核！');
-			}else{
-				parent.document.getElementById('Window_Video').contentWindow.loadVideo(path);
-		    }
-		}
-
-		//用户前进后退时会重新加载此页面
-		//重新加载时隐藏录像播放界面、显示查看界面(防止播放时后退被隐藏)、重置录像播放界面
-		function HindVideo(){
-			parent.document.getElementById('Window_Video').contentWindow.closeVideo();
-		}
-		if(parent.document.getElementById('Window_Video') != null 
-			&& typeof parent.document.getElementById('Window_Video').contentWindow.closeVideo === "function"){
-			HindVideo();
+		function playVideo(uri, options) {
+			if (!!window.ActiveXObject || 'ActiveXObject' in window) {
+				alert('暂不支持 IE 内核，请更换浏览器或内核！')
+				return
+			}
+			if (!parent.flop) return
+			document.body.style.display = 'none'
+			parent.flop.playVideo(uri, options || {
+				share: {
+					uri: uri,
+					pathname: '/Play',
+                	background: '#333',
+					title: '扫雷网 Saolei.wang'
+				},
+            	background: 'rgba(0, 0, 0, .5)',
+				listener: function () {
+					document.body.style.display = 'block'
+				}
+			})
 		}
 		
 		</script>

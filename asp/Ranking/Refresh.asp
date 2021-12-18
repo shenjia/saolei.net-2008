@@ -49,7 +49,7 @@ If Check_Result <> "Fail" Then
 		}
 		-->
 		</style>
-		<link href="/Models/Css/2008.css" rel="stylesheet" type="text/css">
+		<link href="/Models/Css/2008.css?v=20211218" rel="stylesheet" type="text/css">
 		<!--#include virtual="/Models/Include/Windows.asp"-->
 		</head>
 		<body onMousemove="move()" onLoad="Window_Load();Action.location='/Ranking/Action/Refresh_Action.asp?tmp='+Math.random();" topmargin=0 leftmargin=0 scroll=no>
