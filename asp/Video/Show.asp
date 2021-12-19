@@ -299,7 +299,7 @@ Select Case Result
 			parent.flop.playVideo(uri, options || {
 				share: {
 					uri: uri,
-					pathname: '/Play',
+					pathname: '/Play/index.html',
                 	background: '#333',
 					title: 'É¨À×Íø Saolei.wang'
 				},
