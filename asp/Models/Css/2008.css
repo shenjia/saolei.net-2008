@@ -325,6 +325,10 @@ a.Signest:hover {
 	BORDER-RIGHT: #FFFFFF 1px solid; 
 	font-weight: bold;
 }
+img[src*='/Models/Images/Player/'] {
+	width: 100px;
+	height: 100px;
+}
 .flop-player-overflow-hidden {
 	overflow: hidden !important;
 }

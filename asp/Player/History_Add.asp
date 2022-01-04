@@ -28,7 +28,7 @@ If Check_Result <> "Fail" Then
 	}
 	-->
 	</style>
-	<link href="/Models/Css/2008.css?v=20211218" rel="stylesheet" type="text/css">
+	<link href="/Models/Css/2008.css?v=20220104" rel="stylesheet" type="text/css">
 	</head>	
 	<body onLoad="parent.document.getElementById('History').style.display='block';History_Form.History_Text.select();">
 	<table width="290" border="0" cellspacing="5" cellpadding="0">

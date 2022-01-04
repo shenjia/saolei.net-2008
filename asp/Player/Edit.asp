@@ -69,7 +69,7 @@ If Message = "No" And Check_Result <> "Fail" Then
 	}
 	-->
 	</style>
-	<link href="/Models/Css/2008.css?v=20211218" rel="stylesheet" type="text/css">
+	<link href="/Models/Css/2008.css?v=20220104" rel="stylesheet" type="text/css">
 	<!--#include virtual="/Models/Include/Windows.asp"-->
 	<!--#include virtual="/Models/Include/ShowHide.asp"-->
 	</head>
