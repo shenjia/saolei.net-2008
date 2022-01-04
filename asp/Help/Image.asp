@@ -34,9 +34,9 @@ body {
 			<table width="370" border="0" cellspacing="10" cellpadding="0">
 				<tr>
 				  <td class="Text">					  <p class="Text">1、选择自己最满意的一张生活照片，越清晰越好，如图：<br>
-				    　&nbsp;<img src="/Models/Images/Player/Example/1.JPG" width="243" height="210"> <span class="Title">zhaopian.jpg				    </span><br>
+				    　&nbsp;<img src="/Models/Images/Player/Example/1.JPG" style="width: 243px;height: 210px;"> <span class="Title">zhaopian.jpg				    </span><br>
 				    2、将头部部分剪切出来，特别注意要在头部周围预留一些空间，不要做成大头状，然后编辑成<span class="Sign">100x100</span>像素，存成<span class="Sign">JPG</span>格式：<br>
-				    　&nbsp;<img src="/Models/Images/Player/Example/2.JPG" width="100" height="100">				    <span class="Title">id1.jpg</span><br>
+				    　&nbsp;<img src="/Models/Images/Player/Example/2.JPG">				    <span class="Title">id1.jpg</span><br>
 				    3、将编辑好的照片连同自己的<span class="Signest">Id</span>发邮件到<a href="mailto:zhangshenjia@qq.com" target="_blank" class="Sign">zhangshenjia@qq.com</a><br>                  
 				  <table width="350" height="30" border="0" align="center" cellpadding="10" cellspacing="1">
 							<tr>
