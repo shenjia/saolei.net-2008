@@ -25,16 +25,15 @@ body {
 <body onLoad="parent.document.getElementById('World').style.display='block';">
 <table width="280" border="0" cellspacing="0" cellpadding="0">
 	<tr>
-	  <td colspan="6" align="left" class="Text"><span class="Title">Damien的世界排行</span>(<a href="http://www.minesweeper.info" target="_blank" class="Sign">http://www.minesweeper.info</a>)<br>		  
-      　　本排行由世界排名第三的<span class="High">Damien Moore</span>建立，是目前全球扫雷玩家公认最为权威的世界排行。因为排行建立于2000年，排行中有部分Windows扫雷成绩（包括前世界第一的<span class="High">Lasse Nyholm</span>），故Sum值只取整数位相加，Sum相同时再按高级成绩排序。<br>
+	  <td colspan="6" align="left" class="Text"><span class="Title">Damien的世界排行</span>(<a href="https://minesweepergame.com/" target="_blank" class="Sign">http://www.minesweeper.info</a>)<br>		  
+      　　本排行由前世界第一的<span class="High">Damien Moore</span>建立，是目前全球扫雷玩家公认最为权威的世界排行。<br>
 			<table width="275" border="0" cellpadding="0" cellspacing="0">
 			  <tr height="10">
 				<td></td>
 			  </tr>
 			</table>
           <span class="Title">加入世界排行的流程</span><br>
-　　世界排行只收录总成绩100秒以内的玩家。 <br>
-　　给Damien(<a href="mailto:damienalexmoore@yahoo.com" class="Sign">damienalexmoore@yahoo.com</a>)写信，将自己的初、中、高三个级别的 <span class="Title">mvf </span>录像作为附件，信中注明自己的姓名拼音、每个级别记录的产生时间，以及自己来自中国何处。(<a href="javascript:;" class="Sign" onClick="top.Window('/Help/Email.asp');">查看示范Email</a>)</td>
+　　首先<a href="https://minesweepergame.com/register.php" target="_blank" class="Sign">注册</a>账号。登录后在<a href="https://minesweepergame.com/member/index.php" target="_blank" class="Sign">欢迎页</a>提交自己的雷网ID即可自动同步雷网的非NF纪录。此外还可以通过<a href="https://minesweepergame.com/member/member-upload.php" target="_blank" class="Sign">上传页</a>直接提交录像。</td>
 	</tr>
 </table>
 </body>
