@@ -25,15 +25,16 @@ body {
 <body onLoad="parent.document.getElementById('World').style.display='block';">
 <table width="280" border="0" cellspacing="0" cellpadding="0">
 	<tr>
-	  <td colspan="6" align="left" class="Text"><span class="Title">Damiençš„ä¸–ç•ŒæŽ’è¡Œ</span>(<a href="https://minesweepergame.com/" target="_blank" class="Sign">http://www.minesweeper.info</a>)<br>		  
-      ã€€ã€€æœ¬æŽ’è¡Œç”±å‰ä¸–ç•Œç¬¬ä¸€çš„<span class="High">Damien Moore</span>å»ºç«‹ï¼Œæ˜¯ç›®å‰å…¨çƒæ‰«é›·çŽ©å®¶å…¬è®¤æœ€ä¸ºæƒå¨çš„ä¸–ç•ŒæŽ’è¡Œã€‚<br>
+	  <td colspan="6" align="left" class="Text"><span class="Title">DamienµÄÊÀ½çÅÅÐÐ</span>(<a href="http://www.minesweeper.info" target="_blank" class="Sign">http://www.minesweeper.info</a>)<br>		  
+      ¡¡¡¡±¾ÅÅÐÐÓÉÊÀ½çÅÅÃûµÚÈýµÄ<span class="High">Damien Moore</span>½¨Á¢£¬ÊÇÄ¿Ç°È«ÇòÉ¨À×Íæ¼Ò¹«ÈÏ×îÎªÈ¨ÍþµÄÊÀ½çÅÅÐÐ¡£ÒòÎªÅÅÐÐ½¨Á¢ÓÚ2000Äê£¬ÅÅÐÐÖÐÓÐ²¿·ÖWindowsÉ¨À×³É¼¨£¨°üÀ¨Ç°ÊÀ½çµÚÒ»µÄ<span class="High">Lasse Nyholm</span>£©£¬¹ÊSumÖµÖ»È¡ÕûÊýÎ»Ïà¼Ó£¬SumÏàÍ¬Ê±ÔÙ°´¸ß¼¶³É¼¨ÅÅÐò¡£<br>
 			<table width="275" border="0" cellpadding="0" cellspacing="0">
 			  <tr height="10">
 				<td></td>
 			  </tr>
 			</table>
-          <span class="Title">åŠ å…¥ä¸–ç•ŒæŽ’è¡Œçš„æµç¨‹</span><br>
-ã€€ã€€é¦–å…ˆ<a href="https://minesweepergame.com/register.php" target="_blank" class="Sign">æ³¨å†Œ</a>è´¦å·ã€‚ç™»å½•åŽåœ¨<a href="https://minesweepergame.com/member/index.php" target="_blank" class="Sign">æ¬¢è¿Žé¡µ</a>æäº¤è‡ªå·±çš„é›·ç½‘IDå³å¯è‡ªåŠ¨åŒæ­¥é›·ç½‘çš„éžNFçºªå½•ã€‚æ­¤å¤–è¿˜å¯ä»¥é€šè¿‡<a href="https://minesweepergame.com/member/member-upload.php" target="_blank" class="Sign">ä¸Šä¼ é¡µ</a>ç›´æŽ¥æäº¤å½•åƒã€‚</td>
+          <span class="Title">¼ÓÈëÊÀ½çÅÅÐÐµÄÁ÷³Ì</span><br>
+¡¡¡¡ÊÀ½çÅÅÐÐÖ»ÊÕÂ¼×Ü³É¼¨100ÃëÒÔÄÚµÄÍæ¼Ò¡£ <br>
+¡¡¡¡¸øDamien(<a href="mailto:damienalexmoore@yahoo.com" class="Sign">damienalexmoore@yahoo.com</a>)Ð´ÐÅ£¬½«×Ô¼ºµÄ³õ¡¢ÖÐ¡¢¸ßÈý¸ö¼¶±ðµÄ <span class="Title">mvf </span>Â¼Ïñ×÷Îª¸½¼þ£¬ÐÅÖÐ×¢Ã÷×Ô¼ºµÄÐÕÃûÆ´Òô¡¢Ã¿¸ö¼¶±ð¼ÇÂ¼µÄ²úÉúÊ±¼ä£¬ÒÔ¼°×Ô¼ºÀ´×ÔÖÐ¹úºÎ´¦¡£(<a href="javascript:;" class="Sign" onClick="top.Window('/Help/Email.asp');">²é¿´Ê¾·¶Email</a>)</td>
 	</tr>
 </table>
 </body>
