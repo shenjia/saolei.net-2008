@@ -34,7 +34,6 @@ body {
 			<table width="360" border="0" cellspacing="10" cellpadding="0">
 				<tr>
 					<td colspan="2" class="Text">
-						<span class="Sign">If you are not Chinese , Please don't register to this site. </span><br>
 						1、<span class="High"><strong>必须使用</strong></span><span class="Signest"><strong>真实姓名</strong></span><span class="High"><strong>注册，每人只能注册一个用户。</strong></span><br>
 						2、<span class="High"><strong>未用实名注册者所上传录象，一律不审核通过。</strong></span><br>
 						3、如发现注册信息不实，管理员有权封停或删除该用户。<br>
