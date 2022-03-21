@@ -6,7 +6,7 @@
 %>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css">
 <!--
 body {
@@ -27,28 +27,28 @@ body {
 		<td bgcolor="#444444">
 			<table width="426" border="0" cellspacing="0" cellpadding="0">
 				<tr bgcolor="#555555">
-					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">¡¡Ìá¹©ÔÞÖú</td>
-					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">¡Á</td>
+					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">ã€€æä¾›èµžåŠ©</td>
+					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">Ã—</td>
 			</tr>
 			</table>
 			<table width="426" border="0" cellspacing="10" cellpadding="0">
 				<tr>
 				  <td class="Text">
-<p>±¾Õ¾Ò»Ö±ÓÉÕ¾³¤ÕÅÉéïØ½øÐÐ¶ÀÁ¢Î¬»¤¡£Ï£ÍûÓÐ¾­¼ÃÄÜÁ¦µÄÀ×ÓÑ¶Ô±¾Õ¾½øÐÐÔÞÖú£¬Ê¹±¾Õ¾ÄÜÎ¬³ÖÔËÐÐ£¬²¢²»¶Ï·¢Õ¹¡£</p>
-<p>Ö§¸¶±¦ÕÊºÅ£º<span class="Sign">137516@qq.com</span></p>
-<span class="Title">¡¾ÔÞÖúÓÃÍ¾¡¿</span>
+<p>æœ¬ç«™ä¸€ç›´ç”±ç«™é•¿å¼ ç ·é•“è¿›è¡Œç‹¬ç«‹ç»´æŠ¤ã€‚å¸Œæœ›æœ‰ç»æµŽèƒ½åŠ›çš„é›·å‹å¯¹æœ¬ç«™è¿›è¡ŒèµžåŠ©ï¼Œä½¿æœ¬ç«™èƒ½ç»´æŒè¿è¡Œï¼Œå¹¶ä¸æ–­å‘å±•ã€‚</p>
+<p>æ”¯ä»˜å®å¸å·ï¼š<span class="Sign">137516@qq.com</span></p>
+<span class="Title">ã€èµžåŠ©ç”¨é€”ã€‘</span>
 <p>
-1¡¢·þÎñÆ÷×âÁÞ¼°ÓòÃûµÈ»ù±¾·ÑÓÃ<br>
-2¡¢±ÈÈü½±½ð<br>
-3¡¢Íâ°ü³ÌÐò¿ª·¢<br>
+1ã€æœåŠ¡å™¨ç§ŸèµåŠåŸŸåç­‰åŸºæœ¬è´¹ç”¨<br>
+2ã€æ¯”èµ›å¥–é‡‘<br>
+3ã€å¤–åŒ…ç¨‹åºå¼€å‘<br>
 </p>
 
-<span class="Title">¡¾×¢ÒâÊÂÏî¡¿</span>
+<span class="Title">ã€æ³¨æ„äº‹é¡¹ã€‘</span>
 <p>
-1¡¢ÔÞÖúÓ¦ÔÚ²»Ó°ÏìÉú»îÖÊÁ¿µÄÇé¿öÏÂ£¬Á¿Á¦¶øÐÐ¡£½¨ÒéÔÚÐ£Ñ§ÉúÔÚ¹¤×÷ºóÔÙ½øÐÐÔÞÖú£¡<br>
-2¡¢ÇëÔÚ¸¶¿îËµÃ÷ÖÐ×¢Ã÷¡°É¨À×Íø+ÓÃ»§ID¡±£¨Èç£º<span class="Sign">É¨À×Íø 54</span>£©£¬·ñÔò¿îÏî½«Á÷Ê§£¬ÎÞ·¨¼ÆÈëÔÞÖú¡£<br>
-3¡¢ÈÕºó±¾Õ¾ÍÆ³öÊÕ·ÑÏîÄ¿£¨ÈçVIP»áÔ±£©Ê±£¬½«¶ÔÔÞÖúÓÃ»§³äÖµ¶ÔÓ¦µÄ½ð¶î£¬Èç¹û²»ÌîÐ´IDÔòÊÓÎªÄäÃûÔÞÖú£¬·ÅÆúÈÕºóµÈ¶î³äÖµµÄÈ¨Àû¡£<br>
-4¡¢Çë²»Òª½«ÔÞÖú½ð¶î·¢²¼ÔÚÂÛÌ³»òQQÈºÖÐ£¬ÈçÐèºËÊµ¿îÏîÇëºÍÕ¾³¤ÕÅÉéïØÁªÏµ¡£
+1ã€èµžåŠ©åº”åœ¨ä¸å½±å“ç”Ÿæ´»è´¨é‡çš„æƒ…å†µä¸‹ï¼Œé‡åŠ›è€Œè¡Œã€‚å»ºè®®åœ¨æ ¡å­¦ç”Ÿåœ¨å·¥ä½œåŽå†è¿›è¡ŒèµžåŠ©ï¼<br>
+2ã€è¯·åœ¨ä»˜æ¬¾è¯´æ˜Žä¸­æ³¨æ˜Žâ€œæ‰«é›·ç½‘+ç”¨æˆ·IDâ€ï¼ˆå¦‚ï¼š<span class="Sign">æ‰«é›·ç½‘ 54</span>ï¼‰ï¼Œå¦åˆ™æ¬¾é¡¹å°†æµå¤±ï¼Œæ— æ³•è®¡å…¥èµžåŠ©ã€‚<br>
+3ã€æ—¥åŽæœ¬ç«™æŽ¨å‡ºæ”¶è´¹é¡¹ç›®ï¼ˆå¦‚VIPä¼šå‘˜ï¼‰æ—¶ï¼Œå°†å¯¹èµžåŠ©ç”¨æˆ·å……å€¼å¯¹åº”çš„é‡‘é¢ï¼Œå¦‚æžœä¸å¡«å†™IDåˆ™è§†ä¸ºåŒ¿åèµžåŠ©ï¼Œæ”¾å¼ƒæ—¥åŽç­‰é¢å……å€¼çš„æƒåˆ©ã€‚<br>
+4ã€è¯·ä¸è¦å°†èµžåŠ©é‡‘é¢å‘å¸ƒåœ¨è®ºå›æˆ–QQç¾¤ä¸­ï¼Œå¦‚éœ€æ ¸å®žæ¬¾é¡¹è¯·å’Œç«™é•¿å¼ ç ·é•“è”ç³»ã€‚
 </p>
 </td>
 				</tr>
@@ -59,14 +59,14 @@ body {
 						<td width="161">
 							<table width="150" height="30" border="0" align="right" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="window.open('https://www.alipay.com')">
 								<tr>
-									<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';"><img src="/Models/Images/alipay.jpg" style="vertical-align:middle"/> <span class="Sign">È¥Ö§¸¶±¦¸¶¿î</span></td>
+									<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';"><img src="/Models/Images/alipay.jpg" style="vertical-align:middle"/> <span class="Sign">åŽ»æ”¯ä»˜å®ä»˜æ¬¾</span></td>
 								</tr>
 						  </table>
 						</td>
 						<td width="161">
 							<table width="150" height="30" border="0" align="left" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="Cancel();">
 								<tr>
-									<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">ÒÔºóÔÙËµ</td>
+									<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">ä»¥åŽå†è¯´</td>
 								</tr>
 						  </table>
 						</td>
