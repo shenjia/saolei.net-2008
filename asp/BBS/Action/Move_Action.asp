@@ -14,10 +14,10 @@ Call Check_Master()
 Call Get_Input()
 
 If Check_Result <> "Fail" Then
-	Notice_Text = "¹«¸æ"
-	Skill_Text = "¼¼Êõ"
-	Other_Text = "ÔÓÌ¸"
-	Ask_Text = "ÎÊ´ğ"
+	Notice_Text = "å…¬å‘Š"
+	Skill_Text = "æŠ€æœ¯"
+	Other_Text = "æ‚è°ˆ"
+	Ask_Text = "é—®ç­”"
 	
 	Execute "Title_Model_Text = "&Title_Model&"_Text"
 		
@@ -55,7 +55,7 @@ If Check_Result <> "Fail" Then
 				
 		Case "Move_Fail"
 		
-			Message = "¸ÃÖ÷Ìâ²»´æÔÚ£¡"
+			Message = "è¯¥ä¸»é¢˜ä¸å­˜åœ¨ï¼"
 			Act = "top.End_Mask();top.Window_Box.style.display='none';top.location.reload();;"
 			Call Error()
 			
