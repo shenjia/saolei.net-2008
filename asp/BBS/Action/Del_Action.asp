@@ -49,7 +49,7 @@ If Message = "No" And Check_Result <> "Fail" Then
 	
 		Case "Del_Fail"
 		
-			Message = "´ËÌû×Ó²»´æÔÚ!"
+			Message = "æ­¤å¸–å­ä¸å­˜åœ¨!"
 			Act="top.location=top.location"
 			Call Error()
 		
@@ -69,8 +69,8 @@ Sub Check_Input()
 
 	Message = "No"
 	
-	If Title_Id <> "" And Check_Express(Title_Id,"\d{1,8}") Then Message = "ÄúÖ¸¶¨µÄ[ID]²»ºÏ·¨!"
-	If Why_Text = "" Then Message = "ÇëÊäÈë»òÑ¡ÔñÔ­Òò!"
+	If Title_Id <> "" And Check_Express(Title_Id,"\d{1,8}") Then Message = "æ‚¨æŒ‡å®šçš„[ID]ä¸åˆæ³•!"
+	If Why_Text = "" Then Message = "è¯·è¾“å…¥æˆ–é€‰æ‹©åŸå› !"
 	
 	If Message <> "No" Then
 		Act="parent.document.all.Why_Text.focus()"
