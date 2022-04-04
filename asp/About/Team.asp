@@ -6,7 +6,7 @@
 %>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css">
 <!--
 body {
@@ -27,21 +27,21 @@ body {
 		<td bgcolor="#444444">
 			<table width="400" border="0" cellspacing="0" cellpadding="0">
 				<tr bgcolor="#555555">
-					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">¡¡¹ÜÀíÍÅ¶Ó</td>
-					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">¡Á</td>
+					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">ã€€ç®¡ç†å›¢é˜Ÿ</td>
+					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">Ã—</td>
 			</tr>
 			</table>
 			<table width="400" border="0" cellspacing="10" cellpadding="0">
 				<tr>
-				  <td class="Text">					  <span class="Bold">Õ¾¡¡³¤£º</span><span class="Sign">ÕÅÉéïØ</span><br>
-				    <span class="Bold">¹ÜÀí×é£º</span><span class="Sign">³ÂÅô »ª¿¡ Âí¾² Ã«ÕÁÎÄ ÆëÔÆË® Ê©Ò»·É ÌïÒç•P Ðí½¨Óî ÕÅºê</span><br>
-				     ¡¡¡¡¡¡¡¡<span class="High">				    (ÒÔÉÏÅÅÃû²»·ÖÏÈºó)</span></td>
+				  <td class="Text">					  <span class="Bold">ç«™ã€€é•¿ï¼š</span><span class="Sign">å¼ ç ·é•“</span><br>
+				    <span class="Bold">ç®¡ç†ç»„ï¼š</span><span class="Sign">é™ˆé¹ åŽä¿Š é©¬é™ æ¯›æ¨Ÿæ–‡ é½äº‘æ°´ æ–½ä¸€é£ž ç”°æº¢æ˜‰ è®¸å»ºå®‡ å¼ å®</span><br>
+				     ã€€ã€€ã€€ã€€<span class="High">				    (ä»¥ä¸ŠæŽ’åä¸åˆ†å…ˆåŽ)</span></td>
 				</tr>
 				<tr>
 				  <td class="Text">
 						<table width="180" height="30" border="0" align="center" cellpadding="0" cellspacing="1" style="cursor:pointer; " onClick="Cancel();">
 							<tr>
-								<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">¸÷Î»´ó¸çÐÁ¿àÁË£¬ÔÚÏÂ¸æÍË</td>
+								<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">å„ä½å¤§å“¥è¾›è‹¦äº†ï¼Œåœ¨ä¸‹å‘Šé€€</td>
 							</tr>
 					</table>
 				  </td>
