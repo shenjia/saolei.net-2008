@@ -52,7 +52,7 @@ If Message = "No" And Check_Result <> "Fail" Then
 			
 		Case "Lock_Fail"
 		
-			Message = "´ËÖ÷Ìâ²»´æÔÚ!"
+			Message = "æ­¤ä¸»é¢˜ä¸å­˜åœ¨!"
 			Act = "top.location='/BBS/Index.asp'"
 			Call Error()
 			
@@ -70,7 +70,7 @@ Sub Check_Input()
 
 	Message = "No"
 	
-	If Title_Id <> "" And Check_Express(Title_Id,"\d{1,6}") Then Message = "ÄúÖ¸¶¨µÄ[Ö÷ÌâID]²»ºÏ·¨!"
+	If Title_Id <> "" And Check_Express(Title_Id,"\d{1,6}") Then Message = "æ‚¨æŒ‡å®šçš„[ä¸»é¢˜ID]ä¸åˆæ³•!"
 	
 	If Message <> "No" Then
 		Act="Back"
