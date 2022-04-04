@@ -51,21 +51,21 @@ If Message = "No" And Check_Result <> "Fail" Then
 		Case "Reply_Fail_Player"
 		
 			Call End_Conn()
-			Message = "ÓÃ»§²»´æÔÚ!"
+			Message = "ç”¨æˆ·ä¸å­˜åœ¨!"
 			Act = "No"
 			Call Error()
 			
 		Case "Reply_Fail_Title"
 		
 			Call End_Conn()
-			Message = "Ö÷Ìâ²»´æÔÚ!"
+			Message = "ä¸»é¢˜ä¸å­˜åœ¨!"
 			Act = "top.location='/BBS/Index.asp'"
 			Call Error()
 
 		Case "Reply_Fail_Newbee"
 		
 			Call End_Conn()
-			Message = "¼ÓÈëÅÅĞĞºó²ÅÄÜ½øĞĞ»Ø¸´!ĞÂÈËÓĞÎÊÌâÇë¼ÓÊ×Ò³µÄQQÈº£¬»ò·¢¶ÌÏûÏ¢¸ø¹ÜÀíÔ±£¬¸ĞĞ»Àí½â£º£©"
+			Message = "åŠ å…¥æ’è¡Œåæ‰èƒ½è¿›è¡Œå›å¤!æ–°äººæœ‰é—®é¢˜è¯·åŠ é¦–é¡µçš„QQç¾¤ï¼Œæˆ–å‘çŸ­æ¶ˆæ¯ç»™ç®¡ç†å‘˜ï¼Œæ„Ÿè°¢ç†è§£ï¼šï¼‰"
 			Act = "No"
 			Call Error()
 	
@@ -83,9 +83,9 @@ End Sub
 Sub Check_Input()
 	
 	Message = "No"
-	If strLength(Title_Text) > 5000 Then Message = "ÄÚÈİ³¬¹ı5000×Ö·û£¬Çë·Ö¿ª·¢±í!"
-	If strLength(Title_Text) < 2 Then Message = "ÄÚÈİ¹ı¶Ì£¬Çë²¹³ä!"
-	If Title_Text = "" Then Message = "ÇëÊäÈëÄÚÈİ!"
+	If strLength(Title_Text) > 5000 Then Message = "å†…å®¹è¶…è¿‡5000å­—ç¬¦ï¼Œè¯·åˆ†å¼€å‘è¡¨!"
+	If strLength(Title_Text) < 2 Then Message = "å†…å®¹è¿‡çŸ­ï¼Œè¯·è¡¥å……!"
+	If Title_Text = "" Then Message = "è¯·è¾“å…¥å†…å®¹!"
 	If Message <> "No" Then
 		Act="No"
 		Call Error()
