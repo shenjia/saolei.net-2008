@@ -19,15 +19,15 @@ Else
 End If
 
 If Check_Result <> "Fail" Then
-	No_Text = "ÂÛÌ³"
-	Notice_Text = "¹«¸æ"
-	Skill_Text = "¼¼Êõ"
-	Other_Text = "ÔÓÌ¸"
-	Ask_Text = "ÎÊ´ğ"
+	No_Text = "è®ºå›"
+	Notice_Text = "å…¬å‘Š"
+	Skill_Text = "æŠ€æœ¯"
+	Other_Text = "æ‚è°ˆ"
+	Ask_Text = "é—®ç­”"
 	%>
 	<html>
 	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<style type="text/css">
 	<!--
 	body {
@@ -50,10 +50,10 @@ If Check_Result <> "Fail" Then
 		<td width="96" class="Text">
 		<table width="80" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="history.go(-1);">
 		  <tr>
-			<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">·µ»Ø</td>
+			<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">è¿”å›</td>
 		  </tr>
 		</table></td>
-		<td width="369" class="Text">Äú½«ÔÚ<span class="Title">¡¾<%Execute "Response.Write("&Model&"_Text)"%>¡¿</span>·¢±íÖ÷Ìâ</td>
+		<td width="369" class="Text">æ‚¨å°†åœ¨<span class="Title">ã€<%Execute "Response.Write("&Model&"_Text)"%>ã€‘</span>å‘è¡¨ä¸»é¢˜</td>
 		</tr>
 		<tr><td height="10" colspan="3"></td></tr>
 		<tr><td height="1" colspan="3" bgcolor="#555555"></td></tr>
@@ -62,25 +62,25 @@ If Check_Result <> "Fail" Then
 	<table width="575" border="0" cellspacing="0" cellpadding="0">
 	  <form name="Title_Form" action="Action/Post_Action.asp" method="post" target="Action">
 	  <tr>
-		<td width="72" align="right" valign="top" class="Text">±ê¡¡¡¡Ìâ£º
+		<td width="72" align="right" valign="top" class="Text">æ ‡ã€€ã€€é¢˜ï¼š
 		</td>
 	    <td width="503" valign="top" class="Text">
 		<%If Model = "No" Then%>
 		<select name="Title_Model" class="input-no">		
-		  <%If Session("Player_IsMaster") Then%><option value="Notice">¹«¸æ</option><%End If%>
-		  <option value="Skill">¼¼Êõ</option>
-		  <option value="Other">ÔÓÌ¸</option>
-		  <option value="Ask">ÎÊ´ğ</option>
+		  <%If Session("Player_IsMaster") Then%><option value="Notice">å…¬å‘Š</option><%End If%>
+		  <option value="Skill">æŠ€æœ¯</option>
+		  <option value="Other">æ‚è°ˆ</option>
+		  <option value="Ask">é—®ç­”</option>
 		</select>
 		<%Else%>
 		<input name="Title_Model" value="<%=Model%>" type="hidden">
 		<%End If%>
 		<input name="Title_Name" type="text" class="input-no" size="50" maxlength="50" onFocus="Show('For_Title_Name')" onBlur="Hide('For_Title_Name')">
-		<span id="For_Title_Name" class="High" style="display: none">¡ùÇëÊäÈë±êÌâ£¨2¡«50×Ö·û£©</span>
+		<span id="For_Title_Name" class="High" style="display: none">â€»è¯·è¾“å…¥æ ‡é¢˜ï¼ˆ2ï½50å­—ç¬¦ï¼‰</span>
 		</td>
 	  </tr>
 	  <tr>
-		<td width="72" align="right" valign="top" class="Text">ÄÚ¡¡¡¡Èİ£º
+		<td width="72" align="right" valign="top" class="Text">å†…ã€€ã€€å®¹ï¼š
 		</td>
 	    <td width="503" valign="top" class="Text">
 		<textarea name="Title_Text" cols="70" rows="20" wrap="VIRTUAL" class="input-bbs" onKeyDown="KeyDown();" onkeyup="Resize_Textarea();"></textarea>
@@ -94,42 +94,42 @@ If Check_Result <> "Fail" Then
 		<td width="90">
 			<table width="80" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="Title_Form.submit();">
 			  <tr>
-				<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">·¢±íÖ÷Ìâ</td>
+				<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">å‘è¡¨ä¸»é¢˜</td>
 			  </tr>
 			</table>
 		</td>
 		<td width="70">
 			<table width="60" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onclick="Add_Class('Title');Resize_Textarea();">
 			  <tr>
-				<td align="center" bgcolor="#444444" class="Title" onMouseOver="this.className='Signest';" onMouseOut="this.className='Title';">±êÌâ</td>
+				<td align="center" bgcolor="#444444" class="Title" onMouseOver="this.className='Signest';" onMouseOut="this.className='Title';">æ ‡é¢˜</td>
 			  </tr>
 			</table>
 		</td>
 		<td width="70">
 			<table width="60" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onclick="Add_Class('Sign');Resize_Textarea();">
 			  <tr>
-				<td align="center" bgcolor="#444444" class="Sign" onMouseOver="this.className='Sign';" onMouseOut="this.className='Sign';">ĞÑÄ¿</td>
+				<td align="center" bgcolor="#444444" class="Sign" onMouseOver="this.className='Sign';" onMouseOut="this.className='Sign';">é†’ç›®</td>
 			  </tr>
 			</table>
 		</td>
 		<td width="70">
 			<table width="60" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onclick="Img();Resize_Textarea();">
 			  <tr>
-				<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">ÌùÍ¼</td>
+				<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">è´´å›¾</td>
 			  </tr>
 			</table>
 		</td>
 		<td width="70">
 			<table width="60" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onclick="Url();Resize_Textarea();">
 			  <tr>
-				<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">Á´½Ó</td>
+				<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">é“¾æ¥</td>
 			  </tr>
 			</table>
 		</td>
 		<td width="70">
 			<table width="60" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onclick="Face();Resize_Textarea();">
 			  <tr>
-				<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">±íÇé</td>
+				<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">è¡¨æƒ…</td>
 			  </tr>
 			</table>
 			<!--#include virtual="/Models/Include/Face.asp"-->
@@ -137,7 +137,7 @@ If Check_Result <> "Fail" Then
 		<td width="80">
 			<table width="60" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onclick="Mine();Resize_Textarea();">
 			  <tr>
-				<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">°ÚÀ×</td>
+				<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">æ‘†é›·</td>
 			  </tr>
 			</table>
 			<!--#include virtual="/Models/Include/Mine.asp"-->
@@ -148,33 +148,33 @@ If Check_Result <> "Fail" Then
 	  </tr>
 	  <tr>
 	    <td valign="top" class="Text">&nbsp;</td>
-	    <td height="50" valign="middle" class="Text">¡ù ÄúÎŞ·¨É¾³ıÒÑ¾­·¢±íµÄÖ÷Ìâ,Ö»ÄÜ¶ÔÆä½øĞĞ±à¼­<br>
-        ¡ù Î¥·´<a href="javascript:;" onclick="top.Window('/Help/BBS.asp');" class="Sign">¡¶ÂÛÌ³¹ÜÀíÌõÀı¡·</a>µÄÖ÷Ìâ½«±»É¾³ı</td>
+	    <td height="50" valign="middle" class="Text">â€» æ‚¨æ— æ³•åˆ é™¤å·²ç»å‘è¡¨çš„ä¸»é¢˜,åªèƒ½å¯¹å…¶è¿›è¡Œç¼–è¾‘<br>
+        â€» è¿å<a href="javascript:;" onclick="top.Window('/Help/BBS.asp');" class="Sign">ã€Šè®ºå›ç®¡ç†æ¡ä¾‹ã€‹</a>çš„ä¸»é¢˜å°†è¢«åˆ é™¤</td>
 	    </tr>
 	  </form>
 	</table>
 
 	<script type="text/javascript">
-		var textarea=document.Title_Form.Title_Text;//»ñÈ¡textareaÔªËØ
+		var textarea=document.Title_Form.Title_Text;//è·å–textareaå…ƒç´ 
 
 		function Resize_Textarea(){
-			// iPhoneºÍAndroidÔÚtextareaÄÚÊ×´ÎÊäÈëÄÚÈİÊ±£¬iPadÕı³£ÏÔÊ¾(µçÄÔÄ£Äâ²âÊÔ)
-			// textarea»á´íÎóµ÷Õû¸ß¶È£¬²¢ÇÒµ÷Õû¸ß¶ÈÓëÊÖ»ú·Ö±æÂÊÏà¹Ø£¬Ô­Òò²»Ã÷
+			// iPhoneå’ŒAndroidåœ¨textareaå†…é¦–æ¬¡è¾“å…¥å†…å®¹æ—¶ï¼ŒiPadæ­£å¸¸æ˜¾ç¤º(ç”µè„‘æ¨¡æ‹Ÿæµ‹è¯•)
+			// textareaä¼šé”™è¯¯è°ƒæ•´é«˜åº¦ï¼Œå¹¶ä¸”è°ƒæ•´é«˜åº¦ä¸æ‰‹æœºåˆ†è¾¨ç‡ç›¸å…³ï¼ŒåŸå› ä¸æ˜
 			if(/(iPhone|Android)/i.test(navigator.userAgent)){
-				// ±ÜÃâÊÖ»ú¶ËÔÚ±à¼­textareaÄÚÈİÊ±ÎŞ·¨¿´µ½°´Å¥
+				// é¿å…æ‰‹æœºç«¯åœ¨ç¼–è¾‘textareaå†…å®¹æ—¶æ— æ³•çœ‹åˆ°æŒ‰é’®
 				textarea.style.height="100%";
 				if(textarea.value==""){
-					// µ±Çå¿ÕÄÚÈİÊ±textarea»á×Ô¶¯»Ø¸´Ô­À´µÄ¸ß¶È£¬Ô­Òò²»Ã÷
+					// å½“æ¸…ç©ºå†…å®¹æ—¶textareaä¼šè‡ªåŠ¨å›å¤åŸæ¥çš„é«˜åº¦ï¼ŒåŸå› ä¸æ˜
 					textarea.style.height="";
 				}
 			}
 		}
 
 		function Add_Class(classname) {
-			let start=textarea.selectionStart;//Ñ¡ÔñÄÚÈİµÄ¿ªÊ¼Î»ÖÃ
-			let end=textarea.selectionEnd;//Ñ¡ÔñÄÚÈİµÄ½áÊøÎ»ÖÃ
-			let selection=textarea.value.substring(start,end);//Ñ¡ÔñµÄÄÚÈİ
-			textarea.focus();//»ñÈ¡½¹µã£¬²»È»ÎŞ·¨½øĞĞÆäËû²Ù×÷
+			let start=textarea.selectionStart;//é€‰æ‹©å†…å®¹çš„å¼€å§‹ä½ç½®
+			let end=textarea.selectionEnd;//é€‰æ‹©å†…å®¹çš„ç»“æŸä½ç½®
+			let selection=textarea.value.substring(start,end);//é€‰æ‹©çš„å†…å®¹
+			textarea.focus();//è·å–ç„¦ç‚¹ï¼Œä¸ç„¶æ— æ³•è¿›è¡Œå…¶ä»–æ“ä½œ
 			textarea.setSelectionRange(start,end);
 			textarea.setRangeText("["+classname+"]"+selection+"[/"+classname+"]");
 			textarea.setSelectionRange(start,end+2*classname.length+5);
