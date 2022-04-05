@@ -6,10 +6,10 @@
 %>
 <!--#include virtual="/Models/Common/Const.asp"--><html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <META name="description" content="<%=Meta_Description%>">
 <META name="keywords" content="<%=Meta_Keywords%>">
-<title>½Ì³Ì<%=HTML_Title%></title>
+<title>æ•™ç¨‹<%=HTML_Title%></title>
 <style type="text/css">
 <!--
 body {
@@ -24,54 +24,54 @@ body {
 <link href="/Models/Css/2008.css?v=20220104" rel="stylesheet" type="text/css">
 </head>
 <body onLoad="Top(6);">
-<!--#include virtual="/Models/Include/Top.asp"-->
+<!--#include virtual="/Models/Include/Top_utf8.asp"-->
 <table width="910" border="0" align="center" cellpadding="0" cellspacing="1">
   <tr>
     <td width="604" height="500" valign="top">
 			<table border="0" cellpadding="0" cellspacing="1" bgcolor="#444444">
 			  <tr align="center" height="25">
-				<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Guide_1" style="cursor:pointer " onClick="High('Guide_1');">É¨À×½Ì³Ì</td>
+				<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Guide_1" style="cursor:pointer " onClick="High('Guide_1');">æ‰«é›·æ•™ç¨‹</td>
 			  </tr>
 			</table>
 			<script language="javascript">High('Guide_1');</script>
 		<table width="595" border="0" cellpadding="10" cellspacing="1" bgcolor="#666666">
 		  <tr bgcolor="#333333">
-			<td height="535" valign="top" class="Text">¡¡ <span class="Sign">¡¾»ù´¡ÈëÃÅ¡¿</span><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=177" target="_blank" class="High">É¨À×ÐÂÊÖÉÏÂ·</a>¡¡×÷Õß: <A class=Text href="/Player/Show.asp?Id=433">ÃÅÊÀÔË</A><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=227" target="_blank" class="High">É¨À×ÊõÓï½éÉÜ</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">ÕÅÉéïØ</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=362" target="_blank" class="High">É¨À×¶¨Ê½¼°Æä±ä»¯</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">ÕÅÉéïØ</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=8243" target="_blank" class="High">¹ØÓÚÊý×Ö1-7ÖÜÎ§8¸ñÖÐÀ×µÄ·Ö²¼µÄ¸÷ÖÖÐÎ×´</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=2747" target="_blank" class="Text">ÑîÏôÑî</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=1005" target="_blank" class="High">É¨À×ÓÎÏ·µÄÆðÔ´</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">ÕÅÉéïØ</a><br>
-<span class="Sign">¡¡¡¾ÖÐ¼¶½ø½×¡¿</span><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=187" target="_blank" class="High">²ÂÀ×µÄÒ»Ð©ÐÄµÃ</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">ÕÅÉéïØ</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=210" target="_blank" class="High">É¨À×»ù±¾µÈÊ½</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=32" target="_blank" class="Text">Àî·å</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=1262" target="_blank" class="High">Ì¸¾Ö²¿×îÓÅ»¯²Ù×÷</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">ÕÅÉéïØ</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=374" target="_blank" class="High">ÔõÑù½ÚÊ¡±êÀ×</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=32" target="_blank" class="Text">Àî·å</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=825" target="_blank" class="High">3BV/sµÄ¹«Ê½¼°ÆäÓ¦ÓÃ</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=31" target="_blank" class="Text">ÕÅºê</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=1099" target="_blank" class="High">ÎûÎûµÄÐÄµÃ</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=34" target="_blank" class="Text">ÉÛ¹â</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=1188" target="_blank" class="High">É¨À×¼ÍÂ¼µÄ¹¹³É·ÖÎö</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">ÕÅÉéïØ</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=1579" target="_blank" class="High">À×¾÷°ËÌõ</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">ÕÅÉéïØ</a><br>
-<span class="Sign">¡¡¡¾×ÛºÏ½Ì³Ì¡¿</span><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=92" target="_blank" class="High">É¨À×»ù±¾¾­Ñé</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">ÕÅÉéïØ</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=285" target="_blank" class="High">Ð¡Ì¸Ã¤É¨Óë±êÀ×</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=32" target="_blank" class="Text">Àî·å</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=333" target="_blank" class="High">É¨À×ÓÎÏ·Ç°ÈÈÉíÖ®ÎÒ¼û</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=32" target="_blank" class="Text">Àî·å</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=453" target="_blank" class="High">Ò»·½Ì¸É¨À×07°æ</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=24" target="_blank" class="Text">ÌïÒç•P</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=4845" target="_blank" class="High">Ò»·½Ì¸É¨À×09°æ</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=24" target="_blank" class="Text">ÌïÒç•P</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=11409" target="_blank" class="High">¹ù¼ÎNF¾­ÑéÌ¸</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=8356" target="_blank" class="Text">¹ùÎµ¼Î</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=8367" target="_blank" class="High">Ç³Ì¸¸ô¿ÕÅÐÀ×¼°±êÀ×</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=4843" target="_blank" class="Text">ÖÜµ¤</a><br>
-<span class="Sign">¡¡¡¾Èí¼þÖÜ±ß¡¿</span><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=11038" target="_blank" class="High">Minesweeper ArbiterÊ¹ÓÃ½Ì³Ì(Ò»)</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=4843" target="_blank" class="Text">ÖÜµ¤</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=11039" target="_blank" class="High">Minesweeper ArbiterÊ¹ÓÃ½Ì³Ì(¶þ)</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=4843" target="_blank" class="Text">ÖÜµ¤</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=11499" target="_blank" class="High">Minesweeper ArbiterÖÐÎÄ²å¼þ</a><span class="Counter">&nbsp;New!</span>¡¡×÷Õß: <a href="/Player/Show.asp?Id=9672" target="_blank" class="Text">¹ù½õÑó</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=1006" target="_blank" class="High">Minesweeper Clone 0.97 Ê¹ÓÃËµÃ÷</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">ÕÅÉéïØ</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=1007" target="_blank" class="High">Minesweeper Clone 0.97 ³£¼ûÎÊÌâ</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">ÕÅÉéïØ</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=115" target="_blank" class="High">Minesweeper Clone 0.97 ×Ô¶¯Â¼Ïñ½Ì³Ì</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=124" target="_blank" class="Text">ÎâÃÎÐÜ</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=105" target="_blank" class="High">É¨À×Ó²¼þÕ„Ö®Ò»Êó±ê</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=22" target="_blank" class="Text">»ª¿¡</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=128" target="_blank" class="High">É¨À×Ó²¼þÕ„Ö®¶þÊó±êµæ</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=22" target="_blank" class="Text">»ª¿¡</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=283" target="_blank" class="High">½«·Ö±æÂÊµ÷³É640x480µÄ·½·¨</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">ÕÅÉéïØ</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=385" target="_blank" class="High">¹ØÓÚµ÷½ÚÊó±êËÙ¶È</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">ÕÅÉéïØ</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=1082" target="_blank" class="High">ÔõÑùµ÷½ÚÊÊºÏ×Ô¼ºµÄÊó±êÁéÃô¶È</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=32" target="_blank" class="Text">Àî·å</a><br>
-¡¡¡¡¡ù <a href="/BBS/Title.asp?Id=2294" target="_blank" class="High">É¨À×ÊÀ½çÅÅÐÐ°ñ¼òÊ·(2008.5.25)</a>¡¡×÷Õß: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">ÕÅÉéïØ</a></td>
+			<td height="535" valign="top" class="Text">ã€€ <span class="Sign">ã€åŸºç¡€å…¥é—¨ã€‘</span><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=177" target="_blank" class="High">æ‰«é›·æ–°æ‰‹ä¸Šè·¯</a>ã€€ä½œè€…: <A class=Text href="/Player/Show.asp?Id=433">é—¨ä¸–è¿</A><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=227" target="_blank" class="High">æ‰«é›·æœ¯è¯­ä»‹ç»</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">å¼ ç ·é•“</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=362" target="_blank" class="High">æ‰«é›·å®šå¼åŠå…¶å˜åŒ–</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">å¼ ç ·é•“</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=8243" target="_blank" class="High">å…³äºŽæ•°å­—1-7å‘¨å›´8æ ¼ä¸­é›·çš„åˆ†å¸ƒçš„å„ç§å½¢çŠ¶</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=2747" target="_blank" class="Text">æ¨è§æ¨</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=1005" target="_blank" class="High">æ‰«é›·æ¸¸æˆçš„èµ·æº</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">å¼ ç ·é•“</a><br>
+<span class="Sign">ã€€ã€ä¸­çº§è¿›é˜¶ã€‘</span><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=187" target="_blank" class="High">çŒœé›·çš„ä¸€äº›å¿ƒå¾—</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">å¼ ç ·é•“</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=210" target="_blank" class="High">æ‰«é›·åŸºæœ¬ç­‰å¼</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=32" target="_blank" class="Text">æŽå³°</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=1262" target="_blank" class="High">è°ˆå±€éƒ¨æœ€ä¼˜åŒ–æ“ä½œ</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">å¼ ç ·é•“</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=374" target="_blank" class="High">æ€Žæ ·èŠ‚çœæ ‡é›·</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=32" target="_blank" class="Text">æŽå³°</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=825" target="_blank" class="High">3BV/sçš„å…¬å¼åŠå…¶åº”ç”¨</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=31" target="_blank" class="Text">å¼ å®</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=1099" target="_blank" class="High">å˜»å˜»çš„å¿ƒå¾—</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=34" target="_blank" class="Text">é‚µå…‰</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=1188" target="_blank" class="High">æ‰«é›·çºªå½•çš„æž„æˆåˆ†æž</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">å¼ ç ·é•“</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=1579" target="_blank" class="High">é›·è¯€å…«æ¡</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">å¼ ç ·é•“</a><br>
+<span class="Sign">ã€€ã€ç»¼åˆæ•™ç¨‹ã€‘</span><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=92" target="_blank" class="High">æ‰«é›·åŸºæœ¬ç»éªŒ</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">å¼ ç ·é•“</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=285" target="_blank" class="High">å°è°ˆç›²æ‰«ä¸Žæ ‡é›·</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=32" target="_blank" class="Text">æŽå³°</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=333" target="_blank" class="High">æ‰«é›·æ¸¸æˆå‰çƒ­èº«ä¹‹æˆ‘è§</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=32" target="_blank" class="Text">æŽå³°</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=453" target="_blank" class="High">ä¸€æ–¹è°ˆæ‰«é›·07ç‰ˆ</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=24" target="_blank" class="Text">ç”°æº¢æ˜‰</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=4845" target="_blank" class="High">ä¸€æ–¹è°ˆæ‰«é›·09ç‰ˆ</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=24" target="_blank" class="Text">ç”°æº¢æ˜‰</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=11409" target="_blank" class="High">éƒ­å˜‰NFç»éªŒè°ˆ</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=8356" target="_blank" class="Text">éƒ­è”šå˜‰</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=8367" target="_blank" class="High">æµ…è°ˆéš”ç©ºåˆ¤é›·åŠæ ‡é›·</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=4843" target="_blank" class="Text">å‘¨ä¸¹</a><br>
+<span class="Sign">ã€€ã€è½¯ä»¶å‘¨è¾¹ã€‘</span><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=11038" target="_blank" class="High">Minesweeper Arbiterä½¿ç”¨æ•™ç¨‹(ä¸€)</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=4843" target="_blank" class="Text">å‘¨ä¸¹</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=11039" target="_blank" class="High">Minesweeper Arbiterä½¿ç”¨æ•™ç¨‹(äºŒ)</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=4843" target="_blank" class="Text">å‘¨ä¸¹</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=11499" target="_blank" class="High">Minesweeper Arbiterä¸­æ–‡æ’ä»¶</a><span class="Counter">&nbsp;New!</span>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=9672" target="_blank" class="Text">éƒ­é”¦æ´‹</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=1006" target="_blank" class="High">Minesweeper Clone 0.97 ä½¿ç”¨è¯´æ˜Ž</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">å¼ ç ·é•“</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=1007" target="_blank" class="High">Minesweeper Clone 0.97 å¸¸è§é—®é¢˜</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">å¼ ç ·é•“</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=115" target="_blank" class="High">Minesweeper Clone 0.97 è‡ªåŠ¨å½•åƒæ•™ç¨‹</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=124" target="_blank" class="Text">å´æ¢¦ç†Š</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=105" target="_blank" class="High">æ‰«é›·ç¡¬ä»¶è«‡ä¹‹ä¸€é¼ æ ‡</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=22" target="_blank" class="Text">åŽä¿Š</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=128" target="_blank" class="High">æ‰«é›·ç¡¬ä»¶è«‡ä¹‹äºŒé¼ æ ‡åž«</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=22" target="_blank" class="Text">åŽä¿Š</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=283" target="_blank" class="High">å°†åˆ†è¾¨çŽ‡è°ƒæˆ640x480çš„æ–¹æ³•</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">å¼ ç ·é•“</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=385" target="_blank" class="High">å…³äºŽè°ƒèŠ‚é¼ æ ‡é€Ÿåº¦</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">å¼ ç ·é•“</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=1082" target="_blank" class="High">æ€Žæ ·è°ƒèŠ‚é€‚åˆè‡ªå·±çš„é¼ æ ‡çµæ•åº¦</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=32" target="_blank" class="Text">æŽå³°</a><br>
+ã€€ã€€â€» <a href="/BBS/Title.asp?Id=2294" target="_blank" class="High">æ‰«é›·ä¸–ç•ŒæŽ’è¡Œæ¦œç®€å²(2008.5.25)</a>ã€€ä½œè€…: <a href="/Player/Show.asp?Id=1" target="_blank" class="Text">å¼ ç ·é•“</a></td>
 		  </tr>
 		</table>
 	<table width="604" border="0" cellpadding="0" cellspacing="0">
@@ -86,15 +86,15 @@ body {
 		<table border="0" cellpadding="0" cellspacing="1" bgcolor="#444444">
 		  <tr align="center" height="25">
 			<%If Session("Player_Id") <> "" Then%>
-			<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Info_1" style="cursor:pointer " onClick="High('Info_1');Low('Info_2');Low('Info_3');Info_Frame.location='/Player/Main.asp'">¸öÈËÐÅÏ¢</td>
+			<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Info_1" style="cursor:pointer " onClick="High('Info_1');Low('Info_2');Low('Info_3');Info_Frame.location='/Player/Main.asp'">ä¸ªäººä¿¡æ¯</td>
 			<%End If%>
-			<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Info_2" style="cursor:pointer " onClick="High('Info_2');Low('Info_1');Low('Info_3');Info_Frame.location='/Player/Star.asp'">Ã¿ÈÕÒ»ÐÇ</td>
-			<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Info_3" style="cursor:pointer " onClick="High('Info_3');Low('Info_1');Low('Info_2');Info_Frame.location='/Main/Satus.asp'">À×½çÍ³¼Æ</td>
+			<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Info_2" style="cursor:pointer " onClick="High('Info_2');Low('Info_1');Low('Info_3');Info_Frame.location='/Player/Star.asp'">æ¯æ—¥ä¸€æ˜Ÿ</td>
+			<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Info_3" style="cursor:pointer " onClick="High('Info_3');Low('Info_1');Low('Info_2');Info_Frame.location='/Main/Satus.asp'">é›·ç•Œç»Ÿè®¡</td>
 		  </tr>
 		</table>
 		<script language="javascript"><%If Session("Player_Id") <> "" Then%>High('Info_1');<%Else%>High('Info_2');<%End If%></script>
 		<%If Session("Player_Id") = "" Then%>
-		</td><td width="100" class="High" align="center"><a href="javascript:;" class="Text" onClick="Window('/Help/Star.asp');">ÈçºÎÆÀÑ¡?</a>
+		</td><td width="100" class="High" align="center"><a href="javascript:;" class="Text" onClick="Window('/Help/Star.asp');">å¦‚ä½•è¯„é€‰?</a>
 		<%End If%>
 		</td></tr></table>
 		<script language="javascript"><%If Session("Player_Id") <> "" Then%>High('Info_1');<%Else%>High('Info_2');<%End If%></script>
@@ -110,7 +110,7 @@ body {
 	</td>
   </tr>
 </table>
-<!--#include virtual="/Models/Include/Bottom.asp"-->
+<!--#include virtual="/Models/Include/Bottom_utf8.asp"-->
 </body>
 <iframe name="Action" width="0" height="0" style="display: none"></iframe>
 </html>
