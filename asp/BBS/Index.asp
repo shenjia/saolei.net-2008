@@ -10,10 +10,10 @@
 <!--#include virtual="/Models/Include/ShowHide.asp"-->
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <META name="description" content="<%=Meta_Description%>">
 <META name="keywords" content="<%=Meta_Keywords%>">
-<title>è®ºå›<%=HTML_Title%></title>
+<title>ÂÛÌ³<%=HTML_Title%></title>
 <style type="text/css">
 <!--
 body {
@@ -38,21 +38,21 @@ body {
 				<td width="423">
 			<table border="0" cellpadding="0" cellspacing="1" bgcolor="#444444">
 			  <tr align="center" height="25">
-				<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="BBS_0" style="cursor:pointer " onClick="High('BBS_0');Low('BBS_1');Low('BBS_2');Low('BBS_3');Low('BBS_4');Low('BBS_5');Order_Select('Order_1');Order_Blur('Order_2');File='BBS_All';BBS_Frame.location='/BBS/BBS_All.asp?Page=1&Order=Reply&Nice=0&tmp='+Math.random();">è®ºå›</td>
-				<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="BBS_1" style="cursor:pointer " onClick="High('BBS_1');Low('BBS_0');Low('BBS_2');Low('BBS_3');Low('BBS_4');Low('BBS_5');Order_Select('Order_1');Order_Blur('Order_2');File='BBS_Notice';BBS_Frame.location='/BBS/BBS_Notice.asp?Page=1&Order=Reply&Nice=0&tmp='+Math.random();">å…¬å‘Š</td>
-				<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="BBS_2" style="cursor:pointer " onClick="High('BBS_2');Low('BBS_0');Low('BBS_1');Low('BBS_3');Low('BBS_4');Low('BBS_5');Order_Select('Order_1');Order_Blur('Order_2');File='BBS_Skill';BBS_Frame.location='/BBS/BBS_Skill.asp?Page=1&Order=Reply&Nice=0&tmp='+Math.random();">æŠ€æœ¯</td>
-				<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="BBS_3" style="cursor:pointer " onClick="High('BBS_3');Low('BBS_0');Low('BBS_2');Low('BBS_1');Low('BBS_4');Low('BBS_5');Order_Select('Order_1');Order_Blur('Order_2');File='BBS_Other';BBS_Frame.location='/BBS/BBS_Other.asp?Page=1&Order=Reply&Nice=0&tmp='+Math.random();">æ‚è°ˆ</td>
-				<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="BBS_4" style="cursor:pointer " onClick="High('BBS_4');Low('BBS_0');Low('BBS_1');Low('BBS_2');Low('BBS_3');Low('BBS_5');Order_Select('Order_1');Order_Blur('Order_2');File='BBS_Ask';BBS_Frame.location='/BBS/BBS_Ask.asp?Page=1&Order=Reply&Nice=0&tmp='+Math.random();">é—®ç­”</td>
+				<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="BBS_0" style="cursor:pointer " onClick="High('BBS_0');Low('BBS_1');Low('BBS_2');Low('BBS_3');Low('BBS_4');Low('BBS_5');Order_Select('Order_1');Order_Blur('Order_2');File='BBS_All';BBS_Frame.location='/BBS/BBS_All.asp?Page=1&Order=Reply&Nice=0&tmp='+Math.random();">ÂÛÌ³</td>
+				<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="BBS_1" style="cursor:pointer " onClick="High('BBS_1');Low('BBS_0');Low('BBS_2');Low('BBS_3');Low('BBS_4');Low('BBS_5');Order_Select('Order_1');Order_Blur('Order_2');File='BBS_Notice';BBS_Frame.location='/BBS/BBS_Notice.asp?Page=1&Order=Reply&Nice=0&tmp='+Math.random();">¹«¸æ</td>
+				<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="BBS_2" style="cursor:pointer " onClick="High('BBS_2');Low('BBS_0');Low('BBS_1');Low('BBS_3');Low('BBS_4');Low('BBS_5');Order_Select('Order_1');Order_Blur('Order_2');File='BBS_Skill';BBS_Frame.location='/BBS/BBS_Skill.asp?Page=1&Order=Reply&Nice=0&tmp='+Math.random();">¼¼Êõ</td>
+				<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="BBS_3" style="cursor:pointer " onClick="High('BBS_3');Low('BBS_0');Low('BBS_2');Low('BBS_1');Low('BBS_4');Low('BBS_5');Order_Select('Order_1');Order_Blur('Order_2');File='BBS_Other';BBS_Frame.location='/BBS/BBS_Other.asp?Page=1&Order=Reply&Nice=0&tmp='+Math.random();">ÔÓÌ¸</td>
+				<td width="66" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="BBS_4" style="cursor:pointer " onClick="High('BBS_4');Low('BBS_0');Low('BBS_1');Low('BBS_2');Low('BBS_3');Low('BBS_5');Order_Select('Order_1');Order_Blur('Order_2');File='BBS_Ask';BBS_Frame.location='/BBS/BBS_Ask.asp?Page=1&Order=Reply&Nice=0&tmp='+Math.random();">ÎÊ´ð</td>
 				<%If Session("Player_Id")<>"" Then%>
-				<td width="81" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="BBS_5" style="cursor:pointer " onClick="High('BBS_5');Low('BBS_1');Low('BBS_2');Low('BBS_3');Low('BBS_4');Order_Select('Order_1');Order_Blur('Order_2');File='BBS_My';BBS_Frame.location='/BBS/BBS_My.asp?Page=1&Order=Reply&Nice=0&tmp='+Math.random();">æˆ‘çš„ä¸»é¢˜</td>
+				<td width="81" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="BBS_5" style="cursor:pointer " onClick="High('BBS_5');Low('BBS_1');Low('BBS_2');Low('BBS_3');Low('BBS_4');Order_Select('Order_1');Order_Blur('Order_2');File='BBS_My';BBS_Frame.location='/BBS/BBS_My.asp?Page=1&Order=Reply&Nice=0&tmp='+Math.random();">ÎÒµÄÖ÷Ìâ</td>
 				<%End If%>
 			  </tr>
 			</table>
 			<script language="javascript">High('BBS_0');</script>
 				</td>
-				<td width="180" align="left" class="Text">æŽ’åºæ–¹å¼ï¼š
-				<span id="Order_1" class="Text" onClick="Order_Select('Order_2');Order_Blur('Order_1');BBS_Frame.location='/BBS/'+File+'.asp?Page=1&Order=Reply';" style="cursor:pointer ">å›žå¤æ—¶é—´</span>
-				<span id="Order_2" class="Text" onClick="Order_Select('Order_1');Order_Blur('Order_2');BBS_Frame.location='/BBS/'+File+'.asp?Page=1&Order=Post';" style="cursor:pointer ">å‘è¡¨æ—¶é—´</span>
+				<td width="180" align="left" class="Text">ÅÅÐò·½Ê½£º
+				<span id="Order_1" class="Text" onClick="Order_Select('Order_2');Order_Blur('Order_1');BBS_Frame.location='/BBS/'+File+'.asp?Page=1&Order=Reply';" style="cursor:pointer ">»Ø¸´Ê±¼ä</span>
+				<span id="Order_2" class="Text" onClick="Order_Select('Order_1');Order_Blur('Order_2');BBS_Frame.location='/BBS/'+File+'.asp?Page=1&Order=Post';" style="cursor:pointer ">·¢±íÊ±¼ä</span>
 			<script language="javascript">var File='BBS_All';Order_Select('Order_1');</script>
 				</td>
 			  </tr>
@@ -78,15 +78,15 @@ body {
 		<table border="0" cellpadding="0" cellspacing="1" bgcolor="#444444">
 		  <tr align="center" height="25">
 			<%If Session("Player_Id") <> "" Then%>
-			<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Info_1" style="cursor:pointer " onClick="High('Info_1');Low('Info_2');Low('Info_3');Info_Frame.location='/Player/Main.asp'">ä¸ªäººä¿¡æ¯</td>
+			<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Info_1" style="cursor:pointer " onClick="High('Info_1');Low('Info_2');Low('Info_3');Info_Frame.location='/Player/Main.asp'">¸öÈËÐÅÏ¢</td>
 			<%End If%>
-			<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Info_2" style="cursor:pointer " onClick="High('Info_2');Low('Info_1');Low('Info_3');Info_Frame.location='/Player/Star.asp'">æ¯æ—¥ä¸€æ˜Ÿ</td>
-			<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Info_3" style="cursor:pointer " onClick="High('Info_3');Low('Info_1');Low('Info_2');Info_Frame.location='/Main/Satus.asp'">é›·ç•Œç»Ÿè®¡</td>
+			<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Info_2" style="cursor:pointer " onClick="High('Info_2');Low('Info_1');Low('Info_3');Info_Frame.location='/Player/Star.asp'">Ã¿ÈÕÒ»ÐÇ</td>
+			<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Info_3" style="cursor:pointer " onClick="High('Info_3');Low('Info_1');Low('Info_2');Info_Frame.location='/Main/Satus.asp'">À×½çÍ³¼Æ</td>
 		  </tr>
 		</table>
 		<script language="javascript"><%If Session("Player_Id") <> "" Then%>High('Info_1');<%Else%>High('Info_2');<%End If%></script>
 		<%If Session("Player_Id") = "" Then%>
-		</td><td width="100" class="High" align="center"><a href="javascript:;" class="Text" onClick="Window('/Help/Star.asp');">å¦‚ä½•è¯„é€‰?</a>
+		</td><td width="100" class="High" align="center"><a href="javascript:;" class="Text" onClick="Window('/Help/Star.asp');">ÈçºÎÆÀÑ¡?</a>
 		<%End If%>
 		</td></tr></table>
 		<script language="javascript"><%If Session("Player_Id") <> "" Then%>High('Info_1');<%Else%>High('Info_2');<%End If%></script>
@@ -106,7 +106,7 @@ body {
 		</table>
 		<table border="0" cellpadding="0" cellspacing="1" bgcolor="#444444">
 		  <tr align="center" height="25">
-			<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Hot_1" style="cursor:pointer " onClick="High('Hot_1');World_Frame.location='/BBS/BBS_Hot.asp';">çƒ­è®®ä¸»é¢˜</td>
+			<td width="100" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';" bgcolor="#333333" id="Hot_1" style="cursor:pointer " onClick="High('Hot_1');World_Frame.location='/BBS/BBS_Hot.asp';">ÈÈÒéÖ÷Ìâ</td>
 		  </tr>
 		</table>
 		<script language="javascript">High('Hot_1');</script>

@@ -8,7 +8,7 @@
 <!--#include virtual="/Models/Common/ConnDB.asp"-->
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <style type="text/css">
 <!--
 body {
@@ -41,10 +41,10 @@ a:link {overflow: hidden;text-overflow: ellipsis;display: block;}
 			
 	If Not rs.Eof Then
 	
-		Notice_Text = "<span class=Sign>Â¹Â«Â¸Ã¦</span>"
-		Skill_Text = "Â¼Â¼ÃŠÃµ"
-		Other_Text = "Ã”Ã“ÃŒÂ¸"
-		Ask_Text = "ÃŽÃŠÂ´Ã°"
+		Notice_Text = "<span class=Sign>¹«¸æ</span>"
+		Skill_Text = "¼¼Êõ"
+		Other_Text = "ÔÓÌ¸"
+		Ask_Text = "ÎÊ´ð"
 	
 		Do While Not rs.Eof
 			If rs("Title_IsHigh") Then 
@@ -55,7 +55,7 @@ a:link {overflow: hidden;text-overflow: ellipsis;display: block;}
 			%>
 			<tr class="Text" onMouseOver="Title_<%=rs("Title_Id")%>.className='Sign';this.style.background='#444444';" onMouseOut="Title_<%=rs("Title_Id")%>.className='<%=Cls%>';this.style.background='#333333';">
 			<td width="80%" class="td" valign="top" nowrap><div class="Text">
-			<img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle">&nbsp;[<%Execute "Response.Write("&rs("Title_Model")&"_Text)"%>]&nbsp;<div class=<%If rs("Title_IsNice") Then%>"short"<%else%>"long"<%End If%>><a id="Title_<%=rs("Title_Id")%>" href="/BBS/Title.asp?Id=<%=rs("Title_Id")%>" class="<%=Cls%>" target="_blank"><%=rs("Title_Name")%></a></div><%If rs("Title_IsNice") Then%><span class="Sign">.Â¾Â«</span><%End If%></div></td>
+			<img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle">&nbsp;[<%Execute "Response.Write("&rs("Title_Model")&"_Text)"%>]&nbsp;<div class=<%If rs("Title_IsNice") Then%>"short"<%else%>"long"<%End If%>><a id="Title_<%=rs("Title_Id")%>" href="/BBS/Title.asp?Id=<%=rs("Title_Id")%>" class="<%=Cls%>" target="_blank"><%=rs("Title_Name")%></a></div><%If rs("Title_IsNice") Then%><span class="Sign">.¾«</span><%End If%></div></td>
 		  <td width="20%" class="td" valign="top" align="center"><div class="Text"><%=Month(rs("Title_Post_Time"))%>-<%=Day(rs("Title_Post_Time"))%></div></td></tr><%
 			rs.MoveNext
 		Loop		

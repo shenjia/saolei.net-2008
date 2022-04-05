@@ -7,7 +7,7 @@ Title_Id = Request("Id")
 %>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <style type="text/css">
 <!--
 body {
@@ -28,8 +28,8 @@ body {
 		<td bgcolor="#444444">
 			<table width="120" border="0" cellspacing="0" cellpadding="0">
 				<tr bgcolor="#555555">
-					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">ã€€ç§»åŠ¨ä¸»é¢˜</td>
-					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">Ã—</td>
+					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">¡¡ÒÆ¶¯Ö÷Ìâ</td>
+					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">¡Á</td>
 			</tr>
 			</table>
 			<table width="120" border="0" cellspacing="10" cellpadding="0">
@@ -37,7 +37,7 @@ body {
 				  <td class="Text">			
 					<table width="100" border="0" cellspacing="0" cellpadding="0">
 					<tr style="cursor: pointer " onMouseOver="List_1.className='Sign';this.style.background='#555555';" onMouseOut="List_1.className='Text';this.style.background='#444444';" onClick="Action.location='/BBS/Action/Move_Action.asp?Id=<%=Title_Id%>&Model=Notice';">
-					<td id="List_1" class="Text" height="20" align="center">ã€å…¬å‘Šã€‘
+					<td id="List_1" class="Text" height="20" align="center">¡¾¹«¸æ¡¿
 					</td>
 					</tr>
 					</table>
@@ -47,7 +47,7 @@ body {
 				  <td class="Text">			
 					<table width="100" border="0" cellspacing="0" cellpadding="0">
 					<tr style="cursor: pointer " onMouseOver="List_2.className='Sign';this.style.background='#555555';" onMouseOut="List_2.className='Text';this.style.background='#444444';" onClick="Action.location='/BBS/Action/Move_Action.asp?Id=<%=Title_Id%>&Model=Skill';">
-					<td id="List_2" class="Text" height="20" align="center">ã€æŠ€æœ¯ã€‘
+					<td id="List_2" class="Text" height="20" align="center">¡¾¼¼Êõ¡¿
 					</td>
 					</tr>
 					</table>
@@ -57,7 +57,7 @@ body {
 				  <td class="Text">			
 					<table width="100" border="0" cellspacing="0" cellpadding="0">
 					<tr style="cursor: pointer " onMouseOver="List_3.className='Sign';this.style.background='#555555';" onMouseOut="List_3.className='Text';this.style.background='#444444';" onClick="Action.location='/BBS/Action/Move_Action.asp?Id=<%=Title_Id%>&Model=Other';">
-					<td id="List_3" class="Text" height="20" align="center">ã€æ‚è°ˆã€‘
+					<td id="List_3" class="Text" height="20" align="center">¡¾ÔÓÌ¸¡¿
 					</td>
 					</tr>
 					</table>
@@ -67,7 +67,7 @@ body {
 				  <td class="Text">			
 					<table width="100" border="0" cellspacing="0" cellpadding="0">
 					<tr style="cursor: pointer " onMouseOver="List_4.className='Sign';this.style.background='#555555';" onMouseOut="List_4.className='Text';this.style.background='#444444';" onClick="Action.location='/BBS/Action/Move_Action.asp?Id=<%=Title_Id%>&Model=Ask';">
-					<td id="List_4" class="Text" height="20" align="center">ã€é—®ç­”ã€‘
+					<td id="List_4" class="Text" height="20" align="center">¡¾ÎÊ´ð¡¿
 					</td>
 					</tr>
 					</table>

@@ -24,7 +24,7 @@ If Check_Result <> "Fail" Then
 	
 	If rs.Eof Then
 	
-		Message = "ä¸»é¢˜ä¸å­˜åœ¨!"
+		Message = "Ö÷Ìâ²»´æÔÚ!"
 		Act="top.location='/BBS/Index.asp'"
 		Call Error()
 	
@@ -43,7 +43,7 @@ If Check_Result <> "Fail" Then
 		%>
 		<html>
 		<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 		<style type="text/css">
 		<!--
 		body {
@@ -66,10 +66,10 @@ If Check_Result <> "Fail" Then
 			<td width="106" class="Text">
 			<table width="80" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="top.location='Title.asp?Id=<%If Title_Get_Id=0 Then%><%=Title_Id%><%Else%><%=Title_Get_Id%><%End If%>';">
 			  <tr>
-				<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">è¿”å›</td>
+				<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">·µ»Ø</td>
 			  </tr>
 			</table></td>
-			<td width="469" class="Text">æ‚¨æ­£åœ¨ç¼–è¾‘æœ¬å¸–å­</td>
+			<td width="469" class="Text">ÄúÕıÔÚ±à¼­±¾Ìû×Ó</td>
 			</tr>
 			<tr><td height="10" colspan="3"></td></tr>
 			<tr><td height="1" colspan="3" bgcolor="#555555"></td></tr>
@@ -79,15 +79,15 @@ If Check_Result <> "Fail" Then
 			  <form name="Title_Form" action="Action/Edit_Action.asp" method="post" target="Action">
 			  <%If Title_Get_Id = 0 Then%>
 				<tr>
-				  <td width="72" align="right" valign="top" class="Text">æ ‡ã€€ã€€é¢˜ï¼š </td>
+				  <td width="72" align="right" valign="top" class="Text">±ê¡¡¡¡Ìâ£º </td>
 				  <td width="503" valign="top" class="Text"><input name="Title_Name" type="text" class="input-no" size="50" maxlength="50" onFocus="Show('For_Title_Name')" onBlur="Hide('For_Title_Name')" value="<%=Title_Name%>">
-					  <span id="For_Title_Name" class="High" style="display: none">â€»è¯·è¾“å…¥æ ‡é¢˜ï¼ˆ2ï½50å­—ç¬¦ï¼‰</span>
+					  <span id="For_Title_Name" class="High" style="display: none">¡ùÇëÊäÈë±êÌâ£¨2¡«50×Ö·û£©</span>
 					  		<input name="Title_Id" value="<%=Title_Id%>" type="hidden">		
 				  </td>
 				</tr>
 				<%End If%>
 				<tr>
-				  <td width="72" align="right" valign="top" class="Text">å†…ã€€ã€€å®¹ï¼š </td>
+				  <td width="72" align="right" valign="top" class="Text">ÄÚ¡¡¡¡Èİ£º </td>
 				  <td width="503" valign="top" class="Text"><textarea name="Title_Text" cols="70" rows="20" wrap="VIRTUAL" class="input-bbs" onKeyDown="KeyDown();" onkeyup="Resize_Textarea();"><%=Html(Title_Text)%></textarea>
 			  <%If Title_Get_Id <> 0 Then%>	
 		  		<input name="Title_Id" value="<%=Title_Id%>" type="hidden">		
@@ -101,41 +101,41 @@ If Check_Result <> "Fail" Then
 					  <tr>
 						<td width="90"><table width="80" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="Title_Form.submit();">
 							<tr>
-							  <td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">æäº¤ç¼–è¾‘</td>
+							  <td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">Ìá½»±à¼­</td>
 							</tr>
 						</table></td>
 				<td width="70">
 					<table width="60" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onclick="Add_Class('Title')Resize_Textarea();">
 					  <tr>
-						<td align="center" bgcolor="#444444" class="Title" onMouseOver="this.className='Signest';" onMouseOut="this.className='Title';">æ ‡é¢˜</td>
+						<td align="center" bgcolor="#444444" class="Title" onMouseOver="this.className='Signest';" onMouseOut="this.className='Title';">±êÌâ</td>
 					  </tr>
 					</table>
 				</td>
 				<td width="70">
 					<table width="60" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onclick="Add_Class('Sign');Resize_Textarea();">
 					  <tr>
-						<td align="center" bgcolor="#444444" class="Sign" onMouseOver="this.className='Sign';" onMouseOut="this.className='Sign';">é†’ç›®</td>
+						<td align="center" bgcolor="#444444" class="Sign" onMouseOver="this.className='Sign';" onMouseOut="this.className='Sign';">ĞÑÄ¿</td>
 					  </tr>
 					</table>
 				</td>
 				<td width="70">
 					<table width="60" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onclick="Img();Resize_Textarea();">
 					  <tr>
-						<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">è´´å›¾</td>
+						<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">ÌùÍ¼</td>
 					  </tr>
 					</table>
 				</td>
 				<td width="70">
 					<table width="60" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onclick="Url();Resize_Textarea();">
 					  <tr>
-						<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">é“¾æ¥</td>
+						<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">Á´½Ó</td>
 					  </tr>
 					</table>
 				</td>
 				<td width="70">
 					<table width="60" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onclick="Face();Resize_Textarea();">
 					  <tr>
-						<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">è¡¨æƒ…</td>
+						<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">±íÇé</td>
 					  </tr>
 					</table>
 					<!--#include virtual="/Models/Include/Face.asp"-->
@@ -143,7 +143,7 @@ If Check_Result <> "Fail" Then
 				<td width="80">
 					<table width="60" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onclick="Mine();Resize_Textarea();">
 					  <tr>
-						<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">æ‘†é›·</td>
+						<td align="center" bgcolor="#444444" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">°ÚÀ×</td>
 					  </tr>
 					</table>
 					<!--#include virtual="/Models/Include/Mine.asp"-->
@@ -153,33 +153,33 @@ If Check_Result <> "Fail" Then
 				</tr>
 				<tr>
 				  <td valign="top" class="Text">&nbsp;</td>
-				  <td height="50" valign="middle" class="Text">â€» æäº¤ç¼–è¾‘åæ‚¨çš„å¸–å­å°†ä¼šå¤±å»ç²¾åå’ŒåŠ äº®ï¼Œè¯·é€šçŸ¥ç®¡ç†å‘˜å†æ¬¡å®¡æ ¸<br>
-			â€» è¿å<a href="javascript:;" onclick="top.Window('/Help/BBS.asp');" class="Sign">ã€Šè®ºå›ç®¡ç†æ¡ä¾‹ã€‹</a>çš„ä¸»é¢˜å°†è¢«åˆ é™¤</td>
+				  <td height="50" valign="middle" class="Text">¡ù Ìá½»±à¼­ºóÄúµÄÌû×Ó½«»áÊ§È¥¾«»ªºÍ¼ÓÁÁ£¬ÇëÍ¨Öª¹ÜÀíÔ±ÔÙ´ÎÉóºË<br>
+			¡ù Î¥·´<a href="javascript:;" onclick="top.Window('/Help/BBS.asp');" class="Sign">¡¶ÂÛÌ³¹ÜÀíÌõÀı¡·</a>µÄÖ÷Ìâ½«±»É¾³ı</td>
 				</tr>
 			  </form>
 		</table>
 
 		<script type="text/javascript">
-		var textarea=document.Title_Form.Title_Text;//è·å–textareaå…ƒç´ 
+		var textarea=document.Title_Form.Title_Text;//»ñÈ¡textareaÔªËØ
 
 		function Resize_Textarea(){
-			// iPhoneå’ŒAndroidåœ¨textareaå†…é¦–æ¬¡è¾“å…¥å†…å®¹æ—¶ï¼ŒiPadæ­£å¸¸æ˜¾ç¤º(ç”µè„‘æ¨¡æ‹Ÿæµ‹è¯•)
-			// textareaä¼šé”™è¯¯è°ƒæ•´é«˜åº¦ï¼Œå¹¶ä¸”è°ƒæ•´é«˜åº¦ä¸æ‰‹æœºåˆ†è¾¨ç‡ç›¸å…³ï¼ŒåŸå› ä¸æ˜
+			// iPhoneºÍAndroidÔÚtextareaÄÚÊ×´ÎÊäÈëÄÚÈİÊ±£¬iPadÕı³£ÏÔÊ¾(µçÄÔÄ£Äâ²âÊÔ)
+			// textarea»á´íÎóµ÷Õû¸ß¶È£¬²¢ÇÒµ÷Õû¸ß¶ÈÓëÊÖ»ú·Ö±æÂÊÏà¹Ø£¬Ô­Òò²»Ã÷
 			if(/(iPhone|Android)/i.test(navigator.userAgent)){
-				// é¿å…æ‰‹æœºç«¯åœ¨ç¼–è¾‘textareaå†…å®¹æ—¶æ— æ³•çœ‹åˆ°æŒ‰é’®
+				// ±ÜÃâÊÖ»ú¶ËÔÚ±à¼­textareaÄÚÈİÊ±ÎŞ·¨¿´µ½°´Å¥
 				textarea.style.height="100%";
 				if(textarea.value==""){
-					// å½“æ¸…ç©ºå†…å®¹æ—¶textareaä¼šè‡ªåŠ¨å›å¤åŸæ¥çš„é«˜åº¦ï¼ŒåŸå› ä¸æ˜
+					// µ±Çå¿ÕÄÚÈİÊ±textarea»á×Ô¶¯»Ø¸´Ô­À´µÄ¸ß¶È£¬Ô­Òò²»Ã÷
 					textarea.style.height="";
 				}
 			}
 		}
 
 		function Add_Class(classname) {
-			let start=textarea.selectionStart;//é€‰æ‹©å†…å®¹çš„å¼€å§‹ä½ç½®
-			let end=textarea.selectionEnd;//é€‰æ‹©å†…å®¹çš„ç»“æŸä½ç½®
-			let selection=textarea.value.substring(start,end);//é€‰æ‹©çš„å†…å®¹
-			textarea.focus();//è·å–ç„¦ç‚¹ï¼Œä¸ç„¶æ— æ³•è¿›è¡Œå…¶ä»–æ“ä½œ
+			let start=textarea.selectionStart;//Ñ¡ÔñÄÚÈİµÄ¿ªÊ¼Î»ÖÃ
+			let end=textarea.selectionEnd;//Ñ¡ÔñÄÚÈİµÄ½áÊøÎ»ÖÃ
+			let selection=textarea.value.substring(start,end);//Ñ¡ÔñµÄÄÚÈİ
+			textarea.focus();//»ñÈ¡½¹µã£¬²»È»ÎŞ·¨½øĞĞÆäËû²Ù×÷
 			textarea.setSelectionRange(start,end);
 			textarea.setRangeText("["+classname+"]"+selection+"[/"+classname+"]");
 			textarea.setSelectionRange(start,end+2*classname.length+5);
@@ -194,7 +194,7 @@ If Check_Result <> "Fail" Then
 		<iframe name="Action" style="display: none"></iframe>
 		<%
 	Else		
-		Message = "æ‚¨æ— æƒç¼–è¾‘æœ¬ä¸»é¢˜!"
+		Message = "ÄúÎŞÈ¨±à¼­±¾Ö÷Ìâ!"
 		Act = "top.location='Title.asp'"
 		Call Error()
 	End If
