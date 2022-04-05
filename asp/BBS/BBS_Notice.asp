@@ -16,7 +16,7 @@ If Session("Nice") = "" Then Session("Nice") = 0
 %>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <style type="text/css">
 <!--
 body {
@@ -41,10 +41,10 @@ If Session("Nice") Then
 	<td width="96" class="Text">
 	<table width="80" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="location='?Nice=0';">
 	  <tr>
-		<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">è¿”å›</td>
+		<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">·µ»Ø</td>
 	  </tr>
 	</table></td>
-	<td width="369" class="Title">ã€ç²¾ååŒºã€‘</td>
+	<td width="369" class="Title">¡¾¾«»ªÇø¡¿</td>
 	</tr>
 	<tr><td height="10" colspan="3"></td></tr>
 	<tr><td height="1" colspan="3" bgcolor="#555555"></td></tr>
@@ -59,7 +59,7 @@ Else
 	<td width="110">
 		<table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="<%If Session("Player_Id")<>"" Then%>location='/BBS/Post.asp?Model=Notice';<%Else%>top.Window('/Player/Login.asp');<%End If%>">
 		<tr>
-		<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">å‘è¡¨æ–°ä¸»é¢˜</td>
+		<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">·¢±íĞÂÖ÷Ìâ</td>
 		</tr>
 		</table>
 	</td>
@@ -67,10 +67,10 @@ Else
 	<td width="96" class="Text">
 	<table width="80" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="location='?Nice=1';">
 	  <tr>
-		<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">ç²¾ååŒº</td>
+		<td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">¾«»ªÇø</td>
 	  </tr>
 	</table></td>
-	<td width="369" class="Text">é‡è¦é€šçŸ¥,æ´»åŠ¨å…¬å‘Š...</td>
+	<td width="369" class="Text">ÖØÒªÍ¨Öª,»î¶¯¹«¸æ...</td>
 	</tr>
 	<tr><td height="10" colspan="3"></td></tr>
 	<tr><td height="1" colspan="3" bgcolor="#555555"></td></tr>
@@ -96,10 +96,10 @@ End If
 			
 	If Not rs.Eof Then
 	
-		Notice_Text = "<span class=Sign>å…¬å‘Š</span>"
-		Skill_Text = "æŠ€æœ¯"
-		Other_Text = "æ‚è°ˆ"
-		Ask_Text = "é—®ç­”"
+		Notice_Text = "<span class=Sign>¹«¸æ</span>"
+		Skill_Text = "¼¼Êõ"
+		Other_Text = "ÔÓÌ¸"
+		Ask_Text = "ÎÊ´ğ"
 	
 		Total_Number = rs("Total")
 		
@@ -120,8 +120,8 @@ End If
 			%>
 			<tr class="Text" onMouseOver="Title_<%=rs("Title_Id")%>.className='Sign';this.style.background='#444444';" onMouseOut="Title_<%=rs("Title_Id")%>.className='<%=Cls%>';this.style.background='#333333';">
 			<td width="20%"><%=FormatDateTime(rs("Title_"&Session("BBS_Order")&"_Time"),1)%></td>
-			<td width="65%" class="td" nowrap><div>[<%Execute "Response.Write("&rs("Title_Model")&"_Text)"%>]&nbsp;<a id="Title_<%=rs("Title_Id")%>" href="/BBS/Title.asp?Id=<%=rs("Title_Id")%>" target="_blank" class="<%=Cls%>"><%=rs("Title_Name")%></a><%If rs("Title_IsNice") Then%><span class="Sign">.ç²¾</span><%End If%>&nbsp;(<span class="Counter"><%=rs("Title_Reply")%></span>/<span class="Counters"><%=rs("Title_Click")%></span>)</div></td>
-			<td width="15%" class="td" nowrap><div><span class="Texts">[</span><span onClick="top.Window('/Help/Title.asp');" class="<%=rs("Title_Player_Title")%>" title="ç‚¹å‡»æŸ¥çœ‹ç§°å·è¯´æ˜"><%=rs("Title_Player_Title")%></span><span class="Texts">]</span> <a href="javascript:;" onClick="top.Window('/Player/Show.asp?Id=<%=rs("Title_Player")%>');" class="High" title="ç‚¹å‡»æŸ¥çœ‹ä¸ªäººä¿¡æ¯"><%=rs("Title_Player_Name")%></a></div></td>
+			<td width="65%" class="td" nowrap><div>[<%Execute "Response.Write("&rs("Title_Model")&"_Text)"%>]&nbsp;<a id="Title_<%=rs("Title_Id")%>" href="/BBS/Title.asp?Id=<%=rs("Title_Id")%>" target="_blank" class="<%=Cls%>"><%=rs("Title_Name")%></a><%If rs("Title_IsNice") Then%><span class="Sign">.¾«</span><%End If%>&nbsp;(<span class="Counter"><%=rs("Title_Reply")%></span>/<span class="Counters"><%=rs("Title_Click")%></span>)</div></td>
+			<td width="15%" class="td" nowrap><div><span class="Texts">[</span><span onClick="top.Window('/Help/Title.asp');" class="<%=rs("Title_Player_Title")%>" title="µã»÷²é¿´³ÆºÅËµÃ÷"><%=rs("Title_Player_Title")%></span><span class="Texts">]</span> <a href="javascript:;" onClick="top.Window('/Player/Show.asp?Id=<%=rs("Title_Player")%>');" class="High" title="µã»÷²é¿´¸öÈËĞÅÏ¢"><%=rs("Title_Player_Name")%></a></div></td>
 			</tr>
 			<%
 			I = I +1
@@ -134,18 +134,18 @@ End If
 		<form name="Page_Form" method="get">
 		<tr><td align="center" class="Text" height="30">
 			<%
-			Go = "è½¬åˆ°"
-			Go_Start = "ç¬¬"
-			Go_End = "é¡µ"
-			Total_Start = "å…±"
-			Total_End = "ç¯‡"
-			First_Page = "é¦–é¡µ"
-			Previous_Page = "ä¸Šä¸€é¡µ"
-			Next_Page = "ä¸‹ä¸€é¡µ"
-			Last_Page = "æœ«é¡µ"
-			Page_Start = "ç°åœ¨æ˜¯ç¬¬"
-			Page_End = "é¡µ"
-			%>ã€€ã€€<%=Total_Start%><span class="Signest">&nbsp;<%=Total_Number%>&nbsp;</span><%=Total_End%>	<%
+			Go = "×ªµ½"
+			Go_Start = "µÚ"
+			Go_End = "Ò³"
+			Total_Start = "¹²"
+			Total_End = "Æª"
+			First_Page = "Ê×Ò³"
+			Previous_Page = "ÉÏÒ»Ò³"
+			Next_Page = "ÏÂÒ»Ò³"
+			Last_Page = "Ä©Ò³"
+			Page_Start = "ÏÖÔÚÊÇµÚ"
+			Page_End = "Ò³"
+			%>¡¡¡¡<%=Total_Start%><span class="Signest">&nbsp;<%=Total_Number%>&nbsp;</span><%=Total_End%>	<%
 			If Page<2 Then
 				%>&nbsp;&nbsp;<span class="Text"><%=First_Page%></span>&nbsp;|&nbsp;<span class="Text"><%=Previous_Page%></span><%
 			Else
@@ -173,7 +173,7 @@ End If
 	Else
 		%>
 		<tr>
-		<td class="Sign">è¿˜æ²¡æœ‰ä»»ä½•ä¸»é¢˜</td>
+		<td class="Sign">»¹Ã»ÓĞÈÎºÎÖ÷Ìâ</td>
 		</tr>
 		<%
 	End If
@@ -185,9 +185,9 @@ End If
 	<td width="20" height="15" align="center" valign="top">
 	<%
 	If Page = 1 Then
-		%><span class="uButton" onMouseOver="Show('Pages');" onMouseOut="Hide('Pages');">â–²</span><%
+		%><span class="uButton" onMouseOver="Show('Pages');" onMouseOut="Hide('Pages');">¡ø</span><%
 	Else
-		%><span class="eButton" onMouseOver="this.className='hButton';Show('Pages');" onMouseOut="this.className='eButton';Hide('Pages');" onClick="location='?Page=<%=Page-1%>'">â–²</span><%
+		%><span class="eButton" onMouseOver="this.className='hButton';Show('Pages');" onMouseOut="this.className='eButton';Hide('Pages');" onClick="location='?Page=<%=Page-1%>'">¡ø</span><%
 	End If
 	%>
 	</td>
@@ -202,9 +202,9 @@ End If
 	<td width="20" height="15" align="center" valign="bottom">
 	<%
 	If CInt(Page) >= CInt(Max_Page) Then
-		%><span class="uButton" onMouseOver="Show('Pages');" onMouseOut="Hide('Pages');">â–¼</span><%
+		%><span class="uButton" onMouseOver="Show('Pages');" onMouseOut="Hide('Pages');">¨‹</span><%
 	Else
-		%><span class="eButton" onMouseOver="this.className='hButton';Show('Pages');" onMouseOut="this.className='eButton';Hide('Pages');" onClick="location='?Page=<%=Page+1%>'">â–¼</span><%
+		%><span class="eButton" onMouseOver="this.className='hButton';Show('Pages');" onMouseOut="this.className='eButton';Hide('Pages');" onClick="location='?Page=<%=Page+1%>'">¨‹</span><%
 	End If
 	%></td>
   </tr>

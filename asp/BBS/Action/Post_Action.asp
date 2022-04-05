@@ -54,14 +54,14 @@ If Message = "No" And Check_Result <> "Fail" Then
 		Case "Post_Fail_User"
 		
 			Call End_Conn()
-			Message = "ç”¨æˆ·ä¸å­˜åœ¨!"
+			Message = "ÓÃ»§²»´æÔÚ!"
 			Act = "No"
 			Call Error()
 
 		Case "Post_Fail_Newbee"
 		
 			Call End_Conn()
-			Message = "åŠ å…¥æ’è¡Œåæ‰èƒ½å‘å¸ƒä¸»é¢˜!æ–°äººæœ‰é—®é¢˜è¯·åŠ é¦–é¡µçš„QQç¾¤ï¼Œæˆ–å‘çŸ­æ¶ˆæ¯ç»™ç®¡ç†å‘˜ï¼Œæ„Ÿè°¢ç†è§£ï¼šï¼‰"
+			Message = "¼ÓÈëÅÅĞĞºó²ÅÄÜ·¢²¼Ö÷Ìâ!ĞÂÈËÓĞÎÊÌâÇë¼ÓÊ×Ò³µÄQQÈº£¬»ò·¢¶ÌÏûÏ¢¸ø¹ÜÀíÔ±£¬¸ĞĞ»Àí½â£º£©"
 			Act = "No"
 			Call Error()
 	
@@ -80,12 +80,12 @@ End Sub
 Sub Check_Input()
 	
 	Message = "No"
-	If strLength(Title_Name) > 50 Then Message = "æ ‡é¢˜è¶…è¿‡50å­—ç¬¦ï¼Œè¯·é‡æ–°è¾“å…¥!"
-	If strLength(Title_Name) < 2 Then Message = "æ ‡é¢˜è¿‡çŸ­ï¼Œè¯·è¡¥å……!"
-	If strLength(Title_Text) > 20000 Then Message = "å†…å®¹è¶…è¿‡20000å­—ç¬¦ï¼Œè¯·åˆ†å¼€å‘è¡¨!"
-	If strLength(Title_Text) < 2 Then Message = "å†…å®¹è¿‡çŸ­ï¼Œè¯·è¡¥å……!"
-	If Title_Name = "" Then Message = "è¯·è¾“å…¥æ ‡é¢˜!"
-	If Title_Text = "" Then Message = "è¯·è¾“å…¥å†…å®¹!"
+	If strLength(Title_Name) > 50 Then Message = "±êÌâ³¬¹ı50×Ö·û£¬ÇëÖØĞÂÊäÈë!"
+	If strLength(Title_Name) < 2 Then Message = "±êÌâ¹ı¶Ì£¬Çë²¹³ä!"
+	If strLength(Title_Text) > 20000 Then Message = "ÄÚÈİ³¬¹ı20000×Ö·û£¬Çë·Ö¿ª·¢±í!"
+	If strLength(Title_Text) < 2 Then Message = "ÄÚÈİ¹ı¶Ì£¬Çë²¹³ä!"
+	If Title_Name = "" Then Message = "ÇëÊäÈë±êÌâ!"
+	If Title_Text = "" Then Message = "ÇëÊäÈëÄÚÈİ!"
 	If Message <> "No" Then
 		Act="No"
 		Call Error()

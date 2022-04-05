@@ -10,7 +10,7 @@ Point = 12
 <!--#include virtual="/Models/Include/ShowHide.asp"-->
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <meta http-equiv="Refresh" content="100">
 <style type="text/css">
 <!--
@@ -50,10 +50,10 @@ body {
 			Max_Page = Total_Number \ Point + 1
 		End If
 		
-		Notice_Text = "<span class=Sign>Â¹Â«Â¸Ã¦</span>"
-		Skill_Text = "Â¼Â¼ÃŠÃµ"
-		Other_Text = "Ã”Ã“ÃŒÂ¸"
-		Ask_Text = "ÃŽÃŠÂ´Ã°"
+		Notice_Text = "<span class=Sign>¹«¸æ</span>"
+		Skill_Text = "¼¼Êõ"
+		Other_Text = "ÔÓÌ¸"
+		Ask_Text = "ÎÊ´ð"
 		I = 1
 		
 		Do While Not rs.Eof
@@ -63,7 +63,7 @@ body {
 				Cls = "Text"
 			End If
 			%><tr class="Text" onMouseOver="Title_<%=I%>.className='Sign';this.style.background='#444444';" onMouseOut="Title_<%=I%>.className='<%=Cls%>';this.style.background='#333333';">
-			<td width="99%" nowrap><div>[<%Execute "Response.Write("&rs("Title_Model")&"_Text)"%>]&nbsp;<a id="Title_<%=I%>" href="/BBS/Title.asp?Id=<%=rs("Title_Id")%>" target="_blank" class="<%=Cls%>"><%=rs("Title_Name")%></a><%If rs("Title_IsNice") Then%><span class="Sign">.Â¾Â«</span><%End If%>&nbsp;(<span class="Counter"><%=rs("Title_Reply")%></span>/<span class="Counters"><%=rs("Title_Click")%></span>)</div></td>
+			<td width="99%" nowrap><div>[<%Execute "Response.Write("&rs("Title_Model")&"_Text)"%>]&nbsp;<a id="Title_<%=I%>" href="/BBS/Title.asp?Id=<%=rs("Title_Id")%>" target="_blank" class="<%=Cls%>"><%=rs("Title_Name")%></a><%If rs("Title_IsNice") Then%><span class="Sign">.¾«</span><%End If%>&nbsp;(<span class="Counter"><%=rs("Title_Reply")%></span>/<span class="Counters"><%=rs("Title_Click")%></span>)</div></td>
 			<td width="1%" class="td" nowrap></td></tr>
 			<%
 			I = I + 1

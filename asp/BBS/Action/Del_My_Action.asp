@@ -46,13 +46,13 @@ If Message = "No" And Check_Result <> "Fail" Then
 	
 		Case "Del_Fail_Exist"
 		
-			Message = "æ­¤å›å¤ä¸å­˜åœ¨!"
+			Message = "´Ë»Ø¸´²»´æÔÚ!"
 			Act="top.location=top.location"
 			Call Error()
 	
 		Case "Del_Fail_Power"
 		
-			Message = "æ‚¨æ— æƒåˆ é™¤æ­¤å›å¤!"
+			Message = "ÄúÎŞÈ¨É¾³ı´Ë»Ø¸´!"
 			Act = "No"
 			Call Error()
 		
@@ -71,7 +71,7 @@ Sub Check_Input()
 
 	Message = "No"
 	
-	If Title_Id <> "" And Check_Express(Title_Id,"\d{1,8}") Then Message = "æ‚¨æŒ‡å®šçš„[ID]ä¸åˆæ³•!"
+	If Title_Id <> "" And Check_Express(Title_Id,"\d{1,8}") Then Message = "ÄúÖ¸¶¨µÄ[ID]²»ºÏ·¨!"
 	
 	If Message <> "No" Then
 		Act = "Top_Go"
