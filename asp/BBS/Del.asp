@@ -5,10 +5,10 @@
 '------------------------
 Dim Why(10)
 Why_Counter = 4
-Why(1) = "ÎŞÈÎºÎÒâÒå"
-Why(2) = "¶ñÒâÈËÉí¹¥»÷"
-Why(3) = "É¢²¼¹ã¸æĞÅÏ¢"
-Why(4) = "°üº¬Î¥·¨ÄÚÈİ"
+Why(1) = "æ— ä»»ä½•æ„ä¹‰"
+Why(2) = "æ¶æ„äººèº«æ”»å‡»"
+Why(3) = "æ•£å¸ƒå¹¿å‘Šä¿¡æ¯"
+Why(4) = "åŒ…å«è¿æ³•å†…å®¹"
 %>
 <!--#include virtual="/Player/Check.asp"-->
 <!--#include virtual="/Models/Common/Const.asp"-->
@@ -22,7 +22,7 @@ If Check_Result <> "Fail" Then
 	%>
 	<html>
 	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<style type="text/css">
 	<!--
 	body {
@@ -47,8 +47,8 @@ If Check_Result <> "Fail" Then
 		  <td bgcolor="#444444">
 			<table width="400" border="0" cellspacing="0" cellpadding="0">
 				<tr bgcolor="#555555">
-					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">¡¡É¾³ıÌû×Ó</td>
-					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">¡Á</td>
+					<td height="25" class="Highest" onmousedown="down=true;divtop=event.clientY;divleft=event.clientX;" onmouseup="down=false" onmouseout="down=false">ã€€åˆ é™¤å¸–å­</td>
+					<td width="20" height="25" align="center" class="Bold" onMouseOver="this.className='Signest';" onMouseOut="this.className='Bold';" style="cursor:pointer; " onClick="Cancel();">Ã—</td>
 				</tr>
 			</table>
 			<table width="400" border="0" cellspacing="10" cellpadding="0" class="tbl">
@@ -67,10 +67,10 @@ If Check_Result <> "Fail" Then
 				<div class="cls2"><span class="cls2">
 				<input type="text" name="Why_Text" style="width: 227; height: 21" class="input-no" maxlength="21">
 				</span> </div>
-				  ÀíÓÉ£º</td>
+				  ç†ç”±ï¼š</td>
 				  <td width="27%" valign="top" class="Text"><table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="Del_Form.submit();">
 					<tr>
-					  <td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">½øĞĞÉ¾³ı</td>
+					  <td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">è¿›è¡Œåˆ é™¤</td>
 					</tr>
 				  </table></td>
 			  </tr>

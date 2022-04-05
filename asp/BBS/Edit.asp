@@ -20,7 +20,7 @@ rs.Open SQL_Text,Conn,3,1
 
 If rs.Eof Then
 
-	Message = "¸ÃÖ÷Ìâ²»´æÔÚ!"
+	Message = "è¯¥ä¸»é¢˜ä¸å­˜åœ¨!"
 	Act="top.location='/BBS/Index.asp'"
 	Call Error()
 
@@ -41,7 +41,7 @@ Else
 	%>
 	<html>
 	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<META name="description" content="<%=Meta_Description%>">
 	<META name="keywords" content="<%=Meta_Keywords%>">
 	<title><%=Title_Name%><%=HTML_Title%></title>
@@ -66,10 +66,10 @@ Else
 		<%
 		If Session("Title_Page") Then
 		
-			Notice_Text = "¹«¸æ"
-			Skill_Text = "¼¼Êõ"
-			Other_Text = "ÔÓÌ¸"
-			Ask_Text = "ÎÊ´ğ"
+			Notice_Text = "å…¬å‘Š"
+			Skill_Text = "æŠ€æœ¯"
+			Other_Text = "æ‚è°ˆ"
+			Ask_Text = "é—®ç­”"
 			
 			Call Start_Conn()
 			
@@ -97,7 +97,7 @@ Else
 					<table border="0" cellpadding="0" cellspacing="1" bgcolor="#444444">
 					<tr align="center" height="25">
 					<td width="15"></td>
-					<td class="Text">[<%If Title_Get_Id="0" Then%><%Execute "Response.Write("&Title_Model&"_Text)"%><%Else%>»Ø¸´<%End If%>]<span class="<%=Cls%>"><%=Title_Name%></span><%If Title_IsNice Then%><span class="Sign">.¾«</span><%End If%>&nbsp;(<span class="Counter"><%=Title_Reply%></span>/<span class="Counters"><%=Title_Click%></span>)</td>
+					<td class="Text">[<%If Title_Get_Id="0" Then%><%Execute "Response.Write("&Title_Model&"_Text)"%><%Else%>å›å¤<%End If%>]<span class="<%=Cls%>"><%=Title_Name%></span><%If Title_IsNice Then%><span class="Sign">.ç²¾</span><%End If%>&nbsp;(<span class="Counter"><%=Title_Reply%></span>/<span class="Counters"><%=Title_Click%></span>)</td>
 					<td width="15"></td>
 					</tr>
 					</table>
@@ -106,8 +106,8 @@ Else
 					<table border="0" cellpadding="0" cellspacing="0">
 					<tr>
 					<td class="Text">
-					¡¡<span class="Texts">[</span><span onClick="top.Window('/Help/Title.asp');" class="<%=Title_Player_Title%>" title="µã»÷²é¿´³ÆºÅËµÃ÷"><%=Title_Player_Title%></span><span class="Texts">]</span> <a href="javascript:;" onClick="top.Window('/Player/Show.asp?Id=<%=Title_Player%>');" class="High" title="µã»÷²é¿´¸öÈËĞÅÏ¢"><%=Title_Player_Name%></a>
-					·¢±íÓÚ
+					ã€€<span class="Texts">[</span><span onClick="top.Window('/Help/Title.asp');" class="<%=Title_Player_Title%>" title="ç‚¹å‡»æŸ¥çœ‹ç§°å·è¯´æ˜"><%=Title_Player_Title%></span><span class="Texts">]</span> <a href="javascript:;" onClick="top.Window('/Player/Show.asp?Id=<%=Title_Player%>');" class="High" title="ç‚¹å‡»æŸ¥çœ‹ä¸ªäººä¿¡æ¯"><%=Title_Player_Name%></a>
+					å‘è¡¨äº
 					<%=FormatDateTime(Title_Post_Time,1)%>
 					</td>
 					</tr>
@@ -135,7 +135,7 @@ Else
 		<td width="304" valign="top">
 			<table border="0" cellpadding="0" cellspacing="1" bgcolor="#444444">
 			  <tr align="center" height="25">
-				<td width="100" class="High" bgcolor="#444444">Â¥Ö÷ĞÅÏ¢</td>
+				<td width="100" class="High" bgcolor="#444444">æ¥¼ä¸»ä¿¡æ¯</td>
 			  </tr>
 			</table>
 			<table width="303" border="0" cellpadding="5" cellspacing="1" bgcolor="#666666">

@@ -56,14 +56,14 @@ If Message = "No" And Check_Result <> "Fail" Then
 		Case "Edit_Fail_Exist"
 		
 			Call End_Conn()
-			Message = "Ìû×Ó²»´æÔÚ!"
+			Message = "å¸–å­ä¸å­˜åœ¨!"
 			Act = "top.location='/BBS/Title.asp?Id="&Title_Id&"';"
 			Call Error()
 			
 		Case "Edit_Fail_Power"
 		
 			Call End_Conn()
-			Message = "ÄúÎŞÈ¨±à¼­±¾Ìû×Ó!"
+			Message = "æ‚¨æ— æƒç¼–è¾‘æœ¬å¸–å­!"
 			Act = "top.location='/BBS/Title.asp?Id="&Title_Id&"';"
 			Call Error()
 	
@@ -82,13 +82,13 @@ End Sub
 Sub Check_Input()
 	
 	Message = "No"
-	If strLength(Title_Name) > 50 Then Message = "±êÌâ³¬¹ı50×Ö·û£¬ÇëÖØĞÂÊäÈë!"
-	If strLength(Title_Name) < 2 Then Message = "±êÌâ¹ı¶Ì£¬Çë²¹³ä!"
-	If strLength(Title_Text) > 20000 Then Message = "ÄÚÈİ³¬¹ı20000×Ö·û£¬Çë·Ö¿ª·¢±í!"
-	If strLength(Title_Text) < 2 Then Message = "ÄÚÈİ¹ı¶Ì£¬Çë²¹³ä!"
-	If Title_Name = "" Then Message = "ÇëÊäÈë±êÌâ!"
-	If Title_Text = "" Then Message = "ÇëÊäÈëÄÚÈİ!"
-	If Title_Id <> "" And Check_Express(Title_Id,"\d{1,8}") Then Message = "ÄúÖ¸¶¨µÄ[ID]²»ºÏ·¨!"
+	If strLength(Title_Name) > 50 Then Message = "æ ‡é¢˜è¶…è¿‡50å­—ç¬¦ï¼Œè¯·é‡æ–°è¾“å…¥!"
+	If strLength(Title_Name) < 2 Then Message = "æ ‡é¢˜è¿‡çŸ­ï¼Œè¯·è¡¥å……!"
+	If strLength(Title_Text) > 20000 Then Message = "å†…å®¹è¶…è¿‡20000å­—ç¬¦ï¼Œè¯·åˆ†å¼€å‘è¡¨!"
+	If strLength(Title_Text) < 2 Then Message = "å†…å®¹è¿‡çŸ­ï¼Œè¯·è¡¥å……!"
+	If Title_Name = "" Then Message = "è¯·è¾“å…¥æ ‡é¢˜!"
+	If Title_Text = "" Then Message = "è¯·è¾“å…¥å†…å®¹!"
+	If Title_Id <> "" And Check_Express(Title_Id,"\d{1,8}") Then Message = "æ‚¨æŒ‡å®šçš„[ID]ä¸åˆæ³•!"
 	If Message <> "No" Then
 		Act="No"
 		Call Error()

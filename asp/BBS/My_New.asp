@@ -8,7 +8,7 @@
 <!--#include virtual="/Models/Common/ConnDB.asp"-->
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css">
 <!--
 body {
@@ -39,17 +39,17 @@ body {
 			
 	If Not rs.Eof Then
 	
-		Notice_Text = "公告"
-		Skill_Text = "技术"
-		Other_Text = "杂谈"
-		Ask_Text = "问答"
+		Notice_Text = "鹿芦赂忙"
+		Skill_Text = "录录脢玫"
+		Other_Text = "脭脫脤赂"
+		Ask_Text = "脦脢麓冒"
 	
 		Do While Not rs.Eof
 			%>
 			<tr class="Text" onMouseOver="Title_<%=rs("Title_Id")%>.className='Sign';this.style.background='#444444';" onMouseOut="Title_<%=rs("Title_Id")%>.className='Text';this.style.background='#333333';">
 			<td width="80%" class="td" valign="top" nowrap><div class="Text">
 			<img src="/Models/Images/Common/Yellow.GIF" width="7" height="25" align="absmiddle">&nbsp;[<%Execute "Response.Write("&rs("Title_Model")&"_Text)"%>]&nbsp;<a id="Title_<%=rs("Title_Id")%>" href="/BBS/Title.asp?Id=<%=rs("Title_Id")%>" class="Text" target="_blank"><%=rs("Title_Name")%></a></div></td>
-		  <td width="20%" class="td" valign="top" align="left"><div class="Text">　<%=Right(Year(rs("Title_Post_Time")),2)%>-<%=Month(rs("Title_Post_Time"))%></div></td></tr><%
+		  <td width="20%" class="td" valign="top" align="left"><div class="Text">隆隆<%=Right(Year(rs("Title_Post_Time")),2)%>-<%=Month(rs("Title_Post_Time"))%></div></td></tr><%
 			rs.MoveNext
 		Loop		
 		
