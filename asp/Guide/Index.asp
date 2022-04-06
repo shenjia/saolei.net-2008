@@ -110,6 +110,7 @@ body {
 	</td>
   </tr>
 </table>
+<!--#include virtual="/Models/Common/Const_ICP.asp"-->
 <!--#include virtual="/Models/Include/Bottom_utf8.asp"-->
 </body>
 <iframe name="Action" width="0" height="0" style="display: none"></iframe>
