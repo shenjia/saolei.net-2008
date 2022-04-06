@@ -4,7 +4,8 @@
 'Date:2007-12-25
 '------------------------
 %>
-<!--#include virtual="/Models/Common/Const.asp"--><html>
+<!--#include virtual="/Models/Common/Const.asp"-->
+<!--#include virtual="/Models/Common/Const_ICP.asp"--><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <META name="description" content="<%=Meta_Description%>">
@@ -110,7 +111,6 @@ body {
 	</td>
   </tr>
 </table>
-<!--#include virtual="/Models/Common/Const_ICP.asp"-->
 <!--#include virtual="/Models/Include/Bottom_utf8.asp"-->
 </body>
 <iframe name="Action" width="0" height="0" style="display: none"></iframe>
