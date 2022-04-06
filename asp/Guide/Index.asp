@@ -5,7 +5,7 @@
 '------------------------
 %>
 <!--#include virtual="/Models/Common/Const.asp"-->
-<!--#include virtual="/Models/Common/Const_ICP.asp"--><html>
+<!--#include virtual="/Models/Common/Const_utf8.asp"--><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <META name="description" content="<%=Meta_Description%>">
