@@ -160,7 +160,7 @@ Sub Check_Input()
 		If ( Video_Model = "Beg" And ( Video_3BV < 2  Or Video_3BV > 54 ) ) Or ( Video_Model = "Int" And ( Video_3BV < 25 Or Video_3BV > 216 ) ) Or ( Video_Model = "Exp" And ( Video_3BV < 95 Or Video_3BV > 381 ) )  Then Message = "您输入的[录像3BV值]不合法!"
 	End If
 	If Video_3BV = "" Then Message = "请输入[录像3BV值]!"
-	if file.fileSize=0 Then Message = "请选择要上传的录象文件!"
+	if file.FileStart = 0 Or file.FileName = "" Then Message = "请选择要上传的录象文件!"
 	If Video_Type = "mvf" Then Message = "很抱歉，本站已停止对mvf录像的支持！"
 
 	If Message <> "No" Then
