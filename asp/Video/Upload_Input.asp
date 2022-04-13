@@ -182,7 +182,7 @@ If Check_Result <> "Fail" Then
             return
         }
         iframe.contentDocument.querySelector("input[name='Video_3BV']").value = video.getBBBV()
-        iframe.contentDocument.querySelector("input[name='Video_Score']").value = (video.getTime() / 1000).toFixed(2)
+        iframe.contentDocument.querySelector("input[name='Video_Score']").value = (video.getTime() / 1000).toFixed(3)
         iframe.contentDocument.querySelector("input[name='Video_IsNoFrag']").checked = video.getRightClicks() === 0 && video.getDoubleClicks() === 0
     }
 
