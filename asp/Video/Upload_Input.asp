@@ -177,13 +177,18 @@ If Check_Result <> "Fail" Then
         const iframe = parent.document.getElementById('Window_Frame')
         if (!video || !iframe) return
         const levelArr = ['Unknown', 'Beg', 'Int', 'Exp', 'Cus']
+        const playerName = new TextDecoder('Windows-1252').decode(video.getPlayerArray()).trim()
         if (levelArr[video.getLevel()] !== iframe.contentDocument.querySelector("input[name='Video_Model']").value) {
-            Error('录像级别错误，请重新选择！')
-            return
+            Error('录像级别错误，请重新选择录像文件')
+        } else if (parent.flop.videoType === 'avf' && playerName === 'Anonymous! Press F5 for Setup') {
+            Error('录像标识文字未设置，请重新选择录像文件！')
+        } else if (parent.flop.videoType === 'rmv' && playerName === 'ANONYMOUS') {
+            Error('录像标识文字未设置，请重新选择录像文件！')
+        } else {
+            iframe.contentDocument.querySelector("input[name='Video_3BV']").value = video.getBBBV()
+            iframe.contentDocument.querySelector("input[name='Video_Score']").value = (video.getTime() / 1000).toFixed(3)
+            iframe.contentDocument.querySelector("input[name='Video_IsNoFrag']").checked = video.getRightClicks() === 0 && video.getDoubleClicks() === 0
         }
-        iframe.contentDocument.querySelector("input[name='Video_3BV']").value = video.getBBBV()
-        iframe.contentDocument.querySelector("input[name='Video_Score']").value = (video.getTime() / 1000).toFixed(3)
-        iframe.contentDocument.querySelector("input[name='Video_IsNoFrag']").checked = video.getRightClicks() === 0 && video.getDoubleClicks() === 0
     }
 
     function AnalyzeFiles(files) {
@@ -191,10 +196,11 @@ If Check_Result <> "Fail" Then
         if (!files || !iframe || !parent.flop) return
         const name = files[0].name
         const type = name.indexOf('.') !== -1 ? name.substring(name.lastIndexOf('.') + 1) : ''
-        if (type !== 'avf' && type !== 'mvf' && type !== 'rmv') {
-            Error('录像格式错误，请重新选择！')
+        if (type !== 'avf' && type !== 'rmv') {
+            Error('录像格式错误，请选择avf或者rmv录像！')
             return
         }
+        parent.flop.videoType = type
         parent.flop.parseFiles(files, AnalyzeSuccess)
     }
 
