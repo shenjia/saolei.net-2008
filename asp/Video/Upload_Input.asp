@@ -179,7 +179,7 @@ If Check_Result <> "Fail" Then
         const levelArr = ['Unknown', 'Beg', 'Int', 'Exp', 'Cus']
         const playerName = new TextDecoder('Windows-1252').decode(video.getPlayerArray()).trim()
         if (levelArr[video.getLevel()] !== iframe.contentDocument.querySelector("input[name='Video_Model']").value) {
-            Error('录像级别错误，请重新选择录像文件')
+            Error('录像级别错误，请重新选择录像文件！')
         } else if (parent.flop.videoType === 'avf' && playerName === 'Anonymous! Press F5 for Setup') {
             Error('录像标识文字未设置，请重新选择录像文件！')
         } else if (parent.flop.videoType === 'rmv' && playerName === 'ANONYMOUS') {
