@@ -7,6 +7,7 @@
 <script language="javascript">
 function Window_Load()
 {
+	if (self == top) return;
 	parent.document.getElementById('Window_Box').style.display='block';
 	parent.document.getElementById('Window_Box').width='';
 	parent.Start_Mask();
@@ -32,6 +33,7 @@ function Window_Load()
 }
 var over=false,down=false,divleft,divtop;
 function move(){
+	if (self == top) return;
 	if(down){
 	var isIE=document.all? true:false;
 	if(isIE){X=event.clientX;Y=event.clientY;}
@@ -41,6 +43,7 @@ function move(){
 	}
 }
 parent.window.onresize = function () {
+	if (self == top) return;
 	if(parent.document.getElementById('divPageMask').style.width!="0px"){// 当前是否显示遮罩
 		parent.resizeMask();
 
@@ -51,6 +54,7 @@ parent.window.onresize = function () {
 	}
 }
 function resize_iframe(){
+	if (self == top) return;
 	theWidth = parent.document.getElementById('Window_Frame').width=theWidth;
 	theHeight = parent.document.getElementById('Window_Frame').height=theHeight;
 
