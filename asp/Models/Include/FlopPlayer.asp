@@ -4,4 +4,10 @@
 'Date:2022-04-22
 '------------------------
 %>
-<iframe class="flop-player-iframe flop-player-display-none" src="/Play/index.html?v=202201011420"></iframe>
+<iframe id="Flop_Player" class="flop-player-iframe flop-player-display-none"></iframe>
+
+<script type="text/javascript">
+function Set_Flop_Src(Src) {
+    document.getElementById('Flop_Player').src = Src || "/Play/index.html?v=202201011420"
+}
+</script>

@@ -38,7 +38,7 @@ If Check_Result <> "Fail" Then
 	<!--#include virtual="/Models/Include/Windows.asp"-->
 	<!--#include virtual="/Models/Include/FlopPlayer.asp"-->
 	</head>
-	<body onload="Window_Load();Upload_Form.Video.select();" onMousemove="move()" topmargin=0 leftmargin=0 scroll=no>
+	<body onload="Set_Flop_Src();Window_Load();Upload_Form.Video.select();" onMousemove="move()" topmargin=0 leftmargin=0 scroll=no>
 	<form name="Upload_Form" action="Action/Upload_Action.asp" method="post" target="Action" enctype="multipart/form-data">
 	<table id="Window_Table" border="0" cellspacing="1" cellpadding="0" bgcolor="#999999">
 		<tr>
