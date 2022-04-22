@@ -133,7 +133,7 @@ Select Case Result
 					<tr>
 						<td width="270" valign="top" class="Text">
 						<span class="<%=Video_Model%>">
-						<%Execute "Response.Write("&Video_Model&"_Text)"%></span>&nbsp;<span class="Signest"><%=FormatNumber(Video_Score,2)%></span><%If Video_IsNoFrag Then%><span class="Counter">NF</span><%End If%>&nbsp;秒录像，3BV=<span class="Title"><%=CInt(Video_3BV)%></span>，3BV/s=<span class="Title"><%=FormatNumber(Video_3BVS,2,True)%></span>
+						<%Execute "Response.Write("&Video_Model&"_Text)"%></span>&nbsp;<a href="/Video/Show.asp?Id=<%=Video_Id%>" class="Signest" title="点击跳转到查看录像页面" target="_blank"><%=FormatNumber(Video_Score,2)%></a><%If Video_IsNoFrag Then%><span class="Counter">NF</span><%End If%>&nbsp;秒录像，3BV=<span class="Title"><%=CInt(Video_3BV)%></span>，3BV/s=<span class="Title"><%=FormatNumber(Video_3BVS,2,True)%></span>
 						<br>
 						<a href="/Player/Show.asp?Id=<%=Video_Player%>" class="High" title="点击查看个人信息"><%=Video_Player_Name%></a>
 						<span onClick="location='/Help/Title.asp';" style="cursor:pointer" class="Title" title="点击查看称号说明"><%=Video_Player_Title%></span><span class="Counter"><%=Player_Sex_Text%></span>
