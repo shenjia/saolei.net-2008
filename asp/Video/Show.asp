@@ -117,6 +117,7 @@ Select Case Result
 		</style>
 		<link href="/Models/Css/2008.css?v=20220104" rel="stylesheet" type="text/css">
 		<!--#include virtual="/Models/Include/Windows.asp"-->
+		<!--#include virtual="/Models/Include/FlopPlayer.asp"-->
 		</head>
 		<body onLoad="Window_Load();<%If Session("Player_Id") <> "" Then%>Comment_Form.Comment_Text.select();<%End If%>" onMousemove="move()" topmargin=0 leftmargin=0 scroll=no>
 		<table id="Window_Table" border="0" cellspacing="1" cellpadding="0" bgcolor="#999999">
@@ -265,7 +266,6 @@ Select Case Result
 			</tr>
 		</table>
 		<iframe name="Action" style="display: none"></iframe>
-		<iframe class="flop-player-iframe flop-player-display-none" src="../play/index.html?v=202201011420"></iframe>
 		</body>
 		</html>
 		<script language="javascript">
