@@ -109,6 +109,10 @@ Select Case Result
 			margin-bottom: 0px;
 			background-color: #333333;
 		}
+		.disabled tr td {
+		    color: gray;
+		    cursor: not-allowed;
+		}
 		-->
 		</style>
 		<link href="/Models/Css/2008.css?v=20220104" rel="stylesheet" type="text/css">
@@ -149,12 +153,12 @@ Select Case Result
 					  </td>
 						<td width="100" valign="top" class="Text">
 						<table border="0" cellspacing="0" cellpadding="0">
-						  <tr>
+						  <tr id="Online_Play" <%If CInt(Video_Freeze) = 0 Then%>class="disabled"<%End If%>>
 							<td height="50" valign="top">
 							<%If Video_Freeze Then
 								Call Button("为什么冻结?",100,40,"location='/Help/Freeze.asp';",1)
 							Else
-								Act = "playVideo('"&Video_Path&"');"
+								Act = "PlayVideo('"&Video_Path&"');"
 								Call Button("在线播放",100,40,Act,0)
 							End If%>
 							</td>
@@ -261,6 +265,7 @@ Select Case Result
 			</tr>
 		</table>
 		<iframe name="Action" style="display: none"></iframe>
+		<iframe class="flop-player-iframe flop-player-display-none" src="../play/index.html?v=202201011420"></iframe>
 		</body>
 		</html>
 		<script language="javascript">
@@ -289,26 +294,76 @@ Select Case Result
 				parent.document.getElementById('Window_Box').style.display='none';
 		}
 
-		function playVideo(uri, options) {
-			if (!!window.ActiveXObject || 'ActiveXObject' in window) {
-				alert('暂不支持 IE 内核，请更换浏览器或内核！')
-				return
-			}
-			if (!parent.flop) return
-			document.body.style.display = 'none'
-			parent.flop.playVideo(uri, options || {
-				share: {
-					uri: uri,
-					pathname: '/Play/index.html',
-                	background: '#333',
-					title: '扫雷网 Saolei.wang'
-				},
-            	background: 'rgba(0, 0, 0, .5)',
-				listener: function () {
-					document.body.style.display = 'block'
-				}
-			})
-		}
+        function GetShareParams(uri) {
+            return {
+                uri: uri,
+                pathname: '/Play/index.html',
+                background: '#333333',
+                title: '扫雷网 Saolei.wang'
+            }
+        }
+
+        function IsIE() {
+            return !!window.ActiveXObject || 'ActiveXObject' in window
+        }
+
+        function IsPlayerReady() {
+            return window.flop && window.flop.playVideo
+        }
+
+        function EnablePlayButton() {
+            document.getElementById('Online_Play').classList.remove('disabled')
+        }
+
+        function PlayVideoSelf(uri, options) {
+            if (!IsPlayerReady()) return
+            document.getElementById('Window_Table').style.display = 'none'
+            window.flop.playVideo(uri, options || {
+                share: GetShareParams(uri),
+                background: 'transparent',
+                listener: function () {
+                    document.getElementById('Window_Table').style.display = 'table'
+                }
+            })
+        }
+
+        function PlayVideoParent(uri, options) {
+            if (!IsPlayerReady()) return
+            document.body.style.backgroundColor = 'transparent'
+            document.getElementById('Window_Table').style.display = 'none'
+            parent.document.body.classList.add('flop-player-overflow-hidden')
+            parent.document.getElementById('Window_Frame').style.inset = 0
+            parent.document.getElementById('Window_Frame').classList.add('flop-player-iframe')
+            window.flop.playVideo(uri, options || {
+                share: GetShareParams(uri),
+                background: 'rgba(0, 0, 0, .5)',
+                listener: function () {
+                    document.body.style.backgroundColor = '#333333'
+                    document.getElementById('Window_Table').style.display = 'table'
+                    parent.document.body.classList.remove('flop-player-overflow-hidden')
+                    parent.document.getElementById('Window_Frame').style.inset = 'auto'
+                    parent.document.getElementById('Window_Frame').classList.remove('flop-player-iframe')
+                }
+            })
+        }
+
+        function PlayVideo(uri, options) {
+            if (IsIE()) {
+                alert('暂不支持 IE 内核，请更换浏览器或内核！')
+            } else {
+                (self === top ? PlayVideoSelf : PlayVideoParent)(uri, options)
+            }
+        }
+
+        (function () {
+            if (IsIE() || IsPlayerReady()) {
+                EnablePlayButton()
+            } else {
+                window.flop = {
+                    onload: EnablePlayButton
+                }
+            }
+        })()
 		
 		</script>
 		<%
