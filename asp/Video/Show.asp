@@ -119,7 +119,7 @@ Select Case Result
 		<!--#include virtual="/Models/Include/Windows.asp"-->
 		<!--#include virtual="/Models/Include/FlopPlayer.asp"-->
 		</head>
-		<body onLoad="Set_Flop_Src();Window_Load();<%If Session("Player_Id") <> "" Then%>Comment_Form.Comment_Text.select();<%End If%>" onMousemove="move()" topmargin=0 leftmargin=0 scroll=no>
+		<body onLoad="Window_Load();<%If Session("Player_Id") <> "" Then%>Comment_Form.Comment_Text.select();<%End If%>Set_Flop_Src();" onMousemove="move()" topmargin=0 leftmargin=0 scroll=no>
 		<table id="Window_Table" border="0" cellspacing="1" cellpadding="0" bgcolor="#999999">
 			<tr>
 			  <td bgcolor="#444444">
