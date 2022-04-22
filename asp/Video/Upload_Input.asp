@@ -36,6 +36,7 @@ If Check_Result <> "Fail" Then
 	</style>
 	<link href="/Models/Css/2008.css?v=20220104" rel="stylesheet" type="text/css">
 	<!--#include virtual="/Models/Include/Windows.asp"-->
+	<!--#include virtual="/Models/Include/FlopPlayer.asp"-->
 	</head>
 	<body onload="Window_Load();Upload_Form.Video.select();" onMousemove="move()" topmargin=0 leftmargin=0 scroll=no>
 	<form name="Upload_Form" action="Action/Upload_Action.asp" method="post" target="Action" enctype="multipart/form-data">
@@ -180,9 +181,9 @@ If Check_Result <> "Fail" Then
         const playerName = new TextDecoder('Windows-1252').decode(video.getPlayerArray()).trim()
         if (levelArr[video.getLevel()] !== iframe.contentDocument.querySelector("input[name='Video_Model']").value) {
             Error('录像级别错误，请重新选择录像文件！')
-        } else if (parent.flop.videoType === 'avf' && playerName === 'Anonymous! Press F5 for Setup') {
+        } else if (window.flop.videoType === 'avf' && playerName === 'Anonymous! Press F5 for Setup') {
             Error('录像标识文字未设置，请重新选择录像文件！')
-        } else if (parent.flop.videoType === 'rmv' && playerName === 'ANONYMOUS') {
+        } else if (window.flop.videoType === 'rmv' && playerName === 'ANONYMOUS') {
             Error('录像标识文字未设置，请重新选择录像文件！')
         } else {
             iframe.contentDocument.querySelector("input[name='Video_3BV']").value = video.getBBBV()
@@ -193,15 +194,15 @@ If Check_Result <> "Fail" Then
 
     function AnalyzeFiles(files) {
         const iframe = parent.document.getElementById('Window_Frame')
-        if (!files || !iframe || !parent.flop) return
+        if (!files || !iframe || !window.flop) return
         const name = files[0].name
         const type = name.indexOf('.') !== -1 ? name.substring(name.lastIndexOf('.') + 1) : ''
         if (type !== 'avf' && type !== 'rmv') {
             Error('录像格式错误，请选择avf或者rmv录像！')
             return
         }
-        parent.flop.videoType = type
-        parent.flop.parseFiles(files, AnalyzeSuccess)
+        window.flop.videoType = type
+        window.flop.parseFiles(files, AnalyzeSuccess)
     }
 
 	</script>
