@@ -115,7 +115,7 @@ Select Case Result
 		}
 		-->
 		</style>
-		<link href="/Models/Css/2008.css?v=20220104" rel="stylesheet" type="text/css">
+		<link href="/Models/Css/2008.css?v=20220423" rel="stylesheet" type="text/css">
 		<!--#include virtual="/Models/Include/Windows.asp"-->
 		<!--#include virtual="/Models/Include/FlopPlayer.asp"-->
 		</head>
@@ -332,7 +332,6 @@ Select Case Result
             document.body.style.backgroundColor = 'transparent'
             document.getElementById('Window_Table').style.display = 'none'
             parent.document.body.classList.add('flop-player-overflow-hidden')
-            parent.document.getElementById('Window_Frame').style.inset = 0
             parent.document.getElementById('Window_Frame').classList.add('flop-player-iframe')
             window.flop.playVideo(uri, options || {
                 share: GetShareParams(uri),
@@ -341,7 +340,6 @@ Select Case Result
                     document.body.style.backgroundColor = '#333333'
                     document.getElementById('Window_Table').style.display = 'table'
                     parent.document.body.classList.remove('flop-player-overflow-hidden')
-                    parent.document.getElementById('Window_Frame').style.inset = 'auto'
                     parent.document.getElementById('Window_Frame').classList.remove('flop-player-iframe')
                 }
             })
