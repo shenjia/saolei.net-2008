@@ -6,6 +6,7 @@
 %>
 <!--#include virtual="/Models/Include/Window.asp"-->
 <!--#include virtual="/Models/Include/Mask.asp"-->
+<!--#include virtual="/Models/Include/FlopPlayer.asp"-->
 <%
 If Session("Player_Id")<>"" Then
 %><!--#include virtual="/Models/Include/Message.asp"-->

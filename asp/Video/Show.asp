@@ -119,7 +119,7 @@ Select Case Result
 		<!--#include virtual="/Models/Include/Windows.asp"-->
 		<!--#include virtual="/Models/Include/FlopPlayer.asp"-->
 		</head>
-		<body onLoad="Window_Load();<%If Session("Player_Id") <> "" Then%>Comment_Form.Comment_Text.select();<%End If%>Set_Flop_Src();" onMousemove="move()" topmargin=0 leftmargin=0 scroll=no>
+		<body onLoad="Window_Load();<%If Session("Player_Id") <> "" Then%>Comment_Form.Comment_Text.select();<%End If%>" onMousemove="move()" topmargin=0 leftmargin=0 scroll=no>
 		<table id="Window_Table" border="0" cellspacing="1" cellpadding="0" bgcolor="#999999">
 			<tr>
 			  <td bgcolor="#444444">
@@ -308,7 +308,7 @@ Select Case Result
         }
 
         function IsPlayerReady() {
-            return window.flop && window.flop.playVideo
+            return parent.flop && parent.flop.playVideo
         }
 
         function EnablePlayButton() {
@@ -318,7 +318,7 @@ Select Case Result
         function PlayVideoSelf(uri, options) {
             if (!IsPlayerReady()) return
             document.getElementById('Window_Table').style.display = 'none'
-            window.flop.playVideo(uri, options || {
+            parent.flop.playVideo(uri, options || {
                 share: GetShareParams(uri),
                 background: 'transparent',
                 listener: function () {
@@ -329,18 +329,12 @@ Select Case Result
 
         function PlayVideoParent(uri, options) {
             if (!IsPlayerReady()) return
-            document.body.style.backgroundColor = 'transparent'
-            document.getElementById('Window_Table').style.display = 'none'
-            parent.document.body.classList.add('flop-player-overflow-hidden')
-            parent.document.getElementById('Window_Frame').classList.add('flop-player-iframe')
-            window.flop.playVideo(uri, options || {
+            document.body.style.display = 'none'
+            parent.flop.playVideo(uri, options || {
                 share: GetShareParams(uri),
                 background: 'rgba(0, 0, 0, .5)',
                 listener: function () {
-                    document.body.style.backgroundColor = '#333333'
-                    document.getElementById('Window_Table').style.display = 'table'
-                    parent.document.body.classList.remove('flop-player-overflow-hidden')
-                    parent.document.getElementById('Window_Frame').classList.remove('flop-player-iframe')
+            		document.body.style.display = 'block'
                 }
             })
         }
@@ -357,7 +351,7 @@ Select Case Result
             if (IsIE() || IsPlayerReady()) {
                 EnablePlayButton()
             } else {
-                window.flop = {
+                parent.flop = {
                     onload: EnablePlayButton
                 }
             }
