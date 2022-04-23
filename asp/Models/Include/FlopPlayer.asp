@@ -7,7 +7,10 @@
 <iframe id="Flop_Player" class="flop-player-iframe flop-player-display-none"></iframe>
 
 <script type="text/javascript">
-function Set_Flop_Src(Src) {
-    document.getElementById('Flop_Player').src = Src || "/Play/index.html?v=202201011420"
-}
+window.addEventListener('load', function() {
+    if (self !== top) return;
+	window.requestAnimationFrame(function() {
+		document.getElementById('Flop_Player').src = "/Play/index.html?v=202201011420";
+	});
+});
 </script>
