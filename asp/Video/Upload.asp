@@ -30,6 +30,7 @@ cmd.execute
 Video_Number_Beg = cmd("@Video_Number_Beg")
 Video_Number_Int = cmd("@Video_Number_Int")
 Video_Number_Exp = cmd("@Video_Number_Exp")
+Video_Number_All = Video_Number_Beg + Video_Number_Int + Video_Number_Exp
 
 Set cmd = Nothing
 
@@ -72,7 +73,7 @@ body {
 				</table>
 				</td>
 				<td width="208" align="left" valign="middle">
-				<%Call Bar("Beg",Video_Number_Beg,1500,208,20)%>
+				<%Call Bar("Beg",Video_Number_Beg,Video_Number_All,208,20)%>
 				</td>
 				<td id="Beg_Number" width="15" align="left" valign="middle" class="Counters"><%=Video_Number_Beg%></td>
 			  </tr>
@@ -85,7 +86,7 @@ body {
 				</table>
 				</td>
 				<td width="208" align="left" valign="middle">
-				<%Call Bar("Int",Video_Number_Int,1500,208,20)%>
+				<%Call Bar("Int",Video_Number_Int,Video_Number_All,208,20)%>
 				</td>
 				<td id="Int_Number" width="15" align="left" valign="middle" class="Counters"><%=Video_Number_Int%></td>
 			  </tr>
@@ -98,7 +99,7 @@ body {
 				</table>
 				</td>
 				<td width="208" align="left" valign="middle">
-				<%Call Bar("Exp",Video_Number_Exp,1500,208,20)%>
+				<%Call Bar("Exp",Video_Number_Exp,Video_Number_All,208,20)%>
 				</td>
 				<td id="Exp_Number" width="15" align="left" valign="middle" class="Counters"><%=Video_Number_Exp%></td>
 			  </tr>
