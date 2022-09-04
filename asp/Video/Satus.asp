@@ -29,6 +29,7 @@ cmd.execute
 Video_Number_Beg = cmd("@Video_Number_Beg")
 Video_Number_Int = cmd("@Video_Number_Int")
 Video_Number_Exp = cmd("@Video_Number_Exp")
+Video_Number_All = Video_Number_Beg + Video_Number_Int + Video_Number_Exp
 
 Set cmd = Nothing
 
@@ -55,21 +56,21 @@ body {
   <tr class="Text" onMouseOver="Beg.className='High';Box_Beg.style.background='#999999';Bar_Beg.style.background='#999999';Beg_Number.className='Counter';" onMouseOut="Beg.className='Text';Box_Beg.style.background='#777777';Bar_Beg.style.background='#777777';Beg_Number.className='Counters';">
     <td id="Beg" width="50" align="left" valign="middle" class="Text">初级录像</td>
     <td width="180" align="left" valign="middle">
-	<%Call Bar("Beg",Video_Number_Beg,500,180,20)%>
+	<%Call Bar("Beg",Video_Number_Beg,Video_Number_All,180,20)%>
 	</td>
     <td id="Beg_Number" width="22" align="left" valign="middle" class="Counters"><%=Video_Number_Beg%></td>
   </tr>
   <tr class="Text" onMouseOver="Int.className='High';Box_Int.style.background='#999999';Bar_Int.style.background='#999999';Int_Number.className='Counter';" onMouseOut="Int.className='Text';Box_Int.style.background='#777777';Bar_Int.style.background='#777777';Int_Number.className='Counters';">
     <td id="Int" width="50" align="left" valign="middle" class="Text">中级录像</td>
     <td width="180" align="left" valign="middle">
-	<%Call Bar("Int",Video_Number_Int,500,180,20)%>
+	<%Call Bar("Int",Video_Number_Int,Video_Number_All,180,20)%>
 	</td>
     <td id="Int_Number" width="22" align="left" valign="middle" class="Counters"><%=Video_Number_Int%></td>
   </tr>
   <tr class="Text" onMouseOver="Exp.className='High';Box_Exp.style.background='#999999';Bar_Exp.style.background='#999999';Exp_Number.className='Counter';" onMouseOut="Exp.className='Text';Box_Exp.style.background='#777777';Bar_Exp.style.background='#777777';Exp_Number.className='Counters';">
     <td id="Exp" width="50" align="left" valign="middle" class="Text">高级录像</td>
     <td width="180" align="left" valign="middle">
-	<%Call Bar("Exp",Video_Number_Exp,500,180,20)%>
+	<%Call Bar("Exp",Video_Number_Exp,Video_Number_All,180,20)%>
 	</td>
     <td id="Exp_Number" width="22" align="left" valign="middle" class="Counters"><%=Video_Number_Exp%></td>
   </tr>
