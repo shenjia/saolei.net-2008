@@ -7,6 +7,9 @@ Dim NowStep
 Dim NowBar 
 
 Sub Bar(Bar_Name,Step,All,Width,Height)
+	If All = 0 Then
+		All = 1
+	End If
 	%>
 	<table id="Box_<%=Bar_Name%>" width="<%=Width%>" height="<%=Height%>" border="0" align="left" cellpadding="0" cellspacing="1" bgcolor="#777777">
 		<tr bgcolor="#333333">
