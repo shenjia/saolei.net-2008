@@ -75,7 +75,7 @@ body {
 				<td width="208" align="left" valign="middle">
 				<%Call Bar("Beg",Video_Number_Beg,Video_Number_All,208,20)%>
 				</td>
-				<td id="Beg_Number" width="15" align="left" valign="middle" class="Counters"><%=Video_Number_Beg%></td>
+				<td id="Beg_Number" width="30" align="left" valign="middle" class="Counters"><%=Video_Number_Beg%></td>
 			  </tr>
 			  <tr class="Text" onMouseOver="Int.className='High';Box_Int.style.background='#999999';Bar_Int.style.background='#999999';Int_Number.className='Counter';" onMouseOut="Int.className='Text';Box_Int.style.background='#777777';Bar_Int.style.background='#777777';Int_Number.className='Counters';">
 				<td id="Int" width="100" align="left" valign="middle" class="Text">
@@ -88,7 +88,7 @@ body {
 				<td width="208" align="left" valign="middle">
 				<%Call Bar("Int",Video_Number_Int,Video_Number_All,208,20)%>
 				</td>
-				<td id="Int_Number" width="15" align="left" valign="middle" class="Counters"><%=Video_Number_Int%></td>
+				<td id="Int_Number" width="30" align="left" valign="middle" class="Counters"><%=Video_Number_Int%></td>
 			  </tr>
 			  <tr class="Text" onMouseOver="Exp.className='High';Box_Exp.style.background='#999999';Bar_Exp.style.background='#999999';Exp_Number.className='Counter';" onMouseOut="Exp.className='Text';Box_Exp.style.background='#777777';Bar_Exp.style.background='#777777';Exp_Number.className='Counters';">
 				<td id="Exp" width="100" align="left" valign="middle" class="Text">
@@ -101,7 +101,7 @@ body {
 				<td width="208" align="left" valign="middle">
 				<%Call Bar("Exp",Video_Number_Exp,Video_Number_All,208,20)%>
 				</td>
-				<td id="Exp_Number" width="15" align="left" valign="middle" class="Counters"><%=Video_Number_Exp%></td>
+				<td id="Exp_Number" width="30" align="left" valign="middle" class="Counters"><%=Video_Number_Exp%></td>
 			  </tr>
 		  </table>
 		</td>
