@@ -196,8 +196,8 @@ If Check_Result <> "Fail" Then
         if (!files || !iframe || !parent.flop) return
         const name = files[0].name
         const type = name.indexOf('.') !== -1 ? name.substring(name.lastIndexOf('.') + 1) : ''
-        if (type !== 'avf' && type !== 'rmv') {
-            Error('录像格式错误，请选择avf或者rmv录像！')
+        if (type !== 'avf') {
+            Error('录像格式错误，请选择avf录像！')
             return
         }
         parent.flop.videoType = type

@@ -33,11 +33,11 @@ Call Check_Input()
 Session("Upload_Video_Model") = Video_Model
 Session("Upload_Video_Score") = Video_Score
 
-If Video_Type <> "avf" And Video_Type <> "mvf" And Video_Type <> "rmv" Then
+If Video_Type <> "avf" And Video_Type <> "mvf"Then
 	Video_Type = "avf"
 End If
 
-If Video_Type = "avf" Or Video_Type = "rmv" Then
+If Video_Type = "avf" Then
 	Video_Score = Video_Score + 1
 End If
 
@@ -162,6 +162,7 @@ Sub Check_Input()
 	If Video_3BV = "" Then Message = "请输入[录像3BV值]!"
 	if file.FileStart = 0 Or file.FileName = "" Then Message = "请选择要上传的录象文件!"
 	If Video_Type = "mvf" Then Message = "很抱歉，本站已停止对mvf录像的支持！"
+	If Video_Type = "rmv" Then Message = "很抱歉，本站已停止对rmv录像的支持！"
 
 	If Message <> "No" Then
 		Act="No"
