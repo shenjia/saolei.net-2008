@@ -197,7 +197,7 @@ If Message = "No" Then
 					</table>
 				</td>
 				<%End If%>
-				<%If Session("Player_IsMaster") Or (Session("Player_Id") <> "" And Session("Player_Id") = CInt(Title_Player)) Then%>
+				<%If Session("Player_IsMaster") Or (Session("Player_Id") <> "" And Session("Player_Id") = CLng(Title_Player)) Then%>
 				<td width="70">
 					<table width="60" height="20" border="0" align="right" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="location='/BBS/Edit.asp?Id=<%=Title_Id%>';">
 					  <tr>
@@ -316,7 +316,7 @@ If Message = "No" Then
 							</table>
 						</td>
 						<%Else
-							If Session("Player_Id") <> "" And Session("Player_Id") = CInt(Title_Player) Then
+							If Session("Player_Id") <> "" And Session("Player_Id") = CLng(Title_Player) Then
 							%>
 						<td width="70">
 							<table width="60" height="20" border="0" align="right" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="Action.location=('/BBS/Action/Del_My_Action.asp?Id=<%=rs("Title_Id")%>')">

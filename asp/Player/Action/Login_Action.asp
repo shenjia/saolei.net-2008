@@ -48,7 +48,7 @@ If Message = "No" Then
 	
 		Case "Login_Ok"
 			
-			Session("Player_Id") = CInt(cmd("@Player_Id"))
+			Session("Player_Id") = CLng(cmd("@Player_Id"))
 			Session("Player_Name") = Player_Name
 			Session("Player_Name_Chinese") = cmd("@Player_Name_Chinese")
 			Session("Player_Name_English") = cmd("@Player_Name_English")

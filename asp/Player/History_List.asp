@@ -33,7 +33,7 @@
 					<div id="Scroll_Div" style="position:absolute;left:0px;top:0px;overflow:visible;">
 						<table id="Scroll_Table" width="255" class="tbl" border="0" cellspacing="0" cellpadding="0">
 							<%
-							Player_Id = CInt(Request("Id"))
+							Player_Id = CLng(Request("Id"))
 
 							If Player_Id = Session("Player_Id") Then
 								History_IsMine = True

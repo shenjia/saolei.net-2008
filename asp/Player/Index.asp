@@ -212,7 +212,7 @@ End If
 Sub Get_Input()
 
 	Player_Id = Session("Player_Id")
-	If Request("Id") <> "" Then Player_Id = CInt(Request("Id"))
+	If Request("Id") <> "" Then Player_Id = CLng(Request("Id"))
 
 End Sub
 

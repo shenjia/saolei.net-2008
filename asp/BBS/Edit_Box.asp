@@ -33,7 +33,7 @@ If Check_Result <> "Fail" Then
 		Title_Text = rs("Title_Text")
 		Title_Get_Id = CLng(rs("Title_Get_Id"))
 		Title_Name = rs("Title_Name")
-		Title_Player = CInt(rs("Title_Player"))
+		Title_Player = CLng(rs("Title_Player"))
 		
 	End If
 		

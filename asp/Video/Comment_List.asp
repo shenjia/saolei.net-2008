@@ -39,7 +39,7 @@ body {
 	SQL_Text = "Video_Read "&Session("Comment_Video")
 	rs.Open SQL_Text,Conn,3,1
 	
-	Video_Owner = CInt(rs("Video_Player"))
+	Video_Owner = CLng(rs("Video_Player"))
 	
 	Call End_Conn()
 
