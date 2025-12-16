@@ -5,9 +5,9 @@
 '------------------------
 Response.Buffer = True
 Dim Areas(100)
-Dim Hero(500)
+Dim Hero(1000)
 Dim Video(200)
-Dim Man(10000)
+Dim Man(15000)
 %>
 <!--#include virtual="/Player/Check.asp"-->
 <!--#include virtual="/Models/Common/Const.asp"-->
@@ -25,7 +25,7 @@ If Check_Result <> "Fail" Then
 	{
 		parent.document.getElementById('Bar_'+Name).width=Width;
 	}
-	parent.document.getElementById('Ranking').innerHTML='ÕıÔÚË¢ĞÂÉñ½çÅÅĞĞ...';</script>
+	parent.document.getElementById('Ranking').innerHTML='ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...';</script>
 	<%Response.Flush()
 	
 	Call Start_Conn()
@@ -66,7 +66,7 @@ If Check_Result <> "Fail" Then
 	
 	Call Bar_Reset("Refresh")
 
-	%><script>parent.document.getElementById('Ranking').innerHTML='ÕıÔÚË¢ĞÂÈË½çÅÅĞĞ...';</script>
+	%><script>parent.document.getElementById('Ranking').innerHTML='ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½ï¿½ï¿½Ë½ï¿½ï¿½ï¿½ï¿½ï¿½...';</script>
 	<%Response.Flush()
 	
 	Call Start_Conn()
@@ -121,7 +121,7 @@ If Check_Result <> "Fail" Then
 	
 	Call Bar_Reset("Refresh")
 
-	%><script>parent.document.getElementById('Ranking').innerHTML='ÕıÔÚË¢ĞÂµØÇøÅÅĞĞ...';</script>
+	%><script>parent.document.getElementById('Ranking').innerHTML='ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...';</script>
 	<%Response.Flush()
 	
 	Call Start_Conn()
@@ -160,7 +160,7 @@ If Check_Result <> "Fail" Then
 	
 	Call Bar_Reset("Refresh")
 
-	%><script>parent.document.getElementById('Ranking').innerHTML='ÕıÔÚÉ¾³ı¹ıÆÚ¶³½áÂ¼Ïñ...';</script>
+	%><script>parent.document.getElementById('Ranking').innerHTML='ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½Â¼ï¿½ï¿½...';</script>
 	<%Response.Flush()
 	
 	Call Start_Conn()
@@ -210,7 +210,7 @@ If Check_Result <> "Fail" Then
 
 	Call End_Conn()
 	%><script>	
-	parent.document.getElementById('Ranking').innerHTML='Ë¢ĞÂÅÅĞĞÍê³É!!!';
+	parent.document.getElementById('Ranking').innerHTML='Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!!!';
 	var handle;
 	handle=setTimeout("Cancel()",1000);
 	function Cancel()
