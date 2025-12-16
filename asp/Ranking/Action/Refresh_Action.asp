@@ -25,7 +25,7 @@ If Check_Result <> "Fail" Then
 	{
 		parent.document.getElementById('Bar_'+Name).width=Width;
 	}
-	parent.document.getElementById('Ranking').innerHTML='ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...';</script>
+	parent.document.getElementById('Ranking').innerHTML='ÕıÔÚË¢ĞÂÉñ½çÅÅĞĞ...';</script>
 	<%Response.Flush()
 	
 	Call Start_Conn()
@@ -66,7 +66,7 @@ If Check_Result <> "Fail" Then
 	
 	Call Bar_Reset("Refresh")
 
-	%><script>parent.document.getElementById('Ranking').innerHTML='ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½ï¿½ï¿½Ë½ï¿½ï¿½ï¿½ï¿½ï¿½...';</script>
+	%><script>parent.document.getElementById('Ranking').innerHTML='ÕıÔÚË¢ĞÂÈË½çÅÅĞĞ...';</script>
 	<%Response.Flush()
 	
 	Call Start_Conn()
@@ -121,7 +121,7 @@ If Check_Result <> "Fail" Then
 	
 	Call Bar_Reset("Refresh")
 
-	%><script>parent.document.getElementById('Ranking').innerHTML='ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...';</script>
+	%><script>parent.document.getElementById('Ranking').innerHTML='ÕıÔÚË¢ĞÂµØÇøÅÅĞĞ...';</script>
 	<%Response.Flush()
 	
 	Call Start_Conn()
@@ -160,7 +160,7 @@ If Check_Result <> "Fail" Then
 	
 	Call Bar_Reset("Refresh")
 
-	%><script>parent.document.getElementById('Ranking').innerHTML='ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½Â¼ï¿½ï¿½...';</script>
+	%><script>parent.document.getElementById('Ranking').innerHTML='ÕıÔÚÉ¾³ı¹ıÆÚ¶³½áÂ¼Ïñ...';</script>
 	<%Response.Flush()
 	
 	Call Start_Conn()
@@ -210,7 +210,7 @@ If Check_Result <> "Fail" Then
 
 	Call End_Conn()
 	%><script>	
-	parent.document.getElementById('Ranking').innerHTML='Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!!!';
+	parent.document.getElementById('Ranking').innerHTML='Ë¢ĞÂÅÅĞĞÍê³É!!!';
 	var handle;
 	handle=setTimeout("Cancel()",1000);
 	function Cancel()
