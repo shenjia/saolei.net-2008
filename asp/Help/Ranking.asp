@@ -40,8 +40,8 @@ body {
 </span> 　进入游戏后按 <span class="Highest">F5</span> ， 可进入设置界面。<br>
 　在 <span class="Sign">Show Player Identification Text</span> 选项下面的输入框中设置录像标识文字。<br>
 <span class="High">　录像标识文字只能使用英文</span>，推荐使用姓名拼音附加地区拼音，例如：<span class="Signest">Wang Wei (Shan Xi)</span> 。 <br>
-　如果您注册时不慎填错了录像标识文字，可与管理员联系进行更改。<br>
-　如果您上传了成绩后想更改录像标识文字，必须放弃已有的成绩。<br>
+　如果您注册时不慎填错了录像标识文字，可与管理员联系进行一次更改。<br>
+　如果您想再次更改录像标识文字，必须放弃已有的成绩。<br>
 <span class="Title">保存扫雷录像</span><br>
 　每次突破记录后软件会将录像自动保存在软件目录下。<br>
 <span class="Title">查看录像数据</span><br>
