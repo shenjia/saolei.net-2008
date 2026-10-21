@@ -172,6 +172,7 @@ body {
   </tr>
 </table>
 <!--#include virtual="/Models/Include/Bottom_Ad.asp"-->
+<!--#include virtual="/Models/Common/Freeze_Notice.asp"-->
 </body>
 <iframe name="Action" width="0" height="0" style="display: none"></iframe>
 </html>
