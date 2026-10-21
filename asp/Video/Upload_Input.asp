@@ -35,6 +35,7 @@ If Check_Result <> "Fail" Then
 	-->
 	</style>
 	<link href="/Models/Css/2008.css?v=20220423" rel="stylesheet" type="text/css">
+<!--#include virtual="/Models/Common/Freeze_Tip.asp"-->
 	<!--#include virtual="/Models/Include/Windows.asp"-->
 	</head>
 	<body onload="Window_Load();Upload_Form.Video.select();" onMousemove="move()" topmargin=0 leftmargin=0 scroll=no>

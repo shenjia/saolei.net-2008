@@ -11,6 +11,7 @@ Dim Title_Text
 <!--#include virtual="/Models/Common/ConnDB.asp"-->
 <!--#include virtual="/Models/Common/Function.asp"-->
 <!--#include virtual="/Models/Include/NoHtml.asp"-->
+<!--#include virtual="/Models/Common/Freeze.asp"-->
 <%
 Act = "Top_Go"
 Call Get_Input()

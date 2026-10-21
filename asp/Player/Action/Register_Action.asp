@@ -20,6 +20,7 @@ Dim Player_Answer
 <!--#include virtual="/Models/Common/Const.asp"-->
 <!--#include virtual="/Models/Common/ConnDB.asp"-->
 <!--#include virtual="/Models/Common/Function.asp"-->
+<!--#include virtual="/Models/Common/Freeze.asp"-->
 <%
 Call Get_Input()
 Call Check_Input()

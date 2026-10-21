@@ -226,7 +226,7 @@ Select Case Result
 					  <input name="Comment_Video" type="hidden" value="<%=Video_Id%>">
 					  </td>
 					  <td width="100" rowspan="2" valign="top" class="Text">
-						<table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="Comment_Form.submit();">
+						<table width="100" height="20" border="0" align="left" cellpadding="0" cellspacing="0" style="cursor:pointer; " onClick="alert('旧版已停止数据更新，请访问新站 new.saolei.wang');">
 							<tr>
 							  <td align="center" bgcolor="#555555" class="High" onMouseOver="this.className='Sign';" onMouseOut="this.className='High';">我来说两句</td>
 							</tr>
