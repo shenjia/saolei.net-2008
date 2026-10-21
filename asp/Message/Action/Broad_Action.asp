@@ -10,7 +10,6 @@ Dim Player(20000)
 <!--#include virtual="/Models/Common/Const.asp"-->
 <!--#include virtual="/Models/Common/ConnDB.asp"-->
 <!--#include virtual="/Models/Include/Bar.asp"-->
-<!--#include virtual="/Models/Common/Freeze.asp"-->
 <%
 Act = "Top_Go"
 Call Check_Master()
