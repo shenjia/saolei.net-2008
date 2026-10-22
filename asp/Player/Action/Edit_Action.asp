@@ -26,6 +26,7 @@ Dim Player_Answer
 <!--#include virtual="/Models/Common/Const.asp"-->
 <!--#include virtual="/Models/Common/ConnDB.asp"-->
 <!--#include virtual="/Models/Common/Function.asp"-->
+<!--#include virtual="/Models/Common/Freeze.asp"-->
 <%
 Call Check_Master()
 Call Get_Input()

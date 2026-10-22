@@ -9,6 +9,7 @@ Dim History_Id
 <!--#include virtual="/Models/Common/Const.asp"-->
 <!--#include virtual="/Models/Common/ConnDB.asp"-->
 <!--#include virtual="/Models/Common/Function.asp"-->
+<!--#include virtual="/Models/Common/Freeze.asp"-->
 <%
 Call Check()
 Call Get_Input()

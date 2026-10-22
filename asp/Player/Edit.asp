@@ -70,6 +70,7 @@ If Message = "No" And Check_Result <> "Fail" Then
 	-->
 	</style>
 	<link href="/Models/Css/2008.css?v=20220423" rel="stylesheet" type="text/css">
+<!--#include virtual="/Models/Common/Freeze_Tip.asp"-->
 	<!--#include virtual="/Models/Include/Windows.asp"-->
 	<!--#include virtual="/Models/Include/ShowHide.asp"-->
 	</head>
