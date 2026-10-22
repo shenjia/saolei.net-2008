@@ -29,7 +29,7 @@
 </div>
 <script language="JavaScript">
 function Freeze_Go(){
-	location.href = location.href.replace(/^(https?:\/\/)[^\/]+/i, "$1new.saolei.net");
+	location.href = location.href.replace(/^(https?:\/\/)[^\/]+/i, "$1new.saolei.wang");
 }
 function Freeze_Close(){
 	document.getElementById("Freeze_Mask").style.display = "none";
