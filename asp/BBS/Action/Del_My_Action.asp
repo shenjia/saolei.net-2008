@@ -8,6 +8,7 @@ Dim Title_Id
 <!--#include virtual="/Player/Check.asp"-->
 <!--#include virtual="/Models/Common/Const.asp"-->
 <!--#include virtual="/Models/Common/ConnDB.asp"-->
+<!--#include virtual="/Models/Common/Freeze.asp"-->
 <!--#include virtual="/Models/Common/Function.asp"-->	
 <%
 Call Check()
